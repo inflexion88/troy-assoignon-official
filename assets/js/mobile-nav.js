@@ -1,17 +1,42 @@
 // Mobile Navigation
 
 export function setupMobileNav() {
+  console.log('setupMobileNav called');
+  console.log('Looking for #mobile-menu-button...');
+
   const mobileMenuButton = document.querySelector('#mobile-menu-button');
   const mobileMenu = document.querySelector('#mobile-menu');
   const menuIcon = document.querySelector('#menu-icon');
   const closeIcon = document.querySelector('#close-icon');
 
+  console.log('Button found:', !!mobileMenuButton, mobileMenuButton);
+  console.log('Menu found:', !!mobileMenu, mobileMenu);
+  console.log('Menu icon found:', !!menuIcon);
+  console.log('Close icon found:', !!closeIcon);
+
   if (!mobileMenuButton || !mobileMenu) {
-    console.warn('Mobile menu elements not found');
+    console.warn('Mobile menu elements not found - will retry');
+    // Retry after a short delay
+    setTimeout(() => {
+      const retryButton = document.querySelector('#mobile-menu-button');
+      const retryMenu = document.querySelector('#mobile-menu');
+      if (retryButton && retryMenu) {
+        console.log('Retry successful, setting up now...');
+        setupMobileNavActual(retryButton, retryMenu,
+          document.querySelector('#menu-icon'),
+          document.querySelector('#close-icon'));
+      } else {
+        console.error('Retry failed - elements still not found');
+      }
+    }, 100);
     return;
   }
 
   console.log('Mobile menu elements found, setting up...');
+  setupMobileNavActual(mobileMenuButton, mobileMenu, menuIcon, closeIcon);
+}
+
+function setupMobileNavActual(mobileMenuButton, mobileMenu, menuIcon, closeIcon) {
 
   // Toggle menu visibility
   mobileMenuButton.addEventListener('click', () => {

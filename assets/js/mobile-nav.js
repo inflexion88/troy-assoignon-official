@@ -33,6 +33,27 @@ export function setupMobileNav() {
   }
 
   console.log('Mobile menu elements found, setting up...');
+
+  // Visibility check
+  const rect = mobileMenuButton.getBoundingClientRect();
+  const styles = window.getComputedStyle(mobileMenuButton);
+  console.log('Button position:', {
+    top: rect.top,
+    left: rect.left,
+    right: rect.right,
+    bottom: rect.bottom,
+    width: rect.width,
+    height: rect.height,
+    display: styles.display,
+    visibility: styles.visibility,
+    opacity: styles.opacity,
+    zIndex: styles.zIndex
+  });
+  console.log('Viewport size:', {
+    width: window.innerWidth,
+    height: window.innerHeight
+  });
+
   setupMobileNavActual(mobileMenuButton, mobileMenu, menuIcon, closeIcon);
 }
 

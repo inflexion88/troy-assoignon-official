@@ -1,0 +1,2013 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Troy Assoignon - Strategic Brand Positioning</title>
+    <meta name="description" content="Strategic brand positioning and luxury marketing services" />
+    <meta name="author" content="Troy Assoignon" />
+    <meta property="og:image" content="/og-image.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'accent-green': '#65E48F',
+              'accent-green-dark': '#51BC7B',
+              'luxury-200': '#B9B9BE',
+              'luxury-300': '#B9B9BE',
+              'luxury-400': '#969664',
+              'luxury-500': '#787882',
+              'luxury-600': '#5A5A64',
+              'luxury-700': '#46464A',
+              'luxury-800': '#323238',
+              'luxury-900': '#1E1E23',
+              'luxury-950': '#111117',
+              'glass-bg': 'rgba(20, 20, 25, 0.7)',
+              'glass-border': 'rgba(50, 50, 60, 0.2)'
+            },
+            fontFamily: {
+              'sans': ['Inter', 'sans-serif'],
+              'display': ['Inter', 'sans-serif']
+            },
+            zIndex: {
+              '0': '0',
+              '1': '1',
+              '10': '10',
+              '20': '20',
+              '30': '30',
+              '40': '40',
+              '50': '50',
+              '100': '100',
+              '1000': '1000'
+            },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            }
+          }
+        }
+      }
+    </script>
+  <style>
+    /* Critical CSS for proper layout */
+    :root {
+      --accent-green: #65E48F;
+      --accent-green-dark: #51BC7B;
+      --luxury-200: #B9B9BE;
+      --luxury-300: #B9B9BE;
+      --luxury-700: #46464A;
+      --luxury-800: #323238;
+      --luxury-900: #1E1E23;
+      --luxury-950: #111117;
+    }
+    
+    body {
+      overflow-x: hidden;
+      position: relative;
+    }
+    
+    #root {
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Fix navbar positioning */
+    #navbar {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      z-index: 9999 !important;
+      padding: 1rem 1.5rem !important;
+      transition: background-color 0.3s ease !important;
+      background-color: transparent !important;
+    }
+    
+    /* Mobile menu styling */
+    #mobile-menu {
+      z-index: 9990 !important;
+    }
+    
+    /* Dropdown menu styling */
+    .dropdown-menu {
+      display: none;
+      position: absolute !important;
+      top: 100% !important;
+      left: 0 !important;
+      background-color: rgba(0,0,0,0.8) !important;
+      backdrop-filter: blur(10px) !important;
+      min-width: 200px !important;
+      border-radius: 0.375rem !important;
+      border: 1px solid rgba(50,50,56,0.4) !important;
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05) !important;
+      z-index: 9998 !important;
+      padding: 0.5rem 0 !important;
+    }
+    
+    /* Show dropdown on hover */
+    .group:hover .dropdown-menu {
+      display: block !important;
+    }
+    
+    /* Section heading styles */
+    .section-heading {
+      font-size: 3.75rem;
+      line-height: 1;
+      font-weight: 700;
+      font-family: Inter, sans-serif;
+    }
+    
+    @media (min-width: 768px) {
+      .section-heading {
+        font-size: 4.5rem;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .section-heading {
+        font-size: 6rem;
+      }
+    }
+    
+    /* Luxury gradient text */
+    .luxury-gradient {
+      background: linear-gradient(135deg, #65E48F 0%, #51BC7B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Navigation item styles */
+    .nav-item {
+      color: #B9B9BE;
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+    
+    .nav-item:hover {
+      color: #65E48F;
+    }
+    /* Enhanced testimonial card styling */
+    .group .relative.bg-luxury-900\/50 {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backface-visibility: hidden;
+    }
+    
+    .group:hover .relative.bg-luxury-900\/50 {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Improved typography */
+    blockquote.text-luxury-200 {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      letter-spacing: 0.01em;
+    }
+    
+    /* Enhanced spacing */
+    .section-heading {
+      letter-spacing: -0.02em;
+    }
+    
+    /* Add subtle visual separator between sections */
+    .bg-luxury-900 {
+      position: relative;
+    }
+    
+    .bg-luxury-900::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(104, 211, 145, 0.2), transparent);
+    }
+    
+    /* Testimonial wall enhancements */
+    #testimonials, #services {
+      overflow: hidden;
+    }
+    
+    #testimonials::before, #services::before {
+      content: '';
+      position: absolute;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(104, 211, 145, 0.03) 0%, transparent 70%);
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    #testimonials::before {
+      top: -400px;
+      right: -400px;
+    }
+    
+    #services::before {
+      bottom: -400px;
+      left: -400px;
+    }
+    
+    /* Profile image enhancement */
+    .h-\[64px\].w-\[64px\].flex-none.rounded-full {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .h-\[64px\].w-\[64px\].flex-none.rounded-full::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 9999px;
+      background: linear-gradient(45deg, transparent, rgba(104, 211, 145, 0.2), transparent);
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .group:hover .h-\[64px\].w-\[64px\].flex-none.rounded-full::after {
+      opacity: 1;
+    }
+    
+    /* Improved card spacing */
+    .relative.bg-luxury-900\/50 {
+      padding: 1.75rem !important; /* Increase internal padding */
+    }
+    
+    /* Adjust layout on smaller screens */
+    @media (max-width: 1280px) {
+      #services .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important; /* Force 3 columns on medium screens */
+      }
+    }
+    
+    @media (max-width: 1024px) {
+      #services .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important; /* Force 2 columns on smaller screens */
+      }
+    }
+    
+    /* Create more vertical space in the cards */
+    .flex-grow.min-h-\[120px\] {
+      min-height: 140px !important;
+    }
+    
+    /* Add more breathing room between sections */
+    .flex.items-start.gap-4.mb-4 {
+      margin-bottom: 1.25rem !important;
+    }
+    
+    /* Existing styles */
+    /* ... existing code ... */
+    
+    /* Card content optimization */
+    .relative.bg-luxury-900\/50 {
+      padding: 1.5rem !important; /* Slightly increased padding */
+    }
+    
+    /* Optimize typography for better space usage */
+    .text-white.font-medium.text-lg.truncate {
+      font-size: 1.05rem;
+      line-height: 1.4;
+    }
+    
+    .text-luxury-300.text-sm.mb-1,
+    .text-luxury-400.text-sm.mb-2 {
+      font-size: 0.8125rem;
+      line-height: 1.3;
+      margin-bottom: 0.25rem !important;
+    }
+    
+    /* Make testimonial text slightly smaller and more efficient */
+    blockquote.text-luxury-200 {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      letter-spacing: 0;
+    }
+    
+    /* Reduce minimum height for testimonial content */
+    .flex-grow.min-h-\[120px\] {
+      min-height: 110px !important;
+    }
+    
+    /* Tighten spacing on profile section */
+    .flex.items-start.gap-4.mb-4 {
+      gap: 0.75rem !important;
+      margin-bottom: 0.75rem !important;
+    }
+    
+    /* Add subtle dividers between sections of the card */
+    blockquote.text-luxury-200.mb-4 {
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    /* Remove extra whitespace from bottom of blockquote */
+    blockquote.text-luxury-200.mb-4 {
+      margin-bottom: 0.75rem !important;
+    }
+    
+    /* Make first testimonial section more compact */
+    #testimonials .relative.bg-luxury-900\/50 {
+      padding: 1.25rem !important; /* Reduced padding for first section */
+    }
+    
+    #testimonials blockquote.text-luxury-200 {
+      font-size: 0.85rem; /* Smaller font for testimonials in first section */
+      line-height: 1.4; /* Tighter line height */
+      min-height: 100px !important; /* Shorter minimum height */
+    }
+    
+    #testimonials .flex.items-start.gap-4.mb-4 {
+      gap: 0.5rem !important; /* Even smaller gap in profile section */
+      margin-bottom: 0.5rem !important; /* Reduced margin below profile */
+    }
+    
+    #testimonials h3.text-white.font-medium.text-lg.truncate {
+      font-size: 1rem; /* Slightly smaller name */
+    }
+    
+    #testimonials .text-luxury-300.text-sm.mb-1,
+    #testimonials .text-luxury-400.text-sm.mb-2 {
+      font-size: 0.75rem; /* Smaller location text */
+      margin-bottom: 0.125rem !important; /* Very tight margins */
+    }
+    
+    /* Make first section visually more compact */
+    #testimonials .py-16 {
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem;
+    }
+    
+    #testimonials .mb-16 {
+      margin-bottom: 2.5rem;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/js/style.js"></script>
+  <script type="module" crossorigin src="/assets/js/main2.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/css/style.css">
+</head>
+  <body>
+    <div id="root">
+      <!-- Hero Section -->
+      <div class="relative min-h-screen bg-black flex items-center justify-center overflow-hidden hero-section">
+        <!-- Matrix effect will be inserted here -->
+        
+        <!-- Subtle background effects -->
+        <div class="absolute inset-0 opacity-[0.03]">
+          <div class="h-full w-full" style="background-image: linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 100px 100px;"></div>
+        </div>
+        
+        <!-- Accent glow effects -->
+        <div class="absolute top-0 -right-32 w-[600px] h-[600px] bg-accent-green/[0.03] rounded-full blur-[128px]"></div>
+        <div class="absolute bottom-0 -left-32 w-[600px] h-[600px] bg-accent-green/[0.03] rounded-full blur-[128px]"></div>
+        
+        <!-- Accent lines -->
+        <div class="absolute inset-x-0 top-32 h-px bg-gradient-to-r from-transparent via-accent-green/10 to-transparent"></div>
+
+        <div class="container mx-auto px-4 sm:px-6 relative z-10 py-16">
+          <div class="flex flex-col items-center pt-[16px]">
+            <!-- Luxury tag -->
+            <div class="inline-block relative mb-6 px-5 py-2 rounded-full bg-luxury-900/70 backdrop-blur-lg border border-luxury-700/30 mt-[50px] flex items-center gap-4">
+              <svg class="w-2 h-2 animate-pulse" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#FF0000" stroke="#FF0000" stroke-width="2"/>
+                <circle cx="12" cy="12" r="8" fill="#FF0000" opacity="0.5"/>
+              </svg>
+              <span class="text-luxury-200 text-sm tracking-wider">AN URGENT MESSAGE TO EVERY ENTREPRENEUR STRUGGLING TO STAND OUT IN A CROWDED MARKET</span>
+            </div>
+            
+            <!-- Main hero content -->
+            <div class="max-w-5xl mx-auto text-center mb-8">
+              <h1 class="font-display font-bold mb-6 relative text-6xl md:text-7xl lg:text-8xl">
+                <span class="text-accent-green font-black" style="font-weight: 900;">The 7 Deadly</span><span class="text-white"> Positioning Mistakes</span><span class="text-white"> Workshop</span>
+                <!-- Luxurious swoosh element -->
+                <div class="absolute -bottom-6 left-1/2 w-64 h-6 pointer-events-none transform -translate-x-1/2">
+                  <svg viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                    <path d="M5 10C25 18 75 18 95 10" stroke="url(#swooshGradient)" stroke-width="1" stroke-linecap="round" />
+                    <defs>
+                      <linearGradient id="swooshGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#65E48F" stop-opacity="0.1" />
+                        <stop offset="50%" stop-color="#65E48F" stop-opacity="0.4" />
+                        <stop offset="100%" stop-color="#65E48F" stop-opacity="0.1" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+              </h1>
+              
+              <h2 class="text-3xl md:text-4xl font-display font-bold mb-3 text-white">
+                Most 7-figure businesses think they<br>need more leads for explosive growth...
+              </h2>
+              
+              <h2 class="text-2xl md:text-3xl font-display font-bold mb-6" style="color: #FF0000;">
+                (Psst...The Reality? They Are Making These Positioning Mistakes)
+              </h2>
+              
+              <p class="text-2xl md:text-3xl font-display text-accent-green mb-6 uppercase" style="letter-spacing: 0.75em;">
+                THURSDAY 5PM CST 6PM EST
+              </p>
+
+              <!-- Email Signup Form -->
+              <div class="w-full max-w-[400px] mx-auto">
+                <div class="bg-luxury-900/50 backdrop-blur-md p-5 sm:p-7 rounded-2xl border border-luxury-700/30">
+                  <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+                  <form action="https://app.kit.com/forms/7737426/subscriptions" 
+                        class="seva-form formkit-form" 
+                        method="post" 
+                        data-sv-form="7737426" 
+                        data-uid="b9348db497" 
+                        data-format="inline" 
+                        data-version="5" 
+                        data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;redirect&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;https://troyassoignon.com/thank-you-workshop/&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:false,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" 
+                        min-width="400 500 600 700 800">
+                    <div data-style="clean">
+                      <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+                      <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="formkit-field md:col-span-2">
+                          <input class="formkit-input w-full px-5 py-3 bg-luxury-800/50 border border-luxury-700/50 rounded-xl text-white placeholder-luxury-400 focus:outline-none focus:ring-2 focus:ring-accent-green/50 text-base transition-all duration-200 hover:border-luxury-600/50" 
+                                 aria-label="Name*" 
+                                 name="fields[first_name]" 
+                                 required="" 
+                                 placeholder="Name*" 
+                                 type="text">
+                        </div>
+                        <div class="formkit-field">
+                          <input class="formkit-input w-full px-5 py-3 bg-luxury-800/50 border border-luxury-700/50 rounded-xl text-white placeholder-luxury-400 focus:outline-none focus:ring-2 focus:ring-accent-green/50 text-base transition-all duration-200 hover:border-luxury-600/50" 
+                                 name="email_address" 
+                                 aria-label="Email*" 
+                                 placeholder="Email*" 
+                                 required="" 
+                                 type="email">
+                        </div>
+                        <div class="formkit-field">
+                          <input class="formkit-input w-full px-5 py-3 bg-luxury-800/50 border border-luxury-700/50 rounded-xl text-white placeholder-luxury-400 focus:outline-none focus:ring-2 focus:ring-accent-green/50 text-base transition-all duration-200 hover:border-luxury-600/50" 
+                                 aria-label="Phone, eg. +1" 
+                                 name="fields[phone_number]" 
+                                 placeholder="Phone, eg. +1" 
+                                 type="text">
+                        </div>
+                        <button data-element="submit" 
+                                class="formkit-submit md:col-span-2 relative inline-flex items-center justify-center overflow-hidden group px-8 py-4 bg-accent-green/20 backdrop-blur-md transition-all duration-500 rounded-xl hover:bg-accent-green/30 hover:scale-[1.02] hover:-translate-y-0.5 border border-accent-green/20">
+                          <div class="formkit-spinner">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                          </div>
+                          <span class="relative z-10 text-accent-green font-medium text-lg">Reserve Your Seat Now</span>
+                          <div class="absolute inset-0 rounded-xl shadow-[0_0_20px_rgba(101,228,143,0.2)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                          <div class="absolute inset-0 bg-gradient-to-r from-accent-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-xl"></div>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Results section container - the JS will insert into this -->
+            <div id="results-container" class="w-full">
+              <!-- Results will be inserted here by JS -->
+            </div>
+
+            <!-- Scroll indicator - moved after results -->
+            <svg class="mt-16 animate-float" width="72" height="72" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 5v14M19 12l-7 7-7-7" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+          animation: float 2s ease-in-out infinite;
+        }
+      </style>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="py-16 relative bg-black">
+        <div class="max-w-[1440px] mx-auto px-8 sm:px-10">
+          <div class="text-center mb-16">
+            <h2 class="section-heading text-white mb-4 whitespace-nowrap">The Great Wall Of Testimony</h2>
+            <p class="text-2xl md:text-3xl text-luxury-300">Read what other people have to say about working with Troy...</p>
+          </div>
+
+          <!-- Testimonials Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Jonathon Mitchell - Longer testimonial first -->
+            <div class="group relative aspect-square">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50">
+                    <img 
+                      src="images/JonathonM.jpg" 
+                      alt="Jonathon Mitchell"
+                      class="object-cover w-full h-full"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Jonathon Mitchell</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Lele Aviation Consulting</p>
+                    <p class="text-luxury-400 text-sm mb-2">Hawaii, USA</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow overflow-y-auto custom-scrollbar">
+                  "I connected with Troy through a mutual LinkedIn connection and attended his positioning workshop. My greatest takeaway was that being your authentic self is key to strong positioning."
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://www.prosperpath.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  prosperpath.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Joe Shedden -->
+            <div class="group relative aspect-square">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50">
+                    <img 
+                      src="images/placeholder-avatar.svg" 
+                      alt="Joe Shedden"
+                      class="object-cover w-full h-full"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Joe Shedden</h3>
+                    <p class="text-luxury-300 text-sm mb-1">CEO</p>
+                    <p class="text-luxury-400 text-sm mb-2">Today's Executive Network</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow overflow-y-auto custom-scrollbar">
+                  "I highly recommend Troy's positioning workshops. They are an incredibly valuable use of my time, providing clear, actionable insights. Troy facilitated the session with expertise, ensuring that everyone came away with a deeper understanding and practical strategies to implement right away."
+                </blockquote>
+              </div>
+            </div>
+
+            <!-- Isabel Sterne -->
+            <div class="group relative aspect-square">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50">
+                    <img 
+                      src="images/IsabelleS.jpg" 
+                      alt="Isabel Sterne"
+                      class="object-cover w-full h-full"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Isabel Sterne</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Founder</p>
+                    <p class="text-luxury-400 text-sm mb-2">New York, USA</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow overflow-y-auto custom-scrollbar">
+                  "Troy's workshop helped me position my brand in a way that resonated with my target audience. The insights were invaluable."
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://isabelsterne.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  isabelsterne.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Ethan's Testimonial -->
+            <div class="group relative aspect-square">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50">
+                    <img 
+                      src="images/EthanC.jpg" 
+                      alt="Ethan Conques"
+                      class="object-cover w-full h-full"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Ethan Conques</h3>
+                    <p class="text-luxury-300 text-sm mb-1">ECON Marketing</p>
+                    <p class="text-luxury-400 text-sm mb-2">Lafayette, Louisiana, USA</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow overflow-y-auto custom-scrollbar">
+                  "Troy's Positioning Workshop feels like getting exclusive access to a marketing masterclass on a weekly basis. He goes through potent concepts that have shifted my positioning in the market, taking the value of my offers to new heights."
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://econmarketing.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  econmarketing.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Bobbi Mullins -->
+            <div class="group relative aspect-square">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50">
+                    <img 
+                      src="images/BobbiM.jpg" 
+                      alt="Bobbi Mullins"
+                      class="object-cover w-full h-full"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Bobbi Mullins</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Andy Robson Consolidated</p>
+                    <p class="text-luxury-400 text-sm mb-2">Jacksonville, Florida, USA</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow overflow-y-auto custom-scrollbar">
+                  "Troy broke down into relatable terms- what positioning is, what it means, and why it's important to nail it down. If you want actionable advice on improving positioning rather than the vague/fuzzy advice that so many others offer as advice."
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://AndyRobsonConsolidated.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  AndyRobsonConsolidated.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Neil Newsome -->
+            <div class="group relative aspect-square">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50">
+                    <img 
+                      src="images/NeilN.jpg" 
+                      alt="Neil Newsome"
+                      class="object-cover w-full h-full"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Neil Newsome</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Owner & Co-Founder</p>
+                    <p class="text-luxury-400 text-sm mb-2">Toronto, Canada</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow overflow-y-auto custom-scrollbar">
+                  "In less than an hour during this webinar, Troy helped break the rigged perception and ideas I had of my business. I feel like I now have a wider grasp of what I need to develop moving forward. Feels good to be mentally unstuck."
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://nrnglobal.ca" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  nrnglobal.ca
+                </a>
+              </div>
+            </div>
+
+            <!-- Danny Chen -->
+            <div class="group relative aspect-square">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50">
+                    <img 
+                      src="images/DannyC.jpg" 
+                      alt="Danny Chen"
+                      class="object-cover w-full h-full"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Danny Chen</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Advisor</p>
+                    <p class="text-luxury-400 text-sm mb-2">Toronto, Canada</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow overflow-y-auto custom-scrollbar">
+                  "What I loved was the interactive and supportive environment. Troy is your man, he is knowledgeable, enthusiastic, and provided personalized feedback that helped me refine my marketing strategy."
+                </blockquote>
+              </div>
+            </div>
+
+            <!-- Alexis Wainwright -->
+            <div class="group relative aspect-square">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50">
+                    <img 
+                      src="images/alexisw.jpeg" 
+                      alt="Alexis Wainwright"
+                      class="object-cover w-full h-full"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Alexis Wainwright</h3>
+                    <p class="text-luxury-300 text-sm mb-1">News Reporter</p>
+                    <p class="text-luxury-400 text-sm mb-2">Toronto, Canada</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow overflow-y-auto custom-scrollbar">
+                  "Being a part of Troy's dynamic forum brought content positioning to life with vibrant, actionable strategies for scaling engagement. Great community to workshop ideas and learn from the best!"
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://www.linkedin.com/in/alexiswainwright/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  LinkedIn Profile
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <style>
+        .custom-scrollbar {
+          scrollbar-width: thin;
+          scrollbar-color: rgba(101, 228, 143, 0.3) transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+          width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background-color: rgba(101, 228, 143, 0.3);
+          border-radius: 20px;
+        }
+      </style>
+
+      <!-- What You'll Get Section -->
+      <section class="benefits py-24 relative bg-black">
+        <!-- Background Effect -->
+        <div class="absolute inset-0 bg-gradient-radial from-luxury-900/20 to-transparent opacity-50"></div>
+        
+        <!-- Content Container -->
+        <div class="max-w-[1440px] mx-auto px-8 sm:px-10">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="section-heading text-white mb-4 text-5xl md:text-6xl font-display">What You'll Get When You Join Us</h2>
+            <p class="text-2xl md:text-3xl text-luxury-300">Transform your business with our proven positioning framework</p>
+          </div>
+
+          <!-- Benefits Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Position For Scale -->
+            <div class="group relative">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-8 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full">
+                <!-- Number -->
+                <div class="text-3xl font-bold text-accent-green mb-6">01</div>
+                <!-- Content -->
+                <h3 class="text-2xl font-medium text-white mb-4">Position For Scale</h3>
+                <p class="text-luxury-300 leading-relaxed">We'll show you how we think about Positioning an offer so you can bring on more clients without burning out.</p>
+              </div>
+            </div>
+
+            <!-- Master Your Message -->
+            <div class="group relative">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-8 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full">
+                <!-- Number -->
+                <div class="text-3xl font-bold text-accent-green mb-6">02</div>
+                <!-- Content -->
+                <h3 class="text-2xl font-medium text-white mb-4">Master Your Message</h3>
+                <p class="text-luxury-300 leading-relaxed">You get our Positioning framework we use to identify your genius, hone in on it so you can master your messaging.</p>
+              </div>
+            </div>
+
+            <!-- Future-Proof Your Expertise -->
+            <div class="group relative">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-8 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full">
+                <!-- Number -->
+                <div class="text-3xl font-bold text-accent-green mb-6">03</div>
+                <!-- Content -->
+                <h3 class="text-2xl font-medium text-white mb-4">Future-Proof Your Expertise</h3>
+                <p class="text-luxury-300 leading-relaxed">We will talk about productizing your expertise, and what is working NOW in 2025, for myself and others.</p>
+              </div>
+            </div>
+
+            <!-- Magnetic Client Attraction -->
+            <div class="group relative">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-8 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full">
+                <!-- Number -->
+                <div class="text-3xl font-bold text-accent-green mb-6">04</div>
+                <!-- Content -->
+                <h3 class="text-2xl font-medium text-white mb-4">Magnetic Client Attraction</h3>
+                <p class="text-luxury-300 leading-relaxed">We'll show you how to think about Positioning yourself so clients are magnetized to you.</p>
+              </div>
+            </div>
+
+            <!-- Stand Out Strategy -->
+            <div class="group relative">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-8 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full">
+                <!-- Number -->
+                <div class="text-3xl font-bold text-accent-green mb-6">05</div>
+                <!-- Content -->
+                <h3 class="text-2xl font-medium text-white mb-4">Stand Out Strategy</h3>
+                <p class="text-luxury-300 leading-relaxed">You'll learn how we think about positioning and sales so you can stand out in a crowded market place.</p>
+              </div>
+            </div>
+
+            <!-- Comprehensive Positioning -->
+            <div class="group relative">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-8 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full">
+                <!-- Number -->
+                <div class="text-3xl font-bold text-accent-green mb-6">06</div>
+                <!-- Content -->
+                <h3 class="text-2xl font-medium text-white mb-4">Comprehensive Positioning</h3>
+                <p class="text-luxury-300 leading-relaxed">We'll discuss various different types of positioning from brand positioning to personality positioning and more...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  <!-- Navbar -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 py-4 md:py-6 bg-transparent">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+          <a href="#" class="text-xl font-display font-bold tracking-tight flex items-center">
+        <span class="luxury-gradient">TROY ASSOIGNON</span>
+        <span class="bg-accent-green h-1.5 w-1.5 rounded-full ml-1 mt-1"></span>
+      </a>
+      
+      <nav class="hidden md:flex items-center space-x-8">
+            <a href="#" class="nav-item">Home</a>
+        <div class="relative group">
+          <button class="nav-item flex items-center">
+            Services
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="services-dropdown" class="dropdown-menu">
+            <div class="service-submenu">
+              <a href="/services/fractional-cmo-caio.html" class="block px-4 py-2.5 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                Fractional CMO/CAIo
+              </a>
+              <a href="/services/strategic-brand-positioning.html" class="block px-4 py-2.5 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                Strategic Brand Positioning
+              </a>
+              <a href="/services/authority-thought-leadership.html" class="block px-4 py-2.5 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                Authority & Thought Leadership
+              </a>
+              <a href="/services/investor-ready-positioning.html" class="block px-4 py-2.5 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                Investor-Ready Positioning
+              </a>
+              <a href="/services/premium-pricing-offers.html" class="block px-4 py-2.5 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                Premium Pricing & Offers
+              </a>
+              <a href="/services/positioning-diagnostics.html" class="block px-4 py-2.5 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                Positioning Diagnostics
+              </a>
+            </div>
+          </div>
+        </div>
+            <a href="#about" class="nav-item">About</a>
+            <a href="#process" class="nav-item">Process</a>
+        <a href="/blog.html" class="nav-item">Blog</a>
+        <a href="/workshop.html" class="nav-item text-accent-green">Workshop</a>
+        
+        <!-- Theme toggle button -->
+        <button id="theme-toggle" class="p-2 rounded-full bg-luxury-800/30 hover:bg-luxury-700/50 transition-colors" aria-label="Toggle theme">
+          <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-luxury-300">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-luxury-300 hidden">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        
+        <a href="/positioningiq.html" class="bg-accent-green text-black px-6 py-2 rounded-full hover:bg-accent-green/90 transition-colors">
+          PositioningIQ
+        </a>
+      </nav>
+      
+      <div class="md:hidden flex items-center space-x-4">
+        <!-- Theme toggle button (mobile) -->
+        <button id="theme-toggle-mobile" class="p-2 rounded-full bg-luxury-800/30 hover:bg-luxury-700/50 transition-colors" aria-label="Toggle theme">
+          <svg id="moon-icon-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-luxury-300">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg id="sun-icon-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-luxury-300 hidden">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        
+        <button 
+          id="mobile-menu-button"
+          class="text-luxury-300 hover:text-white transition-colors" 
+          aria-label="Toggle menu"
+        >
+          <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="6" x2="20" y2="6"></line>
+            <line x1="4" y1="18" x2="20" y2="18"></line>
+          </svg>
+          <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6L6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center space-y-8 pt-20 transition-all duration-500 ease-in-out transform opacity-0 translate-x-full pointer-events-none">
+      <a href="#services" class="nav-item text-xl mobile-nav-item">Services</a>
+      <div class="flex flex-col items-center space-y-4 mb-6">
+        <a href="/services/fractional-cmo-caio.html" class="text-sm text-luxury-300 hover:text-luxury-100 hover:bg-luxury-800/50 transition-colors">• Fractional CMO/CAIo</a>
+        <a href="/services/strategic-brand-positioning.html" class="text-sm text-luxury-300 hover:text-white">• Strategic Brand Positioning</a>
+        <a href="/services/authority-thought-leadership.html" class="text-sm text-luxury-300 hover:text-white">• Authority & Thought Leadership</a>
+        <a href="/services/investor-ready-positioning.html" class="text-sm text-luxury-300 hover:text-white">• Investor-Ready Positioning</a>
+        <a href="/services/premium-pricing-offers.html" class="text-sm text-luxury-300 hover:text-white">• Premium Pricing & Offers</a>
+        <a href="/services/positioning-diagnostics.html" class="text-sm text-luxury-300 hover:text-white">• Positioning Diagnostics</a>
+      </div>
+          <a href="#about" class="nav-item text-xl mobile-nav-item">About</a>
+          <a href="#process" class="nav-item text-xl mobile-nav-item">Process</a>
+      <a href="/blog.html" class="nav-item text-xl mobile-nav-item">Blog</a>
+      <a href="/workshop.html" class="nav-item text-xl mobile-nav-item text-accent-green">Workshop</a>
+      <a href="/positioningiq.html" class="bg-accent-green text-black px-6 py-2 rounded-full hover:bg-accent-green/90 transition-colors">
+        PositioningIQ
+      </a>
+    </div>
+  </header>
+
+      <!-- Services Section -->
+      <section id="services" class="py-16 relative bg-luxury-900/30">
+        <div class="max-w-[1440px] mx-auto px-8 sm:px-10">
+          <div class="text-center mb-16">
+            <h2 class="section-heading text-white mb-4 whitespace-nowrap">Continued Great Wall Of Testimony</h2>
+            <p class="text-2xl md:text-3xl text-luxury-300">Read what other people have to say about working with Troy...</p>
+          </div>
+
+          <!-- Testimonials Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Isabel Sterne -->
+            <div class="group relative aspect-square">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50">
+                    <img 
+                      src="images/IsabelleS.jpg" 
+                      alt="Isabel Sterne"
+                      class="object-cover w-full h-full"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Isabel Sterne</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Founder</p>
+                    <p class="text-luxury-400 text-sm mb-2">Ireland</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow overflow-y-auto custom-scrollbar">
+                  "Troy's positioning workshop was transformative. He helped me identify my unique value proposition and communicate it effectively."
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://www.isabelsterne.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  isabelsterne.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Valen Vergara -->
+            <div class="group relative aspect-square">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50">
+                    <img 
+                      src="images/ValenV.jpg" 
+                      alt="Valen Vergara"
+                      class="object-cover w-full h-full"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Valen Vergara</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Founder</p>
+                    <p class="text-luxury-400 text-sm mb-2">Argentina</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow overflow-y-auto custom-scrollbar">
+                  "Troy's workshop was a game-changer for my business. His insights on positioning and market differentiation were invaluable."
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://valenvergara.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  valenvergara.com
+                </a>
+                </div>
+            </div>
+
+            <!-- Hugh Bohane -->
+            <div class="group relative h-full">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50" style="min-width: 64px; min-height: 64px; max-width: 64px; max-height: 64px;">
+                    <img 
+                      src="images/hugheadshot.png" 
+                      alt="Hugh Bohane"
+                      width="64"
+                      height="64"
+                      class="object-cover"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                      style="width: 64px; height: 64px;"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Hugh Bohane</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Australian Associated Press Journalist</p>
+                    <p class="text-luxury-400 text-sm mb-2">Australia</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow min-h-[120px]">
+                  "Troy has helped me and some of my contacts with expert fundraising advice which has in turn helped NGOs specifically working in war zones. His advice and time and is very personable. He would be an asset to any potential future clients who might be lucky enough to engage with him."
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://hughbohane.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors mt-auto">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+                  hughbohane.com
+                </a>
+          </div>
+        </div>
+
+            <!-- Julia Vorontsova -->
+            <div class="group relative h-full">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50" style="min-width: 64px; min-height: 64px; max-width: 64px; max-height: 64px;">
+                    <img 
+                      src="images/JuliaV.jpg" 
+                      alt="Julia Vorontsova"
+                      width="64"
+                      height="64"
+                      class="object-cover"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                      style="width: 64px; height: 64px;"
+                    >
+              </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Julia Vorontsova</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Innovation Park</p>
+                    <p class="text-luxury-400 text-sm mb-2">Antwerp, Belgium</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow min-h-[120px]">
+                  "One thing that makes Troy very different from other advisors whom I paid 5 figures, is that he actually does the work, he doesn't 'wing' it, or say any basic stuff you heard 100s of times before."
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://innovation-park.e" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors mt-auto">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  innovation-park.e
+                </a>
+              </div>
+            </div>
+
+            <!-- Dawn DelVecchio -->
+            <div class="group relative h-full">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50" style="min-width: 64px; min-height: 64px; max-width: 64px; max-height: 64px;">
+                    <img 
+                      src="images/DawnDHeadshot.png" 
+                      alt="Dawn DelVecchio"
+                      width="64"
+                      height="64"
+                      class="object-cover"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                      style="width: 64px; height: 64px;"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Dawn DelVecchio</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Business Mentor, Author</p>
+                    <p class="text-luxury-400 text-sm mb-2">Sedona, Arizona, USA</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow min-h-[120px]">
+                  "There's genius here with this one! I know I am in good hands when it comes to developing and rolling-out effective campaigns to grow my business."
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://dawndelvecchio.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors mt-auto">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  dawndelvecchio.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Alex Kovalchuk -->
+            <div class="group relative h-full">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50" style="min-width: 64px; min-height: 64px; max-width: 64px; max-height: 64px;">
+                    <img 
+                      src="images/AlexK.png" 
+                      alt="Alex Kovalchuk"
+                      width="64"
+                      height="64"
+                      class="object-cover"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                      style="width: 64px; height: 64px;"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Alex Kovalchuk</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Business Owner</p>
+                    <p class="text-luxury-400 text-sm mb-2">Kelowna, BC, Canada</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow min-h-[120px]">
+                  "Troy Increased my business by 300% in only 3 months, dude is a BEAST. Went through Troy's business development program and he completely turned my business around."
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://www.katsencourier.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors mt-auto">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  katsencourier.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Manjit Ruhkra -->
+            <div class="group relative h-full">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50" style="min-width: 64px; min-height: 64px; max-width: 64px; max-height: 64px;">
+                    <img 
+                      src="images/ManjitR.jpg" 
+                      alt="Manjit Ruhkra"
+                      width="64"
+                      height="64"
+                      class="object-cover"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                      style="width: 64px; height: 64px;"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Manjit Ruhkra</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Real Estate Investor</p>
+                    <p class="text-luxury-400 text-sm mb-2">Winnipeg, Manitoba, Canada</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow min-h-[120px]">
+                  "Troy helped me with improving my copy and positioning on social media. His feedback helped me gain perspective on my ideal customer."
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://www.prosperpath.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors mt-auto">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  prosperpath.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Peter Celentano -->
+            <div class="group relative h-full">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50" style="min-width: 64px; min-height: 64px; max-width: 64px; max-height: 64px;">
+                    <img 
+                      src="images/PeterC.jpg" 
+                      alt="Peter Celentano"
+                      width="64"
+                      height="64"
+                      class="object-cover"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                      style="width: 64px; height: 64px;"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Peter Celentano</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Rutgers University</p>
+                    <p class="text-luxury-400 text-sm mb-2">New Jersey, USA</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow min-h-[120px]">
+                  "I attended Rutgers University and Troy's sales training was the highest level sales training I've ever received. I have received 1000x my original investment."
+                </blockquote>
+              </div>
+            </div>
+
+            <!-- Steffen Rachutt -->
+            <div class="group relative h-full">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50" style="min-width: 64px; min-height: 64px; max-width: 64px; max-height: 64px;">
+                    <img 
+                      src="images/SteffenR.jpg" 
+                      alt="Steffen Rachutt"
+                      width="64"
+                      height="64"
+                      class="object-cover"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                      style="width: 64px; height: 64px;"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Steffen Rachutt</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Resonads Advertising</p>
+                    <p class="text-luxury-400 text-sm mb-2">Osnabrück, Germany</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow min-h-[120px]">
+                  "I just had my best month financially, and I do attribute that to you and your consulting Troy. I hired Troy to be a consultant for my business and he absolutely over delivered every single session."
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://resonads.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors mt-auto">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  resonads.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Armaan Hameed -->
+            <div class="group relative h-full">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50" style="min-width: 64px; min-height: 64px; max-width: 64px; max-height: 64px;">
+                    <img 
+                      src="images/ArmaanHameed.jpg" 
+                      alt="Armaan Hameed"
+                      width="64"
+                      height="64"
+                      class="object-cover"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                      style="width: 64px; height: 64px;"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Armaan Hameed</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Digital Strategy @ Google</p>
+                    <p class="text-luxury-400 text-sm mb-2">Toronto, Ontario, Canada</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow min-h-[120px]">
+                  "What started off as a cold call, has turned into a lifelong friendship & that should speak volumes about Troy. He is a strategic thinker and I can lean on him for virtually all professional and personal advice."
+                </blockquote>
+              </div>
+            </div>
+
+            <!-- David Lewis -->
+            <div class="group relative h-full">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50" style="min-width: 64px; min-height: 64px; max-width: 64px; max-height: 64px;">
+                    <img 
+                      src="images/DavidLewis.png" 
+                      alt="David Lewis"
+                      width="64"
+                      height="64"
+                      class="object-cover"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                      style="width: 64px; height: 64px;"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">David Lewis</h3>
+                    <p class="text-luxury-300 text-sm mb-1">The Wild Life Club</p>
+                    <p class="text-luxury-400 text-sm mb-2">Australia</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow min-h-[120px]">
+                  "Troy told me he could accomplish the artistic direction I had briefed him on, in a matter of days. Two days later he presented me with the first draft, it not only fit but it screamed the elements that I needed to represent my company."
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://thewildlife.club/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors mt-auto">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  thewildlife.club
+                </a>
+              </div>
+            </div>
+
+            <!-- Aaron Ludin -->
+            <div class="group relative h-full">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50" style="min-width: 64px; min-height: 64px; max-width: 64px; max-height: 64px;">
+                    <img 
+                      src="images/AaronL.jpg" 
+                      alt="Aaron Ludin"
+                      width="64"
+                      height="64"
+                      class="object-cover"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                      style="width: 64px; height: 64px;"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Aaron Ludin</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Sports Medicine Entrepreneur</p>
+                    <p class="text-luxury-400 text-sm mb-2">Canada</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow min-h-[120px]">
+                  "Troy's approach to strategic positioning has opened my eyes to new opportunities. His workshop provided actionable insights that helped transform my business approach."
+                </blockquote>
+              </div>
+            </div>
+
+            <!-- Johnathan Bowes -->
+            <div class="group relative h-full">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50" style="min-width: 64px; min-height: 64px; max-width: 64px; max-height: 64px;">
+                    <img 
+                      src="images/JohnathonBowes.jpg" 
+                      alt="Johnathan Bowes"
+                      width="64"
+                      height="64"
+                      class="object-cover"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                      style="width: 64px; height: 64px;"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Johnathan Bowes</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Marketer & Artist</p>
+                    <p class="text-luxury-400 text-sm mb-2">USA</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow min-h-[120px]">
+                  "Troy is a constant source of wisdom and inspiration. He spreads ethical business practices and powerful life lessons through communities he fosters with love and honesty."
+                </blockquote>
+              </div>
+            </div>
+
+            <!-- Lane Belone -->
+            <div class="group relative h-full">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50" style="min-width: 64px; min-height: 64px; max-width: 64px; max-height: 64px;">
+                    <img 
+                      src="images/laneb.jpeg" 
+                      alt="Lane Belone"
+                      width="64"
+                      height="64"
+                      class="object-cover"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                      style="width: 64px; height: 64px;"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Lane Belone</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Green Beret Veteran</p>
+                    <p class="text-luxury-400 text-sm mb-2">Soverign Colorado, USA</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow min-h-[120px]">
+                  "Working with Troy was a great pleasure. Troy is an expert at his craft and quickly identified where I needed help with my copywriting."
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://lanebelone.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors mt-auto">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  lanebelone.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Evan Teague -->
+            <div class="group relative h-full">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50" style="min-width: 64px; min-height: 64px; max-width: 64px; max-height: 64px;">
+                    <img 
+                      src="images/EvanTeauge.jpg" 
+                      alt="Evan Teague"
+                      width="64"
+                      height="64"
+                      class="object-cover"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                      style="width: 64px; height: 64px;"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Evan Teague</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Marketing Professional</p>
+                    <p class="text-luxury-400 text-sm mb-2">Denver, Colorado, USA</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow min-h-[120px]">
+                  "Troy is a machine. He actually cares about client success, connection, and building long term relationships. Beyond that? He's studied and mastered his chosen crafts."
+                </blockquote>
+              </div>
+            </div>
+
+            <!-- Dan Sorkin -->
+            <div class="group relative h-full">
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-green/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div class="relative bg-luxury-900/50 backdrop-blur-md rounded-2xl p-6 border border-luxury-700/30 hover:border-luxury-600/50 transition-all duration-300 h-full flex flex-col">
+                <!-- Profile Header -->
+                <div class="flex items-start gap-4 mb-4">
+                  <div class="h-[64px] w-[64px] flex-none rounded-full overflow-hidden border-2 border-luxury-700/50" style="min-width: 64px; min-height: 64px; max-width: 64px; max-height: 64px;">
+                    <img 
+                      src="images/dans.jpeg" 
+                      alt="Dan Sorkin"
+                      width="64"
+                      height="64"
+                      class="object-cover"
+                      loading="lazy"
+                      onerror="this.src='images/placeholder-avatar.svg'"
+                      style="width: 64px; height: 64px;"
+                    >
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-white font-medium text-lg truncate">Dan Sorkin</h3>
+                    <p class="text-luxury-300 text-sm mb-1">Business Owner</p>
+                    <p class="text-luxury-400 text-sm mb-2">Chicago, Illinois, USA</p>
+                    <div class="text-accent-green">★★★★★</div>
+                  </div>
+                </div>
+                <!-- Testimonial Content -->
+                <blockquote class="text-luxury-200 mb-4 text-sm leading-relaxed flex-grow min-h-[120px]">
+                  "I call Troy the preacher for entrepreneurs. Within one conversation he was able to help me rid myself of the one major roadblock in both my business model and mindset."
+                </blockquote>
+                <!-- Website Link -->
+                <a href="https://dansorkin.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm text-accent-green hover:text-accent-green/80 transition-colors mt-auto">
+                  <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  dansorkin.com
+                </a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+      <!-- About Troy Section -->
+      <section id="about" class="pt-8 px-6 relative bg-luxury-950" style="padding-bottom: 0; margin-bottom: 0;">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <div class="inline-block px-3 py-1 mb-4 rounded-full bg-luxury-800/50 border border-luxury-700/50 text-accent-green text-xs tracking-wider backdrop-blur-sm">
+              ABOUT THE EXPERT
+            </div>
+            <h2 class="section-heading text-white mb-4">Meet Troy Assoignon</h2>
+            <p class="text-luxury-300 text-2xl md:text-3xl max-w-3xl mx-auto">Positioning Expert With Over 15+ Years Experience</p>
+          </div>
+
+          <div class="bg-gradient-to-br from-luxury-900 to-luxury-950 backdrop-blur-sm border border-luxury-800/30 rounded-2xl overflow-hidden relative">
+            <div class="grid md:grid-cols-2 items-center">
+              <div class="p-12 md:p-16">
+                <div class="space-y-6">
+                  <p class="text-luxury-500 text-lg md:text-xl tracking-wider mb-6 font-medium">QUICK INTRODUCTION</p>
+                  <p class="text-luxury-300 leading-relaxed">
+                    As a premier Positioning strategist, Troy Assoignon has personally managed millions in ad spend for elite personal brands, creators, and influencers across multiple industries. His expertise transcends platform limitations, focusing instead on architecting the most impactful Positioning strategy for each unique client situation.
+                  </p>
+                  
+                  <p class="text-luxury-300 leading-relaxed">
+                    Troy's strategic vision has produced extraordinary results: orchestrating a campaign that raised $4.5M for a real estate syndicate through precision-targeted messaging, and executing a humanitarian initiative that generated $619,000, directly facilitating the extraction of 2,750 women and children from a conflict zone.
+                  </p>
+                  
+                  <p class="text-luxury-300 leading-relaxed">
+                    Currently advising select entrepreneurs and industry leaders, Troy specializes in identifying clients' unique market differentiators and developing strategic frameworks that convert this Positioning into revenue-generating assets. His methodical approach integrates trust-based sales processes with sophisticated retention strategies, ensuring every element of a brand works in concert to reinforce market position and drive sustainable growth.
+                  </p>
+                  <div class="mt-4 -mb-2">
+                    <img src="/images/troy-sig-white-rt copy.png" alt="Troy Assoignon Signature" class="h-20" style="opacity: 0.5;">
+                  </div>
+                </div>
+              </div>
+              <div class="md:block h-full bg-luxury-950 relative overflow-hidden">
+                <img src="/images/karl-troy-cosntuling2.png" alt="Troy consulting with a client" class="h-full w-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-l from-transparent to-luxury-950 z-10"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Background accent -->
+        <div class="absolute top-1/2 left-1/4 w-[600px] h-[600px] bg-accent-green/5 rounded-full blur-[150px] pointer-events-none"></div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="px-6 relative bg-luxury-900/30" style="margin-top: -120px; padding-top: 140px; padding-bottom: 60px;">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12" style="padding-top: 40px;">
+            <div class="inline-block px-3 py-1 mb-4 rounded-full bg-luxury-800/50 border border-luxury-700/50 text-accent-green text-xs tracking-wider backdrop-blur-sm">
+              WORKSHOP DETAILS
+            </div>
+            <h2 class="section-heading text-white mb-4">Frequently Asked Questions</h2>
+            <p class="text-luxury-300 text-2xl md:text-3xl max-w-5xl mx-auto whitespace-nowrap">Everything you need to know about the 7 Deadly Positioning Mistakes Workshop</p>
+          </div>
+          
+          <!-- FAQ Accordion -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+            <!-- Left Column -->
+            <div class="space-y-6">
+              <!-- FAQ Item 1 -->
+              <div class="faq-item">
+                <button class="faq-toggle" aria-expanded="false">
+                  <h3>What is the 7 Deadly Positioning Mistakes Workshop?</h3>
+                  <div class="icon-container"></div>
+                </button>
+                <div class="faq-content">
+                  <p class="text-luxury-300 leading-relaxed">
+                    This is an interactive weekly workshop where Troy reveals the most common positioning mistakes that 7-figure businesses make that prevent explosive growth. You'll learn actionable strategies to improve your positioning in the market and attract more ideal clients.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- FAQ Item 2 -->
+              <div class="faq-item">
+                <button class="faq-toggle" aria-expanded="false">
+                  <h3>When and where does the workshop take place?</h3>
+                  <div class="icon-container"></div>
+                </button>
+                <div class="faq-content">
+                  <p class="text-luxury-300 leading-relaxed">
+                    The workshop takes place every Thursday at <span class="text-accent-green font-medium">6PM EST, 5PM CST</span>, on <span class="text-accent-green font-medium">Google Meets</span>. When you sign up, you'll automatically receive a calendar invitation with all the details.
+                  </p>
+          </div>
+        </div>
+              
+              <!-- FAQ Item 3 -->
+              <div class="faq-item">
+                <button class="faq-toggle" aria-expanded="false">
+                  <h3>How long is the workshop?</h3>
+                  <div class="icon-container"></div>
+                </button>
+                <div class="faq-content">
+                  <p class="text-luxury-300 leading-relaxed">
+                    Each session lasts approximately <span class="text-accent-green font-medium">1 hour</span>, occasionally extending to 1.5 hours if we include extended hot seats.
+                  </p>
+              </div>
+          </div>
+              
+              <!-- FAQ Item 4 -->
+              <div class="faq-item">
+                <button class="faq-toggle" aria-expanded="false">
+                  <h3>Is the workshop free?</h3>
+                  <div class="icon-container"></div>
+                </button>
+                <div class="faq-content">
+                  <p class="text-luxury-300 leading-relaxed">
+                    The introductory workshop is completely <span class="text-accent-green font-medium">FREE</span>. Advanced training options are available for a fee if you wish to continue your positioning journey.
+                  </p>
+      </div>
+              </div>
+              
+              <!-- FAQ Item 5 -->
+              <div class="faq-item">
+                <button class="faq-toggle" aria-expanded="false">
+                  <h3>Is there a replay available if I can't attend live?</h3>
+                  <div class="icon-container"></div>
+                </button>
+                <div class="faq-content">
+                  <p class="text-luxury-300 leading-relaxed">
+                    Replays are <span class="text-accent-green font-medium">ONLY</span> available to those who attend the live session. If you register but don't attend, you won't receive the replay.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- FAQ Item 6 -->
+              <div class="faq-item">
+                <button class="faq-toggle" aria-expanded="false">
+                  <h3>Who should attend this workshop?</h3>
+                  <div class="icon-container"></div>
+                </button>
+                <div class="faq-content">
+                  <p class="text-luxury-300 leading-relaxed">
+                    This workshop is designed for all professionals, entrepreneurs, and individuals looking to grow their personal brand, company brand, or take their business to the next level. The only prerequisite is an open mind!
+                  </p>
+                </div>
+              </div>
+              
+              <!-- FAQ Item 7 -->
+              <div class="faq-item">
+                <button class="faq-toggle" aria-expanded="false">
+                  <h3>What will I learn in the workshop?</h3>
+                  <div class="icon-container"></div>
+                </button>
+                <div class="faq-content">
+                  <p class="text-luxury-300 leading-relaxed mb-4">You'll learn:</p>
+                  <ul class="text-luxury-300 space-y-2 pl-5 list-disc">
+                    <li>How to position your offer to bring on more clients <span class="text-accent-green">without burning out</span></li>
+                    <li>A proven positioning framework to <span class="text-accent-green">identify your genius</span> and master your messaging</li>
+                    <li>How to productize your expertise using strategies that are working <span class="text-accent-green">NOW in 2025</span></li>
+                    <li>How to position yourself so clients are <span class="text-accent-green">magnetized</span> to you</li>
+                    <li>How to <span class="text-accent-green">stand out</span> in a crowded marketplace</li>
+                    <li>Various types of positioning including brand positioning and personality positioning</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="space-y-6">
+              <!-- FAQ Item 8 -->
+              <div class="faq-item">
+                <button class="faq-toggle" aria-expanded="false">
+                  <h3>Will there be an opportunity to get personalized feedback?</h3>
+                  <div class="icon-container"></div>
+                </button>
+                <div class="faq-content">
+                  <p class="text-luxury-300 leading-relaxed">
+                    <span class="text-accent-green font-medium">Yes!</span> The workshop includes interactive elements where Troy provides personalized feedback to participants. Many testimonials highlight this as one of the most valuable aspects of the workshop.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- FAQ Item 9 -->
+              <div class="faq-item">
+                <button class="faq-toggle" aria-expanded="false">
+                  <h3>Who is Troy?</h3>
+                  <div class="icon-container"></div>
+                </button>
+                <div class="faq-content">
+                  <p class="text-luxury-300 leading-relaxed">
+                    Troy is a positioning and marketing expert who has managed millions of dollars in ad spend for personal brands, creators, and influencers across multiple industries. He's helped clients generate significant revenue uplift (<span class="text-accent-green">$62.7M</span> mentioned), raised <span class="text-accent-green">$4.5M</span> for a real estate syndicate, and even raised <span class="text-accent-green">$619,000</span> for humanitarian efforts.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- FAQ Item 10 -->
+              <div class="faq-item">
+                <button class="faq-toggle" aria-expanded="false">
+                  <h3>What makes this workshop different from others?</h3>
+                  <div class="icon-container"></div>
+                </button>
+                <div class="faq-content">
+                  <p class="text-luxury-300 leading-relaxed">
+                    Based on testimonials, Troy provides personalized feedback that's actionable rather than vague advice. The workshop is interactive, with live Q&A, and focuses on practical strategies you can implement immediately. As one attendee mentioned: <span class="italic">"There's nothing 'surface-level' here - it's the <span class="text-accent-green">real deal</span>."</span>
+                  </p>
+                </div>
+              </div>
+              
+              <!-- FAQ Item 11 -->
+              <div class="faq-item">
+                <button class="faq-toggle" aria-expanded="false">
+                  <h3>What results can I expect?</h3>
+                  <div class="icon-container"></div>
+                </button>
+                <div class="faq-content">
+                  <p class="text-luxury-300 leading-relaxed mb-4">
+                    While results vary, testimonials show significant improvements in business performance after implementing Troy's strategies:
+                  </p>
+                  <ul class="text-luxury-300 space-y-2 pl-5 list-disc mb-4">
+                    <li>Some clients have increased revenue by <span class="text-accent-green font-medium">300%</span> in 3 months</li>
+                    <li>Others have been able to fire problematic clients while increasing income by <span class="text-accent-green font-medium">20%</span></li>
+                    <li>Many report gaining clarity and confidence in their marketing strategy</li>
+                  </ul>
+                  <p class="text-luxury-400 text-sm italic border-l-2 border-accent-green/40 pl-4 py-1">
+                    <strong class="text-accent-green">DISCLAIMER:</strong> These results are NOT typical. Your results will vary based on your industry, experience, execution, and commitment. You must do the work to see results. The workshop provides strategies and guidance, but implementation is entirely your responsibility.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- FAQ Item 12 -->
+              <div class="faq-item">
+                <button class="faq-toggle" aria-expanded="false">
+                  <h3>Do I need any special preparation or materials for the workshop?</h3>
+                  <div class="icon-container"></div>
+                </button>
+                <div class="faq-content">
+                  <p class="text-luxury-300 leading-relaxed">
+                    No special materials are needed. Just come with an <span class="text-accent-green">open mind</span> and be ready to engage with the content. Having your business information handy may help you get more personalized insights during the session.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- FAQ Item 13 -->
+              <div class="faq-item">
+                <button class="faq-toggle" aria-expanded="false">
+                  <h3>How do I register for the workshop?</h3>
+                  <div class="icon-container"></div>
+                </button>
+                <div class="faq-content">
+                  <p class="text-luxury-300 leading-relaxed">
+                    You can <span class="text-accent-green">reserve your seat</span> by filling out the form with your name, email, and phone number on the registration page.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- FAQ Item 14 -->
+              <div class="faq-item">
+                <button class="faq-toggle" aria-expanded="false">
+                  <h3>Can I ask questions during the workshop?</h3>
+                  <div class="icon-container"></div>
+                </button>
+                <div class="faq-content">
+                  <p class="text-luxury-300 leading-relaxed">
+                    <span class="text-accent-green font-medium">Absolutely!</span> The interactive nature of the workshop encourages questions and discussion. This is what makes each session unique and valuable.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- FAQ Item 15 -->
+              <div class="faq-item">
+                <button class="faq-toggle" aria-expanded="false">
+                  <h3>Are there opportunities for further training after the workshop?</h3>
+                  <div class="icon-container"></div>
+                </button>
+                <div class="faq-content">
+                  <p class="text-luxury-300 leading-relaxed">
+                    <span class="text-accent-green font-medium">Yes</span>, Troy offers advanced paid training options for those who want to dive deeper into positioning strategies after attending the free workshop.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Background accent -->
+        <div class="absolute top-1/4 right-1/3 w-[400px] h-[400px] bg-accent-green/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-[500px] h-[500px] bg-accent-green/10 rounded-full blur-[150px] pointer-events-none"></div>
+    </section>
+
+      <!-- JavaScript for FAQ accordion -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const faqToggles = document.querySelectorAll('.faq-toggle');
+          
+          faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', function() {
+              const content = this.nextElementSibling;
+              const faqItem = this.closest('.faq-item');
+              const expanded = this.getAttribute('aria-expanded') === 'true';
+              
+              // Close all other expanded items
+              document.querySelectorAll('.faq-toggle[aria-expanded="true"]').forEach(item => {
+                if (item !== this) {
+                  item.setAttribute('aria-expanded', 'false');
+                  item.nextElementSibling.style.maxHeight = '0px';
+                  item.closest('.faq-item').classList.remove('expanded');
+                }
+              });
+              
+              // Toggle aria-expanded
+              this.setAttribute('aria-expanded', !expanded);
+              
+              // Toggle content visibility with animation
+              if (expanded) {
+                content.style.maxHeight = '0px';
+                faqItem.classList.remove('expanded');
+              } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                faqItem.classList.add('expanded');
+              }
+            });
+          });
+        });
+      </script>
+      
+      <style>
+        .faq-item {
+          background-color: rgba(17, 24, 39, 0.5);
+          backdrop-filter: blur(8px);
+          border-radius: 0.75rem;
+          border: 1px solid rgba(55, 65, 81, 0.3);
+          overflow: hidden;
+          transition: all 0.3s ease;
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-item:hover {
+          border-color: rgba(16, 185, 129, 0.3);
+          transform: translateY(-2px);
+        }
+        
+        .faq-item.expanded {
+          border-color: rgba(16, 185, 129, 0.5);
+        }
+        
+        .faq-toggle {
+          width: 100%;
+          padding: 1.5rem 2rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-align: left;
+          color: white;
+        }
+        
+        .faq-toggle h3 {
+          font-size: 1.25rem;
+          font-weight: 500;
+          font-family: var(--font-display);
+        }
+        
+        .icon-container {
+          position: relative;
+          width: 24px;
+          height: 24px;
+          color: rgb(16, 185, 129);
+          transition: transform 0.3s ease;
+        }
+        
+        .icon-container::before,
+        .icon-container::after {
+          content: "";
+          position: absolute;
+          background-color: currentColor;
+          border-radius: 1px;
+          transition: transform 0.3s ease;
+        }
+        
+        .icon-container::before {
+          width: 18px;
+          height: 2px;
+          top: 11px;
+          left: 3px;
+        }
+        
+        .icon-container::after {
+          width: 2px;
+          height: 18px;
+          top: 3px;
+          left: 11px;
+        }
+        
+        .faq-toggle[aria-expanded="true"] .icon-container::after {
+          transform: rotate(90deg);
+        }
+        
+        .faq-content {
+          max-height: 0;
+          overflow: hidden;
+          padding: 0 2rem;
+          transition: max-height 0.3s ease;
+          color: rgb(209, 213, 219);
+          line-height: 1.6;
+        }
+        
+        .faq-toggle[aria-expanded="true"] + .faq-content {
+          padding-bottom: 2rem;
+        }
+      </style>
+    </div>
+</body>
+</html> 

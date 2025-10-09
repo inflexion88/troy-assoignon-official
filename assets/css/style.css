@@ -2185,3 +2185,20 @@ html:not(.dark) .luxury-footer .premium-tag {
     opacity: 0;
   }
 }
+
+/* Android/Xiaomi Poco Font Smoothing - Phase 2 Fix */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* High DPI Android device adjustments */
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px),
+       screen and (min-resolution: 192dpi) and (max-width: 768px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}
+

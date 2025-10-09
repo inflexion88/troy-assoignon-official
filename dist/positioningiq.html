@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PositioningIQ - Matrix Terminal</title>
+    <meta name="description" content="PositioningIQ - Strategic Brand Positioning Terminal" />
+    <meta name="author" content="Troy Assoignon" />
+    <meta property="og:image" content="/og-image.png" />
+    <style>
+      /* Critical inline animations */
+      @keyframes matrixRain {
+        0% { 
+          transform: translateY(-100%) translateX(0);
+          opacity: 0;
+        }
+        10% { opacity: 0.4; }
+        90% { opacity: 0.4; }
+        100% { 
+          transform: translateY(100vh) translateX(0);
+          opacity: 0;
+        }
+      }
+      
+      /* Reduce space above and tighten hero content */
+      .matrix-hero {
+        padding-top: 4rem !important;
+      }
+
+      .matrix-hero__content {
+        gap: 0.5rem !important;
+        margin-bottom: 1rem !important;
+      }
+
+      .matrix-hero__title {
+        margin: 0 !important;
+        line-height: 1.1 !important;
+      }
+
+      .matrix-hero__terminal {
+        padding-top: 1rem !important;
+      }
+
+      /* Force terminal width */
+      .terminal-container {
+        width: 832px !important;
+        max-width: 832px !important;
+        min-width: 832px !important;
+      }
+      
+      .terminal-window {
+        width: 100% !important;
+        height: 100% !important;
+      }
+      
+      .background-matrix-rain {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+      }
+      
+      .name-matrix-rain {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+        overflow: hidden;
+      }
+      
+      .background-matrix-column {
+        position: absolute;
+        top: -100%;
+        white-space: pre;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1;
+        color: rgba(101, 228, 143, 0.2);
+        animation: matrixRain 3s linear forwards;
+        transform: translateX(0);
+      }
+      
+      .name-matrix-column {
+        position: absolute;
+        top: -100%;
+        white-space: pre;
+        font-family: monospace;
+        font-size: 24px;
+        line-height: 1;
+        color: rgba(101, 228, 143, 0.4);
+        font-weight: bold;
+        animation: matrixRain 4s linear forwards;
+        transform: translateX(0);
+      }
+
+      .matrix-rain-background,
+      .matrix-rain-foreground {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .matrix-rain-background {
+        z-index: 1;
+        mix-blend-mode: screen;
+      }
+
+      .matrix-rain-foreground {
+        z-index: 2;
+        mix-blend-mode: screen;
+      }
+
+      .matrix-rain-background .matrix-rain-column,
+      .matrix-rain-foreground .matrix-rain-column {
+        position: absolute;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1;
+        color: rgba(101, 228, 143, 0.6);
+        text-shadow: 0 0 8px rgba(101, 228, 143, 0.4);
+        white-space: pre;
+        opacity: 0;
+        will-change: transform;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+
+      .matrix-rain-foreground .matrix-rain-column {
+        font-family: 'Courier New', monospace;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      /* Add styles for loading interface */
+      #loading-interface {
+        background: transparent !important;
+      }
+
+      #terminal-static {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/terminal.css">
+  </head>
+  <body class="bg-black">
+    <div id="root">
+      <!-- Matrix Hero Section -->
+      <section class="matrix-hero">
+        <!-- Background Layers -->
+        <div class="matrix-hero__layer matrix-hero__layer--grid"></div>
+        <div class="matrix-hero__layer matrix-hero__layer--glow matrix-hero__layer--glow-right"></div>
+        <div class="matrix-hero__layer matrix-hero__layer--glow-left"></div>
+        <div class="matrix-hero__layer matrix-hero__layer--matrix">
+          <div class="matrix-rain-background"></div>
+          <div class="matrix-rain-foreground"></div>
+        </div>
+        <div class="matrix-hero__layer matrix-hero__layer--noise"></div>
+
+        <!-- Hero Content -->
+        <div class="matrix-hero__content">
+          <div class="matrix-hero__eyebrow">SYSTEM ACCESS</div>
+          <h1 class="matrix-hero__title">
+            <span class="luxury-gradient">Positioning Matrix</span>
+          </h1>
+          <p class="matrix-hero__lead">
+            Enter the system to unlock strategic positioning intelligence
+          </p>
+        </div>
+
+        <!-- Terminal Interface -->
+        <div class="matrix-hero__terminal">
+          <div class="matrix-hero__interface" id="loading-interface">
+        <div class="terminal-container">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="terminal-title">PositioningIQ - Competitive Intelligence System</div>
+            </div>
+            <div class="terminal-content">
+              <div class="terminal-output" id="terminal-output">
+                <div class="line system-msg">Terminal active...</div>
+                <div class="line system-msg">Connection tracking...</div>
+                <div class="line system-msg">Signal intercepted.</div>
+                <div class="line blink-cursor" id="name-prompt"></div>
+              </div>
+              <div class="terminal-input-container" id="name-input-container" style="display: none;">
+                <span class="prompt">>></span>
+                <input type="text" id="name-input" class="terminal-input" autocomplete="off" maxlength="20" placeholder="Enter your name">
+              </div>
+              <div class="terminal-input-container" id="email-input-container" style="display: none;">
+                <span class="prompt">>></span>
+                <input type="email" id="email-input" class="terminal-input" autocomplete="off" placeholder="Enter your email (optional)">
+              </div>
+              <div class="loading-bar-container" id="loading-bar-container" style="display: none;">
+                <div class="pixel-loading-bar" id="loading-bar-fill">
+                  <div class="pixel-segments"></div>
+                </div>
+                <div class="loading-percentage" id="loading-percentage">0%</div>
+              </div>
+              <div class="pill-choice-container" id="pill-choice-container" style="display: none;">
+                <div class="pill-prompt">Choose your path...</div>
+                <div class="pill-options">
+                  <button id="red-pill" class="pill-button red-pill" data-choice="red">Red Pill</button>
+                  <button id="blue-pill" class="pill-button blue-pill" data-choice="blue">Blue Pill</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="../assets/js/terminal-init.js"></script>
+  </body>
+</html> 

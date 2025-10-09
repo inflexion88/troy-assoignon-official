@@ -2,7 +2,7 @@
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
     <title>Troy Assoignon - Strategic Brand Positioning</title>
     <meta name="description" content="Strategic brand positioning and luxury marketing services" />
     <meta name="author" content="Troy Assoignon" />
@@ -60,7 +60,9 @@
                 The Wrong Position Could Cost<br class="block sm:hidden"> <span class="sm:inline">You Millions in Lost Deals</span>
               </h2>
 
-              <p class="text-sm sm:text-lg md:text-xl lg:text-[22px] xl:text-[26px] text-luxury-300 max-w-3xl lg:max-w-4xl mx-auto mb-8 leading-normal sm:leading-relaxed">
+              <!-- Phase 3 Fix: Changed text-sm to text-base (14px→16px) for WCAG 2.2 compliance -->
+              <!-- Set to 1100px width, reduced desktop font sizes slightly (lg: 22→20px, xl: 26→24px) -->
+              <p class="text-base sm:text-lg md:text-xl lg:text-[20px] xl:text-[24px] text-luxury-300 max-w-[1100px] mx-auto mb-8 leading-snug">
                 McKinsey reports brands with precise positioning see 20-40% higher profit margins and command 15-25% in price premiums. I've systematized this so thoroughly, my AI positioning agent won 2nd place in a national ElevenLabs hackathon. $62.7M in client results prove it works.
               </p>
 
@@ -140,10 +142,13 @@
           </nav>
           
           <div class="md:hidden flex items-center space-x-4">
-            <button 
+            <!-- Phase 3 Fix: Enhanced ARIA attributes for WCAG compliance -->
+            <button
               id="mobile-menu-button"
-              class="text-luxury-300 hover:text-white transition-colors" 
+              class="text-luxury-300 hover:text-white transition-colors"
               aria-label="Toggle menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
             >
               <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="4" y1="12" x2="20" y2="12"></line>

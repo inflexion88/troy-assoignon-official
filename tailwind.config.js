@@ -131,6 +131,21 @@ module.exports = {
         'slide-up': 'slide-up 0.7s ease-out forwards',
         'glow-pulse': 'glow-pulse 3s infinite',
         'rise-slow': 'rise-slow 8s ease-in-out infinite'
+      },
+      // Phase 2 Fix: Touch-friendly utilities for Xiaomi Poco and WCAG compliance
+      minHeight: {
+        'touch': '44px',      // WCAG AAA touch target minimum
+        'touch-aa': '24px',   // WCAG AA touch target minimum
+      },
+      minWidth: {
+        'touch': '44px',      // WCAG AAA touch target minimum
+        'touch-aa': '24px',   // WCAG AA touch target minimum
+      },
+      spacing: {
+        'safe-top': 'env(safe-area-inset-top)',
+        'safe-bottom': 'env(safe-area-inset-bottom)',
+        'safe-left': 'env(safe-area-inset-left)',
+        'safe-right': 'env(safe-area-inset-right)',
       }
     }
   },

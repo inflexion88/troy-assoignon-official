@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+<html lang="en" class="dark">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fractional CMO & CAIo - Troy Assoignon</title>
+
+    <meta name="description" content="Fractional Chief Marketing Officer and Chief AI Officer services for luxury brands" />
+
+    <meta name="author" content="Troy Assoignon" />
+
+    <meta property="og:image" content="/og-image.png" />
+  <script type="module" crossorigin src="/assets/js/style.js"></script>
+  <script type="module" crossorigin src="/assets/js/main2.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/css/style.css">
+</head>
+
+  <body class="bg-black text-white">
+
+    <div id="root">
+
+      <!-- Navbar -->
+
+      <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 py-4 md:py-6 bg-black/80 backdrop-blur-md shadow-md">
+
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+          <a href="/" class="text-xl font-display font-bold tracking-tight flex items-center">
+
+            <span class="luxury-gradient">TROY ASSOIGNON</span>
+
+            <span class="bg-accent-green h-1.5 w-1.5 rounded-full ml-1 mt-1"></span>
+
+          </a>
+
+          
+
+          <nav class="hidden md:flex items-center space-x-8">
+
+            <a href="/" class="back-button" aria-label="Return to home page">
+
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+
+              </svg>
+
+              Back to Home
+
+            </a>
+
+            <a href="/#services" class="nav-item">Services</a>
+
+            <a href="/#about" class="nav-item">About</a>
+
+            <a href="/#process" class="nav-item">Process</a>
+
+            <a href="/contact.html" class="button-primary">Get in Touch</a>
+
+          </nav>
+
+          
+
+          <button 
+
+            id="mobile-menu-button"
+
+            class="md:hidden text-luxury-300 hover:text-white transition-colors" 
+
+            aria-label="Toggle menu"
+
+          >
+
+            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+
+              <line x1="4" y1="6" x2="20" y2="6"></line>
+
+              <line x1="4" y1="18" x2="20" y2="18"></line>
+
+            </svg>
+
+            <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+              <path d="M18 6L6 18M6 6l12 12"></path>
+
+            </svg>
+
+          </button>
+
+        </div>
+
+        
+
+        <!-- Mobile Menu -->
+
+        <div id="mobile-menu" class="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center space-y-8 pt-20 transition-all duration-500 ease-in-out transform opacity-0 translate-x-full pointer-events-none">
+
+          <a href="/" class="back-button" aria-label="Return to home page">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+
+            </svg>
+
+          </a>
+
+          <a href="/#services" class="nav-item text-xl">Services</a>
+
+          <a href="/#about" class="nav-item text-xl">About</a>
+
+          <a href="/#process" class="nav-item text-xl">Process</a>
+
+          <a href="/contact.html" class="button-primary text-xl mt-4">Get in Touch</a>
+
+        </div>
+
+      </header>
+
+      <!-- Navigation safety overlay -->
+
+      <div class="fixed top-0 left-0 right-0 h-20 bg-transparent z-[900] pointer-events-none"></div>
+
+      <!-- Service Content -->
+
+      <main class="pt-32 pb-24 px-6 bg-gradient-to-b from-black to-luxury-950">
+
+        <div class="max-w-4xl mx-auto">
+
+          <!-- Service Header -->
+
+          <div class="flex items-center mb-12">
+
+            <div class="p-4 bg-accent-green/10 rounded-lg border border-accent-green/20 mr-6">
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-green">
+
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+              </svg>
+
+            </div>
+
+            <h1 class="text-3xl md:text-4xl font-display font-bold text-white">Fractional CMO & CAIo</h1>
+
+          </div>
+
+          
+
+          <!-- Featured Flag -->
+
+          <div class="inline-block px-3 py-1 mb-8 rounded-full bg-accent-green/10 border border-accent-green/20 text-accent-green text-xs tracking-wider backdrop-blur-sm">
+
+            FEATURED SERVICE
+
+          </div>
+
+          
+
+          <!-- Service Details -->
+
+          <div class="space-y-8 text-luxury-300">
+
+            <p class="text-xl leading-relaxed">For elite brands seeking to leverage AI-driven marketing and positioning strategies without the expense of a full AI team, our Fractional CMO & CAIo service provides executive-level guidance on implementing artificial intelligence into your brand positioning and customer engagement strategies.</p>
+
+            
+
+            <p>As your Fractional CMO and Chief AI Officer, I bring sophisticated AI implementation expertise alongside a decade of brand building & conversion marketing experience to your leadership team, providing strategic direction and hands-on implementation support for AI-powered marketing initiatives.</p>
+
+            
+
+            <h2 class="text-2xl font-display font-medium mt-12 mb-6 text-luxury-100">AI-Enhanced Marketing Services</h2>
+
+            
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+
+              <div class="glass p-6 backdrop-blur-lg border border-luxury-800/30 hover:border-accent-green/20 transition-all duration-300">
+
+                <h3 class="text-lg font-medium mb-3 text-luxury-100">AI Strategy Development</h3>
+
+                <p class="text-sm">Create AI-powered marketing and positioning strategies aligned with business objectives and market opportunities.</p>
+
+              </div>
+
+              <div class="glass p-6 backdrop-blur-lg border border-luxury-800/30 hover:border-accent-green/20 transition-all duration-300">
+
+                <h3 class="text-lg font-medium mb-3 text-luxury-100">AI Implementation</h3>
+
+                <p class="text-sm">Execute AI-driven campaigns, content creation, and customer journey optimization leveraging cutting-edge AI technologies.</p>
+
+              </div>
+
+              <div class="glass p-6 backdrop-blur-lg border border-luxury-800/30 hover:border-accent-green/20 transition-all duration-300">
+
+                <h3 class="text-lg font-medium mb-3 text-luxury-100">Data-Driven Insights</h3>
+
+                <p class="text-sm">Harness AI to extract actionable intelligence from marketing data, enabling more precise positioning and targeting.</p>
+
+              </div>
+
+            </div>
+
+            
+
+            <h2 class="text-2xl font-display font-medium mt-12 mb-6 text-luxury-100">The AI-Enhanced Marketing Approach</h2>
+
+            
+
+            <p>My approach integrates advanced AI technologies with strategic marketing expertise, creating a powerful combination that leverages data-driven insights while maintaining the human touch essential for brand positioning.</p>
+
+            
+
+            <div class="flex flex-col md:flex-row gap-6 mt-6 mb-12">
+
+              <div class="flex items-start">
+
+                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-luxury-800 text-luxury-200 mr-4 flex-shrink-0">1</div>
+
+                <div>
+
+                  <h3 class="text-base font-medium text-luxury-200 mb-1">AI Assessment</h3>
+
+                  <p class="text-sm text-luxury-400">Evaluating current positioning and AI-readiness</p>
+
+                </div>
+
+              </div>
+
+              <div class="flex items-start">
+
+                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-luxury-800 text-luxury-200 mr-4 flex-shrink-0">2</div>
+
+                <div>
+
+                  <h3 class="text-base font-medium text-luxury-200 mb-1">AI Strategy</h3>
+
+                  <p class="text-sm text-luxury-400">Developing AI-enhanced marketing plans</p>
+
+                </div>
+
+              </div>
+
+              <div class="flex items-start">
+
+                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-luxury-800 text-luxury-200 mr-4 flex-shrink-0">3</div>
+
+                <div>
+
+                  <h3 class="text-base font-medium text-luxury-200 mb-1">Implementation</h3>
+
+                  <p class="text-sm text-luxury-400">Executing AI-powered initiatives</p>
+
+                </div>
+
+              </div>
+
+              <div class="flex items-start">
+
+                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-luxury-800 text-luxury-200 mr-4 flex-shrink-0">4</div>
+
+                <div>
+
+                  <h3 class="text-base font-medium text-luxury-200 mb-1">Optimization</h3>
+
+                  <p class="text-sm text-luxury-400">Refining through AI-driven analytics</p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            
+
+            <h2 class="text-2xl font-display font-medium mt-12 mb-6 text-luxury-100">Why AI-Enhanced Marketing Leadership Matters</h2>
+
+            
+
+            <p>In today's rapidly evolving digital landscape, brands that fail to leverage AI technologies risk being left behind. Our Fractional CMO & CAIo service provides the strategic AI guidance you need with the flexibility your business requires.</p>
+
+            
+
+            <ul class="space-y-4 ml-6 mt-6">
+
+              <li class="flex items-start">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-green mt-1 mr-4 flex-shrink-0">
+
+                  <polyline points="20 6 9 17 4 12"></polyline>
+
+                </svg>
+
+                <span>Access executive AI and marketing expertise without the cost of a full AI team</span>
+
+              </li>
+
+              <li class="flex items-start">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-green mt-1 mr-4 flex-shrink-0">
+
+                  <polyline points="20 6 9 17 4 12"></polyline>
+
+                </svg>
+
+                <span>Implement cutting-edge AI technologies tailored to your brand's unique positioning</span>
+
+              </li>
+
+              <li class="flex items-start">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-green mt-1 mr-4 flex-shrink-0">
+
+                  <polyline points="20 6 9 17 4 12"></polyline>
+
+                </svg>
+
+                <span>Leverage AI-driven insights to create more personalized and effective marketing campaigns</span>
+
+              </li>
+
+            </ul>
+
+            
+
+            <div class="glass p-8 mt-12 backdrop-blur-lg border border-luxury-800/30">
+
+              <h3 class="text-xl font-display font-medium mb-4 text-luxury-100">Success Story</h3>
+
+              <blockquote class="text-luxury-300 italic mb-6 relative">
+
+                <span class="text-4xl text-accent-green/20 absolute top-0 left-0 transform -translate-x-4 -translate-y-2">"</span>
+
+                Troy Increased my business by 300% in only 3 months, dude is a BEAST. Went through Troy's business development program and he completely turned my business around.
+
+                <span class="text-4xl text-accent-green/20 absolute bottom-0 right-0 transform translate-x-2 translate-y-2">"</span>
+
+              </blockquote>
+
+              <div class="flex items-center">
+
+                <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-luxury-700/50 mr-3">
+                  <img
+                    src="/images/AlexK.png"
+                    alt="Alex Kovalchuk"
+                    class="object-cover w-full h-full"
+                    loading="lazy"
+                    onerror="this.src='/images/placeholder-avatar.svg'"
+                  >
+                </div>
+
+                <div>
+
+                  <div class="text-sm font-medium text-luxury-200">Alex Kovalchuk</div>
+
+                  <div class="text-xs text-luxury-400">Business Owner, Kelowna, BC, Canada</div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            
+
+            <h2 class="text-2xl font-display font-medium mt-12 mb-6 text-luxury-100">AI-Enhanced Marketing Applications</h2>
+
+            
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+
+              <div class="glass p-6 backdrop-blur-lg border border-luxury-800/30">
+
+                <h3 class="text-lg font-medium mb-3 text-accent-green">Personalization at Scale</h3>
+
+                <p class="text-sm text-luxury-300">Deploy AI systems that create hyper-personalized experiences for your audience without sacrificing your brand's premium feel.</p>
+
+              </div>
+
+              <div class="glass p-6 backdrop-blur-lg border border-luxury-800/30">
+
+                <h3 class="text-lg font-medium mb-3 text-accent-green">Predictive Analytics</h3>
+
+                <p class="text-sm text-luxury-300">Anticipate market shifts and customer behavior through sophisticated AI-powered predictive models.</p>
+
+              </div>
+
+              <div class="glass p-6 backdrop-blur-lg border border-luxury-800/30">
+
+                <h3 class="text-lg font-medium mb-3 text-accent-green">Generative Content</h3>
+
+                <p class="text-sm text-luxury-300">Create premium content at scale while maintaining your brand voice through advanced AI systems.</p>
+
+              </div>
+
+              <div class="glass p-6 backdrop-blur-lg border border-luxury-800/30">
+
+                <h3 class="text-lg font-medium mb-3 text-accent-green">Competitive Intelligence</h3>
+
+                <p class="text-sm text-luxury-300">Monitor and analyze competitor positioning using AI to identify opportunities in the market.</p>
+
+              </div>
+
+            </div>
+
+            
+
+            <p class="mt-8">This service is ideal for:</p>
+
+            
+
+            <ul class="space-y-4 ml-6 mt-4">
+
+              <li class="flex items-start">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-green mt-1 mr-4 flex-shrink-0">
+
+                  <circle cx="12" cy="12" r="10"></circle>
+
+                  <path d="M12 16v-4"></path>
+
+                  <path d="M12 8h.01"></path>
+
+                </svg>
+
+                <span>Brands seeking to leverage AI without compromising brand exclusivity</span>
+
+              </li>
+
+              <li class="flex items-start">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-green mt-1 mr-4 flex-shrink-0">
+
+                  <circle cx="12" cy="12" r="10"></circle>
+
+                  <path d="M12 16v-4"></path>
+
+                  <path d="M12 8h.01"></path>
+
+                </svg>
+
+                <span>High-growth companies needing AI expertise but not ready for a full AI department</span>
+
+              </li>
+
+              <li class="flex items-start">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-green mt-1 mr-4 flex-shrink-0">
+
+                  <circle cx="12" cy="12" r="10"></circle>
+
+                  <path d="M12 16v-4"></path>
+
+                  <path d="M12 8h.01"></path>
+
+                </svg>
+
+                <span>Established brands looking to modernize their marketing approach with AI innovation</span>
+
+              </li>
+
+            </ul>
+
+            
+
+            <!-- Investment Range -->
+
+            <div class="mt-16 p-8 bg-gradient-to-br from-luxury-900/70 to-luxury-950/70 backdrop-blur-lg border border-luxury-800/30 rounded-xl">
+
+              <h3 class="text-xl font-display font-medium mb-4 text-luxury-100 text-center">Investment</h3>
+
+              <div class="text-center">
+
+                <div class="text-accent-green text-xl font-medium mb-2">$10,000 - $25,000 per month</div>
+
+                <p class="text-luxury-400 text-sm">Custom engagement based on scope and requirements</p>
+
+              </div>
+
+            </div>
+
+            
+
+            <!-- CTA Section -->
+
+            <div class="mt-12 text-center">
+
+              <h2 class="text-2xl font-display font-medium mb-6 text-luxury-100">Ready to Transform Your Marketing with AI?</h2>
+
+              <a href="/contact.html" class="button-primary inline-block px-8 py-3">
+
+                Schedule a Consultation
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </main>
+
+      <!-- Footer -->
+
+      <footer class="py-12 px-6 bg-black border-t border-luxury-800/20">
+
+        <div class="max-w-7xl mx-auto">
+
+          <div class="flex flex-col md:flex-row justify-between items-center">
+
+            <div class="mb-6 md:mb-0">
+
+              <a href="/" class="text-xl font-display font-bold tracking-tight flex items-center">
+
+                <span class="luxury-gradient">TROY ASSOIGNON</span>
+
+                <span class="bg-accent-green h-1.5 w-1.5 rounded-full ml-1 mt-1"></span>
+
+              </a>
+
+              <p class="text-sm text-luxury-500 mt-2">AI-Enhanced Luxury Positioning</p>
+
+            </div>
+
+            
+
+            <nav class="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4 mb-8 md:mb-0">
+
+              <a href="/#services" class="text-sm text-luxury-400 hover:text-luxury-200 transition-colors">Services</a>
+
+              <a href="/#about" class="text-sm text-luxury-400 hover:text-luxury-200 transition-colors">About</a>
+
+              <a href="/#process" class="text-sm text-luxury-400 hover:text-luxury-200 transition-colors">Process</a>
+
+              <a href="/contact.html" class="text-sm text-luxury-400 hover:text-luxury-200 transition-colors">Contact</a>
+
+            </nav>
+
+          </div>
+
+          
+
+          <div class="border-t border-luxury-800/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+
+            <div class="text-xs text-luxury-600 mb-4 md:mb-0">
+
+               <span id="current-year">2023</span> Troy Assoignon. All rights reserved.
+
+            </div>
+
+            
+
+            <div class="flex space-x-6">
+
+              <a href="/privacy" class="text-xs text-luxury-600 hover:text-luxury-400 transition-colors">Privacy Policy</a>
+
+              <a href="/terms" class="text-xs text-luxury-600 hover:text-luxury-400 transition-colors">Terms of Service</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </footer>
+
+    </div>
+
+  
+
+    <!-- Scripts -->
+
+
+
+  </body>
+
+</html> \n
+
+
+
+
+
+
+
+
+
+

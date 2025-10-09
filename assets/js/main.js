@@ -11,6 +11,27 @@ import { setupMatrixRain } from './matrix-rain.js';
 import { setupTransformationMatrix } from './transformation-matrix.js';
 import { debugLog, warnLog } from './logger.js';
 
+// Phase 2 Fix: Throttle utility for scroll performance on Xiaomi Poco
+const throttle = (func, delay) => {
+  let lastCall = 0;
+  let timeoutId = null;
+  return function(...args) {
+    const now = Date.now();
+    const timeSinceLastCall = now - lastCall;
+
+    if (timeSinceLastCall >= delay) {
+      lastCall = now;
+      func.apply(this, args);
+    } else {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        lastCall = Date.now();
+        func.apply(this, args);
+      }, delay - timeSinceLastCall);
+    }
+  };
+};
+
 const runAfterIdle = (callback, timeout = 200) => {
   if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
     window.requestIdleCallback(callback, { timeout });
@@ -105,44 +126,55 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-// Initialize Mobile Menu// Initialize Mobile Menu
+// Initialize Mobile Menu
 function initMobileMenu() {
   const menuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
   const menuIcon = document.getElementById('menu-icon');
   const closeIcon = document.getElementById('close-icon');
-  
+
   if (menuButton && mobileMenu) {
+    // Phase 3 Fix: Close menu function for WCAG keyboard navigation
+    const closeMenu = () => {
+      mobileMenu.classList.remove('opacity-100', 'translate-x-0', 'pointer-events-auto');
+      mobileMenu.classList.add('opacity-0', 'translate-x-full', 'pointer-events-none');
+      menuIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+      menuButton.setAttribute('aria-expanded', 'false');
+    };
+
+    // Phase 3 Fix: Open menu function for WCAG keyboard navigation
+    const openMenu = () => {
+      mobileMenu.classList.remove('opacity-0', 'translate-x-full', 'pointer-events-none');
+      mobileMenu.classList.add('opacity-100', 'translate-x-0', 'pointer-events-auto');
+      menuIcon.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+      menuButton.setAttribute('aria-expanded', 'true');
+    };
+
     menuButton.addEventListener('click', () => {
       const isOpen = mobileMenu.classList.contains('opacity-100');
-      
       if (isOpen) {
-        // Close the menu
-        mobileMenu.classList.remove('opacity-100', 'translate-x-0', 'pointer-events-auto');
-        mobileMenu.classList.add('opacity-0', 'translate-x-full', 'pointer-events-none');
-        menuIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden');
+        closeMenu();
       } else {
-        // Open the menu
-        mobileMenu.classList.remove('opacity-0', 'translate-x-full', 'pointer-events-none');
-        mobileMenu.classList.add('opacity-100', 'translate-x-0', 'pointer-events-auto');
-        menuIcon.classList.add('hidden');
-        closeIcon.classList.remove('hidden');
-        document.body.classList.add('overflow-hidden');
+        openMenu();
       }
     });
-    
+
+    // Phase 3 Fix: Escape key to close menu (WCAG keyboard navigation)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('opacity-100')) {
+        closeMenu();
+        menuButton.focus();
+      }
+    });
+
     // Close mobile menu when clicking on a nav item
     const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
     mobileNavItems.forEach(item => {
-      item.addEventListener('click', () => {
-        mobileMenu.classList.remove('opacity-100', 'translate-x-0', 'pointer-events-auto');
-        mobileMenu.classList.add('opacity-0', 'translate-x-full', 'pointer-events-none');
-        menuIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden');
-      });
+      item.addEventListener('click', closeMenu);
     });
   }
 }
@@ -173,8 +205,9 @@ function initNavbarScroll() {
   if (navbar) {
     // Ensure navbar is above matrix background
     navbar.style.zIndex = '1000';
-    
-    window.addEventListener('scroll', () => {
+
+    // Phase 2 Fix: Throttle navbar scroll to 100ms for Xiaomi Poco performance
+    const handleNavbarScroll = throttle(() => {
       if (window.scrollY > 50) {
         navbar.classList.add('bg-black/80', 'backdrop-blur-md', 'shadow-md');
         navbar.classList.remove('bg-transparent');
@@ -182,8 +215,10 @@ function initNavbarScroll() {
         navbar.classList.remove('bg-black/80', 'backdrop-blur-md', 'shadow-md');
         navbar.classList.add('bg-transparent');
       }
-    });
-    
+    }, 100);
+
+    window.addEventListener('scroll', handleNavbarScroll);
+
     // Trigger the scroll handler once to set initial state
     if (window.scrollY > 50) {
       navbar.classList.add('bg-black/80', 'backdrop-blur-md', 'shadow-md');
@@ -260,39 +295,46 @@ function initContactForm() {
 function initParallaxEffect() {
   const parallaxContainer = document.getElementById('parallax-container');
   const parallaxImage = document.getElementById('parallax-image');
-  
+
+  // Phase 2 Fix: Throttle parallax scroll to 16ms (~60fps) for Xiaomi Poco performance
   if (parallaxContainer && parallaxImage) {
-    window.addEventListener('scroll', () => {
+    const handleParallaxScroll = throttle(() => {
       const scrollY = window.scrollY;
       const containerTop = parallaxContainer.getBoundingClientRect().top + scrollY;
       const containerHeight = parallaxContainer.offsetHeight;
       const windowHeight = window.innerHeight;
-      
+
       // Check if the container is in the viewport
       if (
-        scrollY + windowHeight > containerTop && 
+        scrollY + windowHeight > containerTop &&
         scrollY < containerTop + containerHeight
       ) {
         // Calculate how much to translate the image based on scroll position
         const offset = (scrollY + windowHeight - containerTop) / (containerHeight + windowHeight);
         const translateY = Math.min(20, offset * 40); // Max 20px movement
-        
+
         // Apply parallax effect
         parallaxImage.style.transform = `translateY(-${translateY}px)`;
       }
-    });
+    }, 16);
+
+    window.addEventListener('scroll', handleParallaxScroll);
   }
-  
+
   // About image scroll effect
   const aboutImage = document.getElementById('about-image');
-  window.addEventListener('scroll', () => {
-    if (!aboutImage) return;
-    const rect = aboutImage.getBoundingClientRect();
-    const scrollPercent = Math.min(Math.max((window.innerHeight - rect.top) / (window.innerHeight + rect.height), 0), 1);
-    
-    aboutImage.style.transform = `scale(${1 + scrollPercent * 0.05})`;
-    aboutImage.style.filter = `brightness(${0.8 + scrollPercent * 0.2})`;
-  });
+  if (aboutImage) {
+    // Phase 2 Fix: Throttle about image scroll to 16ms (~60fps) for Xiaomi Poco performance
+    const handleAboutImageScroll = throttle(() => {
+      const rect = aboutImage.getBoundingClientRect();
+      const scrollPercent = Math.min(Math.max((window.innerHeight - rect.top) / (window.innerHeight + rect.height), 0), 1);
+
+      aboutImage.style.transform = `scale(${1 + scrollPercent * 0.05})`;
+      aboutImage.style.filter = `brightness(${0.8 + scrollPercent * 0.2})`;
+    }, 16);
+
+    window.addEventListener('scroll', handleAboutImageScroll);
+  }
 }
 
 // Update copyright year

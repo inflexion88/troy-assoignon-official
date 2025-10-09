@@ -142,25 +142,6 @@
               Contact
             </a>
           </nav>
-          
-          <!-- Mobile hamburger - fixed position to ensure visibility -->
-          <button
-            id="mobile-menu-button"
-            class="md:hidden fixed top-4 right-4 z-[99999] p-4 bg-accent-green hover:bg-accent-green/80 transition-colors shadow-2xl"
-            style="width: 56px; height: 56px; border-radius: 12px;"
-            aria-label="Toggle menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto;">
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-            <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto;">
-              <path d="M18 6L6 18M6 6l12 12"></path>
-            </svg>
-          </button>
         </div>
         
         <!-- Mobile Menu -->
@@ -196,6 +177,31 @@
           </div>
         </div>
       </header>
+
+      <!-- Mobile hamburger - OUTSIDE navbar to force visibility -->
+      <style>
+        #mobile-menu-button { display: flex !important; }
+        @media (min-width: 768px) {
+          #mobile-menu-button { display: none !important; }
+        }
+      </style>
+      <button
+        id="mobile-menu-button"
+        style="position: fixed !important; top: 16px !important; right: 16px !important; z-index: 999999 !important; width: 56px !important; height: 56px !important; background-color: #65E48F !important; border-radius: 12px !important; padding: 12px !important; display: flex !important; align-items: center !important; justify-content: center !important; box-shadow: 0 10px 40px rgba(101, 228, 143, 0.5) !important; cursor: pointer !important; border: none !important;"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg id="close-icon" style="display: none !important;" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6L6 18M6 6l12 12"></path>
+        </svg>
+      </button>
+
       <!-- Unified Transformation Section -->
       <section id="transformation" class="pt-8 md:pt-10 pb-12 md:pb-14 px-6 relative bg-luxury-950 overflow-hidden">
         <!-- Matrix Rain Background Effect -->

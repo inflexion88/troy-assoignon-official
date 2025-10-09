@@ -40,7 +40,8 @@
             </div>
 
             <!-- Main hero content -->
-            <div class="max-w-7xl mx-auto text-center mb-12 sm:mb-16 px-4">
+            <!-- Mobile fix: px-2 on mobile for more text width, px-4 on desktop -->
+            <div class="max-w-7xl mx-auto text-center mb-12 sm:mb-16 px-2 sm:px-4">
               <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 relative leading-tight tracking-tight sm:tracking-normal">
                 <span class="text-accent-green font-black" style="font-weight: 900;">Positioning</span><span class="text-luxury-600">|</span><span class="text-white">Expert</span>
                 <!-- Luxurious swoosh element -->
@@ -63,8 +64,8 @@
               </h2>
 
               <!-- Phase 3 Fix: Changed text-sm to text-base (14px→16px) for WCAG 2.2 compliance -->
-              <!-- Set to 900px width, leading-normal spacing, desktop fonts: 20px/24px -->
-              <p class="text-base sm:text-lg md:text-xl lg:text-[20px] xl:text-[24px] text-luxury-300 max-w-[900px] mx-auto mb-8 leading-normal">
+              <!-- Mobile: leading-tight for fewer lines, Desktop: leading-normal for better spacing -->
+              <p class="text-base sm:text-lg md:text-xl lg:text-[20px] xl:text-[24px] text-luxury-300 max-w-[900px] mx-auto mb-8 leading-tight sm:leading-normal">
                 McKinsey reports brands with precise positioning see 20-40% higher profit margins and command 15-25% in price premiums. I've systematized this so thoroughly, my AI positioning agent won 2nd place in a national ElevenLabs hackathon. $62.7M in client results prove it works.
               </p>
 

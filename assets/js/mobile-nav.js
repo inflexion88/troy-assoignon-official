@@ -11,6 +11,8 @@ export function setupMobileNav() {
     return;
   }
 
+  console.log('Mobile menu elements found, setting up...');
+
   // Toggle menu visibility
   mobileMenuButton.addEventListener('click', () => {
     const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
@@ -21,24 +23,24 @@ export function setupMobileNav() {
       mobileMenu.classList.add('opacity-0', 'translate-x-full', 'pointer-events-none');
       mobileMenu.classList.remove('opacity-100', 'translate-x-0');
 
-      // Toggle icons
+      // Toggle icons using inline styles
       if (menuIcon && closeIcon) {
-        menuIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
       }
     } else {
       // Open menu
       mobileMenu.classList.remove('opacity-0', 'translate-x-full', 'pointer-events-none');
       mobileMenu.classList.add('opacity-100', 'translate-x-0');
 
-      // Toggle icons
+      // Toggle icons using inline styles
       if (menuIcon && closeIcon) {
-        menuIcon.classList.add('hidden');
-        closeIcon.classList.remove('hidden');
+        menuIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
       }
     }
   });
-  
+
   // Close menu when clicking on a link
   const mobileLinks = mobileMenu.querySelectorAll('a');
   mobileLinks.forEach(link => {
@@ -47,13 +49,13 @@ export function setupMobileNav() {
       mobileMenu.classList.add('opacity-0', 'translate-x-full', 'pointer-events-none');
       mobileMenu.classList.remove('opacity-100', 'translate-x-0');
 
-      // Toggle icons back
+      // Toggle icons back using inline styles
       if (menuIcon && closeIcon) {
-        menuIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
       }
     });
   });
-  
+
   console.log('Mobile navigation setup complete');
 } 

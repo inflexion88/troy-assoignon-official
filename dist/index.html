@@ -145,25 +145,24 @@
             </a>
           </nav>
           
-          <div class="md:hidden flex items-center">
-            <!-- Phase 3 Fix: Enhanced ARIA attributes for WCAG compliance -->
-            <button
-              id="mobile-menu-button"
-              class="text-white hover:text-accent-green transition-colors p-3 relative z-[10000] bg-accent-green/20 border-2 border-accent-green rounded-lg"
-              aria-label="Toggle menu"
-              aria-expanded="false"
-              aria-controls="mobile-menu"
-            >
-              <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-              </svg>
-              <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 6L6 18M6 6l12 12"></path>
-              </svg>
-            </button>
-          </div>
+          <!-- Mobile hamburger - fixed position to ensure visibility -->
+          <button
+            id="mobile-menu-button"
+            class="md:hidden fixed top-4 right-4 z-[99999] p-4 bg-accent-green hover:bg-accent-green/80 transition-colors shadow-2xl"
+            style="width: 56px; height: 56px; border-radius: 12px;"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto;">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto;">
+              <path d="M18 6L6 18M6 6l12 12"></path>
+            </svg>
+          </button>
         </div>
         
         <!-- Mobile Menu -->

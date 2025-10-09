@@ -38,9 +38,9 @@
             </div>
 
             <!-- Main hero content -->
-            <!-- Mobile fix: px-2 on mobile for more text width, px-4 on desktop -->
-            <div class="max-w-7xl mx-auto text-center mb-12 sm:mb-16 px-2 sm:px-4">
-              <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 relative leading-tight tracking-tight sm:tracking-normal">
+            <div class="max-w-7xl mx-auto text-center mb-12 sm:mb-16 px-4">
+              <!-- Mobile fix: text-3xl on very small screens to prevent cut-off -->
+              <h1 class="text-3xl min-[400px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 relative leading-tight tracking-tight sm:tracking-normal">
                 <span class="text-accent-green font-black" style="font-weight: 900;">Positioning</span><span class="text-luxury-600">|</span><span class="text-white">Expert</span>
                 <!-- Luxurious swoosh element -->
                 <div class="absolute -bottom-6 left-1/2 w-64 h-6 pointer-events-none transform -translate-x-1/2">
@@ -61,9 +61,8 @@
                 The Wrong Position Could Cost<br class="block sm:hidden"> <span class="sm:inline">You Millions in Lost Deals</span>
               </h2>
 
-              <!-- Phase 3 Fix: Changed text-sm to text-base (14px→16px) for WCAG 2.2 compliance -->
-              <!-- Mobile: leading-tight for fewer lines, Desktop: leading-normal for better spacing -->
-              <p class="text-base sm:text-lg md:text-xl lg:text-[20px] xl:text-[24px] text-luxury-300 max-w-[900px] mx-auto mb-8 leading-tight sm:leading-normal">
+              <!-- Mobile fix: 15px compromise between WCAG (16px) and design (14px), tighter leading -->
+              <p class="text-[15px] sm:text-lg md:text-xl lg:text-[20px] xl:text-[24px] text-luxury-300 max-w-[900px] mx-auto mb-8 leading-tight sm:leading-normal">
                 McKinsey reports brands with precise positioning see 20-40% higher profit margins and command 15-25% in price premiums. I've systematized this so thoroughly, my AI positioning agent won 2nd place in a national ElevenLabs hackathon. $62.7M in client results prove it works.
               </p>
 

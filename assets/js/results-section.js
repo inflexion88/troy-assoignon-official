@@ -40,12 +40,12 @@ export function setupResultsSection() {
 
   // Create results section HTML
   const resultsHTML = `
-    <div class="relative z-10 max-w-[80%] mx-auto">
+    <div class="relative z-10 max-w-[90%] md:max-w-[80%] mx-auto flex flex-col items-center md:block">
       <!-- Results Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
         ${resultsData.map((result, index) => `
-          <div class="relative group opacity-0 animate-fade-in" style="animation-delay: ${index * 100}ms; animation-fill-mode: forwards;">
-            <div class="flex items-center h-full p-4 rounded-xl bg-black/30 backdrop-blur-sm border border-luxury-800/10 transition-all duration-300 hover:border-accent-green/20 hover:bg-black/40">
+          <div class="relative group opacity-0 animate-fade-in w-full md:w-auto mx-auto md:mx-0" style="animation-delay: ${index * 100}ms; animation-fill-mode: forwards;">
+            <div class="flex items-center h-full p-4 rounded-xl bg-black/30 backdrop-blur-sm border border-luxury-800/10 transition-all duration-300 hover:border-accent-green/20 hover:bg-black/40 max-w-md md:max-w-none mx-auto md:mx-0">
               <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-black/40 backdrop-blur-sm mr-3">
                 ${result.icon}
               </div>

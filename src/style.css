@@ -1,0 +1,2 @@
+/* Vite entry stylesheet: wraps the Tailwind/PostCSS bundle */
+@import '../assets/css/style.css';

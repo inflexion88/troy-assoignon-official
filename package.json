@@ -1,0 +1,27 @@
+{
+  "name": "luxe-positioning-vanilla",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env ROLLUP_USE_BUNDLED=true vite",
+    "build": "cross-env ROLLUP_USE_BUNDLED=true vite build",
+    "preview": "cross-env ROLLUP_USE_BUNDLED=true vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.16",
+    "cross-env": "^7.0.3",
+    "postcss": "8.4.31",
+    "tailwindcss": "3.3.5",
+    "vite": "5.0.10"
+  },
+  "dependencies": {
+    "tailwindcss-animate": "1.0.7"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}

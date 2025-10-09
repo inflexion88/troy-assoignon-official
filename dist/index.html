@@ -8,11 +8,34 @@
     <meta name="author" content="Troy Assoignon" />
     <meta property="og:image" content="/og-image.png" />
         <!-- Fix for the editorial-button class implementation to avoid @apply with group utility -->
+    <style>
+      @media (min-width: 768px) {
+        #mobile-hamburger-wrapper { display: none !important; }
+      }
+    </style>
     <script type="module" crossorigin src="/assets/js/style.js"></script>
     <script type="module" crossorigin src="/assets/js/main2.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/css/style.css">
   </head>
   <body class="bg-black text-white">
+    <!-- MOBILE HAMBURGER - FIRST ELEMENT -->
+    <div id="mobile-hamburger-wrapper" style="position: fixed; top: 16px; right: 16px; z-index: 9999999; width: 60px; height: 60px;">
+      <button
+        id="mobile-menu-button"
+        style="width: 100%; height: 100%; background: #65E48F; border: 3px solid #000; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 20px rgba(101, 228, 143, 0.8);"
+        aria-label="Menu"
+      >
+        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg id="close-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6L6 18M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
     <div id="root">
       <!-- Hero Section -->
       <div class="relative min-h-screen bg-black flex items-center justify-center overflow-hidden hero-section">
@@ -179,30 +202,6 @@
           </div>
         </div>
       </header>
-
-      <!-- Mobile hamburger - OUTSIDE navbar to force visibility -->
-      <style>
-        #mobile-menu-button { display: flex !important; }
-        @media (min-width: 768px) {
-          #mobile-menu-button { display: none !important; }
-        }
-      </style>
-      <button
-        id="mobile-menu-button"
-        style="position: fixed !important; top: 16px !important; right: 16px !important; z-index: 999999 !important; width: 56px !important; height: 56px !important; background-color: #65E48F !important; border-radius: 12px !important; padding: 12px !important; display: flex !important; align-items: center !important; justify-content: center !important; box-shadow: 0 10px 40px rgba(101, 228, 143, 0.5) !important; cursor: pointer !important; border: none !important;"
-        aria-label="Toggle menu"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-      >
-        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-        <svg id="close-icon" style="display: none !important;" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 6L6 18M6 6l12 12"></path>
-        </svg>
-      </button>
 
       <!-- Unified Transformation Section -->
       <section id="transformation" class="pt-8 md:pt-10 pb-12 md:pb-14 px-6 relative bg-luxury-950 overflow-hidden">

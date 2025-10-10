@@ -16,49 +16,6 @@
     <link rel="stylesheet" crossorigin href="/assets/css/style.css">
   </head>
   <body class="bg-black text-white">
-    <!-- MOBILE HAMBURGER - LEFT SIDE TEST -->
-    <button
-      id="mobile-menu-button"
-      style="
-        position: fixed !important;
-        top: 20px !important;
-        left: 20px !important;
-        width: 56px !important;
-        height: 56px !important;
-        z-index: 2147483647 !important;
-        background: #65E48F !important;
-        border: 3px solid #000000 !important;
-        border-radius: 8px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        cursor: pointer !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 0 2px #65E48F !important;
-        transform: translateZ(0) !important;
-        -webkit-transform: translateZ(0) !important;
-        will-change: transform !important;
-        backface-visibility: hidden !important;
-        -webkit-backface-visibility: hidden !important;
-        pointer-events: auto !important;
-        touch-action: manipulation !important;
-        -webkit-tap-highlight-color: transparent !important;
-      "
-      aria-label="Menu"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-    >
-      <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="pointer-events: none;">
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-      <svg id="close-icon" style="display: none; pointer-events: none;" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M18 6L6 18M6 6l12 12"></path>
-      </svg>
-    </button>
-
     <div id="root">
       <!-- Hero Section -->
       <div class="relative min-h-screen bg-black flex items-center justify-center overflow-hidden hero-section">
@@ -150,7 +107,20 @@
             <span class="luxury-gradient">TROY ASSOIGNON</span>
             <span class="bg-accent-green h-1.5 w-1.5 rounded-full ml-1 mt-1"></span>
           </a>
-          
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-button"
+            class="md:hidden p-3 text-white relative z-[10001]"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            type="button"
+          >
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+
           <nav class="hidden md:flex items-center space-x-8">
             <a href="#" class="nav-item">Home</a>
             <div class="relative group">
@@ -191,37 +161,48 @@
             </a>
           </nav>
         </div>
-        
+
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="fixed inset-0 bg-black/98 backdrop-blur-xl transition-all duration-300 ease-in-out transform opacity-0 translate-x-full pointer-events-none" style="z-index: 2147483646 !important;">
-          <div class="flex flex-col h-full pt-24 pb-8 px-6 overflow-y-auto">
-            <nav class="flex flex-col space-y-1 flex-1">
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-black/98 backdrop-blur-xl z-[10000] md:hidden overflow-y-auto">
+          <div class="flex flex-col h-full pt-20 pb-8 px-6">
+            <!-- Close Button -->
+            <div class="flex justify-end mb-8">
+              <button
+                onclick="document.getElementById('mobile-menu-button').click()"
+                class="text-white p-2"
+                aria-label="Close menu"
+              >
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Menu Content -->
+            <nav class="flex flex-col space-y-6">
+              <a href="#" class="text-white text-2xl font-medium">Home</a>
+
               <!-- Services Section -->
-              <div class="mb-4">
-                <div class="text-luxury-500 text-xs font-medium uppercase tracking-wider mb-3 px-4">Services</div>
-                <div class="flex flex-col space-y-0.5">
-                  <a href="/services/fractional-cmo-caio.html" class="text-white text-lg py-3 px-4 rounded-lg hover:bg-luxury-800/30 active:bg-luxury-800/50 transition-colors">Fractional CMO/CAIo</a>
-                  <a href="/services/strategic-brand-positioning.html" class="text-white text-lg py-3 px-4 rounded-lg hover:bg-luxury-800/30 active:bg-luxury-800/50 transition-colors">Strategic Brand Positioning</a>
-                  <a href="/services/authority-thought-leadership.html" class="text-white text-lg py-3 px-4 rounded-lg hover:bg-luxury-800/30 active:bg-luxury-800/50 transition-colors">Authority & Thought Leadership</a>
-                  <a href="/services/investor-ready-positioning.html" class="text-white text-lg py-3 px-4 rounded-lg hover:bg-luxury-800/30 active:bg-luxury-800/50 transition-colors">Investor-Ready Positioning</a>
-                  <a href="/services/premium-pricing-offers.html" class="text-white text-lg py-3 px-4 rounded-lg hover:bg-luxury-800/30 active:bg-luxury-800/50 transition-colors">Premium Pricing & Offers</a>
-                  <a href="/services/positioning-diagnostics.html" class="text-white text-lg py-3 px-4 rounded-lg hover:bg-luxury-800/30 active:bg-luxury-800/50 transition-colors">Positioning Diagnostics</a>
+              <div>
+                <div class="text-luxury-400 text-sm uppercase tracking-wider mb-3">Services</div>
+                <div class="flex flex-col space-y-3 pl-4">
+                  <a href="/services/fractional-cmo-caio.html" class="text-white text-lg">Fractional CMO/CAIo</a>
+                  <a href="/services/strategic-brand-positioning.html" class="text-white text-lg">Strategic Brand Positioning</a>
+                  <a href="/services/authority-thought-leadership.html" class="text-white text-lg">Authority & Thought Leadership</a>
+                  <a href="/services/investor-ready-positioning.html" class="text-white text-lg">Investor-Ready Positioning</a>
+                  <a href="/services/premium-pricing-offers.html" class="text-white text-lg">Premium Pricing & Offers</a>
+                  <a href="/services/positioning-diagnostics.html" class="text-white text-lg">Positioning Diagnostics</a>
                 </div>
               </div>
 
-              <!-- Main Navigation -->
-              <div class="border-t border-luxury-800/30 pt-4 flex flex-col space-y-0.5">
-                <a href="#about" class="text-white text-lg py-3 px-4 rounded-lg hover:bg-luxury-800/30 active:bg-luxury-800/50 transition-colors">About</a>
-                <a href="#transformation" class="text-white text-lg py-3 px-4 rounded-lg hover:bg-luxury-800/30 active:bg-luxury-800/50 transition-colors">Process</a>
-              </div>
-            </nav>
+              <a href="#about" class="text-white text-2xl font-medium">About</a>
+              <a href="#transformation" class="text-white text-2xl font-medium">Process</a>
 
-            <!-- Contact Button -->
-            <div class="pt-6 border-t border-luxury-800/30">
-              <a href="/contact.html" class="block w-full bg-accent-green text-black text-center text-lg font-medium py-4 rounded-full hover:bg-accent-green/90 active:bg-accent-green/80 transition-colors">
+              <!-- Contact Button -->
+              <a href="/contact.html" class="bg-accent-green text-black text-center text-lg font-medium py-3 px-6 rounded-full mt-8">
                 Contact
               </a>
-            </div>
+            </nav>
           </div>
         </div>
       </header>

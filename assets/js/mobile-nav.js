@@ -11,6 +11,9 @@ export function setupMobileNav() {
     const isOpen = button.getAttribute('aria-expanded') === 'true';
     button.setAttribute('aria-expanded', !isOpen);
     menu.classList.toggle('hidden');
+
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = isOpen ? '' : 'hidden';
   });
 
   // Close when clicking a link
@@ -18,6 +21,7 @@ export function setupMobileNav() {
     link.addEventListener('click', () => {
       button.setAttribute('aria-expanded', 'false');
       menu.classList.add('hidden');
+      document.body.style.overflow = '';
     });
   });
 
@@ -26,6 +30,7 @@ export function setupMobileNav() {
     if (e.target === menu) {
       button.setAttribute('aria-expanded', 'false');
       menu.classList.add('hidden');
+      document.body.style.overflow = '';
     }
   });
 }

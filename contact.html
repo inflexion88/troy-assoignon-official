@@ -203,6 +203,7 @@
                 <input type="hidden" name="_subject" value="New positioning consultation inquiry">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_next" value="https://troyassoignon.com/contact.html?submitted=true">
                 <input type="hidden" name="_autoresponse" value="Thank you for reaching out! I've received your inquiry and will get back to you within 24 hours to discuss your positioning challenge. In the meantime, feel free to check out some of our case studies at troyassoignon.com. - Troy Assoignon">
                 <input type="text" name="_honey" style="display:none">
 
@@ -496,6 +497,22 @@
 
           });
 
+
+
+          // Check for submission success parameter
+
+          const urlParams = new URLSearchParams(window.location.search);
+
+          if (urlParams.get('submitted') === 'true') {
+
+            console.log('Form was successfully submitted via FormSubmit');
+
+            // Clean up URL without reloading
+
+            window.history.replaceState({}, document.title, window.location.pathname);
+
+          }
+
         });
 
 
@@ -723,37 +740,87 @@
 
           if (window.Calendly) {
 
-            // Clear and reload with full data - keep loading message
+            try {
 
-            widget.innerHTML = '<div class="absolute inset-0 flex items-center justify-center text-luxury-400 text-sm" id="calendlyLoadingMsg">Please wait while we load our calendar...</div>';
+              // Clear and reload with full data - keep loading message
 
-
-
-            // a1 = first custom question (Company), a2 = second custom question (What do you need help with)
-
-            const calendlyUrl = `https://calendly.com/positioningiq/30min?background_color=000000&text_color=ffffff&primary_color=65E48F&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&a1=${encodeURIComponent(company)}&a2=${encodeURIComponent(challenge)}`;
+              widget.innerHTML = '<div class="absolute inset-0 flex items-center justify-center text-luxury-400 text-sm" id="calendlyLoadingMsg">Please wait while we load our calendar...</div>';
 
 
 
-            window.Calendly.initInlineWidget({
+              // a1 = first custom question (Company), a2 = second custom question (What do you need help with)
 
-              url: calendlyUrl,
-
-              parentElement: widget
-
-            });
+              const calendlyUrl = `https://calendly.com/positioningiq/30min?background_color=000000&text_color=ffffff&primary_color=65E48F&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&a1=${encodeURIComponent(company)}&a2=${encodeURIComponent(challenge)}`;
 
 
 
-            // Hide loading message after Calendly iframe loads
+              window.Calendly.initInlineWidget({
 
-            setTimeout(function() {
+                url: calendlyUrl,
 
-              const loadingMsg = document.getElementById('calendlyLoadingMsg');
+                parentElement: widget
 
-              if (loadingMsg) loadingMsg.remove();
+              });
 
-            }, 2000);
+
+
+              // Hide loading message after Calendly iframe loads
+
+              setTimeout(function() {
+
+                const loadingMsg = document.getElementById('calendlyLoadingMsg');
+
+                if (loadingMsg) loadingMsg.remove();
+
+              }, 2000);
+
+
+
+              // Add error detection - if loading message still visible after 10 seconds
+
+              setTimeout(function() {
+
+                const loadingMsg = document.getElementById('calendlyLoadingMsg');
+
+                if (loadingMsg) {
+
+                  widget.innerHTML = `
+
+                    <div class="text-center py-12">
+
+                      <p class="text-luxury-300 mb-4">Having trouble loading the calendar?</p>
+
+                      <p class="text-luxury-400 text-sm mb-6">Please email us directly at <a href="mailto:positioningiq@gmail.com" class="text-accent-green hover:underline">positioningiq@gmail.com</a></p>
+
+                      <button type="button" onclick="loadCalendlyFull()" class="button-secondary">Try Again</button>
+
+                    </div>
+
+                  `;
+
+                }
+
+              }, 10000);
+
+            } catch (error) {
+
+              console.error('Error loading Calendly:', error);
+
+              widget.innerHTML = `
+
+                <div class="text-center py-12">
+
+                  <p class="text-luxury-300 mb-4">Unable to load calendar</p>
+
+                  <p class="text-luxury-400 text-sm mb-6">Please email us directly at <a href="mailto:positioningiq@gmail.com" class="text-accent-green hover:underline">positioningiq@gmail.com</a></p>
+
+                  <button type="button" onclick="loadCalendlyFull()" class="button-secondary">Try Again</button>
+
+                </div>
+
+              `;
+
+            }
 
           } else {
 
@@ -789,27 +856,59 @@
 
 
 
-          // Create a hidden iframe to submit without redirecting
+          try {
 
-          const iframe = document.createElement('iframe');
+            // Create a hidden iframe to submit without redirecting
 
-          iframe.name = 'hiddenFrame';
+            const iframe = document.createElement('iframe');
 
-          iframe.style.display = 'none';
+            iframe.name = 'hiddenFrame';
 
-          document.body.appendChild(iframe);
+            iframe.style.display = 'none';
 
-
-
-          // Set form target to iframe
-
-          form.setAttribute('target', 'hiddenFrame');
+            document.body.appendChild(iframe);
 
 
 
-          // Submit the form
+            // Set form target to iframe
 
-          form.submit();
+            form.setAttribute('target', 'hiddenFrame');
+
+
+
+            // Submit the form
+
+            form.submit();
+
+
+
+            // Listen for iframe load to detect submission completion
+
+            iframe.onload = function() {
+
+              console.log('Form submitted successfully to FormSubmit');
+
+            };
+
+
+
+            // Handle iframe errors
+
+            iframe.onerror = function() {
+
+              console.error('FormSubmit submission error');
+
+              // Continue with Calendly flow even if FormSubmit fails
+
+            };
+
+          } catch (error) {
+
+            console.error('Error submitting form data:', error);
+
+            // Continue with Calendly flow even if error occurs
+
+          }
 
         }
 

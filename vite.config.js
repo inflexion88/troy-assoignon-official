@@ -35,8 +35,7 @@ export default defineConfig({
         blog: resolve(__dirname, 'blog.html'),
         workshop: resolve(__dirname, 'workshop.html'),
         contact: resolve(__dirname, 'contact.html'),
-        // Redirect pages
-        'testimonials/index': resolve(__dirname, 'testimonials/index.html'),
+        testimonials: resolve(__dirname, 'testimonials.html'),
         // Service pages
         'services/fractional-cmo-caio': resolve(__dirname, 'services/fractional-cmo-caio.html'),
         'services/fractional-cmo-cpo': resolve(__dirname, 'services/fractional-cmo-cpo.html'),

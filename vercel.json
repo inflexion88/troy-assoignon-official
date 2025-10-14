@@ -1,5 +1,11 @@
 {
+  "cleanUrls": true,
   "redirects": [
+    {
+      "source": "/testimonials",
+      "destination": "/testimonials.html",
+      "permanent": true
+    },
     {
       "source": "/S1-Vivaldi-II-1-Group-:path*",
       "destination": "/",

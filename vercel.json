@@ -1,16 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/testimonials/:path*",
-      "destination": "/#testimonials",
-      "permanent": true
-    },
-    {
-      "source": "/testimonials",
-      "destination": "/#testimonials",
-      "permanent": true
-    },
-    {
       "source": "/S1-Vivaldi-II-1-Group-:path*",
       "destination": "/",
       "statusCode": 410
@@ -57,12 +47,12 @@
     },
     {
       "source": "/about",
-      "destination": "/#about",
+      "destination": "/",
       "permanent": true
     },
     {
       "source": "/about-us",
-      "destination": "/#about",
+      "destination": "/",
       "permanent": true
     }
   ],

@@ -3,11 +3,11 @@
   "rewrites": [
     {
       "source": "/testimonials/:path*",
-      "destination": "/"
+      "destination": "/index.html"
     },
     {
       "source": "/testimonials",
-      "destination": "/"
+      "destination": "/index.html"
     }
   ],
   "redirects": [

@@ -1,0 +1,88 @@
+{
+  "redirects": [
+    {
+      "source": "/testimonials/:path*",
+      "destination": "/#testimonials",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials",
+      "destination": "/#testimonials",
+      "permanent": true
+    },
+    {
+      "source": "/S1-Vivaldi-II-1-Group-:path*",
+      "destination": "/",
+      "statusCode": 410
+    },
+    {
+      "source": "/wp-admin/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-login.php",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-includes/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-json/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/xmlrpc.php",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug",
+      "destination": "/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/#about",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/#about",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ]
+}

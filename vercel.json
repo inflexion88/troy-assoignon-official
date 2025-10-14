@@ -1,16 +1,16 @@
 {
   "cleanUrls": true,
-  "rewrites": [
+  "redirects": [
     {
       "source": "/testimonials/:path*",
-      "destination": "/index.html"
+      "destination": "/",
+      "permanent": true
     },
     {
       "source": "/testimonials",
-      "destination": "/index.html"
-    }
-  ],
-  "redirects": [
+      "destination": "/",
+      "permanent": true
+    },
     {
       "source": "/S1-Vivaldi-II-1-Group-:path*",
       "destination": "/",

@@ -125,11 +125,11 @@ html.theme-transition {
   }
   
   html {
-    @apply scroll-smooth;
+    @apply scroll-smooth overflow-x-hidden;
   }
-  
+
   body {
-    @apply bg-black text-white font-sans antialiased;
+    @apply bg-black text-white font-sans antialiased overflow-x-hidden;
   }
   
   /* Light mode body styles */

@@ -1,5 +1,11 @@
 {
   "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/permapatch",
+      "destination": "/perma-patch"
+    }
+  ],
   "redirects": [
     {
       "source": "/testimonials/:path*",

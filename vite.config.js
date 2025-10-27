@@ -35,6 +35,7 @@ export default defineConfig({
         blog: resolve(__dirname, 'blog.html'),
         workshop: resolve(__dirname, 'workshop.html'),
         contact: resolve(__dirname, 'contact.html'),
+        faq: resolve(__dirname, 'faq.html'),
         'perma-patch': resolve(__dirname, 'perma-patch.html'),
         // Service pages
         'services/fractional-cmo-caio': resolve(__dirname, 'services/fractional-cmo-caio.html'),

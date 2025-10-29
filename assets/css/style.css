@@ -2202,3 +2202,91 @@ body {
   }
 }
 
+/* FAQ Performance Optimizations */
+/* Progressive disclosure - hide extended content by default */
+.faq-extended-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.faq-extended-content[style*="display: block"] {
+  opacity: 1;
+}
+
+/* FAQ Read More Button Styling */
+.faq-read-more {
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.faq-read-more:active {
+  transform: scale(0.98);
+}
+
+/* FAQ items optimization with will-change for accordion */
+.faq-item {
+  will-change: auto;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.faq-item:hover {
+  will-change: transform;
+}
+
+/* FAQ answer smooth height transitions */
+.faq-answer {
+  will-change: auto;
+  backface-visibility: hidden;
+}
+
+/* Staggered fade-in initial state */
+.faq-item {
+  opacity: 1; /* Default visible state */
+}
+
+/* Performance hint for transforms */
+.faq-icon {
+  will-change: transform;
+}
+
+/* Smooth transitions for read more icon */
+.faq-read-more svg {
+  transition: transform 0.3s ease;
+}
+
+/* Accessibility improvements */
+.faq-read-more:focus {
+  outline: 2px solid rgba(var(--color-accent-green-rgb), 0.5);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.faq-question:focus {
+  outline: 2px solid rgba(var(--color-accent-green-rgb), 0.5);
+  outline-offset: 2px;
+}
+
+/* Keyboard navigation visual feedback */
+.faq-read-more:focus-visible {
+  outline: 2px solid rgb(var(--color-accent-green));
+  outline-offset: 2px;
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid rgb(var(--color-accent-green));
+  outline-offset: 2px;
+}
+
+/* Prevent layout shift during stagger animation */
+.faq-item[style*="opacity: 0"] {
+  visibility: visible;
+  pointer-events: none;
+}
+
+.faq-item[style*="opacity: 1"] {
+  pointer-events: auto;
+}
+

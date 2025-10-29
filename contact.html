@@ -481,19 +481,11 @@
 
 
 
-        // Prevent form submission unless explicitly triggered
+        // Prevent form submission on button clicks during steps 1 & 2 only
 
         document.addEventListener('DOMContentLoaded', function() {
 
           const form = document.getElementById('multiStepForm');
-
-          form.addEventListener('submit', function(e) {
-
-            e.preventDefault();
-
-            return false;
-
-          });
 
 
 
@@ -531,7 +523,7 @@
 
 
 
-        function nextStep() {
+        async function nextStep() {
 
           // Validate current step
 
@@ -611,13 +603,35 @@
 
             mainSection.classList.add('pt-16');
 
-            // Submit form data to FormSubmit immediately (capture lead before calendar)
 
-            submitFormData();
 
-            // Reload Calendly with complete user data (resources already cached from page load)
+            // Show loading indicator
 
-            loadCalendlyFull();
+            showLoadingIndicator();
+
+
+
+            // Submit form data to FormSubmit FIRST (capture lead before calendar)
+
+            const result = await submitFormData();
+
+
+
+            if (result.success) {
+
+              // Only load calendar after successful submission
+
+              hideLoadingIndicator();
+
+              loadCalendlyFull();
+
+            } else {
+
+              // Show error with retry option
+
+              showSubmissionError(result.error);
+
+            }
 
           }
 
@@ -862,67 +876,179 @@
 
 
 
-        // Submit form data to FormSubmit (called when reaching step 3)
+        // Submit form data to FormSubmit via Ajax (called when reaching step 3)
 
-        function submitFormData() {
+        async function submitFormData() {
 
           const form = document.getElementById('multiStepForm');
+
+          const formData = new FormData(form);
 
 
 
           try {
 
-            // Create a hidden iframe to submit without redirecting
-
-            const iframe = document.createElement('iframe');
-
-            iframe.name = 'hiddenFrame';
-
-            iframe.style.display = 'none';
-
-            document.body.appendChild(iframe);
+            console.log('Submitting form data to FormSubmit...');
 
 
 
-            // Set form target to iframe
+            const response = await fetch(form.action, {
 
-            form.setAttribute('target', 'hiddenFrame');
+              method: 'POST',
+
+              body: formData,
+
+              headers: {
+
+                'Accept': 'application/json'
+
+              }
+
+            });
 
 
 
-            // Submit the form
-
-            form.submit();
-
-
-
-            // Listen for iframe load to detect submission completion
-
-            iframe.onload = function() {
+            if (response.ok) {
 
               console.log('Form submitted successfully to FormSubmit');
 
-            };
+              return { success: true };
 
+            } else {
 
+              console.error('FormSubmit returned error status:', response.status);
 
-            // Handle iframe errors
+              return { success: false, error: 'Server error' };
 
-            iframe.onerror = function() {
-
-              console.error('FormSubmit submission error');
-
-              // Continue with Calendly flow even if FormSubmit fails
-
-            };
+            }
 
           } catch (error) {
 
             console.error('Error submitting form data:', error);
 
-            // Continue with Calendly flow even if error occurs
+            return { success: false, error: error.message };
 
           }
+
+        }
+
+
+
+        // Show loading indicator while form is being submitted
+
+        function showLoadingIndicator() {
+
+          const widget = document.getElementById('calendlyWidget');
+
+          widget.innerHTML = `
+
+            <div class="flex flex-col items-center justify-center py-20">
+
+              <div class="w-16 h-16 border-4 border-accent-green/20 border-t-accent-green rounded-full animate-spin mb-6"></div>
+
+              <p class="text-luxury-300 text-lg font-medium mb-2">Submitting your information...</p>
+
+              <p class="text-luxury-400 text-sm">Please wait while we save your details</p>
+
+            </div>
+
+          `;
+
+        }
+
+
+
+        // Hide loading indicator
+
+        function hideLoadingIndicator() {
+
+          // Loading will be replaced by Calendly widget, no action needed
+
+        }
+
+
+
+        // Show error message with retry option
+
+        function showSubmissionError(errorMessage) {
+
+          const widget = document.getElementById('calendlyWidget');
+
+          widget.innerHTML = `
+
+            <div class="text-center py-12">
+
+              <div class="w-20 h-20 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+
+                <svg class="w-10 h-10 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+
+                </svg>
+
+              </div>
+
+              <h3 class="text-2xl font-display font-bold text-white mb-4">Submission Failed</h3>
+
+              <p class="text-luxury-300 mb-2">We couldn't submit your information at this time.</p>
+
+              <p class="text-luxury-400 text-sm mb-8">Error: ${errorMessage || 'Unknown error'}</p>
+
+              <div class="flex gap-4 justify-center">
+
+                <button type="button" onclick="retrySubmission()" class="button-primary">
+
+                  Try Again
+
+                </button>
+
+                <button type="button" onclick="skipToCalendar()" class="button-secondary">
+
+                  Skip to Calendar
+
+                </button>
+
+              </div>
+
+              <p class="text-luxury-500 text-xs mt-6">Or email us directly at <a href="mailto:positioningiq@gmail.com" class="text-accent-green hover:underline">positioningiq@gmail.com</a></p>
+
+            </div>
+
+          `;
+
+        }
+
+
+
+        // Retry form submission
+
+        async function retrySubmission() {
+
+          showLoadingIndicator();
+
+          const result = await submitFormData();
+
+          if (result.success) {
+
+            hideLoadingIndicator();
+
+            loadCalendlyFull();
+
+          } else {
+
+            showSubmissionError(result.error);
+
+          }
+
+        }
+
+
+
+        // Skip to calendar without submission (backup option)
+
+        function skipToCalendar() {
+
+          loadCalendlyFull();
 
         }
 

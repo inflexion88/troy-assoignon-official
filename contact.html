@@ -876,7 +876,7 @@
 
 
 
-        // Submit form data to FormSubmit via Ajax (called when reaching step 3)
+        // Submit form data to FormSubmit via sendBeacon (called when reaching step 3)
 
         async function submitFormData() {
 
@@ -886,45 +886,41 @@
 
 
 
-          // Convert FormData to JSON object
-
-          const data = {};
-
-          formData.forEach((value, key) => {
-
-            data[key] = value;
-
-          });
-
-
-
           try {
 
             console.log('Submitting form data to FormSubmit...');
 
 
 
-            // Use /ajax/ endpoint with JSON body for CORS support
+            // Track start time to ensure minimum 2 second loading visibility
 
-            const response = await fetch('https://formsubmit.co/ajax/9750b99dbe22812a8dcd8993086d7f67', {
-
-              method: 'POST',
-
-              headers: {
-
-                'Content-Type': 'application/json',
-
-                'Accept': 'application/json'
-
-              },
-
-              body: JSON.stringify(data)
-
-            });
+            const startTime = Date.now();
 
 
 
-            if (response.ok) {
+            // Use sendBeacon for reliable background submission (bypasses CORS, preserves all hidden fields)
+
+            const success = navigator.sendBeacon(
+
+              'https://formsubmit.co/9750b99dbe22812a8dcd8993086d7f67',
+
+              formData
+
+            );
+
+
+
+            // Ensure loading indicator shows for at least 2 seconds
+
+            const elapsed = Date.now() - startTime;
+
+            const remaining = Math.max(0, 2000 - elapsed);
+
+            await new Promise(resolve => setTimeout(resolve, remaining));
+
+
+
+            if (success) {
 
               console.log('Form submitted successfully to FormSubmit');
 
@@ -932,15 +928,27 @@
 
             } else {
 
-              console.error('FormSubmit returned error status:', response.status);
+              console.error('FormSubmit sendBeacon failed');
 
-              return { success: false, error: 'Server error' };
+              return { success: false, error: 'Submission failed' };
 
             }
 
           } catch (error) {
 
             console.error('Error submitting form data:', error);
+
+
+
+            // Still ensure minimum loading time even on error
+
+            const elapsed = Date.now() - startTime;
+
+            const remaining = Math.max(0, 2000 - elapsed);
+
+            await new Promise(resolve => setTimeout(resolve, remaining));
+
+
 
             return { success: false, error: error.message };
 

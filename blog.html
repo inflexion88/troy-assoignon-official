@@ -67,44 +67,46 @@
       }
 
       .blog-card {
-        background: rgba(var(--color-luxury-900), 0.4);
-        border: 1px solid rgba(var(--color-luxury-800), 0.3);
-        border-radius: 1rem;
-        overflow: hidden;
-        transition: all 0.3s ease;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        overflow: visible;
+        transition: none;
         display: flex;
         flex-direction: column;
+        height: 100%;
       }
 
       .blog-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 24px rgba(var(--color-accent-green), 0.1);
-        border-color: rgba(var(--color-accent-green), 0.3);
+        transform: none;
+        box-shadow: none;
+        border-color: transparent;
       }
 
       .blog-card.featured {
         grid-column: 1 / -1;
-        background: linear-gradient(135deg, rgba(var(--color-luxury-900), 0.6), rgba(var(--color-accent-green), 0.05));
-        border: 2px solid rgba(var(--color-accent-green), 0.3);
+        background: transparent;
+        border: none;
       }
 
+      /* Remove image styling - cards will be text-only like FAQ */
       .blog-card-image {
-        width: 100%;
-        height: 240px;
-        background: linear-gradient(135deg, rgba(var(--color-luxury-800), 0.8), rgba(var(--color-luxury-700), 0.4));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 3rem;
-        color: rgba(var(--color-accent-green), 0.3);
+        display: none;
       }
 
-      .blog-card.featured .blog-card-image {
-        height: 320px;
+      /* Featured pillar card enhancement */
+      .luxury-card.featured-pillar {
+        border: 2px solid rgba(var(--color-accent-green), 0.3);
+        box-shadow: 0 0 30px rgba(var(--color-accent-green), 0.08);
+      }
+
+      .luxury-card.featured-pillar:hover {
+        border-color: rgba(var(--color-accent-green), 0.5);
+        box-shadow: 0 0 40px rgba(var(--color-accent-green), 0.15);
       }
 
       .blog-card-content {
-        padding: 1.5rem;
+        padding: 0;
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -224,16 +226,15 @@
 
       /* Light theme compatibility */
       html:not(.dark) .blog-card {
-        background: rgba(240, 240, 245, 0.8);
-        border-color: rgba(200, 200, 210, 0.4);
+        background: transparent;
       }
 
       html:not(.dark) .blog-card.featured {
-        background: linear-gradient(135deg, rgba(240, 240, 245, 0.95), rgba(var(--color-accent-green), 0.08));
+        background: transparent;
       }
 
       html:not(.dark) .blog-card-image {
-        background: linear-gradient(135deg, rgba(220, 220, 230, 0.8), rgba(200, 200, 215, 0.4));
+        display: none;
       }
     </style>
 
@@ -466,7 +467,7 @@
           </div>
 
           <!-- Blog Post 3 - FEATURED PILLAR CONTENT -->
-          <div class="luxury-card">
+          <div class="luxury-card featured-pillar">
             <div class="noise-texture"></div>
             <a href="/blog/strategic-positioning-framework-deep-dive.html" class="blog-card featured">
               <div class="blog-card-image">

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FormSubmit Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #000;
+      color: #fff;
+    }
+    h1 {
+      color: #65E48F;
+    }
+    form {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #333;
+    }
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      color: #aaa;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      background: #2a2a2a;
+      border: 1px solid #444;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 16px;
+    }
+    button {
+      background: #65E48F;
+      color: #000;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+    }
+    button:hover {
+      background: #52d17d;
+    }
+    .info {
+      background: #2a2a2a;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      border: 1px solid #444;
+    }
+    .info h2 {
+      margin-top: 0;
+      color: #65E48F;
+    }
+    .info p {
+      color: #aaa;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="info">
+    <h2>FormSubmit Direct Test</h2>
+    <p><strong>Purpose:</strong> This is a minimal test to verify if FormSubmit works WITHOUT any JavaScript interference.</p>
+    <p><strong>Endpoint:</strong> Using hash 9750b99dbe22812a8dcd8993086d7f67</p>
+    <p><strong>What happens:</strong> When you submit, FormSubmit will either:</p>
+    <ul>
+      <li>✅ Send an email and redirect you back here with success message</li>
+      <li>❌ Show an error page if the hash is not verified</li>
+      <li>📧 Send a verification email if this is the first use</li>
+    </ul>
+    <p><strong>After submitting:</strong> Check ALL email inboxes you might have used with FormSubmit (including spam folders).</p>
+  </div>
+
+  <h1>Simple Form Test</h1>
+
+  <form action="https://formsubmit.co/9750b99dbe22812a8dcd8993086d7f67" method="POST">
+    <!-- FormSubmit Configuration -->
+    <input type="hidden" name="_subject" value="TEST: FormSubmit verification">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
+    <input type="hidden" name="_next" value="https://troyassoignon.com/test-form.html?success=true">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="Test User" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="test@example.com" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required>This is a test submission to verify FormSubmit is working.</textarea>
+
+    <button type="submit">Submit Test Form</button>
+  </form>
+
+  <script>
+    // Check if we got redirected back with success parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+      const info = document.querySelector('.info');
+      info.innerHTML = `
+        <h2 style="color: #65E48F;">✅ Form Submitted Successfully!</h2>
+        <p><strong>FormSubmit accepted the submission.</strong></p>
+        <p>Now check your email inbox for:</p>
+        <ul>
+          <li>📧 Email with subject "TEST: FormSubmit verification"</li>
+          <li>Check ALL possible inboxes you've used with FormSubmit</li>
+          <li>Check spam/junk folders</li>
+        </ul>
+        <p><strong>If you receive the email:</strong> FormSubmit is working! The problem is with sendBeacon/JavaScript.</p>
+        <p><strong>If you DON'T receive the email:</strong> The hash needs verification or is linked to wrong email.</p>
+        <button onclick="window.location.href='test-form.html'" style="margin-top: 20px;">Test Again</button>
+      `;
+    }
+  </script>
+</body>
+</html>

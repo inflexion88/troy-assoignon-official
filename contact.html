@@ -876,7 +876,7 @@
 
 
 
-        // Submit form data to FormSubmit via sendBeacon (called when reaching step 3)
+        // Submit form data to FormSubmit via fetch (called when reaching step 3)
 
         async function submitFormData() {
 
@@ -890,6 +890,8 @@
 
             console.log('Submitting form data to FormSubmit...');
 
+            console.log('Endpoint:', 'https://formsubmit.co/9750b99dbe22812a8dcd8993086d7f67');
+
 
 
             // Track start time to ensure minimum 2 second loading visibility
@@ -898,15 +900,29 @@
 
 
 
-            // Use sendBeacon for reliable background submission (bypasses CORS, preserves all hidden fields)
+            // Use fetch to get actual response and error details
 
-            const success = navigator.sendBeacon(
+            const response = await fetch('https://formsubmit.co/9750b99dbe22812a8dcd8993086d7f67', {
 
-              'https://formsubmit.co/9750b99dbe22812a8dcd8993086d7f67',
+              method: 'POST',
 
-              formData
+              body: formData,
 
-            );
+              mode: 'cors'
+
+            });
+
+
+
+            console.log('FormSubmit response status:', response.status, response.statusText);
+
+
+
+            // Try to read response body for debugging
+
+            const responseText = await response.text();
+
+            console.log('FormSubmit response body:', responseText);
 
 
 
@@ -920,23 +936,27 @@
 
 
 
-            if (success) {
+            if (response.ok) {
 
-              console.log('Form submitted successfully to FormSubmit');
+              console.log('✅ Form submitted successfully to FormSubmit');
 
               return { success: true };
 
             } else {
 
-              console.error('FormSubmit sendBeacon failed');
+              console.error('❌ FormSubmit returned error status:', response.status);
 
-              return { success: false, error: 'Submission failed' };
+              console.error('Response body:', responseText);
+
+              return { success: false, error: `Server error: ${response.status}` };
 
             }
 
           } catch (error) {
 
-            console.error('Error submitting form data:', error);
+            console.error('❌ Error submitting form data:', error);
+
+            console.error('Error details:', error.message);
 
 
 

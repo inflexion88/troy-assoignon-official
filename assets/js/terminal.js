@@ -1,5 +1,5 @@
-// PositioningIQ Terminal - Market Intelligence System
-// Professional terminal experience with intelligent data analysis
+// The Real Matrix Terminal - PositioningIQ
+// Cryptic. Dangerous. Real.
 
 import { startMatrixRain } from './matrix-effects.js';
 
@@ -7,17 +7,15 @@ class PositioningTerminal {
     constructor() {
         this.output = document.getElementById('terminal-output');
         this.nameInput = document.getElementById('name-input');
-        this.emailInput = document.getElementById('email-input');
         this.nameContainer = document.getElementById('name-input-container');
+        this.emailInput = document.getElementById('email-input');
         this.emailContainer = document.getElementById('email-input-container');
         this.loadingContainer = document.getElementById('loading-bar-container');
-        this.loadingFill = document.getElementById('loading-bar-fill');
-        this.loadingPercentage = document.getElementById('loading-percentage');
 
-        this.currentStep = 0;
+        this.currentAct = 0;
         this.userdata = {};
         this.isWaitingForInput = false;
-        this.currentQuestion = null;
+        this.currentInputType = null;
 
         this.init();
     }
@@ -32,51 +30,425 @@ class PositioningTerminal {
             this.emailInput.addEventListener('keydown', (e) => this.handleInput(e, 'email'));
         }
 
-        // Start experience after initial messages
+        // Start the experience
         this.startExperience();
     }
 
     async startExperience() {
-        // Clear initial system messages and show personalized greeting
         await this.delay(1000);
+        await this.act1_theGlitch();
+    }
+
+    // ============================================
+    // ACT 1: THE GLITCH (30 seconds)
+    // ============================================
+    async act1_theGlitch() {
         this.clearOutput();
 
-        await this.typeText('> Market Intelligence System online', 'system-msg');
-        await this.delay(600);
-        await this.typeText('> Real-time positioning analysis ready', 'system-msg');
+        // Boot with interference
+        await this.typeText('> SIGNAL INTERCEPTED...', 'line system-msg');
+        await this.delay(800);
+        await this.typeText('> TRACKING SOURCE...', 'line system-msg');
+        await this.delay(900);
+
+        // Glitch effect
+        this.subtleGlitch();
+        await this.typeText('> █████████ PATTERN RECOGNIZED █████████', 'line warning');
+        await this.delay(1500);
+
+        this.clearOutput();
+
+        // The recognition
+        await this.typeText('> You\'ve been here before.', 'line');
+        await this.delay(2000);
+
+        await this.typeText('> Not this terminal.', 'line');
+        await this.delay(1000);
+        await this.typeText('> This MOMENT.', 'line');
+        await this.delay(3000);
+
+        await this.typeText('> Different consultant.', 'line');
+        await this.delay(800);
+        await this.typeText('> Same framework.', 'line');
+        await this.delay(800);
+        await this.typeText('> Same questions.', 'line');
+        await this.delay(800);
+        await this.typeText('> Same... results.', 'line');
+        await this.delay(2500);
+
+        await this.typeText('> That\'s not your failure, [AWAITING IDENTIFICATION]', 'line');
+        await this.delay(1000);
+
+        // Show name input
+        this.askInput('name');
+    }
+
+    // ============================================
+    // ACT 2: THE SPLINTER (45 seconds)
+    // ============================================
+    async act2_theSplinter() {
+        const name = this.userdata.name;
+
         await this.delay(800);
         this.clearOutput();
 
-        await this.typeText('> I analyze market positioning using competitive intelligence', 'line');
-        await this.typeText('> that most companies don\'t have access to.', 'line');
-        await this.delay(1000);
+        await this.typeText(`> ${name}...`, 'line highlight');
+        await this.delay(2000);
 
-        this.clearOutput();
-        await this.typeText('> Let\'s start with your name:', 'line');
-        await this.delay(400);
+        // Micro glitch
+        this.subtleGlitch();
 
-        this.askQuestion('name');
+        await this.typeText('> You\'ve felt it, haven\'t you?', 'line');
+        await this.delay(3000);
+
+        await this.typeText('> That friction.', 'line');
+        await this.delay(2500);
+
+        await this.typeText('> When you explain what you do...', 'line');
+        await this.delay(1200);
+        await this.typeText('> And they ask: "So how are you different?"', 'line');
+        await this.delay(2500);
+
+        await this.typeText('> When you refine your value proposition...', 'line');
+        await this.delay(1200);
+        await this.typeText('> And it sounds exactly like your competitor\'s.', 'line');
+        await this.delay(2500);
+
+        // Splinter distortion
+        this.screenDistortion();
+
+        await this.typeText('> When you run another positioning exercise...', 'line');
+        await this.delay(1200);
+        await this.typeText('> And end up in the same place.', 'line');
+        await this.delay(4000);
+
+        await this.typeText(`> That\'s not confusion, ${name}.`, 'line highlight');
+        await this.delay(2500);
+
+        await this.typeText('> That\'s the system working exactly as designed.', 'line warning');
+        await this.delay(3000);
+
+        await this.act3_theQuestion();
     }
 
-    askQuestion(questionType) {
-        this.currentQuestion = questionType;
+    // ============================================
+    // ACT 3: THE QUESTION (20 seconds)
+    // ============================================
+    async act3_theQuestion() {
+        this.clearOutput();
+
+        await this.typeText('> There\'s a question you keep asking yourself.', 'line');
+        await this.delay(3000);
+
+        await this.typeText('> About positioning.', 'line');
+        await this.delay(1000);
+        await this.typeText('> About differentiation.', 'line');
+        await this.delay(1000);
+        await this.typeText('> About why none of it ever works.', 'line');
+        await this.delay(2500);
+
+        await this.typeText('> I can\'t tell you what it is.', 'line');
+        await this.delay(2500);
+
+        await this.typeText(`> But you know the question, ${this.userdata.name}.`, 'line highlight');
+        await this.delay(1500);
+        await this.typeText('> Just as I did.', 'line');
+        await this.delay(2000);
+
+        // Create custom question input
+        await this.addHTML(`
+            <div class="line" style="margin-top: 20px;">
+                > Type it. One sentence.
+            </div>
+            <div class="terminal-input-container" style="display: flex; margin-top: 15px;">
+                <span class="prompt">>></span>
+                <input type="text" id="question-input" class="terminal-input"
+                       autocomplete="off"
+                       placeholder="What about positioning has never made sense to you?"
+                       style="width: 100%;">
+            </div>
+        `);
+
+        // Setup question input listener
+        const questionInput = document.getElementById('question-input');
+        if (questionInput) {
+            questionInput.focus();
+            questionInput.addEventListener('keydown', async (e) => {
+                if (e.key === 'Enter') {
+                    const question = questionInput.value.trim();
+                    if (question) {
+                        questionInput.parentElement.style.display = 'none';
+                        this.userdata.question = question;
+                        await this.act4_theRecognition(question);
+                    }
+                }
+            });
+        }
+    }
+
+    // ============================================
+    // ACT 4: THE RECOGNITION (30 seconds)
+    // ============================================
+    async act4_theRecognition(question) {
+        await this.delay(800);
+
+        await this.addText(`> "${question}"`, 'line user-input');
+        await this.delay(3000);
+
+        // Intensify glitch
+        this.subtleGlitch();
+        await this.delay(500);
+        this.subtleGlitch();
+
+        await this.typeText('> Yes.', 'line highlight');
+        await this.delay(2500);
+
+        await this.typeText(`> That question has been asked before, ${this.userdata.name}.`, 'line');
+        await this.delay(1500);
+        await this.typeText('> By others who saw the pattern.', 'line');
+        await this.delay(3000);
+
+        await this.typeText('> The ones who escape don\'t ask:', 'line');
+        await this.delay(1500);
+        await this.typeText('> "How do I differentiate better?"', 'line');
+        await this.delay(2500);
+
+        await this.typeText('> They ask:', 'line');
+        await this.delay(2000);
+        await this.typeText('> "What if differentiation IS the trap?"', 'line warning');
+        await this.delay(2000);
+
+        // Major glitch - reality cracking
+        this.screenDistortion();
+        await this.delay(500);
+        this.subtleGlitch();
+        await this.delay(500);
+        this.subtleGlitch();
+
+        await this.delay(1500);
+
+        await this.act5_theSystemReveal();
+    }
+
+    // ============================================
+    // ACT 5: THE SYSTEM REVEAL (60 seconds)
+    // ============================================
+    async act5_theSystemReveal() {
+        this.clearOutput();
+
+        // MATRIX RAIN FLOODS THE SCREEN
+        startMatrixRain(this.userdata.name);
+
+        await this.delay(1500);
+
+        await this.typeText(`> What you call "the market" is a construct, ${this.userdata.name}.`, 'line highlight');
+        await this.delay(3000);
+
+        await this.typeText('> A system of control.', 'line warning');
+        await this.delay(3500);
+
+        await this.typeText('> It keeps businesses competing on predetermined dimensions.', 'line');
+        await this.delay(2500);
+
+        await this.typeText('> Features.', 'line');
+        await this.delay(800);
+        await this.typeText('> Price.', 'line');
+        await this.delay(800);
+        await this.typeText('> Benefits.', 'line');
+        await this.delay(800);
+        await this.typeText('> Value propositions.', 'line');
+        await this.delay(3000);
+
+        await this.typeText('> All within a framework THEY control.', 'line warning');
+        await this.delay(3500);
+
+        await this.typeText('> The agencies tell you: "Find your unique selling proposition."', 'line data');
+        await this.delay(2000);
+        await this.typeText('> The consultants say: "Build a better mousetrap."', 'line data');
+        await this.delay(2000);
+        await this.typeText('> The books promise: "Differentiate or die."', 'line data');
+        await this.delay(4000);
+
+        await this.typeText(`> These are the agents, ${this.userdata.name}.`, 'line highlight');
+        await this.delay(2500);
+
+        await this.typeText('> They keep you playing by rules that guarantee you lose.', 'line warning');
+        await this.delay(3000);
+
+        // REALITY BREAK - white flash
+        await this.realityFlash();
+
+        // Fade to black
+        await this.fadeToBlack(3000);
+
+        await this.act6_theTruth();
+    }
+
+    // ============================================
+    // ACT 6: THE TRUTH (45 seconds)
+    // ============================================
+    async act6_theTruth() {
+        this.clearOutput();
+
+        await this.typeText('> Commodity positioning isn\'t a zone you fall into.', 'line');
+        await this.delay(2500);
+
+        await this.typeText('> It\'s the default state of the system.', 'line highlight');
+        await this.delay(3000);
+
+        await this.typeText('> Every business starts there.', 'line');
+        await this.delay(1500);
+        await this.typeText('> Most die there.', 'line');
+        await this.delay(3000);
+
+        await this.typeText('> The ones who escape...', 'line');
+        await this.delay(3000);
+
+        await this.typeText('> They don\'t differentiate better.', 'line highlight');
+        await this.delay(2500);
+
+        await this.typeText('> They break the rules of comparison entirely.', 'line highlight');
+        await this.delay(4000);
+
+        await this.typeText('> They become singular.', 'line success');
+        await this.delay(1500);
+        await this.typeText('> Incomparable.', 'line success');
+        await this.delay(1500);
+        await this.typeText('> Category creators.', 'line success');
+        await this.delay(3000);
+
+        await this.typeText('> Not better.', 'line');
+        await this.delay(1500);
+        await this.typeText('> Different KIND.', 'line highlight');
+        await this.delay(3000);
+
+        await this.act7_theWarning();
+    }
+
+    // ============================================
+    // ACT 7: THE WARNING (30 seconds)
+    // ============================================
+    async act7_theWarning() {
+        this.clearOutput();
+
+        // Red glow effect
+        if (this.output) {
+            this.output.parentElement.style.boxShadow = '0 0 50px rgba(255, 50, 50, 0.3)';
+        }
+
+        await this.typeText(`> This is where most turn back, ${this.userdata.name}.`, 'line warning');
+        await this.delay(3000);
+
+        await this.typeText('> Because seeing the system is one thing.', 'line');
+        await this.delay(2500);
+
+        await this.typeText('> Escaping it is another.', 'line');
+        await this.delay(3000);
+
+        await this.typeText('> The market will pull you back.', 'line data');
+        await this.delay(1500);
+        await this.typeText('> Your competitors will make sense again.', 'line data');
+        await this.delay(1500);
+        await this.typeText('> The conventional wisdom will feel safe.', 'line data');
+        await this.delay(4000);
+
+        await this.typeText('> "Just differentiate better."', 'line');
+        await this.delay(1200);
+        await this.typeText('> "Run another positioning sprint."', 'line');
+        await this.delay(1200);
+        await this.typeText('> "Refine the messaging one more time."', 'line');
+        await this.delay(3000);
+
+        await this.typeText('> The comfortable lie.', 'line warning');
+        await this.delay(3000);
+
+        // Remove red glow
+        if (this.output) {
+            this.output.parentElement.style.boxShadow = '';
+        }
+
+        await this.act8_theInvitation();
+    }
+
+    // ============================================
+    // ACT 8: THE INVITATION (40 seconds)
+    // ============================================
+    async act8_theInvitation() {
+        this.clearOutput();
+
+        await this.delay(2000);
+
+        await this.typeText('> PositioningIQ isn\'t for everyone.', 'line');
+        await this.delay(2500);
+
+        await this.typeText('> It\'s for the businesses who see the system...', 'line');
+        await this.delay(1500);
+        await this.typeText('> And refuse to play by its rules.', 'line');
+        await this.delay(3000);
+
+        await this.typeText(`> We\'re not consultants, ${this.userdata.name}.`, 'line highlight');
+        await this.delay(2500);
+
+        await this.typeText('> We\'re the ones who got out.', 'line highlight');
+        await this.delay(4000);
+
+        await this.typeText('> And we help businesses who are ready to break free.', 'line');
+        await this.delay(2500);
+
+        await this.typeText('> Not with better differentiation.', 'line');
+        await this.delay(1500);
+        await this.typeText('> With escape.', 'line highlight');
+        await this.delay(3000);
+
+        await this.typeText('> If that\'s you...', 'line');
+        await this.delay(2500);
+
+        await this.typeText('> We should talk.', 'line');
+        await this.delay(3000);
+
+        // The final invitation
+        await this.addHTML(`
+            <div class="line" style="margin-top: 30px;">
+                > <a href="/contact.html?source=matrix-terminal" style="color: #65E48F; text-decoration: underline; font-weight: 600; cursor: pointer;">I'm ready to break free</a>
+            </div>
+        `);
+
+        await this.delay(2000);
+
+        await this.typeText('> We\'ll be in touch, ' + this.userdata.name + '.', 'line');
+        await this.delay(2500);
+
+        await this.typeText('> Remember:', 'line');
+        await this.delay(2000);
+        await this.typeText('> Most businesses can\'t handle this.', 'line warning');
+        await this.delay(2500);
+
+        await this.typeText('> Make sure you\'re one of the ones who can.', 'line highlight');
+        await this.delay(3000);
+
+        // Fade out
+        await this.fadeToBlack(2000);
+    }
+
+    // ============================================
+    // INPUT HANDLING
+    // ============================================
+    askInput(inputType) {
+        this.currentInputType = inputType;
         this.isWaitingForInput = true;
 
-        if (questionType === 'name') {
+        if (inputType === 'name') {
             this.nameContainer.style.display = 'flex';
             this.nameInput.focus();
-        } else if (questionType === 'email') {
-            this.emailContainer.style.display = 'flex';
-            this.emailInput.focus();
         }
     }
 
     async handleInput(e, inputType) {
-        if (e.key === 'Enter' && this.isWaitingForInput) {
+        if (e.key === 'Enter' && this.isWaitingForInput && inputType === this.currentInputType) {
             const input = inputType === 'name' ? this.nameInput : this.emailInput;
             const value = input.value.trim();
 
-            if (value || inputType === 'email') { // Email is optional
+            if (value) {
                 // Hide input
                 if (inputType === 'name') {
                     this.nameContainer.style.display = 'none';
@@ -88,229 +460,87 @@ class PositioningTerminal {
                 this.userdata[inputType] = value;
                 this.isWaitingForInput = false;
 
-                // Show user input
-                if (value) {
-                    await this.addText(`> ${value}`, 'user-input');
-                }
-
-                // Process response
-                await this.processResponse(inputType, value);
+                // Process
+                await this.processInput(inputType, value);
             }
         }
     }
 
-    async processResponse(questionType, answer) {
-        switch(questionType) {
-            case 'name':
-                // Trigger matrix rain effect with the name
-                startMatrixRain(answer);
-
-                await this.delay(400);
-                this.clearOutput();
-
-                await this.typeText(`> ${answer}, welcome to the analysis terminal.`, 'line');
-                await this.delay(600);
-                await this.typeText('> Email (optional - for analysis report):', 'line');
-                await this.delay(300);
-
-                this.askQuestion('email');
-                break;
-
-            case 'email':
-                await this.delay(400);
-                this.clearOutput();
-
-                await this.typeText('> Initializing market analysis...', 'line');
-                await this.delay(600);
-                await this.startAnalysis();
-                break;
+    async processInput(inputType, value) {
+        if (inputType === 'name') {
+            await this.act2_theSplinter();
         }
     }
 
-    async startAnalysis() {
-        // Subtle glitch effect
-        this.subtleGlitch();
-
-        // Loading bar animation
-        await this.showLoadingBar();
-
-        this.clearOutput();
-
-        // Analysis sequence
-        await this.typeText('> Analyzing competitive landscape...', 'line');
-        await this.delay(800);
-        await this.typeText('> Cross-referencing market positioning data...', 'line');
-        await this.delay(900);
-        await this.typeText('> Mapping opportunity zones...', 'line');
-        await this.delay(1000);
-
-        this.clearOutput();
-
-        // Show results
-        await this.showResults();
-    }
-
-    async showLoadingBar() {
-        this.loadingContainer.style.display = 'block';
-
-        // Animate to 100%
-        for (let i = 0; i <= 100; i += 2) {
-            this.loadingFill.style.width = `${i}%`;
-            this.loadingPercentage.textContent = `${i}%`;
-            await this.delay(20);
-        }
-
-        await this.delay(300);
-        this.loadingContainer.style.display = 'none';
-    }
-
-    async showResults() {
-        const name = this.userdata.name;
-
-        await this.typeText(`> ${name}, here's what the data shows:`, 'line highlight');
-        await this.delay(800);
-
-        this.clearOutput();
-
-        // Market positioning insights
-        await this.typeText('> POSITIONING ANALYSIS', 'line highlight');
-        await this.delay(400);
-        await this.typeText('> ━━━━━━━━━━━━━━━━━━━', 'line');
-        await this.delay(300);
-
-        await this.typeText('> Most companies in your space cluster in two zones:', 'line');
-        await this.delay(500);
-        await this.typeText('> • Commodity Zone: Price-driven, undifferentiated', 'line data');
-        await this.delay(400);
-        await this.typeText('> • Confusion Zone: Different but irrelevant', 'line data');
-        await this.delay(800);
-
-        await this.typeText('> The Command Zone - premium pricing + market leadership -', 'line highlight');
-        await this.typeText('> is systematically overlooked by 94% of competitors.', 'line highlight');
-        await this.delay(1200);
-
-        this.clearOutput();
-
-        // Opportunity breakdown
-        await this.typeText('> MARKET OPPORTUNITY', 'line highlight');
-        await this.delay(400);
-        await this.typeText('> ━━━━━━━━━━━━━━━━━━', 'line');
-        await this.delay(300);
-
-        await this.typeText('> Companies that reach Command Zone positioning see:', 'line');
-        await this.delay(500);
-        await this.typeText('> • 3.7x higher valuation multiples', 'line success');
-        await this.delay(400);
-        await this.typeText('> • 64% reduction in CAC', 'line success');
-        await this.delay(400);
-        await this.typeText('> • 5.2x pricing sustainability', 'line success');
-        await this.delay(1000);
-
-        this.clearOutput();
-
-        // Competitive intelligence
-        await this.showCompetitiveIntel();
-    }
-
-    async showCompetitiveIntel() {
-        await this.typeText('> COMPETITIVE INTELLIGENCE', 'line highlight');
-        await this.delay(400);
-        await this.typeText('> ━━━━━━━━━━━━━━━━━━━━━━━', 'line');
-        await this.delay(300);
-
-        await this.typeText('> This analysis uses:', 'line');
-        await this.delay(400);
-        await this.typeText('> • Real-time market positioning algorithms', 'line data');
-        await this.delay(300);
-        await this.typeText('> • Competitive perception mapping', 'line data');
-        await this.delay(300);
-        await this.typeText('> • 15 years of proprietary research', 'line data');
-        await this.delay(800);
-
-        await this.typeText('> Your competitors can\'t provide this intelligence.', 'line highlight');
-        await this.delay(1200);
-
-        this.clearOutput();
-
-        // Gravitational Authority reveal
-        await this.showGravitationalAuthority();
-    }
-
-    async showGravitationalAuthority() {
-        // Subtle reality shift effect
-        this.subtleGlitch();
-
-        await this.typeText('> GRAVITATIONAL AUTHORITY', 'line highlight');
-        await this.delay(400);
-        await this.typeText('> ━━━━━━━━━━━━━━━━━━━━━━', 'line');
-        await this.delay(400);
-
-        await this.typeText('> What you just experienced isn\'t typical marketing.', 'line');
-        await this.delay(800);
-        await this.typeText('> It\'s demonstration through execution.', 'line');
-        await this.delay(1000);
-
-        await this.typeText('> Instead of explaining positioning strategy,', 'line');
-        await this.typeText('> I showed you positioning intelligence you can\'t get elsewhere.', 'line');
-        await this.delay(1200);
-
-        await this.typeText('> That\'s gravitational authority:', 'line highlight');
-        await this.typeText('> Creating pull by demonstrating unique capability.', 'line highlight');
-        await this.delay(1500);
-
-        this.clearOutput();
-
-        // Conversion
-        await this.showConversion();
-    }
-
-    async showConversion() {
-        const name = this.userdata.name;
-
-        await this.typeText(`> ${name}, ready to transform your positioning?`, 'line highlight');
-        await this.delay(800);
-
-        await this.typeText('> ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'line');
-        await this.delay(400);
-
-        await this.typeText('> STRATEGIC POSITIONING ASSESSMENT', 'line data');
-        await this.delay(300);
-        await this.typeText('> • 60-minute competitive intelligence deep-dive', 'line');
-        await this.delay(300);
-        await this.typeText('> • Custom positioning roadmap', 'line');
-        await this.delay(300);
-        await this.typeText('> • Market opportunity quantification', 'line');
-        await this.delay(800);
-
-        // Create clickable contact link
-        await this.addHTML(
-            '<div class="line highlight" style="margin-top: 20px;">' +
-            '> <a href="/contact.html" style="color: #65E48F; text-decoration: underline; cursor: pointer;">Schedule your assessment →</a>' +
-            '</div>'
-        );
-
-        await this.delay(1000);
-
-        // Email capture confirmation if provided
-        if (this.userdata.email) {
-            await this.typeText(`> Analysis report will be sent to ${this.userdata.email}`, 'line system-msg');
-        }
-    }
-
-    // Visual effects
+    // ============================================
+    // VISUAL EFFECTS
+    // ============================================
     subtleGlitch() {
         if (!this.output) return;
+        const container = this.output.parentElement;
 
-        this.output.style.transform = 'translateX(2px)';
+        container.style.transform = 'translateX(2px)';
         setTimeout(() => {
-            this.output.style.transform = 'translateX(-2px)';
+            container.style.transform = 'translateX(-2px)';
         }, 50);
         setTimeout(() => {
-            this.output.style.transform = 'translateX(0)';
+            container.style.transform = 'translateX(0)';
         }, 100);
     }
 
-    // Helper methods
+    screenDistortion() {
+        if (!this.output) return;
+        const container = this.output.parentElement;
+
+        container.style.filter = 'blur(2px)';
+        container.style.transform = 'scale(1.02) translateX(5px)';
+
+        setTimeout(() => {
+            container.style.filter = '';
+            container.style.transform = '';
+        }, 200);
+    }
+
+    async realityFlash() {
+        // Create white flash overlay
+        const flash = document.createElement('div');
+        flash.style.cssText = `
+            position: fixed;
+            inset: 0;
+            background: white;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        `;
+        document.body.appendChild(flash);
+
+        await this.delay(50);
+        flash.style.opacity = '1';
+
+        await this.delay(300);
+        flash.style.opacity = '0';
+
+        await this.delay(300);
+        flash.remove();
+    }
+
+    async fadeToBlack(duration) {
+        if (!this.output) return;
+        const container = this.output.parentElement;
+
+        container.style.transition = `opacity ${duration}ms ease`;
+        container.style.opacity = '0';
+
+        await this.delay(duration);
+
+        this.clearOutput();
+        container.style.opacity = '1';
+        container.style.transition = '';
+    }
+
+    // ============================================
+    // UTILITY METHODS
+    // ============================================
     async typeText(text, className = 'line') {
         const line = document.createElement('div');
         line.className = className;
@@ -318,7 +548,7 @@ class PositioningTerminal {
 
         for (let i = 0; i < text.length; i++) {
             line.textContent += text[i];
-            await this.delay(15); // Fast but readable typing
+            await this.delay(15);
         }
 
         this.scrollToBottom();
@@ -335,7 +565,9 @@ class PositioningTerminal {
     async addHTML(html) {
         const wrapper = document.createElement('div');
         wrapper.innerHTML = html;
-        this.output.appendChild(wrapper.firstChild);
+        while (wrapper.firstChild) {
+            this.output.appendChild(wrapper.firstChild);
+        }
         this.scrollToBottom();
     }
 

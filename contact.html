@@ -467,9 +467,15 @@
 
             window.Calendly.initInlineWidget({
 
-              url: 'https://calendly.com/positioningiq/30min?background_color=000000&text_color=ffffff&primary_color=65E48F',
+              url: 'https://calendly.com/positioningiq/30min',
 
-              parentElement: widget
+              parentElement: widget,
+
+              backgroundColor: '000000',
+
+              textColor: 'ffffff',
+
+              primaryColor: '65E48F'
 
             });
 
@@ -778,7 +784,7 @@
 
               // a1 = first custom question (Company), a2 = second custom question (What do you need help with)
 
-              const calendlyUrl = `https://calendly.com/positioningiq/30min?background_color=000000&text_color=ffffff&primary_color=65E48F&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&a1=${encodeURIComponent(company)}&a2=${encodeURIComponent(challenge)}`;
+              const calendlyUrl = `https://calendly.com/positioningiq/30min?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&a1=${encodeURIComponent(company)}&a2=${encodeURIComponent(challenge)}`;
 
 
 
@@ -786,7 +792,15 @@
 
                 url: calendlyUrl,
 
-                parentElement: widget
+                parentElement: widget,
+
+                // Styling options (camelCase format for current Calendly API)
+
+                backgroundColor: '000000',
+
+                textColor: 'ffffff',
+
+                primaryColor: '65E48F'
 
               });
 

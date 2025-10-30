@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-74JF9CHYSL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-74JF9CHYSL', {
+        'send_page_view': true
+      });
+
+      // Track successful download
+      gtag('event', 'generate_lead', {
+        'value': 15000,
+        'currency': 'USD',
+        'lead_source': 'investor_ready_positioning_checklist'
+      });
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Your Investor Checklist - Troy Assoignon</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="/src/style.css" />
+
+    <style>
+      .thank-you-container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(20, 20, 30, 0.95));
+      }
+
+      .thank-you-card {
+        max-width: 650px;
+        width: 100%;
+        background: rgba(var(--color-luxury-900), 0.6);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(var(--color-accent-green), 0.2);
+        border-radius: 1.5rem;
+        padding: 3rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .thank-you-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        pointer-events: none;
+      }
+
+      .capital-badge {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background: linear-gradient(135deg, rgba(var(--color-accent-green), 0.3), rgba(var(--color-accent-green), 0.15));
+        border: 2px solid rgba(var(--color-accent-green), 0.4);
+        border-radius: 2rem;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: rgb(var(--color-accent-green));
+        margin-bottom: 1.5rem;
+      }
+
+      .checkmark-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 1.5rem;
+        background: rgba(var(--color-accent-green), 0.1);
+        border: 2px solid rgb(var(--color-accent-green));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .checkmark-icon svg {
+        width: 40px;
+        height: 40px;
+        stroke: rgb(var(--color-accent-green));
+        stroke-width: 3;
+      }
+
+      .thank-you-card h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: rgb(var(--color-text-primary));
+      }
+
+      .thank-you-card p {
+        font-size: 1.1rem;
+        color: rgb(var(--color-text-secondary));
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .download-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1.25rem 2.5rem;
+        background: linear-gradient(135deg, rgb(var(--color-accent-green)), rgba(var(--color-accent-green), 0.8));
+        color: rgb(var(--color-luxury-900));
+        font-weight: 600;
+        font-size: 1.1rem;
+        border-radius: 0.75rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 2px solid rgb(var(--color-accent-green));
+        box-shadow: 0 4px 20px rgba(var(--color-accent-green), 0.3);
+      }
+
+      .download-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 30px rgba(var(--color-accent-green), 0.5);
+      }
+
+      .download-button svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .warning-box {
+        margin-top: 2.5rem;
+        padding: 1.5rem;
+        background: rgba(255, 193, 7, 0.1);
+        border: 2px solid rgba(255, 193, 7, 0.3);
+        border-radius: 1rem;
+        text-align: left;
+      }
+
+      .warning-box h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: rgb(255, 193, 7);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .warning-box p {
+        font-size: 0.95rem;
+        color: rgb(var(--color-text-secondary));
+        margin-bottom: 0;
+      }
+
+      .checklist-categories {
+        margin-top: 2rem;
+        padding: 1.5rem;
+        background: rgba(var(--color-luxury-800), 0.4);
+        border: 1px solid rgba(var(--color-luxury-700), 0.3);
+        border-radius: 1rem;
+        text-align: left;
+      }
+
+      .checklist-categories h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: rgb(var(--color-accent-green));
+      }
+
+      .category-list {
+        display: grid;
+        gap: 0.75rem;
+        font-size: 0.95rem;
+        color: rgb(var(--color-text-secondary));
+      }
+
+      .category-list li {
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .category-list li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: rgb(var(--color-accent-green));
+        font-weight: bold;
+      }
+
+      .next-steps {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(var(--color-luxury-700), 0.3);
+      }
+
+      .next-steps h2 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: rgb(var(--color-text-primary));
+      }
+
+      .next-steps-list {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+      }
+
+      .next-steps-list li {
+        padding: 0.75rem 0;
+        color: rgb(var(--color-text-secondary));
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      .next-steps-list li::before {
+        content: '✓';
+        color: rgb(var(--color-accent-green));
+        font-weight: bold;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+
+      .cta-link {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 0.75rem 1.5rem;
+        background: rgba(var(--color-accent-green), 0.1);
+        color: rgb(var(--color-accent-green));
+        border: 1px solid rgba(var(--color-accent-green), 0.3);
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.2s ease;
+      }
+
+      .cta-link:hover {
+        background: rgba(var(--color-accent-green), 0.2);
+        border-color: rgba(var(--color-accent-green), 0.5);
+        transform: translateX(4px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="thank-you-container">
+      <div class="thank-you-card">
+        <div class="capital-badge">$4.5M+ CAPITAL RAISED</div>
+
+        <div class="checkmark-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+
+        <h1>Your Investor Checklist is Ready</h1>
+        <p>Download the complete Investor-Ready Positioning Checklist. This is the same framework that helped a real estate fund go from $0 to $4.5M raised in 90 days.</p>
+
+        <a href="/downloads/Investor-Ready-Positioning-Checklist.pdf" download class="download-button" onclick="gtag('event', 'file_download', {'file_name': 'Investor-Ready-Positioning-Checklist.pdf'});">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download Investor Checklist
+        </a>
+
+        <div class="warning-box">
+          <h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+            Before You Pitch Another Investor...
+          </h3>
+          <p>Complete this 44-point diagnostic first. Most founders pitch too early and burn investor relationships they can't get back. VCs won't tell you positioning is why they passed.</p>
+        </div>
+
+        <div class="checklist-categories">
+          <h3>44-Point Framework Includes:</h3>
+          <ul class="category-list">
+            <li><strong>Market Positioning Fundamentals</strong> (12 checkpoints) - TAM/SAM/SOM, category leadership, market timing</li>
+            <li><strong>Value Proposition Architecture</strong> (10 checkpoints) - Problem-solution fit, proof points, validation</li>
+            <li><strong>Competitive Positioning</strong> (8 checkpoints) - Moat clarity, defensibility, differentiation</li>
+            <li><strong>Growth Narrative</strong> (6 checkpoints) - Scalability, expansion story, vision positioning</li>
+            <li><strong>Pitch Positioning</strong> (8 checkpoints) - Deck clarity, one-liner, consistency</li>
+          </ul>
+        </div>
+
+        <div class="next-steps">
+          <h2>Evaluation Protocol:</h2>
+          <ul class="next-steps-list">
+            <li>Complete the 44-point diagnostic to score your investor positioning</li>
+            <li>Calculate your positioning score (40-44 = investor-ready, below 30 = critical gaps)</li>
+            <li>Follow the action plan based on your score before pitching</li>
+            <li>Connect with Troy on <a href="https://www.linkedin.com/in/troyassoignon/" target="_blank" style="color: rgb(var(--color-accent-green)); text-decoration: underline;">LinkedIn</a> for fundraising insights</li>
+          </ul>
+
+          <a href="/services/investor-ready-positioning.html" class="cta-link">
+            Raising Capital? Book an Investor Positioning Session →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

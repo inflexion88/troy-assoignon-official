@@ -15,13 +15,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Investor-Ready Positioning Checklist | Troy Assoignon</title>
-  <meta name="description" content="Audit your pitch deck positioning before approaching investors. The checklist behind $4.5M+ in capital raised." />
+  <title>The Positioning Checklist VCs Use (But Never Share) | Troy Assoignon</title>
+  <meta name="description" content="The 44-point diagnostic VCs evaluate in the first 60 seconds. $4.5M raised in 90 days with positioning alone. Same team, same strategy, different positioning." />
   <meta name="author" content="Troy Assoignon" />
 
   <!-- Open Graph Tags -->
-  <meta property="og:title" content="Investor-Ready Positioning Checklist" />
-  <meta property="og:description" content="Audit your pitch deck positioning before approaching investors. Used by founders who raised $10M+." />
+  <meta property="og:title" content="The Positioning Checklist VCs Use (But Never Share)" />
+  <meta property="og:description" content="$4.5M raised in 90 days after 6 months of rejection. 73% of failed fundraises trace to positioning, not product." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.troyassoignon.com/lead-magnets/investor-positioning-checklist.html" />
   <meta property="og:image" content="https://www.troyassoignon.com/og-image.png" />
@@ -29,8 +29,8 @@
 
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Investor-Ready Positioning Checklist" />
-  <meta name="twitter:description" content="Audit your pitch deck positioning before approaching investors." />
+  <meta name="twitter:title" content="The Positioning Checklist VCs Use (But Never Share)" />
+  <meta name="twitter:description" content="$4.5M raised in 90 days after 6 months of rejection. The positioning diagnostic that changes valuations." />
   <meta name="twitter:image" content="https://www.troyassoignon.com/og-image.png" />
 
   <link rel="canonical" href="https://www.troyassoignon.com/lead-magnets/investor-positioning-checklist.html" />
@@ -38,91 +38,487 @@
   <link rel="stylesheet" href="/src/style.css" />
 
   <style>
-    .lead-magnet-container {
+    .investor-page {
+      background: #0a0a0f;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem 1rem;
-      position: relative;
-      overflow: hidden;
     }
 
-    .lead-magnet-hero {
-      max-width: 700px;
-      width: 100%;
-      position: relative;
-      z-index: 10;
+    .investor-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
     }
 
     .hero-badge {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: rgba(101, 228, 143, 0.15);
-      border: 1px solid rgba(101, 228, 143, 0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(135deg, rgba(101, 228, 143, 0.2), rgba(101, 228, 143, 0.1));
+      border: 2px solid rgba(101, 228, 143, 0.4);
       border-radius: 2rem;
       color: rgb(101, 228, 143);
-      font-size: 0.875rem;
-      font-weight: 600;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px rgba(101, 228, 143, 0.2);
+    }
+
+    .hero-headline {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.1;
+      color: #ffffff;
       margin-bottom: 1.5rem;
     }
 
-    .lead-magnet-form-overlay {
-      background: linear-gradient(135deg, rgba(30, 30, 35, 0.95), rgba(17, 17, 23, 0.98));
-      border: 2px solid rgba(101, 228, 143, 0.2);
+    .hero-subheadline {
+      font-size: 1.375rem;
+      line-height: 1.5;
+      color: rgba(185, 185, 190, 1);
+      margin-bottom: 3rem;
+    }
+
+    .stat-highlight {
+      color: rgb(101, 228, 143);
+      font-weight: 700;
+    }
+
+    .problem-section {
+      background: linear-gradient(135deg, rgba(30, 30, 35, 0.6), rgba(17, 17, 23, 0.8));
+      border: 1px solid rgba(101, 228, 143, 0.15);
       border-radius: 1rem;
       padding: 2.5rem;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-text {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: rgba(185, 185, 190, 1);
+      margin-bottom: 1.25rem;
+    }
+
+    .case-study-card {
+      background: linear-gradient(135deg, rgba(30, 30, 35, 0.95), rgba(17, 17, 23, 0.98));
+      border: 2px solid rgba(101, 228, 143, 0.3);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .case-study-header {
+      background: rgba(101, 228, 143, 0.1);
+      border-left: 4px solid rgb(101, 228, 143);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 0.5rem;
+    }
+
+    .case-study-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+
+    .case-study-subtitle {
+      font-size: 1.125rem;
+      color: rgba(185, 185, 190, 1);
+    }
+
+    .before-after-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .before-after-card {
+      background: rgba(20, 20, 25, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+    }
+
+    .before-after-card.before {
+      border-left: 3px solid #ef4444;
+    }
+
+    .before-after-card.after {
+      border-left: 3px solid rgb(101, 228, 143);
+    }
+
+    .before-after-label {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .before-after-label.before {
+      color: #ef4444;
+    }
+
+    .before-after-label.after {
+      color: rgb(101, 228, 143);
+    }
+
+    .before-after-item {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: rgba(185, 185, 190, 1);
+      margin-bottom: 0.75rem;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+
+    .before-after-item::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: rgba(185, 185, 190, 0.5);
+    }
+
+    .key-insight {
+      background: rgba(101, 228, 143, 0.1);
+      border: 2px solid rgba(101, 228, 143, 0.3);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
       margin-top: 2rem;
     }
 
-    .checkmark {
-      color: rgb(101, 228, 143);
-      margin-right: 0.5rem;
+    .key-insight-text {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #ffffff;
+      text-align: center;
+      line-height: 1.5;
     }
 
-    .benefit-item {
-      display: flex;
-      align-items: flex-start;
+    .checklist-breakdown {
+      background: linear-gradient(135deg, rgba(30, 30, 35, 0.6), rgba(17, 17, 23, 0.8));
+      border: 1px solid rgba(101, 228, 143, 0.15);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .checklist-category {
+      background: rgba(20, 20, 25, 0.6);
+      border: 1px solid rgba(101, 228, 143, 0.2);
+      border-radius: 0.5rem;
+      padding: 1.25rem;
       margin-bottom: 1rem;
+    }
+
+    .checklist-category-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: rgb(101, 228, 143);
+      margin-bottom: 0.5rem;
+    }
+
+    .checklist-category-desc {
+      font-size: 0.9375rem;
       color: rgba(185, 185, 190, 1);
       line-height: 1.6;
     }
 
-    .social-proof {
-      background: rgba(101, 228, 143, 0.1);
-      border-left: 3px solid rgb(101, 228, 143);
-      padding: 1rem;
-      margin: 2rem 0;
-      border-radius: 0.5rem;
+    .scoring-framework {
+      background: rgba(20, 20, 25, 0.8);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      margin-top: 2rem;
     }
 
-    .background-glow {
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(101, 228, 143, 0.15) 0%, transparent 70%);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      z-index: 1;
+    .score-tier {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .score-tier:last-child {
+      border-bottom: none;
+    }
+
+    .score-range {
+      font-weight: 700;
+      color: rgb(101, 228, 143);
+    }
+
+    .score-verdict {
+      color: rgba(185, 185, 190, 1);
+      font-size: 0.9375rem;
+    }
+
+    .testimonials-section {
+      margin-bottom: 3rem;
+    }
+
+    .testimonial-card {
+      background: linear-gradient(135deg, rgba(30, 30, 35, 0.6), rgba(17, 17, 23, 0.8));
+      border: 1px solid rgba(101, 228, 143, 0.15);
+      border-radius: 0.75rem;
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-text {
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      color: rgba(185, 185, 190, 1);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .testimonial-title {
+      font-size: 0.875rem;
+      color: rgb(101, 228, 143);
+    }
+
+    .authority-section {
+      background: linear-gradient(135deg, rgba(30, 30, 35, 0.95), rgba(17, 17, 23, 0.98));
+      border: 2px solid rgba(101, 228, 143, 0.2);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .authority-image {
+      flex-shrink: 0;
+      width: 150px;
+      height: 150px;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 2px solid rgba(101, 228, 143, 0.3);
+    }
+
+    .authority-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .authority-content {
+      flex: 1;
+    }
+
+    .authority-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .authority-title {
+      font-size: 1rem;
+      color: rgb(101, 228, 143);
+      margin-bottom: 1.25rem;
+    }
+
+    .credential-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+      font-size: 0.9375rem;
+      color: rgba(185, 185, 190, 1);
+    }
+
+    .credential-item::before {
+      content: "✓";
+      color: rgb(101, 228, 143);
+      margin-right: 0.75rem;
+      font-weight: 700;
+    }
+
+    .valuation-impact {
+      background: linear-gradient(135deg, rgba(30, 30, 35, 0.6), rgba(17, 17, 23, 0.8));
+      border: 1px solid rgba(101, 228, 143, 0.15);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .impact-stat {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(101, 228, 143, 0.05);
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .impact-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: rgb(101, 228, 143);
+      margin-bottom: 0.5rem;
+    }
+
+    .impact-label {
+      font-size: 1rem;
+      color: rgba(185, 185, 190, 1);
+    }
+
+    .form-section {
+      background: linear-gradient(135deg, rgba(30, 30, 35, 0.95), rgba(17, 17, 23, 0.98));
+      border: 3px solid rgba(101, 228, 143, 0.3);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      margin-bottom: 3rem;
+    }
+
+    .form-headline {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .form-subheadline {
+      font-size: 1.125rem;
+      color: rgba(185, 185, 190, 1);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .form-label {
+      display: block;
+      color: rgba(185, 185, 190, 1);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 0.9375rem;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 1rem 1.25rem;
+      background: rgba(20, 20, 25, 0.6);
+      border: 1px solid rgba(101, 228, 143, 0.2);
+      border-radius: 0.5rem;
+      color: #ffffff;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: rgb(101, 228, 143);
+      box-shadow: 0 0 0 3px rgba(101, 228, 143, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 1.25rem;
+      background: rgb(101, 228, 143);
+      color: #000000;
+      font-size: 1.125rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .form-submit:hover {
+      background: rgb(85, 210, 125);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(101, 228, 143, 0.3);
+    }
+
+    .form-privacy {
+      text-align: center;
+      font-size: 0.8125rem;
+      color: rgba(185, 185, 190, 0.7);
+      margin-top: 1rem;
+    }
+
+    .urgency-section {
+      background: linear-gradient(135deg, rgba(101, 228, 143, 0.1), rgba(101, 228, 143, 0.05));
+      border: 2px solid rgba(101, 228, 143, 0.3);
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .urgency-headline {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+
+    .urgency-text {
+      font-size: 1.125rem;
+      color: rgba(185, 185, 190, 1);
+      line-height: 1.6;
     }
 
     @media (max-width: 768px) {
-      .lead-magnet-form-overlay {
-        padding: 2rem 1.5rem;
+      .hero-headline {
+        font-size: 2rem;
       }
 
-      .background-glow {
-        width: 400px;
-        height: 400px;
+      .hero-subheadline {
+        font-size: 1.125rem;
+      }
+
+      .before-after-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .authority-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .authority-image {
+        width: 120px;
+        height: 120px;
+      }
+
+      .problem-section,
+      .case-study-card,
+      .checklist-breakdown,
+      .form-section {
+        padding: 1.75rem;
       }
     }
   </style>
 </head>
 
-<body class="bg-black text-white">
+<body class="investor-page">
   <div id="root">
     <!-- Navbar -->
     <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 py-4 md:py-6 bg-black/80 backdrop-blur-md shadow-md">
@@ -148,129 +544,311 @@
       </div>
     </header>
 
-    <!-- Background Glow Effect -->
-    <div class="background-glow"></div>
-
     <!-- Main Content -->
-    <main class="lead-magnet-container" style="margin-top: 80px;">
-      <div class="lead-magnet-hero">
-        <!-- Badge -->
+    <main class="investor-container" style="margin-top: 100px;">
+
+      <!-- Hero Section -->
+      <section class="hero-section">
         <div class="hero-badge">
-          $4.5M+ Capital Raised
+          💰 $0 → $4.5M IN 90 DAYS
         </div>
 
-        <!-- Headline -->
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
-          Investor-Ready Positioning Checklist
+        <h1 class="hero-headline">
+          Why VCs Passed on Your Pitch<br />
+          (They Won't Tell You This)
         </h1>
 
-        <!-- Subheadline -->
-        <p class="text-xl text-luxury-300 mb-8">
-          Audit your pitch deck positioning before approaching investors. The checklist behind $4.5M+ in capital raised.
+        <p class="hero-subheadline">
+          <span class="stat-highlight">73% of failed fundraises</span> trace to positioning, not product. Get the 44-point diagnostic VCs evaluate in the first 60 seconds—the checklist behind $4.5M raised after 6 months of rejection.
         </p>
+      </section>
 
-        <!-- Form Overlay -->
-        <div class="lead-magnet-form-overlay">
-          <!-- Benefits List -->
-          <div class="mb-6">
-            <div class="benefit-item">
-              <span class="checkmark">✓</span>
-              <span>20-point investor positioning audit</span>
-            </div>
-            <div class="benefit-item">
-              <span class="checkmark">✓</span>
-              <span>Category ownership assessment</span>
-            </div>
-            <div class="benefit-item">
-              <span class="checkmark">✓</span>
-              <span>Competitive moat evaluation</span>
-            </div>
-            <div class="benefit-item">
-              <span class="checkmark">✓</span>
-              <span>Pitch deck positioning framework</span>
-            </div>
-            <div class="benefit-item">
-              <span class="checkmark">✓</span>
-              <span>Investor psychology insights</span>
-            </div>
+      <!-- Problem Section -->
+      <section class="problem-section">
+        <h2 class="section-title">The Positioning Gap VCs Won't Explain</h2>
+        <p class="section-text">
+          You've pitched 20+ investors. Strong team. Proven track record. Solid investment thesis. But you're getting "we'll pass for now" with no real feedback.
+        </p>
+        <p class="section-text">
+          The truth? <span class="stat-highlight">It's not your product. It's your positioning.</span>
+        </p>
+        <p class="section-text">
+          VCs evaluate positioning in the first 60 seconds: market definition, category ownership, competitive moat, value architecture, and narrative scalability. If these aren't crystal clear, they pass—regardless of your product quality.
+        </p>
+        <p class="section-text">
+          Most founders waste 6 months pitching with weak positioning, burning investor relationships they can't rebuild. The cost? <span class="stat-highlight">$1.2M-$2.8M in lost valuation per 5-point positioning deficit.</span>
+        </p>
+      </section>
+
+      <!-- Case Study -->
+      <section class="case-study-card">
+        <div class="case-study-header">
+          <h2 class="case-study-title">$0 → $4.5M in 90 Days</h2>
+          <p class="case-study-subtitle">Same Team. Same Strategy. Different Positioning.</p>
+        </div>
+
+        <div class="before-after-container">
+          <div class="before-after-card before">
+            <div class="before-after-label before">BEFORE: 6 Months of Rejection</div>
+            <div class="before-after-item">6 months pitching investors</div>
+            <div class="before-after-item">Zero capital raised</div>
+            <div class="before-after-item">Strong team, proven track record, solid thesis</div>
+            <div class="before-after-item">Generic positioning: "We invest in commercial real estate with value-add strategies"</div>
+            <div class="before-after-item">Undifferentiated from 500+ other funds</div>
           </div>
 
-          <!-- Social Proof -->
-          <div class="social-proof">
-            <p class="text-white text-sm font-medium mb-0">
-              Used by founders who raised $10M+ in capital
-            </p>
+          <div class="before-after-card after">
+            <div class="before-after-label after">AFTER: Positioning Overhaul</div>
+            <div class="before-after-item">$4.5M raised in 90 days</div>
+            <div class="before-after-item">3 institutional investors</div>
+            <div class="before-after-item">Narrow, underserved category positioning</div>
+            <div class="before-after-item">Proprietary deal flow narrative</div>
+            <div class="before-after-item">Downside protection focus</div>
+            <div class="before-after-item">Specific geographic + property type expertise</div>
           </div>
+        </div>
 
-          <!-- Email Capture Form -->
-          <form
-            action="https://formsubmit.co/troy@troyassoignon.com"
-            method="POST"
-            id="lead-magnet-form"
-            class="space-y-4"
-          >
-            <!-- Hidden Fields for FormSubmit -->
-            <input type="hidden" name="_subject" value="New Lead: Investor Positioning Checklist">
-            <input type="hidden" name="_next" value="https://www.troyassoignon.com/thank-you.html">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="lead_magnet" value="Investor Positioning Checklist">
-
-            <div>
-              <label for="name" class="block text-luxury-300 font-medium mb-2">Name *</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                class="w-full px-4 py-3 bg-luxury-900/40 border border-luxury-800/30 rounded-lg text-white focus:border-accent-green focus:outline-none transition-colors"
-                placeholder="Your full name"
-              />
-            </div>
-
-            <div>
-              <label for="email" class="block text-luxury-300 font-medium mb-2">Email *</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                class="w-full px-4 py-3 bg-luxury-900/40 border border-luxury-800/30 rounded-lg text-white focus:border-accent-green focus:outline-none transition-colors"
-                placeholder="your@email.com"
-              />
-            </div>
-
-            <div>
-              <label for="fundraising-stage" class="block text-luxury-300 font-medium mb-2">Fundraising Stage *</label>
-              <select
-                id="fundraising-stage"
-                name="fundraising-stage"
-                required
-                class="w-full px-4 py-3 bg-luxury-900/40 border border-luxury-800/30 rounded-lg text-white focus:border-accent-green focus:outline-none transition-colors"
-              >
-                <option value="">Select stage...</option>
-                <option value="Pre-seed">Pre-seed</option>
-                <option value="Seed">Seed</option>
-                <option value="Series A">Series A</option>
-                <option value="Series B+">Series B+</option>
-                <option value="Not fundraising">Not fundraising</option>
-              </select>
-            </div>
-
-            <button
-              type="submit"
-              class="w-full px-6 py-4 bg-accent-green text-black font-bold text-lg rounded-lg hover:bg-accent-green/90 transition-all transform hover:scale-105 hover:shadow-lg"
-            >
-              Download Checklist
-            </button>
-          </form>
-
-          <!-- Privacy Statement -->
-          <p class="text-luxury-500 text-xs text-center mt-4">
-            We respect your privacy. Unsubscribe anytime.
+        <div class="key-insight">
+          <p class="key-insight-text">
+            "Same team. Same investment strategy. Different positioning. $4.5M difference."
           </p>
         </div>
-      </div>
+
+        <p class="section-text" style="margin-top: 2rem;">
+          <strong>What Changed:</strong> We repositioned the fund from a generic "value-add commercial real estate" player to a specialized operator in a narrow, underserved category with proprietary deal sourcing and downside-protected return structures.
+        </p>
+        <p class="section-text">
+          <strong>The Result:</strong> Investors who previously ghosted requested follow-up meetings. New investors saw category leadership instead of commodity competition. The positioning shift de-risked the investment thesis without changing the underlying strategy.
+        </p>
+      </section>
+
+      <!-- Checklist Breakdown -->
+      <section class="checklist-breakdown">
+        <h2 class="section-title">What VCs Evaluate (But Don't Tell You)</h2>
+        <p class="section-text">
+          This isn't a generic business checklist. This is the <span class="stat-highlight">44-point diagnostic framework</span> investors use to assess positioning in the first 60 seconds—reverse-engineered from $62.7M in client capital raised.
+        </p>
+
+        <div class="checklist-category">
+          <div class="checklist-category-title">Part 1: Market Positioning Fundamentals (12 Questions)</div>
+          <div class="checklist-category-desc">
+            Market definition clarity, TAM/SAM/SOM precision, category leadership positioning, competitive differentiation, market timing narrative
+          </div>
+        </div>
+
+        <div class="checklist-category">
+          <div class="checklist-category-title">Part 2: Value Proposition Architecture (10 Questions)</div>
+          <div class="checklist-category-desc">
+            Problem-solution fit clarity, value quantification, proof point strength, customer validation, go-to-market alignment
+          </div>
+        </div>
+
+        <div class="checklist-category">
+          <div class="checklist-category-title">Part 3: Competitive Positioning (8 Questions)</div>
+          <div class="checklist-category-desc">
+            Differentiation defensibility, competitive moat clarity, market positioning vs. competitors, category creation vs. disruption
+          </div>
+        </div>
+
+        <div class="checklist-category">
+          <div class="checklist-category-title">Part 4: Growth Narrative & Positioning (6 Questions)</div>
+          <div class="checklist-category-desc">
+            Positioning scalability, market expansion story, vision positioning, exit positioning
+          </div>
+        </div>
+
+        <div class="checklist-category">
+          <div class="checklist-category-title">Part 5: Messaging & Pitch Positioning (8 Questions)</div>
+          <div class="checklist-category-desc">
+            Pitch deck positioning clarity, one-liner effectiveness, vision statement power, positioning consistency
+          </div>
+        </div>
+
+        <div class="scoring-framework">
+          <h3 style="color: rgb(101, 228, 143); font-weight: 700; margin-bottom: 1rem; text-align: center;">Scoring Framework</h3>
+
+          <div class="score-tier">
+            <span class="score-range">40-44 Points</span>
+            <span class="score-verdict">Investor-ready positioning (proceed to fundraising)</span>
+          </div>
+
+          <div class="score-tier">
+            <span class="score-range">30-39 Points</span>
+            <span class="score-verdict">Strong foundation, refinement needed</span>
+          </div>
+
+          <div class="score-tier">
+            <span class="score-range">20-29 Points</span>
+            <span class="score-verdict">Critical positioning gaps hurting valuation</span>
+          </div>
+
+          <div class="score-tier">
+            <span class="score-range">0-19 Points</span>
+            <span class="score-verdict">Existential positioning failure (fix before pitching)</span>
+          </div>
+        </div>
+
+        <p class="section-text" style="margin-top: 2rem; text-align: center; font-weight: 600; color: rgb(101, 228, 143);">
+          Value Equivalent: $15,000 Positioning Audit
+        </p>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials-section">
+        <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;">
+          What Founders Say
+        </h2>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "In less than an hour during this webinar, Troy helped break the rigged perception and ideas I had of my business. I feel like I now have a wider grasp of what I need to develop moving forward. Feels good to be mentally unstuck."
+          </p>
+          <div class="testimonial-author">Neil Newsome</div>
+          <div class="testimonial-title">Owner & Co-Founder</div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "Troy's workshop was a game-changer for my business. His insights on positioning and market differentiation were invaluable."
+          </p>
+          <div class="testimonial-author">Valen Vergara</div>
+          <div class="testimonial-title">Founder</div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "Troy's positioning workshop was transformative. He helped me identify my unique value proposition and communicate it effectively."
+          </p>
+          <div class="testimonial-author">Isabel Sterne</div>
+          <div class="testimonial-title">Founder</div>
+        </div>
+      </section>
+
+      <!-- Authority Section -->
+      <section class="authority-section">
+        <div class="authority-image">
+          <img src="/images/troy-headshot-photo-about.png" alt="Troy Assoignon" />
+        </div>
+        <div class="authority-content">
+          <h3 class="authority-name">Troy Assoignon</h3>
+          <p class="authority-title">Strategic Positioning Expert | $62.7M in Client Results</p>
+
+          <div class="credential-item">Engineered Real Estate Fund positioning that raised $4.5M in 90 days after 6 months of rejection</div>
+          <div class="credential-item">Strategic Positioning Advantage™ framework (systematic, repeatable, not ad-hoc)</div>
+          <div class="credential-item">$62.7M in documented client capital raising results</div>
+          <div class="credential-item">Construction background: positioning is engineering, not creativity</div>
+          <div class="credential-item">
+            <a href="https://www.linkedin.com/in/troyassoignon/" target="_blank" rel="noopener noreferrer" style="color: rgb(101, 228, 143); text-decoration: underline;">LinkedIn Profile</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Valuation Impact -->
+      <section class="valuation-impact">
+        <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;">
+          The Valuation Impact of Positioning
+        </h2>
+
+        <div class="impact-stat">
+          <div class="impact-number">73%</div>
+          <div class="impact-label">Of failed fundraises trace to positioning, not product</div>
+        </div>
+
+        <div class="impact-stat">
+          <div class="impact-number">$1.2M-$2.8M</div>
+          <div class="impact-label">Valuation impact per 5-point positioning improvement</div>
+        </div>
+
+        <div class="impact-stat">
+          <div class="impact-number">60 Seconds</div>
+          <div class="impact-label">How long VCs need to evaluate your positioning</div>
+        </div>
+
+        <div class="impact-stat">
+          <div class="impact-number">6 Months</div>
+          <div class="impact-label">Average time wasted fundraising with weak positioning</div>
+        </div>
+      </section>
+
+      <!-- Form Section -->
+      <section class="form-section">
+        <h2 class="form-headline">Get The Checklist VCs Wish You Had</h2>
+        <p class="form-subheadline">
+          Instant download. Zero spam. 44-point diagnostic used by founders who raised $10M+.
+        </p>
+
+        <form
+          action="https://formsubmit.co/9750b99dbe22812a8dcd8993086d7f67"
+          method="POST"
+          id="investor-checklist-form"
+        >
+          <!-- Hidden Fields for FormSubmit -->
+          <input type="hidden" name="_subject" value="New Lead Magnet Download: Investor-Ready Positioning Checklist">
+          <input type="hidden" name="_next" value="https://troyassoignon.com/thank-you-investor.html">
+          <input type="hidden" name="_template" value="box">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="lead_magnet" value="Investor-Ready Positioning Checklist">
+
+          <div class="form-group">
+            <label for="name" class="form-label">Name *</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="form-input"
+              placeholder="Your full name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="form-input"
+              placeholder="your@email.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="fundraising-stage" class="form-label">Fundraising Stage *</label>
+            <select
+              id="fundraising-stage"
+              name="fundraising_stage"
+              required
+              class="form-input"
+              style="cursor: pointer;"
+            >
+              <option value="">Select your stage...</option>
+              <option value="Pre-seed">Pre-seed</option>
+              <option value="Seed">Seed</option>
+              <option value="Series A">Series A</option>
+              <option value="Series B+">Series B+</option>
+              <option value="Not Currently Fundraising">Not Currently Fundraising</option>
+            </select>
+          </div>
+
+          <button type="submit" class="form-submit">
+            Download Checklist Now
+          </button>
+
+          <p class="form-privacy">
+            We respect your privacy. Unsubscribe anytime. No spam, ever.
+          </p>
+        </form>
+      </section>
+
+      <!-- Urgency Section -->
+      <section class="urgency-section">
+        <h3 class="urgency-headline">Before You Pitch Another Investor...</h3>
+        <p class="urgency-text">
+          Don't waste 6 months and burn investor relationships with weak positioning. Most founders pitch too early. <span class="stat-highlight">Fix your positioning first. Fundraise second.</span>
+        </p>
+      </section>
+
     </main>
   </div>
 
@@ -286,11 +864,11 @@
   <script type="module" src="/src/main.js"></script>
   <script>
     // Analytics event tracking
-    document.getElementById('lead-magnet-form').addEventListener('submit', function() {
+    document.getElementById('investor-checklist-form').addEventListener('submit', function() {
       if (typeof gtag === 'function') {
         gtag('event', 'lead_magnet_download', {
           'event_category': 'Lead Generation',
-          'event_label': 'Investor Positioning Checklist',
+          'event_label': 'Investor-Ready Positioning Checklist',
           'value': 1
         });
       }

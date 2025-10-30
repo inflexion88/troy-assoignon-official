@@ -15,13 +15,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Strategic Positioning Advantage Framework Guide | Troy Assoignon</title>
-  <meta name="description" content="Master the Define, Design, Defend methodology behind $62.7M in documented client results. Free 25-page positioning framework guide." />
+  <title>Strategic Positioning Advantage™ Framework Guide | Troy Assoignon</title>
+  <meta name="description" content="The $10,000 positioning framework behind $62.7M in documented results. 25-page comprehensive guide used by elite CEOs and positioning consultants." />
   <meta name="author" content="Troy Assoignon" />
 
   <!-- Open Graph Tags -->
-  <meta property="og:title" content="Strategic Positioning Advantage Framework Guide" />
-  <meta property="og:description" content="Master the Define, Design, Defend methodology behind $62.7M in documented results." />
+  <meta property="og:title" content="Strategic Positioning Advantage™ Framework Guide" />
+  <meta property="og:description" content="The $10,000 positioning framework behind $62.7M in documented results." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.troyassoignon.com/lead-magnets/positioning-framework-guide.html" />
   <meta property="og:image" content="https://www.troyassoignon.com/og-image.png" />
@@ -29,8 +29,8 @@
 
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Strategic Positioning Advantage Framework Guide" />
-  <meta name="twitter:description" content="Master the Define, Design, Defend methodology." />
+  <meta name="twitter:title" content="Strategic Positioning Advantage™ Framework Guide" />
+  <meta name="twitter:description" content="The $10,000 positioning framework behind $62.7M in documented results." />
   <meta name="twitter:image" content="https://www.troyassoignon.com/og-image.png" />
 
   <link rel="canonical" href="https://www.troyassoignon.com/lead-magnets/positioning-framework-guide.html" />
@@ -38,67 +38,408 @@
   <link rel="stylesheet" href="/src/style.css" />
 
   <style>
-    .lead-magnet-container {
-      min-height: 100vh;
+    /* Luxury Framework Page Styles */
+    .framework-hero {
+      min-height: 85vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2rem 1rem;
+      padding: 6rem 1.5rem 4rem;
+      background: radial-gradient(circle at 50% 0%, rgba(101, 228, 143, 0.08), transparent 50%);
     }
 
-    .lead-magnet-wrapper {
-      max-width: 1000px;
-      width: 100%;
+    .hero-content {
+      max-width: 900px;
+      text-align: center;
+    }
+
+    .pillar-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(101, 228, 143, 0.1);
+      border: 1px solid rgba(101, 228, 143, 0.3);
+      padding: 0.5rem 1.25rem;
+      border-radius: 2rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: rgb(101, 228, 143);
+      margin-bottom: 2rem;
+    }
+
+    .value-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(101, 228, 143, 0.15), rgba(101, 228, 143, 0.05));
+      border: 1px solid rgba(101, 228, 143, 0.4);
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: rgb(101, 228, 143);
+      margin-top: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .framework-section {
+      padding: 5rem 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-label {
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgb(101, 228, 143);
+      margin-bottom: 1rem;
+    }
+
+    .framework-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .framework-card {
+      background: linear-gradient(135deg, rgba(30, 30, 35, 0.95), rgba(17, 17, 23, 0.98));
+      border: 1px solid rgba(101, 228, 143, 0.2);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .framework-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, rgb(101, 228, 143), rgba(101, 228, 143, 0.3));
+    }
+
+    .framework-card:hover {
+      border-color: rgba(101, 228, 143, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(101, 228, 143, 0.1);
+    }
+
+    .part-number {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: rgb(101, 228, 143);
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .part-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .page-count {
+      font-size: 0.875rem;
+      color: rgba(185, 185, 190, 1);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .framework-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .framework-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      color: rgba(185, 185, 190, 1);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    .framework-list li::before {
+      content: '→';
+      color: rgb(101, 228, 143);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .case-study-section {
+      background: linear-gradient(135deg, rgba(17, 17, 23, 0.98), rgba(30, 30, 35, 0.95));
+      border-top: 1px solid rgba(101, 228, 143, 0.1);
+      border-bottom: 1px solid rgba(101, 228, 143, 0.1);
+    }
+
+    .case-study-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .case-study-card {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(101, 228, 143, 0.2);
+      border-radius: 1rem;
+      padding: 3rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .case-result {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: rgb(101, 228, 143);
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+
+    .case-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .case-description {
+      color: rgba(185, 185, 190, 1);
+      line-height: 1.7;
+      font-size: 0.9375rem;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: linear-gradient(135deg, rgba(30, 30, 35, 0.95), rgba(17, 17, 23, 0.98));
+      border: 1px solid rgba(101, 228, 143, 0.15);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      position: relative;
+    }
+
+    .testimonial-quote {
+      color: rgba(185, 185, 190, 1);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-size: 0.9375rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .author-info {
+      flex: 1;
+    }
+
+    .author-name {
+      font-weight: 700;
+      color: white;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .author-title {
+      font-size: 0.875rem;
+      color: rgba(185, 185, 190, 1);
+    }
+
+    .creator-section {
+      background: radial-gradient(circle at 50% 50%, rgba(101, 228, 143, 0.05), transparent 70%);
+      padding: 5rem 1.5rem;
+    }
+
+    .creator-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 4rem;
       align-items: center;
     }
 
-    .lead-magnet-content {
-      padding: 2rem 0;
-    }
-
-    .lead-magnet-form-card {
-      background: linear-gradient(135deg, rgba(30, 30, 35, 0.95), rgba(17, 17, 23, 0.98));
-      border: 2px solid rgba(101, 228, 143, 0.2);
+    .creator-image {
+      width: 100%;
+      height: auto;
       border-radius: 1rem;
-      padding: 2.5rem 2rem;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      border: 2px solid rgba(101, 228, 143, 0.3);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     }
 
-    .checkmark {
-      color: rgb(101, 228, 143);
-      margin-right: 0.5rem;
+    .creator-bio {
+      color: rgba(185, 185, 190, 1);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
     }
 
-    .benefit-item {
+    .credential-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+    }
+
+    .credential-list li {
       display: flex;
       align-items: flex-start;
+      gap: 1rem;
       margin-bottom: 1rem;
       color: rgba(185, 185, 190, 1);
       line-height: 1.6;
     }
 
-    .social-proof {
-      background: rgba(101, 228, 143, 0.1);
-      border-left: 3px solid rgb(101, 228, 143);
-      padding: 1rem;
-      margin: 2rem 0;
-      border-radius: 0.5rem;
+    .credential-list li::before {
+      content: '✓';
+      color: rgb(101, 228, 143);
+      font-weight: 700;
+      font-size: 1.25rem;
+      flex-shrink: 0;
     }
 
-    @media (max-width: 768px) {
-      .lead-magnet-wrapper {
+    .form-section {
+      background: linear-gradient(135deg, rgba(17, 17, 23, 0.98), rgba(30, 30, 35, 0.95));
+      padding: 5rem 1.5rem;
+      border-top: 1px solid rgba(101, 228, 143, 0.1);
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, rgba(30, 30, 35, 0.95), rgba(17, 17, 23, 0.98));
+      border: 2px solid rgba(101, 228, 143, 0.3);
+      border-radius: 1.5rem;
+      padding: 3rem;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    }
+
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(101, 228, 143, 0.1);
+    }
+
+    .trust-badge {
+      text-align: center;
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .trust-badge-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: rgb(101, 228, 143);
+      margin-bottom: 0.5rem;
+    }
+
+    .trust-badge-label {
+      font-size: 0.875rem;
+      color: rgba(185, 185, 190, 1);
+      line-height: 1.4;
+    }
+
+    .framework-visual {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 3rem;
+      background: linear-gradient(135deg, rgba(30, 30, 35, 0.95), rgba(17, 17, 23, 0.98));
+      border: 1px solid rgba(101, 228, 143, 0.2);
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .framework-visual svg {
+      width: 100%;
+      height: auto;
+      max-width: 600px;
+    }
+
+    .insight-callout {
+      background: rgba(101, 228, 143, 0.1);
+      border-left: 4px solid rgb(101, 228, 143);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      margin: 3rem auto;
+      max-width: 900px;
+      text-align: center;
+    }
+
+    .insight-text {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: white;
+      font-style: italic;
+    }
+
+    @media (max-width: 968px) {
+      .case-study-grid,
+      .testimonial-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
       }
 
-      .lead-magnet-content {
-        padding: 0;
+      .creator-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
       }
 
-      .lead-magnet-form-card {
+      .creator-image {
+        max-width: 280px;
+        margin: 0 auto;
+      }
+
+      .framework-hero {
+        min-height: auto;
+        padding: 5rem 1.5rem 3rem;
+      }
+
+      .case-result {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .framework-section {
+        padding: 3rem 1.5rem;
+      }
+
+      .framework-card,
+      .case-study-card,
+      .testimonial-card {
+        padding: 2rem;
+      }
+
+      .form-container {
         padding: 2rem 1.5rem;
       }
     }
@@ -122,7 +463,6 @@
             <span>Return to Home</span>
           </a>
         </nav>
-        <!-- Mobile menu button -->
         <button id="mobile-menu-btn" class="md:hidden p-2 text-luxury-300 hover:text-white transition-colors" aria-label="Toggle mobile menu">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -131,124 +471,443 @@
       </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="lead-magnet-container" style="margin-top: 80px;">
-      <div class="lead-magnet-wrapper">
-        <!-- Left Column: Benefits -->
-        <div class="lead-magnet-content">
-          <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">
-            The Strategic Positioning Advantage™ Framework Guide
-          </h1>
-
-          <p class="text-lg text-luxury-300 mb-6">
-            Master the Define, Design, Defend methodology behind $62.7M in documented client results. 25-page PDF guide.
-          </p>
-
-          <!-- Benefits List -->
-          <div class="mb-6">
-            <div class="benefit-item">
-              <span class="checkmark">✓</span>
-              <span>Complete framework breakdown (Define, Design, Defend)</span>
-            </div>
-            <div class="benefit-item">
-              <span class="checkmark">✓</span>
-              <span>Step-by-step implementation guide</span>
-            </div>
-            <div class="benefit-item">
-              <span class="checkmark">✓</span>
-              <span>Case studies: $4.5M fund raise, $619K humanitarian success</span>
-            </div>
-            <div class="benefit-item">
-              <span class="checkmark">✓</span>
-              <span>Positioning templates and worksheets</span>
-            </div>
-            <div class="benefit-item">
-              <span class="checkmark">✓</span>
-              <span>Competitive moat assessment tool</span>
-            </div>
-          </div>
-
-          <!-- Social Proof -->
-          <div class="social-proof">
-            <p class="text-white text-sm font-medium mb-0">
-              Used by founders, CMOs, and positioning consultants
-            </p>
-          </div>
+    <!-- Hero Section -->
+    <section class="framework-hero">
+      <div class="hero-content">
+        <div class="pillar-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+          PILLAR CONTENT
         </div>
 
-        <!-- Right Column: Form -->
-        <div class="lead-magnet-form-card">
-          <h3 class="text-xl font-bold text-white mb-6">Get Instant Access</h3>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          The $10,000 Positioning Framework<br/>
+          <span class="luxury-gradient">That Built $62.7M in Results</span>
+        </h1>
 
-          <!-- Email Capture Form -->
-          <form
-            action="https://formsubmit.co/troy@troyassoignon.com"
-            method="POST"
-            id="lead-magnet-form"
-            class="space-y-4"
-          >
-            <!-- Hidden Fields for FormSubmit -->
-            <input type="hidden" name="_subject" value="New Lead: Positioning Framework Guide">
-            <input type="hidden" name="_next" value="https://www.troyassoignon.com/thank-you.html">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="lead_magnet" value="Positioning Framework Guide">
+        <p class="text-lg md:text-xl text-luxury-300 mb-4 max-w-3xl mx-auto leading-relaxed">
+          Strategic Positioning Advantage™ is the systematic methodology behind $4.5M capital raises,
+          $619K humanitarian funding, and elite brand transformations across industries.
+        </p>
 
-            <div>
-              <label for="name" class="block text-luxury-300 font-medium mb-2">Name *</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                class="w-full px-4 py-3 bg-luxury-900/40 border border-luxury-800/30 rounded-lg text-white focus:border-accent-green focus:outline-none transition-colors"
-                placeholder="Your full name"
-              />
-            </div>
+        <p class="text-base md:text-lg text-luxury-300 max-w-2xl mx-auto">
+          This isn't another positioning checklist. This is 25 pages of the comprehensive framework architecture
+          used by CEOs, CMOs, and positioning consultants to create defensible market positions.
+        </p>
 
-            <div>
-              <label for="email" class="block text-luxury-300 font-medium mb-2">Email *</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                class="w-full px-4 py-3 bg-luxury-900/40 border border-luxury-800/30 rounded-lg text-white focus:border-accent-green focus:outline-none transition-colors"
-                placeholder="your@email.com"
-              />
-            </div>
-
-            <div>
-              <label for="role" class="block text-luxury-300 font-medium mb-2">Role *</label>
-              <select
-                id="role"
-                name="role"
-                required
-                class="w-full px-4 py-3 bg-luxury-900/40 border border-luxury-800/30 rounded-lg text-white focus:border-accent-green focus:outline-none transition-colors"
-              >
-                <option value="">Select your role...</option>
-                <option value="Founder/CEO">Founder/CEO</option>
-                <option value="CMO">CMO</option>
-                <option value="Consultant">Consultant</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-
-            <button
-              type="submit"
-              class="w-full px-6 py-4 bg-accent-green text-black font-bold text-lg rounded-lg hover:bg-accent-green/90 transition-all transform hover:scale-105 hover:shadow-lg"
-            >
-              Get Instant Access
-            </button>
-          </form>
-
-          <!-- Privacy Statement -->
-          <p class="text-luxury-500 text-xs text-center mt-4">
-            We respect your privacy. Unsubscribe anytime.
-          </p>
+        <div class="value-badge">
+          Consultant Value: $10,000 — Yours Free
         </div>
       </div>
-    </main>
+    </section>
+
+    <!-- Framework Visual -->
+    <section class="framework-section">
+      <div class="framework-visual">
+        <h3 class="text-2xl font-bold text-white mb-4">Strategic Positioning Advantage™</h3>
+        <p class="text-luxury-300 mb-6">Six-Part Systematic Methodology</p>
+        <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+          <!-- Foundation -->
+          <rect x="50" y="320" width="150" height="60" fill="rgba(101, 228, 143, 0.2)" stroke="rgb(101, 228, 143)" stroke-width="2" rx="4"/>
+          <text x="125" y="355" fill="white" font-size="14" font-weight="600" text-anchor="middle">Part 1: Foundation</text>
+
+          <!-- Differentiation -->
+          <rect x="225" y="280" width="150" height="60" fill="rgba(101, 228, 143, 0.25)" stroke="rgb(101, 228, 143)" stroke-width="2" rx="4"/>
+          <text x="300" y="315" fill="white" font-size="14" font-weight="600" text-anchor="middle">Part 2: Differentiation</text>
+
+          <!-- Message -->
+          <rect x="400" y="240" width="150" height="60" fill="rgba(101, 228, 143, 0.3)" stroke="rgb(101, 228, 143)" stroke-width="2" rx="4"/>
+          <text x="475" y="275" fill="white" font-size="14" font-weight="600" text-anchor="middle">Part 3: Message</text>
+
+          <!-- Implementation -->
+          <rect x="50" y="200" width="150" height="60" fill="rgba(101, 228, 143, 0.35)" stroke="rgb(101, 228, 143)" stroke-width="2" rx="4"/>
+          <text x="125" y="235" fill="white" font-size="14" font-weight="600" text-anchor="middle">Part 4: Implementation</text>
+
+          <!-- Maintenance -->
+          <rect x="225" y="160" width="150" height="60" fill="rgba(101, 228, 143, 0.4)" stroke="rgb(101, 228, 143)" stroke-width="2" rx="4"/>
+          <text x="300" y="195" fill="white" font-size="14" font-weight="600" text-anchor="middle">Part 5: Maintenance</text>
+
+          <!-- Strategic Advantage -->
+          <rect x="200" y="50" width="200" height="80" fill="rgba(101, 228, 143, 0.5)" stroke="rgb(101, 228, 143)" stroke-width="3" rx="8"/>
+          <text x="300" y="85" fill="white" font-size="16" font-weight="700" text-anchor="middle">Strategic Positioning</text>
+          <text x="300" y="110" fill="white" font-size="16" font-weight="700" text-anchor="middle">Advantage™</text>
+
+          <!-- Connection lines -->
+          <line x1="125" y1="320" x2="300" y2="280" stroke="rgba(101, 228, 143, 0.4)" stroke-width="2"/>
+          <line x1="300" y1="280" x2="475" y2="240" stroke="rgba(101, 228, 143, 0.4)" stroke-width="2"/>
+          <line x1="125" y1="260" x2="300" y2="220" stroke="rgba(101, 228, 143, 0.4)" stroke-width="2"/>
+          <line x1="300" y1="220" x2="300" y2="130" stroke="rgba(101, 228, 143, 0.4)" stroke-width="2"/>
+        </svg>
+        <p class="text-luxury-300 mt-4 text-sm">Trademarked methodology - Systematic, repeatable, defensible</p>
+      </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="case-study-section framework-section">
+      <div class="section-header">
+        <div class="section-label">Framework Versatility</div>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          Same Framework, Different Industries,<br/>Consistent Results
+        </h2>
+        <p class="text-lg text-luxury-300 max-w-2xl mx-auto">
+          Strategic Positioning Advantage™ has driven results across capital markets, humanitarian initiatives,
+          and enterprise transformations. Here are two applications of the same systematic methodology.
+        </p>
+      </div>
+
+      <div class="case-study-grid">
+        <div class="case-study-card">
+          <div class="case-result">$4.5M</div>
+          <div class="case-title">Real Estate Investment Fund</div>
+          <div class="case-description">
+            A sophisticated real estate fund struggled to differentiate in a crowded capital markets landscape.
+            Using the Strategic Positioning Advantage™ framework, we repositioned their investor narrative
+            around unique market access and operational infrastructure. Result: <strong>$4.5M raised in 90 days</strong>
+            after repositioning deployment, with investor conversations shifting from "why you?" to "how do we get allocation?"
+          </div>
+          <div class="mt-4 text-sm font-semibold" style="color: rgb(101, 228, 143);">
+            Application: Investor Positioning Architecture
+          </div>
+        </div>
+
+        <div class="case-study-card">
+          <div class="case-result">$619K</div>
+          <div class="case-title">Humanitarian Crisis Initiative</div>
+          <div class="case-description">
+            A humanitarian organization needed to mobilize resources for an urgent evacuation mission.
+            Applying the same Strategic Positioning Advantage™ framework with emotional positioning emphasis,
+            we architected messaging that transformed abstract empathy into concrete action. Result: <strong>$619K raised
+            + 2,750 women and children evacuated</strong> from crisis zones through strategic donor positioning.
+          </div>
+          <div class="mt-4 text-sm font-semibold" style="color: rgb(101, 228, 143);">
+            Application: Emotional Positioning Architecture
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-callout">
+        <p class="insight-text">
+          "The framework doesn't change. The calibration does. That's why it works across industries."
+        </p>
+      </div>
+    </section>
+
+    <!-- What's Inside Section -->
+    <section class="framework-section">
+      <div class="section-header">
+        <div class="section-label">25 Pages of Framework Architecture</div>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          What's Inside the Framework Guide
+        </h2>
+        <p class="text-lg text-luxury-300 max-w-2xl mx-auto">
+          This isn't a surface-level overview. This is the complete systematic methodology with frameworks,
+          diagnostic tools, implementation roadmaps, and maintenance protocols.
+        </p>
+      </div>
+
+      <div class="framework-grid">
+        <!-- Part 1 -->
+        <div class="framework-card">
+          <div class="part-number">Part 1</div>
+          <h3 class="part-title">Foundation - Market Intelligence</h3>
+          <div class="page-count">4 pages of diagnostic frameworks</div>
+          <ul class="framework-list">
+            <li>3-Layer Market Analysis Model (macro/competitive/customer perception layers)</li>
+            <li>Customer Perception Mapping Methodology (psychographic positioning diagnostics)</li>
+            <li>Competitive Landscape Diagnostics (moat identification framework)</li>
+            <li>Market Opportunity Identification (white space analysis tools)</li>
+          </ul>
+        </div>
+
+        <!-- Part 2 -->
+        <div class="framework-card">
+          <div class="part-number">Part 2</div>
+          <h3 class="part-title">Differentiation Architecture</h3>
+          <div class="page-count">5 pages of differentiation frameworks</div>
+          <ul class="framework-list">
+            <li>Value Differentiation Matrix (4-quadrant positioning map)</li>
+            <li>Unique Economic Position Identification (defensible advantage architecture)</li>
+            <li>4 Types of Positioning Differentiation (operational/product/service/brand frameworks)</li>
+            <li>Differentiation DNA Mapping Framework (competitive moat diagnostics)</li>
+          </ul>
+        </div>
+
+        <!-- Part 3 -->
+        <div class="framework-card">
+          <div class="part-number">Part 3</div>
+          <h3 class="part-title">Message Architecture</h3>
+          <div class="page-count">4 pages of messaging frameworks</div>
+          <ul class="framework-list">
+            <li>Positioning Message Pyramid (hierarchical messaging architecture)</li>
+            <li>Core Position Statement Formula (one-sentence positioning crystallization)</li>
+            <li>Value Proposition Crystallization (benefit translation methodology)</li>
+            <li>Proof Architecture Framework (credibility stacking system)</li>
+          </ul>
+        </div>
+
+        <!-- Part 4 -->
+        <div class="framework-card">
+          <div class="part-number">Part 4</div>
+          <h3 class="part-title">Implementation & Activation</h3>
+          <div class="page-count">4 pages of deployment roadmaps</div>
+          <ul class="framework-list">
+            <li>90-Day Positioning Activation Roadmap (phase-by-phase implementation)</li>
+            <li>Channel-Specific Positioning Activation (website/sales/marketing deployment)</li>
+            <li>Sales Enablement Integration (positioning-to-pipeline architecture)</li>
+            <li>Measuring Positioning Impact on Revenue (KPI framework and diagnostics)</li>
+          </ul>
+        </div>
+
+        <!-- Part 5 -->
+        <div class="framework-card">
+          <div class="part-number">Part 5</div>
+          <h3 class="part-title">Positioning Maintenance</h3>
+          <div class="page-count">3 pages of maintenance protocols</div>
+          <ul class="framework-list">
+            <li>Quarterly Positioning Audits (health check framework and diagnostics)</li>
+            <li>When to Evolve vs. Pivot (decision matrix for positioning adjustments)</li>
+            <li>Competitive Response Strategies (defending your positioning moat)</li>
+            <li>Market Signal Interpretation (early warning system for positioning drift)</li>
+          </ul>
+        </div>
+
+        <!-- Part 6 -->
+        <div class="framework-card">
+          <div class="part-number">Part 6</div>
+          <h3 class="part-title">Next Steps & Resources</h3>
+          <div class="page-count">2 pages of actionable guidance</div>
+          <ul class="framework-list">
+            <li>Immediate Action Checklist (first 30 days post-framework)</li>
+            <li>Common Positioning Pitfalls (what to avoid during implementation)</li>
+            <li>When to Bring in Strategic Support (DIY vs. consultant decision framework)</li>
+            <li>Additional Resources and Framework Templates</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <p class="text-luxury-300 text-lg">
+          <strong style="color: white;">Total Framework Value:</strong> 25 pages of systematic positioning methodology
+          typically delivered as $10,000 consulting engagement. Yours free.
+        </p>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="framework-section" style="background: linear-gradient(135deg, rgba(17, 17, 23, 0.98), rgba(30, 30, 35, 0.95)); padding: 5rem 1.5rem;">
+      <div class="section-header">
+        <div class="section-label">Strategic Transformation</div>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          What Elite Founders Say About<br/>Troy's Positioning Frameworks
+        </h2>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            "I highly recommend Troy's positioning workshops. They are an incredibly valuable use of my time,
+            providing clear, actionable insights. Troy facilitated the session with expertise, ensuring that
+            everyone came away with a deeper understanding and practical strategies to implement right away."
+          </div>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <div class="author-name">Joe Shedden</div>
+              <div class="author-title">CEO, Today's Executive Network</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            "In less than an hour during this webinar, Troy helped break the rigged perception and ideas I had
+            of my business. I feel like I now have a wider grasp of what I need to develop moving forward.
+            Feels good to be mentally unstuck."
+          </div>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <div class="author-name">Neil Newsome</div>
+              <div class="author-title">Owner & Co-Founder</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            "Troy's workshop was a game-changer for my business. His insights on positioning and market
+            differentiation were invaluable."
+          </div>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <div class="author-name">Valen Vergara</div>
+              <div class="author-title">Founder</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">
+            "Troy's positioning workshop was transformative. He helped me identify my unique value proposition
+            and communicate it effectively."
+          </div>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <div class="author-name">Isabel Sterne</div>
+              <div class="author-title">Founder</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creator Section -->
+    <section class="creator-section">
+      <div class="section-header">
+        <div class="section-label">Framework Authority</div>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          About the Framework Creator
+        </h2>
+      </div>
+
+      <div class="creator-content">
+        <div>
+          <img src="/images/troy-headshot-photo-about.png" alt="Troy Assoignon" class="creator-image" />
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-4">Troy Assoignon</h3>
+          <p class="creator-bio">
+            Troy built Strategic Positioning Advantage™ the way he built construction projects: systematic,
+            structural, defensible. With a background in construction management, he approached brand positioning
+            as an engineering problem—what are the load-bearing frameworks that create lasting market advantage?
+          </p>
+          <p class="creator-bio">
+            The result is a methodology precise enough to systematize (validated by placing 2nd in the ElevenLabs
+            international AI hackathon) yet flexible enough to drive results across industries—from $4.5M capital
+            raises to $619K humanitarian missions.
+          </p>
+
+          <ul class="credential-list">
+            <li>Creator of Strategic Positioning Advantage™ framework (trademarked methodology)</li>
+            <li>$62.7M in documented client results across capital markets, humanitarian, and enterprise positioning</li>
+            <li>2nd Place, ElevenLabs International AI Hackathon (framework systematization validation)</li>
+            <li>Construction background: positioning built like structural engineering—systematic and defensible</li>
+            <li>Positioning consultant to CEOs, CMOs, and elite founders</li>
+          </ul>
+
+          <a href="https://www.linkedin.com/in/troyassoignon/" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 text-accent-green hover:text-white transition-colors font-semibold">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+      <div class="form-container">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <div class="pillar-badge" style="margin-bottom: 1.5rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            </svg>
+            EXCLUSIVE FRAMEWORK ACCESS
+          </div>
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-3">
+            Get Instant Access to the<br/>Complete Framework Guide
+          </h2>
+          <p class="text-luxury-300 mb-4">
+            25 pages of systematic positioning methodology.<br/>
+            Instant download. Zero spam. Unsubscribe anytime.
+          </p>
+        </div>
+
+        <form
+          action="https://formsubmit.co/9750b99dbe22812a8dcd8993086d7f67"
+          method="POST"
+          id="framework-form"
+          class="space-y-4"
+        >
+          <!-- Hidden Fields -->
+          <input type="hidden" name="_subject" value="New Lead Magnet Download: Strategic Positioning Framework Guide">
+          <input type="hidden" name="_next" value="https://troyassoignon.com/thank-you-framework.html">
+          <input type="hidden" name="_template" value="box">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="lead_magnet" value="Strategic Positioning Framework Guide">
+
+          <div>
+            <label for="name" class="block text-luxury-300 font-medium mb-2">Full Name *</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full px-4 py-3 bg-luxury-900/40 border border-luxury-800/30 rounded-lg text-white focus:border-accent-green focus:outline-none transition-colors"
+              placeholder="Your full name"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block text-luxury-300 font-medium mb-2">Email Address *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-3 bg-luxury-900/40 border border-luxury-800/30 rounded-lg text-white focus:border-accent-green focus:outline-none transition-colors"
+              placeholder="your@email.com"
+            />
+          </div>
+
+          <div>
+            <label for="role" class="block text-luxury-300 font-medium mb-2">Your Role *</label>
+            <select
+              id="role"
+              name="role"
+              required
+              class="w-full px-4 py-3 bg-luxury-900/40 border border-luxury-800/30 rounded-lg text-white focus:border-accent-green focus:outline-none transition-colors"
+            >
+              <option value="">Select your role...</option>
+              <option value="Founder/CEO">Founder/CEO</option>
+              <option value="CMO/Marketing">CMO/Marketing Leader</option>
+              <option value="Consultant">Consultant/Agency</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full px-6 py-4 bg-accent-green text-black font-bold text-lg rounded-lg hover:bg-accent-green/90 transition-all transform hover:scale-105 hover:shadow-lg mt-6"
+          >
+            Get Instant Access to Framework Guide
+          </button>
+        </form>
+
+        <p class="text-luxury-500 text-xs text-center mt-4">
+          We respect your privacy. Your information is secure. Unsubscribe anytime with one click.
+        </p>
+
+        <div class="trust-badges">
+          <div class="trust-badge">
+            <div class="trust-badge-value">25 Pages</div>
+            <div class="trust-badge-label">Comprehensive frameworks & methodologies</div>
+          </div>
+          <div class="trust-badge">
+            <div class="trust-badge-value">$10K Value</div>
+            <div class="trust-badge-label">Consultant deliverable - yours free</div>
+          </div>
+          <div class="trust-badge">
+            <div class="trust-badge-value">$62.7M</div>
+            <div class="trust-badge-label">Documented results from framework</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 
   <!-- Mobile Menu -->
@@ -263,12 +922,12 @@
   <script type="module" src="/src/main.js"></script>
   <script>
     // Analytics event tracking
-    document.getElementById('lead-magnet-form').addEventListener('submit', function() {
+    document.getElementById('framework-form').addEventListener('submit', function() {
       if (typeof gtag === 'function') {
         gtag('event', 'lead_magnet_download', {
           'event_category': 'Lead Generation',
-          'event_label': 'Positioning Framework Guide',
-          'value': 1
+          'event_label': 'Strategic Positioning Framework Guide',
+          'value': 10000
         });
       }
     });
@@ -279,6 +938,17 @@
 
     mobileMenuBtn?.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
     });
   </script>
 </body>

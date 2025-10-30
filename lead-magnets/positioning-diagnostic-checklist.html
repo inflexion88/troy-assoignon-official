@@ -16,12 +16,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Free 25-Point Positioning Diagnostic Checklist | Troy Assoignon</title>
-  <meta name="description" content="Discover hidden revenue leaks in your market positioning. Download the free 25-point positioning diagnostic checklist used by $62.7M worth of client results." />
+  <meta name="description" content="The same $5,000 positioning diagnostic used to generate $62.7M in documented client results. Download free. Used by 500+ executives to identify million-dollar positioning gaps." />
   <meta name="author" content="Troy Assoignon" />
 
   <!-- Open Graph Tags -->
   <meta property="og:title" content="Free 25-Point Positioning Diagnostic Checklist" />
-  <meta property="og:description" content="Discover hidden revenue leaks in your market positioning. Free positioning diagnostic checklist." />
+  <meta property="og:description" content="The same $5,000 positioning diagnostic used to generate $62.7M in documented client results. Free download." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.troyassoignon.com/lead-magnets/positioning-diagnostic-checklist.html" />
   <meta property="og:image" content="https://www.troyassoignon.com/og-image.png" />
@@ -30,7 +30,7 @@
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Free 25-Point Positioning Diagnostic Checklist" />
-  <meta name="twitter:description" content="Discover hidden revenue leaks in your market positioning." />
+  <meta name="twitter:description" content="The same $5,000 positioning diagnostic used to generate $62.7M in client results." />
   <meta name="twitter:image" content="https://www.troyassoignon.com/og-image.png" />
 
   <link rel="canonical" href="https://www.troyassoignon.com/lead-magnets/positioning-diagnostic-checklist.html" />
@@ -40,25 +40,260 @@
   <style>
     .lead-magnet-container {
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       padding: 2rem 1rem;
     }
 
-    .lead-magnet-card {
-      max-width: 600px;
-      width: 100%;
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero-section {
+      max-width: 900px;
+      margin: 0 auto 4rem;
+      text-align: center;
+    }
+
+    .stat-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(101, 228, 143, 0.2), rgba(101, 228, 143, 0.1));
+      border: 2px solid rgba(101, 228, 143, 0.4);
+      border-radius: 2rem;
+      padding: 0.75rem 1.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: rgb(101, 228, 143);
+      letter-spacing: 0.5px;
+    }
+
+    .value-badge {
+      display: inline-block;
+      background: rgba(255, 215, 0, 0.1);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: rgba(255, 215, 0, 0.9);
+      font-weight: 600;
+    }
+
+    .two-column-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 4rem;
+    }
+
+    .glassmorphism-card {
+      background: linear-gradient(135deg, rgba(30, 30, 35, 0.95), rgba(17, 17, 23, 0.98));
+      border: 2px solid rgba(101, 228, 143, 0.15);
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    .testimonial-card {
+      background: linear-gradient(135deg, rgba(30, 30, 35, 0.95), rgba(17, 17, 23, 0.98));
+      border: 1px solid rgba(101, 228, 143, 0.2);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(101, 228, 143, 0.4);
+    }
+
+    .testimonial-quote {
+      color: rgba(185, 185, 190, 1);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-author {
+      color: white;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-title {
+      color: rgba(185, 185, 190, 0.8);
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+
+    .case-study-card {
+      background: linear-gradient(135deg, rgba(101, 228, 143, 0.05), rgba(17, 17, 23, 0.98));
+      border: 2px solid rgba(101, 228, 143, 0.3);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      margin: 3rem 0;
+      box-shadow: 0 20px 60px rgba(101, 228, 143, 0.1);
+    }
+
+    .case-study-title {
+      color: rgb(101, 228, 143);
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    .case-study-stat {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: white;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .case-study-body {
+      color: rgba(185, 185, 190, 1);
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .credibility-section {
       background: linear-gradient(135deg, rgba(30, 30, 35, 0.95), rgba(17, 17, 23, 0.98));
       border: 2px solid rgba(101, 228, 143, 0.2);
       border-radius: 1rem;
-      padding: 3rem 2rem;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      padding: 3rem;
+      margin: 4rem 0;
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .headshot-container {
+      width: 180px;
+      height: 180px;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 3px solid rgba(101, 228, 143, 0.3);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .headshot-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .bio-content h3 {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .bio-tagline {
+      color: rgb(101, 228, 143);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .bio-text {
+      color: rgba(185, 185, 190, 1);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .bio-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .bio-highlight-item {
+      display: flex;
+      align-items: center;
+      color: rgba(185, 185, 190, 0.9);
+      font-size: 0.85rem;
+    }
+
+    .bio-highlight-item::before {
+      content: "✓";
+      color: rgb(101, 228, 143);
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    .linkedin-link {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 1rem;
+      color: rgb(101, 228, 143);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+
+    .linkedin-link:hover {
+      opacity: 0.8;
+    }
+
+    .whats-inside-section {
+      background: linear-gradient(135deg, rgba(30, 30, 35, 0.95), rgba(17, 17, 23, 0.98));
+      border: 2px solid rgba(101, 228, 143, 0.15);
+      border-radius: 1rem;
+      padding: 3rem;
+      margin: 4rem 0;
+    }
+
+    .section-title {
+      color: white;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .checklist-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .category-card {
+      background: rgba(101, 228, 143, 0.05);
+      border: 1px solid rgba(101, 228, 143, 0.2);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+    }
+
+    .category-title {
+      color: rgb(101, 228, 143);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .category-description {
+      color: rgba(185, 185, 190, 0.9);
+      font-size: 0.85rem;
+      line-height: 1.6;
     }
 
     .checkmark {
       color: rgb(101, 228, 143);
       margin-right: 0.5rem;
+      font-weight: bold;
     }
 
     .benefit-item {
@@ -69,16 +304,115 @@
       line-height: 1.6;
     }
 
-    .social-proof {
+    .form-section {
+      background: linear-gradient(135deg, rgba(30, 30, 35, 0.95), rgba(17, 17, 23, 0.98));
+      border: 3px solid rgba(101, 228, 143, 0.3);
+      border-radius: 1rem;
+      padding: 3rem;
+      max-width: 600px;
+      margin: 4rem auto;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    }
+
+    .form-title {
+      color: white;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .form-subtitle {
+      color: rgba(185, 185, 190, 1);
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    .trust-badges {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .trust-badge {
       background: rgba(101, 228, 143, 0.1);
-      border-left: 3px solid rgb(101, 228, 143);
-      padding: 1rem;
-      margin: 2rem 0;
+      border: 1px solid rgba(101, 228, 143, 0.2);
       border-radius: 0.5rem;
+      padding: 0.75rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: rgba(185, 185, 190, 1);
+      font-weight: 600;
+    }
+
+    .trust-badge-icon {
+      color: rgb(101, 228, 143);
+      margin-right: 0.5rem;
+    }
+
+    .urgency-note {
+      background: rgba(255, 215, 0, 0.1);
+      border-left: 4px solid rgba(255, 215, 0, 0.6);
+      padding: 1.5rem;
+      margin-top: 3rem;
+      border-radius: 0.5rem;
+      text-align: center;
+    }
+
+    .urgency-text {
+      color: rgba(255, 215, 0, 0.9);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .urgency-subtext {
+      color: rgba(185, 185, 190, 0.9);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 968px) {
+      .two-column-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .credibility-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+      }
+
+      .headshot-container {
+        margin: 0 auto;
+      }
+
+      .bio-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-badges {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 768px) {
-      .lead-magnet-card {
+      .stat-badge {
+        font-size: 0.85rem;
+        padding: 0.6rem 1.2rem;
+      }
+
+      .case-study-stat {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .form-section {
         padding: 2rem 1.5rem;
       }
     }
@@ -112,110 +446,258 @@
     </header>
 
     <!-- Main Content -->
-    <main class="lead-magnet-container" style="margin-top: 80px;">
-      <div class="lead-magnet-card">
-        <!-- Headline -->
-        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
-          Free: 25-Point Positioning Diagnostic Checklist
-        </h1>
+    <main class="lead-magnet-container" style="margin-top: 100px;">
+      <div class="content-wrapper">
 
-        <!-- Subheadline -->
-        <p class="text-lg text-luxury-300 mb-6 text-center">
-          Discover the hidden revenue leaks in your market positioning. Used by $62.7M worth of client results.
-        </p>
+        <!-- Hero Section -->
+        <section class="hero-section">
+          <div class="stat-badge">
+            PROVEN RESULTS: $4.5M Raised in 90 Days After Positioning Overhaul
+          </div>
 
-        <!-- Benefits List -->
-        <div class="mb-6">
-          <div class="benefit-item">
-            <span class="checkmark">✓</span>
-            <span>Identify positioning gaps costing you 20-40% in margins</span>
-          </div>
-          <div class="benefit-item">
-            <span class="checkmark">✓</span>
-            <span>25-point checklist covering category, differentiation, pricing power</span>
-          </div>
-          <div class="benefit-item">
-            <span class="checkmark">✓</span>
-            <span>Self-assessment framework (5-part diagnostic model)</span>
-          </div>
-          <div class="benefit-item">
-            <span class="checkmark">✓</span>
-            <span>Actionable recommendations for each positioning dimension</span>
-          </div>
-          <div class="benefit-item">
-            <span class="checkmark">✓</span>
-            <span>ROI calculator to quantify opportunity</span>
-          </div>
-        </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            The 25-Point Positioning Diagnostic That Reveals Million-Dollar Revenue Leaks
+          </h1>
 
-        <!-- Social Proof -->
-        <div class="social-proof">
-          <p class="text-white text-sm font-medium mb-0">
-            Join 500+ executives using this checklist
+          <p class="text-lg md:text-xl text-luxury-300 mb-4 leading-relaxed">
+            The same $5,000 positioning framework that's generated <span class="text-accent-green font-semibold">$62.7M in documented client results</span>. Now available free.
           </p>
+
+          <div class="value-badge">
+            $5,000 Positioning Audit Value - Yours Free
+          </div>
+        </section>
+
+        <!-- Case Study Hero -->
+        <div class="case-study-card">
+          <div class="case-study-title">Real Estate Fund Case Study</div>
+          <div class="case-study-stat">$0 → $4.5M in 90 Days</div>
+          <div class="case-study-body">
+            After 6 months of pitching institutional investors with zero commitments, this real estate fund overhauled their positioning using this exact diagnostic framework. Result: <strong style="color: rgb(101, 228, 143);">$4.5M raised from 3 institutional investors in 90 days</strong>. Same team. Same investment strategy. Completely different positioning.
+          </div>
         </div>
 
-        <!-- Email Capture Form -->
-        <form
-          action="https://formsubmit.co/troy@troyassoignon.com"
-          method="POST"
-          id="lead-magnet-form"
-          class="space-y-4"
-        >
-          <!-- Hidden Fields for FormSubmit -->
-          <input type="hidden" name="_subject" value="New Lead: Positioning Diagnostic Checklist">
-          <input type="hidden" name="_next" value="https://www.troyassoignon.com/thank-you.html">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="lead_magnet" value="Positioning Diagnostic Checklist">
+        <!-- Two Column: What's Inside + Form Preview -->
+        <div class="two-column-layout">
 
+          <!-- Left: What's Inside -->
           <div>
-            <label for="name" class="block text-luxury-300 font-medium mb-2">Name *</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              class="w-full px-4 py-3 bg-luxury-900/40 border border-luxury-800/30 rounded-lg text-white focus:border-accent-green focus:outline-none transition-colors"
-              placeholder="Your full name"
-            />
+            <div class="glassmorphism-card">
+              <h2 class="text-2xl font-bold text-white mb-4">What's Inside the Checklist</h2>
+
+              <div class="mb-6">
+                <div class="benefit-item">
+                  <span class="checkmark">✓</span>
+                  <span><strong>25 precision checkpoints</strong> across 5 critical positioning dimensions</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="checkmark">✓</span>
+                  <span><strong>4-tier scoring framework</strong> that quantifies your positioning strength</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="checkmark">✓</span>
+                  <span><strong>Actionable remediation plan</strong> based on your diagnostic score</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="checkmark">✓</span>
+                  <span><strong>Revenue impact calculator</strong> to quantify opportunity cost</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="checkmark">✓</span>
+                  <span><strong>Category design principles</strong> used by market leaders</span>
+                </div>
+              </div>
+
+              <div style="background: rgba(101, 228, 143, 0.05); border-left: 3px solid rgb(101, 228, 143); padding: 1rem; border-radius: 0.5rem; margin-top: 1.5rem;">
+                <p style="color: rgba(185, 185, 190, 1); font-size: 0.9rem; margin: 0;">
+                  <strong style="color: white;">Used by 500+ executives</strong> to identify positioning gaps costing $2.7M+ in lost margins and revenue velocity.
+                </p>
+              </div>
+            </div>
+
+            <!-- Categories Preview -->
+            <div class="checklist-categories" style="margin-top: 2rem;">
+              <div class="category-card">
+                <div class="category-title">Market Clarity</div>
+                <div class="category-description">5 checkpoints on category ownership, market definition, and competitive framing</div>
+              </div>
+              <div class="category-card">
+                <div class="category-title">Value Differentiation</div>
+                <div class="category-description">5 checkpoints on unique mechanisms, proof architecture, and pricing power</div>
+              </div>
+              <div class="category-card">
+                <div class="category-title">Messaging Precision</div>
+                <div class="category-description">5 checkpoints on clarity, specificity, and decision-driving language</div>
+              </div>
+              <div class="category-card">
+                <div class="category-title">Competitive Positioning</div>
+                <div class="category-description">5 checkpoints on alternative framing, moat depth, and strategic differentiation</div>
+              </div>
+              <div class="category-card">
+                <div class="category-title">Revenue Alignment</div>
+                <div class="category-description">5 checkpoints on deal velocity, margin power, and market perception</div>
+              </div>
+            </div>
           </div>
 
+          <!-- Right: Testimonials -->
           <div>
-            <label for="email" class="block text-luxury-300 font-medium mb-2">Email *</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              class="w-full px-4 py-3 bg-luxury-900/40 border border-luxury-800/30 rounded-lg text-white focus:border-accent-green focus:outline-none transition-colors"
-              placeholder="your@email.com"
-            />
+            <h2 class="text-2xl font-bold text-white mb-4">What Executives Are Saying</h2>
+
+            <div class="testimonial-card">
+              <div class="testimonial-quote">
+                "I highly recommend Troy's positioning workshops. They are an incredibly valuable use of my time, providing clear, actionable insights. Troy facilitated the session with expertise, ensuring that everyone came away with a deeper understanding and practical strategies to implement right away."
+              </div>
+              <div class="testimonial-author">Joe Shedden</div>
+              <div class="testimonial-title">CEO, Today's Executive Network</div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-quote">
+                "Troy's Positioning Workshop feels like getting exclusive access to a marketing masterclass on a weekly basis. He goes through potent concepts that have shifted my positioning in the market, taking the value of my offers to new heights."
+              </div>
+              <div class="testimonial-author">Ethan Conques</div>
+              <div class="testimonial-title">ECON Marketing</div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-quote">
+                "Troy broke down into relatable terms - what positioning is, what it means, and why it's important to nail it down. If you want actionable advice on improving positioning rather than the vague/fuzzy advice that so many others offer as advice."
+              </div>
+              <div class="testimonial-author">Bobbi Mullins</div>
+              <div class="testimonial-title">Andy Robson Consolidated</div>
+            </div>
           </div>
 
-          <div>
-            <label for="company" class="block text-luxury-300 font-medium mb-2">Company (optional)</label>
-            <input
-              type="text"
-              id="company"
-              name="company"
-              class="w-full px-4 py-3 bg-luxury-900/40 border border-luxury-800/30 rounded-lg text-white focus:border-accent-green focus:outline-none transition-colors"
-              placeholder="Your company name"
-            />
+        </div>
+
+        <!-- Troy's Credibility Section -->
+        <section class="credibility-section">
+          <div class="headshot-container">
+            <img src="/images/troy-headshot-photo-about.png" alt="Troy Assoignon - Positioning Strategist" loading="lazy">
           </div>
 
-          <button
-            type="submit"
-            class="w-full px-6 py-4 bg-accent-green text-black font-bold text-lg rounded-lg hover:bg-accent-green/90 transition-all transform hover:scale-105 hover:shadow-lg"
+          <div class="bio-content">
+            <h3>Troy Assoignon</h3>
+            <div class="bio-tagline">Construction Grade Positioning: Scope. Manage. Align. Ship.</div>
+
+            <p class="bio-text">
+              Unlike traditional marketing consultants who started in agencies, Troy's positioning methodology was forged on construction jobsites - where miscommunication costs millions and precision isn't optional.
+            </p>
+
+            <p class="bio-text">
+              His Strategic Positioning Advantage™ framework has generated <strong style="color: rgb(101, 228, 143);">$62.7M in documented client results</strong>, turning stalled sales pipelines into closed deals and commoditized offerings into premium category leaders.
+            </p>
+
+            <div class="bio-highlights">
+              <div class="bio-highlight-item">$62.7M documented results</div>
+              <div class="bio-highlight-item">2nd place ElevenLabs AI hackathon</div>
+              <div class="bio-highlight-item">Strategic Positioning Advantage™ creator</div>
+              <div class="bio-highlight-item">Construction → Marketing expert</div>
+            </div>
+
+            <a href="https://www.linkedin.com/in/troyassoignon/" target="_blank" rel="noopener noreferrer" class="linkedin-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.5rem;">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              Connect on LinkedIn
+            </a>
+          </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="form-section">
+          <h2 class="form-title">Get Instant Access</h2>
+          <p class="form-subtitle">
+            Download the complete 25-point diagnostic checklist. Used by CEOs, Founders, and CMOs to identify million-dollar positioning gaps.
+          </p>
+
+          <div class="trust-badges">
+            <div class="trust-badge">
+              <span class="trust-badge-icon">⚡</span> Instant Download
+            </div>
+            <div class="trust-badge">
+              <span class="trust-badge-icon">🔒</span> Zero Spam Guarantee
+            </div>
+            <div class="trust-badge">
+              <span class="trust-badge-icon">✓</span> 100% Actionable
+            </div>
+            <div class="trust-badge">
+              <span class="trust-badge-icon">🎯</span> Unsubscribe Anytime
+            </div>
+          </div>
+
+          <!-- Email Capture Form -->
+          <form
+            action="https://formsubmit.co/9750b99dbe22812a8dcd8993086d7f67"
+            method="POST"
+            id="lead-magnet-form"
+            class="space-y-4"
           >
-            Download Free Checklist
-          </button>
-        </form>
+            <!-- Hidden Fields for FormSubmit -->
+            <input type="hidden" name="_subject" value="New Lead Magnet Download: Positioning Diagnostic Checklist">
+            <input type="hidden" name="_next" value="https://troyassoignon.com/thank-you-diagnostic.html">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="lead_magnet" value="25-Point Positioning Diagnostic Checklist">
 
-        <!-- Privacy Statement -->
-        <p class="text-luxury-500 text-xs text-center mt-4">
-          We respect your privacy. Unsubscribe anytime.
-        </p>
+            <div>
+              <label for="name" class="block text-luxury-300 font-medium mb-2">Name *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="w-full px-4 py-3 bg-luxury-900/40 border border-luxury-800/30 rounded-lg text-white focus:border-accent-green focus:outline-none transition-colors"
+                placeholder="Your full name"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="block text-luxury-300 font-medium mb-2">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-3 bg-luxury-900/40 border border-luxury-800/30 rounded-lg text-white focus:border-accent-green focus:outline-none transition-colors"
+                placeholder="your@email.com"
+              />
+            </div>
+
+            <div>
+              <label for="company" class="block text-luxury-300 font-medium mb-2">Company (optional)</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                class="w-full px-4 py-3 bg-luxury-900/40 border border-luxury-800/30 rounded-lg text-white focus:border-accent-green focus:outline-none transition-colors"
+                placeholder="Your company name"
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="w-full px-6 py-4 bg-accent-green text-black font-bold text-lg rounded-lg hover:bg-accent-green/90 transition-all transform hover:scale-105 hover:shadow-lg"
+            >
+              Get Instant Access
+            </button>
+          </form>
+
+          <!-- Privacy Statement -->
+          <p class="text-luxury-500 text-xs text-center mt-4">
+            We respect your privacy. Zero spam. Unsubscribe anytime with one click.
+          </p>
+        </section>
+
+        <!-- Urgency Note -->
+        <div class="urgency-note">
+          <div class="urgency-text">What consultants charge $197/hour for - yours free.</div>
+          <div class="urgency-subtext">
+            Every day without positioning clarity costs you deals, margins, and market position. Download now and identify your gaps in 15 minutes.
+          </div>
+        </div>
+
       </div>
     </main>
   </div>

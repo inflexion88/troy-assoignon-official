@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-74JF9CHYSL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-74JF9CHYSL', {
+        'send_page_view': true
+      });
+
+      // Track successful download
+      gtag('event', 'generate_lead', {
+        'value': 10000,
+        'currency': 'USD',
+        'lead_source': 'strategic_positioning_framework_guide'
+      });
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Your Framework Guide - Troy Assoignon</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="/src/style.css" />
+
+    <style>
+      .thank-you-container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(20, 20, 30, 0.95));
+      }
+
+      .thank-you-card {
+        max-width: 650px;
+        width: 100%;
+        background: rgba(var(--color-luxury-900), 0.6);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(var(--color-accent-green), 0.2);
+        border-radius: 1.5rem;
+        padding: 3rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .thank-you-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        pointer-events: none;
+      }
+
+      .pillar-badge {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: linear-gradient(135deg, rgba(var(--color-accent-green), 0.2), rgba(var(--color-accent-green), 0.1));
+        border: 1px solid rgba(var(--color-accent-green), 0.3);
+        border-radius: 2rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: rgb(var(--color-accent-green));
+        margin-bottom: 1.5rem;
+      }
+
+      .checkmark-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 1.5rem;
+        background: rgba(var(--color-accent-green), 0.1);
+        border: 2px solid rgb(var(--color-accent-green));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .checkmark-icon svg {
+        width: 40px;
+        height: 40px;
+        stroke: rgb(var(--color-accent-green));
+        stroke-width: 3;
+      }
+
+      .thank-you-card h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: rgb(var(--color-text-primary));
+      }
+
+      .thank-you-card p {
+        font-size: 1.1rem;
+        color: rgb(var(--color-text-secondary));
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .download-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1.25rem 2.5rem;
+        background: linear-gradient(135deg, rgb(var(--color-accent-green)), rgba(var(--color-accent-green), 0.8));
+        color: rgb(var(--color-luxury-900));
+        font-weight: 600;
+        font-size: 1.1rem;
+        border-radius: 0.75rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 2px solid rgb(var(--color-accent-green));
+        box-shadow: 0 4px 20px rgba(var(--color-accent-green), 0.3);
+      }
+
+      .download-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 30px rgba(var(--color-accent-green), 0.5);
+      }
+
+      .download-button svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .framework-preview {
+        margin-top: 2.5rem;
+        padding: 1.5rem;
+        background: rgba(var(--color-luxury-800), 0.4);
+        border: 1px solid rgba(var(--color-luxury-700), 0.3);
+        border-radius: 1rem;
+        text-align: left;
+      }
+
+      .framework-preview h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: rgb(var(--color-accent-green));
+      }
+
+      .framework-parts {
+        display: grid;
+        gap: 0.75rem;
+        font-size: 0.95rem;
+        color: rgb(var(--color-text-secondary));
+      }
+
+      .framework-parts li {
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .framework-parts li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: rgb(var(--color-accent-green));
+        font-weight: bold;
+      }
+
+      .next-steps {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(var(--color-luxury-700), 0.3);
+      }
+
+      .next-steps h2 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: rgb(var(--color-text-primary));
+      }
+
+      .next-steps-list {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+      }
+
+      .next-steps-list li {
+        padding: 0.75rem 0;
+        color: rgb(var(--color-text-secondary));
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      .next-steps-list li::before {
+        content: '✓';
+        color: rgb(var(--color-accent-green));
+        font-weight: bold;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+
+      .cta-link {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 0.75rem 1.5rem;
+        background: rgba(var(--color-accent-green), 0.1);
+        color: rgb(var(--color-accent-green));
+        border: 1px solid rgba(var(--color-accent-green), 0.3);
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.2s ease;
+      }
+
+      .cta-link:hover {
+        background: rgba(var(--color-accent-green), 0.2);
+        border-color: rgba(var(--color-accent-green), 0.5);
+        transform: translateX(4px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="thank-you-container">
+      <div class="thank-you-card">
+        <div class="pillar-badge">PILLAR CONTENT • 25 PAGES • $10K VALUE</div>
+
+        <div class="checkmark-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+
+        <h1>Your Framework Guide is Ready</h1>
+        <p>Click below to download the complete Strategic Positioning Advantage™ Framework Guide. This 25-page comprehensive guide is the same framework that drove $4.5M in capital raises.</p>
+
+        <a href="/downloads/Strategic-Positioning-Framework-Guide.pdf" download class="download-button" onclick="gtag('event', 'file_download', {'file_name': 'Strategic-Positioning-Framework-Guide.pdf'});">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download Framework Guide (25 Pages)
+        </a>
+
+        <div class="framework-preview">
+          <h3>What's Inside Your Framework:</h3>
+          <ul class="framework-parts">
+            <li><strong>Part 1:</strong> Market Intelligence - 3-Layer Analysis Model</li>
+            <li><strong>Part 2:</strong> Differentiation Architecture - Value Matrix & Positioning DNA</li>
+            <li><strong>Part 3:</strong> Message Architecture - Positioning Pyramid & Proof Systems</li>
+            <li><strong>Part 4:</strong> Implementation - 90-Day Activation Roadmap</li>
+            <li><strong>Part 5:</strong> Maintenance - Quarterly Audits & Evolution Strategy</li>
+            <li><strong>Part 6:</strong> Next Steps - Professional Implementation Pathways</li>
+          </ul>
+        </div>
+
+        <div class="next-steps">
+          <h2>Implementation Roadmap:</h2>
+          <ul class="next-steps-list">
+            <li>Read through the complete framework to understand the systematic approach</li>
+            <li>Complete the diagnostic exercises in each section</li>
+            <li>Build your positioning strategy using the templates provided</li>
+            <li>Connect with Troy on <a href="https://www.linkedin.com/in/troyassoignon/" target="_blank" style="color: rgb(var(--color-accent-green)); text-decoration: underline;">LinkedIn</a> for framework insights</li>
+          </ul>
+
+          <a href="/services/strategic-brand-positioning.html" class="cta-link">
+            Need Implementation Support? Explore Strategic Positioning Services →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

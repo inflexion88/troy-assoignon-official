@@ -20,11 +20,21 @@
 
     <title>Get in Touch - Troy Assoignon</title>
 
-    <meta name="description" content="Contact Troy Assoignon for positioning strategy consultation and services" />
+    <meta name="description" content="Contact Troy Assoignon for expert positioning strategy consultation. Transform your brand positioning with proven methodologies. Book a discovery call." />
 
     <meta name="author" content="Troy Assoignon" />
 
     <meta property="og:image" content="/og-image.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.troyassoignon.com/contact.html" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Troy Assoignon - Positioning Expert" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Get in Touch - Troy Assoignon" />
+    <meta name="twitter:description" content="Contact Troy Assoignon for positioning strategy consultation and services" />
+    <meta name="twitter:image" content="https://www.troyassoignon.com/og-image.png" />
+    <link rel="canonical" href="https://www.troyassoignon.com/contact.html" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="/src/style.css" />
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -43,6 +53,38 @@
         display: none !important;
       }
     </style>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Troy Assoignon - Positioning Expert",
+      "description": "Strategic brand positioning consultant helping luxury brands and executives capture premium market positioning through data-driven positioning strategy.",
+      "url": "https://www.troyassoignon.com",
+      "logo": "https://www.troyassoignon.com/favicon.svg",
+      "image": "https://www.troyassoignon.com/og-image.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CA"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Troy Assoignon",
+        "jobTitle": "Positioning Expert",
+        "description": "Positioning expert with $62.7M in documented client results. Creator of the Strategic Positioning Advantage™ framework.",
+        "url": "https://www.troyassoignon.com",
+        "knowsAbout": [
+          "Brand Positioning",
+          "Strategic Positioning",
+          "Luxury Brand Strategy",
+          "Investor Positioning",
+          "Premium Pricing Strategy",
+          "Market Differentiation"
+        ]
+      }
+    }
+    </script>
 </head>
 
   <body class="bg-black text-white">
@@ -79,7 +121,36 @@
 
             </a>
 
-            <a href="/#services" class="nav-item">Services</a>
+            <div class="relative group">
+              <button class="nav-item flex items-center">
+                Services
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div id="services-dropdown" class="dropdown-menu">
+                <div class="service-submenu">
+                  <a href="/services/fractional-cmo-caio.html" class="block px-4 py-2.5 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Fractional CMO/CAIo
+                  </a>
+                  <a href="/services/strategic-brand-positioning.html" class="block px-4 py-2.5 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Strategic Brand Positioning
+                  </a>
+                  <a href="/services/authority-thought-leadership.html" class="block px-4 py-2.5 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Authority & Thought Leadership
+                  </a>
+                  <a href="/services/investor-ready-positioning.html" class="block px-4 py-2.5 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Investor-Ready Positioning
+                  </a>
+                  <a href="/services/premium-pricing-offers.html" class="block px-4 py-2.5 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Premium Pricing & Offers
+                  </a>
+                  <a href="/services/positioning-diagnostics.html" class="block px-4 py-2.5 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Positioning Diagnostics
+                  </a>
+                </div>
+              </div>
+            </div>
 
             <a href="/#about" class="nav-item">About</a>
 
@@ -279,6 +350,40 @@
 
                     </div>
 
+                    <div>
+
+                      <label for="referral-source" class="block text-sm font-medium text-luxury-300 mb-2">How did you hear about us?</label>
+
+                      <select
+
+                        id="referral-source"
+
+                        name="referral-source"
+
+                        class="w-full px-6 py-4 bg-luxury-900/50 border-2 border-luxury-700/40 rounded-xl text-white text-lg placeholder-luxury-400 focus:outline-none focus:ring-2 focus:ring-accent-green/40 focus:border-accent-green transition-all duration-300"
+
+                        style="background-color: rgba(30, 30, 35, 0.6) !important; border: 2px solid rgba(70, 70, 80, 0.4) !important; color: #ffffff !important; font-size: 1.125rem !important;"
+
+                      >
+
+                        <option value="">Select an option...</option>
+
+                        <option value="google-search">Google Search</option>
+
+                        <option value="linkedin">LinkedIn</option>
+
+                        <option value="referral">Referral</option>
+
+                        <option value="blog">Blog/Content</option>
+
+                        <option value="social-media">Social Media</option>
+
+                        <option value="other">Other</option>
+
+                      </select>
+
+                    </div>
+
 
 
                     <button type="button" onclick="nextStep()" class="button-primary w-full">
@@ -331,11 +436,49 @@
 
                     </div>
 
+                    <div>
+
+                      <label for="service-interest" class="block text-sm font-medium text-luxury-300 mb-2">How can we help? *</label>
+
+                      <select
+
+                        id="service-interest"
+
+                        name="service-interest"
+
+                        required
+
+                        class="w-full px-6 py-4 bg-luxury-900/50 border-2 border-luxury-700/40 rounded-xl text-white text-lg placeholder-luxury-400 focus:outline-none focus:ring-2 focus:ring-accent-green/40 focus:border-accent-green transition-all duration-300"
+
+                        style="background-color: rgba(30, 30, 35, 0.6) !important; border: 2px solid rgba(70, 70, 80, 0.4) !important; color: #ffffff !important; font-size: 1.125rem !important;"
+
+                      >
+
+                        <option value="">Select a service...</option>
+
+                        <option value="positioning-diagnostic">Positioning Diagnostic</option>
+
+                        <option value="strategic-positioning">Strategic Brand Positioning</option>
+
+                        <option value="investor-positioning">Investor-Ready Positioning</option>
+
+                        <option value="premium-pricing">Premium Pricing Strategy</option>
+
+                        <option value="fractional-cmo">Fractional CMO/CPO</option>
+
+                        <option value="workshop">Positioning Workshop</option>
+
+                        <option value="other">Other / General Inquiry</option>
+
+                      </select>
+
+                    </div>
+
 
 
                     <div>
 
-                      <label for="challenge" class="block text-sm font-medium text-luxury-300 mb-2">What do you need help with? *</label>
+                      <label for="challenge" class="block text-sm font-medium text-luxury-300 mb-2">Tell us about your challenge *</label>
 
                       <textarea
 
@@ -904,9 +1047,31 @@
 
           const email = document.getElementById('email').value;
 
+          const referralSource = document.getElementById('referral-source').value;
+
           const company = document.getElementById('company').value;
 
+          const serviceInterest = document.getElementById('service-interest').value;
+
           const challenge = document.getElementById('challenge').value;
+
+
+
+          // Track contact form submission with service interest
+
+          if (typeof gtag === 'function') {
+
+            gtag('event', 'contact_form_submit', {
+
+              'event_category': 'Lead Generation',
+
+              'event_label': serviceInterest || 'Unknown',
+
+              'value': 1
+
+            });
+
+          }
 
 
 
@@ -914,7 +1079,7 @@
 
             console.log('Submitting form data to /api/contact...');
 
-            console.log('Data:', { name, email, company, challenge });
+            console.log('Data:', { name, email, referralSource, company, serviceInterest, challenge });
 
 
 
@@ -942,7 +1107,11 @@
 
                 email,
 
+                referralSource,
+
                 company,
+
+                serviceInterest,
 
                 challenge
 

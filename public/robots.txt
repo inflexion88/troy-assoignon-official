@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Disallow utility/admin pages
+Disallow: /dist/
+Disallow: /*.json$
+
+# Allow CSS and JS for proper rendering
+Allow: /src/*.css
+Allow: /src/*.js
+Allow: /assets/
+Allow: /images/
+
+# Sitemap location
+Sitemap: https://www.troyassoignon.com/sitemap.xml

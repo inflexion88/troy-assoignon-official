@@ -14,297 +14,260 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog - Troy Assoignon</title>
-    <meta name="description" content="Insights on strategic brand positioning, luxury marketing, and thought leadership" />
+    <meta name="description" content="Expert insights on strategic brand positioning, luxury marketing, and thought leadership. Practical positioning strategies from Troy Assoignon." />
     <meta name="author" content="Troy Assoignon" />
     <meta property="og:image" content="/og-image.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.troyassoignon.com/blog.html" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Troy Assoignon - Positioning Expert" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blog - Troy Assoignon" />
+    <meta name="twitter:description" content="Insights on strategic brand positioning, luxury marketing, and thought leadership" />
+    <meta name="twitter:image" content="https://www.troyassoignon.com/og-image.png" />
+    <link rel="canonical" href="https://www.troyassoignon.com/blog.html" />
     <link rel="stylesheet" href="/src/style.css" />
         <style>
-      /* Blog specific styles */
-      .blog-container {
-        display: grid;
-        grid-template-columns: 250px 1fr 280px;
-        gap: 0;
-        max-width: 100%;
+      /* Blog Hub Styles */
+      .blog-hero {
+        max-width: 1400px;
         margin: 0 auto;
-        min-height: calc(100vh - 80px);
+        padding: 4rem 2rem 2rem;
+        text-align: center;
       }
-      
-      .blog-sidebar {
-        padding: 2rem 1rem;
-        border-right: 1px solid rgba(50, 50, 60, 0.2);
-        overflow-y: auto;
-        position: sticky;
-        top: 80px;
-        height: calc(100vh - 80px);
-        background-color: rgba(25, 25, 30, 0.4);
-      }
-      
-      .blog-sidebar-nav {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-      }
-      
-      .blog-sidebar-title {
-        font-size: 0.8rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: rgb(var(--color-luxury-400));
-        margin-bottom: 0.5rem;
-        margin-top: 1.5rem;
-        position: relative;
-        padding-bottom: 0.5rem;
-      }
-      
-      .blog-sidebar-title::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 3rem;
-        height: 1px;
-        background: rgba(var(--color-accent-green), 0.3);
-      }
-      
-      .blog-sidebar-link {
-        display: block;
-        padding: 0.25rem 0;
-        color: rgb(var(--color-text-secondary));
-        font-size: 0.9rem;
-        transition: color 0.2s;
-      }
-      
-      .blog-sidebar-link:hover {
-        color: rgb(var(--color-accent-green));
-      }
-      
-      .blog-sidebar-link.active {
-        color: rgb(var(--color-accent-green));
-        font-weight: 500;
-      }
-      
-      .blog-content {
-        padding: 2rem;
-        padding-top: 1.5rem;
-        max-width: 800px;
-        margin: 0 auto;
-        width: 100%;
-        background-color: rgba(20, 20, 25, 0.5);
-        border-left: 1px solid rgba(50, 50, 60, 0.1);
-        border-right: 1px solid rgba(50, 50, 60, 0.1);
-      }
-      
-      .blog-right-sidebar {
-        padding: 2rem 1rem;
-        position: sticky;
-        top: 80px;
-        height: calc(100vh - 80px);
-        overflow-y: auto;
-        border-left: 1px solid rgba(50, 50, 60, 0.2);
-        background-color: rgba(25, 25, 30, 0.4);
-      }
-      
-      .blog-toc-title {
-        font-size: 0.9rem;
-        font-weight: 500;
-        margin-bottom: 1rem;
-        color: rgb(var(--color-text-primary));
-        position: relative;
-        padding-bottom: 0.5rem;
-      }
-      
-      .blog-toc-title::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 3rem;
-        height: 1px;
-        background: rgba(var(--color-accent-green), 0.3);
-      }
-      
-      .blog-toc-link {
-        display: block;
-        padding: 0.25rem 0;
-        color: rgb(var(--color-text-secondary));
-        font-size: 0.85rem;
-        transition: color 0.2s;
-        position: relative;
-        padding-left: 0.75rem;
-      }
-      
-      .blog-toc-link::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 3px;
-        height: 3px;
-        border-radius: 50%;
-        background-color: rgba(var(--color-text-secondary), 0.4);
-        transition: background-color 0.2s;
-      }
-      
-      .blog-toc-link:hover {
-        color: rgb(var(--color-accent-green));
-      }
-      
-      .blog-toc-link:hover::before {
-        background-color: rgb(var(--color-accent-green));
-      }
-      
-      .blog-toc-link[style*="padding-left: 1rem"]::before {
-        left: 0.5rem;
-      }
-      
-      .blog-post-title {
-        font-size: 2.5rem;
-        line-height: 1.2;
+
+      .blog-hero h1 {
+        font-size: 3rem;
         font-weight: 700;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         color: rgb(var(--color-text-primary));
         font-family: 'SF Pro Display', 'Inter', sans-serif;
       }
-      
-      .blog-post-meta {
+
+      .blog-hero p {
+        font-size: 1.1rem;
+        color: rgb(var(--color-text-secondary));
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      .blog-grid-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .blog-card {
+        background: rgba(var(--color-luxury-900), 0.4);
+        border: 1px solid rgba(var(--color-luxury-800), 0.3);
+        border-radius: 1rem;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .blog-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(var(--color-accent-green), 0.1);
+        border-color: rgba(var(--color-accent-green), 0.3);
+      }
+
+      .blog-card.featured {
+        grid-column: 1 / -1;
+        background: linear-gradient(135deg, rgba(var(--color-luxury-900), 0.6), rgba(var(--color-accent-green), 0.05));
+        border: 2px solid rgba(var(--color-accent-green), 0.3);
+      }
+
+      .blog-card-image {
+        width: 100%;
+        height: 240px;
+        background: linear-gradient(135deg, rgba(var(--color-luxury-800), 0.8), rgba(var(--color-luxury-700), 0.4));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: rgba(var(--color-accent-green), 0.3);
+      }
+
+      .blog-card.featured .blog-card-image {
+        height: 320px;
+      }
+
+      .blog-card-content {
+        padding: 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .blog-card-meta {
         display: flex;
         align-items: center;
         gap: 1rem;
-        margin-bottom: 2rem;
-        font-size: 0.9rem;
-        color: rgb(var(--color-text-secondary));
-      }
-      
-      .blog-post-date {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-      
-      .blog-post-category {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-      
-      .blog-post-content p {
-        margin-bottom: 1.5rem;
-        line-height: 1.7;
-        color: rgb(var(--color-text-secondary));
-      }
-      
-      .blog-post-content h2 {
-        font-size: 1.8rem;
-        font-weight: 600;
-        margin-top: 2.5rem;
         margin-bottom: 1rem;
-        color: rgb(var(--color-text-primary));
-        font-family: 'SF Pro Display', 'Inter', sans-serif;
+        flex-wrap: wrap;
       }
-      
-      .blog-post-content h3 {
-        font-size: 1.4rem;
+
+      .blog-card-category {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background: rgba(var(--color-accent-green), 0.2);
+        color: rgb(var(--color-accent-green));
+        border-radius: 0.5rem;
+        font-size: 0.75rem;
         font-weight: 600;
-        margin-top: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .blog-card.featured .blog-card-category {
+        background: rgba(var(--color-accent-green), 0.3);
+      }
+
+      .blog-card-pillar {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background: linear-gradient(135deg, rgba(var(--color-accent-green), 0.3), rgba(var(--color-accent-green), 0.15));
+        color: rgb(var(--color-accent-green));
+        border: 1px solid rgba(var(--color-accent-green), 0.4);
+        border-radius: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .blog-card-date {
+        font-size: 0.85rem;
+        color: rgb(var(--color-luxury-400));
+      }
+
+      .blog-card-readtime {
+        font-size: 0.85rem;
+        color: rgb(var(--color-luxury-400));
+      }
+
+      .blog-card-title {
+        font-size: 1.5rem;
+        font-weight: 700;
         margin-bottom: 0.75rem;
         color: rgb(var(--color-text-primary));
+        line-height: 1.3;
         font-family: 'SF Pro Display', 'Inter', sans-serif;
       }
-      
-      .blog-post-content ul {
-        margin-bottom: 1.5rem;
-        margin-left: 1.5rem;
-        list-style-type: disc;
+
+      .blog-card.featured .blog-card-title {
+        font-size: 2rem;
       }
-      
-      .blog-post-content li {
-        margin-bottom: 0.5rem;
+
+      .blog-card-excerpt {
+        font-size: 0.95rem;
         color: rgb(var(--color-text-secondary));
-      }
-      
-      .blog-post-content code {
-        background-color: rgba(var(--color-luxury-800), 0.6);
-        padding: 0.2rem 0.4rem;
-        border-radius: 0.25rem;
-        font-family: monospace;
-        font-size: 0.9em;
-      }
-      
-      .blog-post-content blockquote {
-        border-left: 3px solid rgb(var(--color-accent-green));
-        padding-left: 1rem;
-        margin-left: 0;
+        line-height: 1.6;
         margin-bottom: 1.5rem;
-        font-style: italic;
-        color: rgb(var(--color-text-secondary));
+        flex: 1;
       }
-      
-      .blog-post-content img {
-        max-width: 100%;
+
+      .blog-card-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        background: rgba(var(--color-accent-green), 0.1);
+        color: rgb(var(--color-accent-green));
+        border: 1px solid rgba(var(--color-accent-green), 0.3);
         border-radius: 0.5rem;
-        margin: 2rem 0;
+        font-weight: 600;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        align-self: flex-start;
       }
-      
+
+      .blog-card-cta:hover {
+        background: rgba(var(--color-accent-green), 0.2);
+        border-color: rgba(var(--color-accent-green), 0.5);
+        transform: translateX(4px);
+      }
+
       /* Responsive design */
-      @media (max-width: 1200px) {
-        .blog-container {
-          grid-template-columns: 220px 1fr 240px;
-        }
-      }
-      
       @media (max-width: 992px) {
-        .blog-container {
+        .blog-grid {
           grid-template-columns: 1fr;
         }
-        
-        .blog-sidebar,
-        .blog-right-sidebar {
-          display: none;
+
+        .blog-card.featured {
+          grid-column: 1;
         }
-        
-        .blog-content {
-          padding: 2rem 1.5rem;
+
+        .blog-hero h1 {
+          font-size: 2rem;
+        }
+
+        .blog-hero p {
+          font-size: 1rem;
+        }
+
+        .blog-grid-container {
+          padding: 1.5rem;
         }
       }
-      
+
       /* Light theme compatibility */
-      html:not(.dark) .blog-sidebar,
-      html:not(.dark) .blog-right-sidebar {
-        border-color: rgba(200, 200, 210, 0.3);
-        background-color: rgba(240, 240, 245, 0.6);
+      html:not(.dark) .blog-card {
+        background: rgba(240, 240, 245, 0.8);
+        border-color: rgba(200, 200, 210, 0.4);
       }
-      
-      html:not(.dark) .blog-content {
-        background-color: rgba(248, 248, 252, 0.8);
-        border-left: 1px solid rgba(200, 200, 210, 0.2);
-        border-right: 1px solid rgba(200, 200, 210, 0.2);
+
+      html:not(.dark) .blog-card.featured {
+        background: linear-gradient(135deg, rgba(240, 240, 245, 0.95), rgba(var(--color-accent-green), 0.08));
       }
-      
-      html:not(.dark) .blog-post-content code {
-        background-color: rgba(230, 230, 235, 0.6);
-      }
-      
-      html:not(.dark) .blog-sidebar-title::after {
-        background: rgba(var(--color-accent-green), 0.4);
-      }
-      
-      html:not(.dark) .blog-toc-title {
-        position: relative;
-        padding-bottom: 0.5rem;
-      }
-      
-      html:not(.dark) .blog-toc-title::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 3rem;
-        height: 1px;
-        background: rgba(var(--color-accent-green), 0.4);
+
+      html:not(.dark) .blog-card-image {
+        background: linear-gradient(135deg, rgba(220, 220, 230, 0.8), rgba(200, 200, 215, 0.4));
       }
     </style>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Troy Assoignon - Positioning Expert",
+      "description": "Strategic brand positioning consultant helping luxury brands and executives capture premium market positioning through data-driven positioning strategy.",
+      "url": "https://www.troyassoignon.com",
+      "logo": "https://www.troyassoignon.com/favicon.svg",
+      "image": "https://www.troyassoignon.com/og-image.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CA"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Troy Assoignon",
+        "jobTitle": "Positioning Expert",
+        "description": "Positioning expert with $62.7M in documented client results. Creator of the Strategic Positioning Advantage™ framework.",
+        "url": "https://www.troyassoignon.com",
+        "knowsAbout": [
+          "Brand Positioning",
+          "Strategic Positioning",
+          "Luxury Brand Strategy",
+          "Investor Positioning",
+          "Premium Pricing Strategy",
+          "Market Differentiation"
+        ]
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root">
@@ -436,157 +399,194 @@
         </div>
       </header>
 
-      <!-- Blog Container -->
-      <div class="blog-container pt-24">
-        <!-- Left Sidebar -->
-        <aside class="blog-sidebar">
-          <div class="blog-sidebar-nav">
-            <div class="blog-sidebar-title">Categories</div>
-            <a href="#" class="blog-sidebar-link active">Brand Positioning</a>
-            <a href="#" class="blog-sidebar-link">Luxury Marketing</a>
-            <a href="#" class="blog-sidebar-link">Thought Leadership</a>
-            <a href="#" class="blog-sidebar-link">Premium Pricing</a>
-            <a href="#" class="blog-sidebar-link">Case Studies</a>
-            
-            <div class="blog-sidebar-title">Recent Posts</div>
-            <a href="#" class="blog-sidebar-link">How to Position Your Brand for Premium Pricing</a>
-            <a href="#" class="blog-sidebar-link">The Psychology Behind Luxury Marketing</a>
-            <a href="#" class="blog-sidebar-link">5 Ways to Establish Thought Leadership</a>
-            <a href="#" class="blog-sidebar-link">Creating a Memorable Brand Experience</a>
-            <a href="#" class="blog-sidebar-link">Why Most Brands Fail at Premium Positioning</a>
-          </div>
-        </aside>
-        
-        <!-- Main Content -->
-        <main class="blog-content">
-          <article class="blog-post">
-            <h1 class="blog-post-title">The Art and Science of Strategic Brand Positioning</h1>
-            
-            <div class="blog-post-meta">
-              <div class="blog-post-date">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="16" y1="2" x2="16" y2="6"></line>
-                  <line x1="8" y1="2" x2="8" y2="6"></line>
-                  <line x1="3" y1="10" x2="21" y2="10"></line>
-                </svg>
-                June 15, 2023
-              </div>
-              <div class="blog-post-category">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path>
-                </svg>
-                Brand Positioning
-              </div>
+      <!-- Blog Hero Section -->
+      <section class="blog-hero pt-24">
+        <h1>Strategic Positioning Insights</h1>
+        <p>Expert guidance on brand positioning, competitive strategy, and premium market differentiation. $62.7M in documented client results.</p>
+      </section>
+
+      <!-- Blog Grid Container -->
+      <div class="blog-grid-container">
+        <div class="blog-grid">
+
+          <!-- Blog Post 1 -->
+          <a href="/blog/what-is-positioning-expert-2025-guide.html" class="blog-card">
+            <div class="blog-card-image">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20h9"></path>
+                <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+              </svg>
             </div>
-            
-            <div class="blog-post-content">
-              <p>In the crowded marketplace of the 21st century, strategic brand positioning isn't just a marketing exercise—it's the cornerstone of business success. The art and science of positioning your brand effectively in the minds of your target audience can mean the difference between being just another option and being the only logical choice.</p>
-              
-              <p>But what exactly is strategic brand positioning, and why is it so critical for luxury brands and high-performing businesses? Let's explore the nuances of this sophisticated discipline and how it can transform your market presence.</p>
-              
-              <h2 id="what-is-strategic-brand-positioning">What is Strategic Brand Positioning?</h2>
-              
-              <p>Strategic brand positioning is the deliberate process of defining and occupying a distinct place in the mind of your target audience. It's about crafting a unique value proposition that sets you apart from competitors and resonates deeply with the specific needs and desires of your ideal customers.</p>
-              
-              <p>Effective positioning answers three critical questions:</p>
-              
-              <ul>
-                <li>Who exactly are you for? (Target audience)</li>
-                <li>What problem do you solve that matters deeply? (Value proposition)</li>
-                <li>Why should someone choose you over alternatives? (Differentiation)</li>
-              </ul>
-              
-              <blockquote>
-                "Your position in the market is not what you say it is. It's what your customers believe it is, based on every experience they have with your brand."
-              </blockquote>
-              
-              <h2 id="the-science-of-positioning">The Science of Positioning</h2>
-              
-              <p>While there's certainly an art to positioning, there's also a rigorous science behind it. Effective positioning requires deep market research, competitive analysis, and a thorough understanding of customer psychology.</p>
-              
-              <p>The scientific approach to positioning involves:</p>
-              
-              <ul>
-                <li>Market segmentation and audience analysis</li>
-                <li>Competitive landscape mapping</li>
-                <li>Perceptual positioning matrix development</li>
-                <li>Value attribute analysis</li>
-                <li>Brand association testing</li>
-              </ul>
-              
-              <p>By leveraging these scientific methodologies, brands can identify strategic opportunities in the marketplace—areas where customer needs are unmet or underserved by existing offerings.</p>
-              
-              <h2 id="the-art-of-positioning">The Art of Positioning</h2>
-              
-              <p>The artful side of positioning is where creativity, intuition, and emotional intelligence come into play. This is where you transform data-driven insights into compelling brand stories and experiences that capture imagination and build desire.</p>
-              
-              <p>The art of positioning encompasses:</p>
-              
-              <ul>
-                <li>Crafting compelling brand narratives</li>
-                <li>Developing distinctive visual and verbal identity systems</li>
-                <li>Creating emotional resonance through brand touchpoints</li>
-                <li>Designing memorable customer experiences</li>
-                <li>Cultivating brand mystique and aspiration</li>
-              </ul>
-              
-              <h2 id="luxury-positioning-principles">Luxury Positioning Principles</h2>
-              
-              <p>For luxury brands, positioning follows a unique set of principles that defy conventional marketing wisdom:</p>
-              
-              <ul>
-                <li><strong>Exclusivity over accessibility</strong> - Creating desire through selective availability</li>
-                <li><strong>Heritage over novelty</strong> - Emphasizing timelessness and tradition while still innovating</li>
-                <li><strong>Craftsmanship over convenience</strong> - Celebrating the human touch in an automated world</li>
-                <li><strong>Symbolism over function</strong> - Selling meaning and identity, not just utility</li>
-                <li><strong>Experience over transaction</strong> - Creating memorable moments, not just exchanges of value</li>
-              </ul>
-              
-              <h3 id="case-study">Case Study: Repositioning a Legacy Brand</h3>
-              
-              <p>Consider how a century-old luxury watchmaker successfully repositioned itself for a new generation of affluent consumers without abandoning its heritage. By identifying the intersection between traditional craftsmanship and contemporary design aesthetics, they created a new category of "heritage innovation" that appealed to both conservative collectors and style-conscious newcomers.</p>
-              
-              <p>The result was a 40% increase in sales among millennials while strengthening loyalty among their traditional customer base. This exemplifies the delicate balance between honoring brand equity and evolving to meet changing market dynamics.</p>
-              
-              <h2 id="implementing-your-positioning">Implementing Your Positioning Strategy</h2>
-              
-              <p>A positioning strategy is only as good as its implementation. To bring your positioning to life effectively:</p>
-              
-              <ul>
-                <li>Ensure internal alignment and buy-in across all departments</li>
-                <li>Translate positioning into clear brand guidelines and standards</li>
-                <li>Train customer-facing teams to embody and communicate your position</li>
-                <li>Audit all touchpoints to ensure positioning consistency</li>
-                <li>Measure perception and adjust as needed through ongoing research</li>
-              </ul>
-              
-              <p>The most powerful positioning is invisible to the consumer—they don't see the strategy, they simply feel an intuitive understanding of what your brand stands for and why it matters to them.</p>
-              
-              <h2 id="conclusion">Conclusion: Positioning as Competitive Advantage</h2>
-              
-              <p>In an era where functional differentiation is increasingly difficult to maintain, strategic brand positioning becomes your most sustainable competitive advantage. When executed with precision and creativity, it creates a place in the customer's mind that only your brand can occupy.</p>
-              
-              <p>Remember that positioning is not a one-time exercise but an ongoing discipline. Markets evolve, competitors shift, and customer preferences change. The brands that maintain leadership positions are those that consistently refine and reinforce their positioning to remain both relevant and distinctive.</p>
-              
-              <p>The art and science of strategic brand positioning may be complex, but the results are clear: brands with strong, well-defined positions command premium prices, enjoy greater customer loyalty, and build more valuable businesses over time.</p>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span class="blog-card-category">Brand Positioning</span>
+                <span class="blog-card-date">October 30, 2025</span>
+                <span class="blog-card-readtime">12 min read</span>
+              </div>
+              <h2 class="blog-card-title">What is a Positioning Expert? The Complete 2025 Guide</h2>
+              <p class="blog-card-excerpt">In the crowded marketplace of the 21st century, strategic brand positioning isn't just a marketing exercise—it's the cornerstone of business success.</p>
+              <span class="blog-card-cta">
+                Read More
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </span>
             </div>
-          </article>
-        </main>
-        
-        <!-- Right Sidebar -->
-        <aside class="blog-right-sidebar">
-          <div class="blog-toc">
-            <div class="blog-toc-title">On this page</div>
-            <a href="#what-is-strategic-brand-positioning" class="blog-toc-link">What is Strategic Brand Positioning?</a>
-            <a href="#the-science-of-positioning" class="blog-toc-link">The Science of Positioning</a>
-            <a href="#the-art-of-positioning" class="blog-toc-link">The Art of Positioning</a>
-            <a href="#luxury-positioning-principles" class="blog-toc-link">Luxury Positioning Principles</a>
-            <a href="#case-study" class="blog-toc-link" style="padding-left: 1rem;">Case Study: Repositioning a Legacy Brand</a>
-            <a href="#implementing-your-positioning" class="blog-toc-link">Implementing Your Positioning Strategy</a>
-            <a href="#conclusion" class="blog-toc-link">Conclusion: Positioning as Competitive Advantage</a>
-          </div>
-        </aside>
+          </a>
+
+          <!-- Blog Post 2 -->
+          <a href="/blog/positioning-expert-vs-brand-strategist.html" class="blog-card">
+            <div class="blog-card-image">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 16v-4M12 8h.01"></path>
+              </svg>
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span class="blog-card-category">Strategy Comparison</span>
+                <span class="blog-card-date">October 30, 2025</span>
+                <span class="blog-card-readtime">10 min read</span>
+              </div>
+              <h2 class="blog-card-title">Positioning Expert vs Brand Strategist: Which Do You Need?</h2>
+              <p class="blog-card-excerpt">The $250K mistake: hiring the wrong expert. Most companies confuse positioning, branding, and strategy. Here's the clear comparison framework.</p>
+              <span class="blog-card-cta">
+                Read More
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Blog Post 3 - FEATURED PILLAR CONTENT -->
+          <a href="/blog/strategic-positioning-framework-deep-dive.html" class="blog-card featured">
+            <div class="blog-card-image">
+              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span class="blog-card-pillar">Pillar Content</span>
+                <span class="blog-card-category">Framework</span>
+                <span class="blog-card-date">October 30, 2025</span>
+                <span class="blog-card-readtime">15 min read</span>
+              </div>
+              <h2 class="blog-card-title">The Strategic Positioning Advantage™ Framework: A Deep Dive</h2>
+              <p class="blog-card-excerpt">The framework that drove $4.5M in capital raises. Most positioning is ad-hoc, not systematic. Here's the complete methodology breakdown.</p>
+              <span class="blog-card-cta">
+                Read More
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Blog Post 4 -->
+          <a href="/blog/when-to-hire-positioning-expert.html" class="blog-card">
+            <div class="blog-card-image">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 11l3 3L22 4"></path>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+              </svg>
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span class="blog-card-category">Problem Diagnosis</span>
+                <span class="blog-card-date">October 30, 2025</span>
+                <span class="blog-card-readtime">10 min read</span>
+              </div>
+              <h2 class="blog-card-title">When to Hire a Positioning Expert: 7 Warning Signs</h2>
+              <p class="blog-card-excerpt">The invisible $2M leak. Most companies don't know positioning is the issue. Here are 7 diagnostic warning signs.</p>
+              <span class="blog-card-cta">
+                Read More
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Blog Post 5 -->
+          <a href="/blog/positioning-roi-profit-margins.html" class="blog-card">
+            <div class="blog-card-image">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span class="blog-card-category">ROI Analysis</span>
+                <span class="blog-card-date">October 30, 2025</span>
+                <span class="blog-card-readtime">12 min read</span>
+              </div>
+              <h2 class="blog-card-title">How Positioning Experts Drive 20-40% Higher Profit Margins</h2>
+              <p class="blog-card-excerpt">McKinsey research shows precise positioning drives 20-40% margin gains. Here's the exact mechanism and real case studies.</p>
+              <span class="blog-card-cta">
+                Read More
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Blog Post 6 -->
+          <a href="/blog/positioning-diagnostics-revenue-analysis.html" class="blog-card">
+            <div class="blog-card-image">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span class="blog-card-category">Diagnostics</span>
+                <span class="blog-card-date">October 30, 2025</span>
+                <span class="blog-card-readtime">11 min read</span>
+              </div>
+              <h2 class="blog-card-title">Positioning Diagnostics: Find Where Your Narrative Costs You Revenue</h2>
+              <p class="blog-card-excerpt">The $1.2M invisible leak discovered through diagnostics. Positioning diagnostics reveal hidden revenue leaks in your market narrative.</p>
+              <span class="blog-card-cta">
+                Read More
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Blog Post 7 -->
+          <a href="/blog/investor-ready-positioning-capital-raising.html" class="blog-card">
+            <div class="blog-card-image">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <span class="blog-card-category">Investor Positioning</span>
+                <span class="blog-card-date">October 30, 2025</span>
+                <span class="blog-card-readtime">14 min read</span>
+              </div>
+              <h2 class="blog-card-title">Investor-Ready Positioning: How Elite Founders Raise Capital</h2>
+              <p class="blog-card-excerpt">The $4.5M pitch deck. Most founders have great businesses, weak investor positioning. Here's the complete investor positioning playbook.</p>
+              <span class="blog-card-cta">
+                Read More
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+        </div>
       </div>
 
       <!-- Footer -->
@@ -629,49 +629,6 @@
     <script>
       // Update copyright year
       document.getElementById('current-year').textContent = new Date().getFullYear();
-      
-      // Enable smooth scrolling for the TOC links
-      document.querySelectorAll('.blog-toc-link').forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href');
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 100,
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-      
-      // Highlight active TOC link on scroll
-      window.addEventListener('scroll', function() {
-        const headings = document.querySelectorAll('h2, h3');
-        const tocLinks = document.querySelectorAll('.blog-toc-link');
-        
-        // Find the current visible heading
-        let currentHeading = null;
-        headings.forEach(heading => {
-          if (heading.getBoundingClientRect().top <= 120) {
-            currentHeading = heading;
-          }
-        });
-        
-        // Highlight the corresponding TOC link
-        if (currentHeading) {
-          const id = currentHeading.getAttribute('id');
-          tocLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + id) {
-              link.classList.add('active');
-              link.style.color = 'rgb(var(--color-accent-green))';
-            } else {
-              link.style.color = '';
-            }
-          });
-        }
-      });
     </script>
   </body>
 </html> 

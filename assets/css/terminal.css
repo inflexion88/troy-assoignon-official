@@ -962,3 +962,56 @@
     padding-top: 2.5rem;
   }
 }
+
+/* ========================================
+   TERMINAL OUTPUT LINE STYLES
+   ======================================== */
+
+/* Highlighted important lines */
+.line.highlight {
+  color: #65E48F;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(101, 228, 143, 0.4);
+}
+
+/* Success messages */
+.line.success {
+  color: #4CAF50;
+  text-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Data/info lines */
+.line.data {
+  color: #87CEEB;
+  text-shadow: 0 0 3px rgba(135, 206, 235, 0.2);
+}
+
+/* Warning messages */
+.line.warning {
+  color: #FFA500;
+  text-shadow: 0 0 5px rgba(255, 165, 0, 0.3);
+}
+
+/* User input display */
+.line.user-input {
+  color: #FFFFFF;
+  font-weight: 500;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth transition for terminal content */
+.terminal-output {
+  transition: transform 0.2s ease;
+}
+
+/* Links within terminal */
+.line a {
+  color: #65E48F;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.line a:hover {
+  color: #4CAF50;
+  text-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}

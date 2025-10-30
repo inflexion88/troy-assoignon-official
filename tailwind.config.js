@@ -6,6 +6,7 @@ module.exports = {
     './blog.html',
     './workshop.html',
     './services/**/*.html',
+    './lead-magnets/**/*.html',
     './src/**/*.{js,ts,jsx,tsx}',
     './assets/js/**/*.{js,ts}',
   ],

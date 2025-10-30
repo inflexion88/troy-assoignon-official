@@ -45,7 +45,19 @@ export default defineConfig({
         'services/investor-ready-positioning': resolve(__dirname, 'services/investor-ready-positioning.html'),
         'services/premium-pricing-offers': resolve(__dirname, 'services/premium-pricing-offers.html'),
         'services/positioning-diagnostics': resolve(__dirname, 'services/positioning-diagnostics.html'),
-        positioningiq: resolve(__dirname, 'public/positioningiq.html')
+        positioningiq: resolve(__dirname, 'public/positioningiq.html'),
+        // Blog post pages
+        'blog/what-is-positioning-expert-2025-guide': resolve(__dirname, 'blog/what-is-positioning-expert-2025-guide.html'),
+        'blog/positioning-expert-vs-brand-strategist': resolve(__dirname, 'blog/positioning-expert-vs-brand-strategist.html'),
+        'blog/strategic-positioning-framework-deep-dive': resolve(__dirname, 'blog/strategic-positioning-framework-deep-dive.html'),
+        'blog/when-to-hire-positioning-expert': resolve(__dirname, 'blog/when-to-hire-positioning-expert.html'),
+        'blog/positioning-roi-profit-margins': resolve(__dirname, 'blog/positioning-roi-profit-margins.html'),
+        'blog/positioning-diagnostics-revenue-analysis': resolve(__dirname, 'blog/positioning-diagnostics-revenue-analysis.html'),
+        'blog/investor-ready-positioning-capital-raising': resolve(__dirname, 'blog/investor-ready-positioning-capital-raising.html'),
+        // Lead magnet pages
+        'lead-magnets/positioning-diagnostic-checklist': resolve(__dirname, 'lead-magnets/positioning-diagnostic-checklist.html'),
+        'lead-magnets/positioning-framework-guide': resolve(__dirname, 'lead-magnets/positioning-framework-guide.html'),
+        'lead-magnets/investor-positioning-checklist': resolve(__dirname, 'lead-magnets/investor-positioning-checklist.html')
       },
       output: {
         // Keep the existing folder structure from public

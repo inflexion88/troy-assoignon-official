@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-74JF9CHYSL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-74JF9CHYSL', {
+        'send_page_view': true
+      });
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Positioning Expert vs Brand Strategist: Which Do You Need? | Troy Assoignon</title>
+    <meta name="description" content="The $250K mistake: hiring the wrong expert. Most companies confuse positioning, branding, and strategy. Here's the clear comparison framework." />
+    <meta name="author" content="Troy Assoignon" />
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://www.troyassoignon.com/blog/positioning-expert-vs-brand-strategist.html" />
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Positioning Expert vs Brand Strategist: Which Do You Need? | Troy Assoignon" />
+    <meta property="og:description" content="The $250K mistake: hiring the wrong expert. Most companies confuse positioning, branding, and strategy. Here's the clear comparison framework." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.troyassoignon.com/blog/positioning-expert-vs-brand-strategist.html" />
+    <meta property="og:image" content="https://www.troyassoignon.com/og-image.png" />
+    <meta property="og:site_name" content="Troy Assoignon - Positioning Expert" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Positioning Expert vs Brand Strategist: Which Do You Need?" />
+    <meta name="twitter:description" content="The $250K mistake: hiring the wrong expert. Most companies confuse positioning, branding, and strategy. Here's the clear comparison framework." />
+    <meta name="twitter:image" content="https://www.troyassoignon.com/og-image.png" />
+
+    <link rel="stylesheet" href="/src/style.css" />
+
+    <style>
+      /* Blog Post Styles */
+      .blog-container {
+        display: grid;
+        grid-template-columns: 250px 1fr 280px;
+        gap: 0;
+        max-width: 100%;
+        margin: 0 auto;
+        min-height: calc(100vh - 80px);
+      }
+
+      .blog-sidebar {
+        padding: 2rem 1rem;
+        border-right: 1px solid rgba(50, 50, 60, 0.2);
+        overflow-y: auto;
+        position: sticky;
+        top: 80px;
+        height: calc(100vh - 80px);
+        background-color: rgba(25, 25, 30, 0.4);
+      }
+
+      .blog-sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .blog-sidebar-title {
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: rgb(var(--color-luxury-400));
+        margin-bottom: 0.5rem;
+        margin-top: 1.5rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+
+      .blog-sidebar-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 3rem;
+        height: 1px;
+        background: rgba(var(--color-accent-green), 0.3);
+      }
+
+      .blog-sidebar-link {
+        display: block;
+        padding: 0.25rem 0;
+        color: rgb(var(--color-text-secondary));
+        font-size: 0.85rem;
+        transition: color 0.2s;
+        text-decoration: none;
+      }
+
+      .blog-sidebar-link:hover {
+        color: rgb(var(--color-accent-green));
+      }
+
+      .blog-content {
+        padding: 2rem;
+        padding-top: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+        background-color: rgba(20, 20, 25, 0.5);
+        border-left: 1px solid rgba(50, 50, 60, 0.1);
+        border-right: 1px solid rgba(50, 50, 60, 0.1);
+      }
+
+      .blog-right-sidebar {
+        padding: 2rem 1rem;
+        position: sticky;
+        top: 80px;
+        height: calc(100vh - 80px);
+        overflow-y: auto;
+        border-left: 1px solid rgba(50, 50, 60, 0.2);
+        background-color: rgba(25, 25, 30, 0.4);
+      }
+
+      .blog-toc-title {
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        color: rgb(var(--color-text-primary));
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+
+      .blog-toc-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 3rem;
+        height: 1px;
+        background: rgba(var(--color-accent-green), 0.3);
+      }
+
+      .blog-toc-link {
+        display: block;
+        padding: 0.25rem 0;
+        color: rgb(var(--color-text-secondary));
+        font-size: 0.85rem;
+        transition: color 0.2s;
+        position: relative;
+        padding-left: 0.75rem;
+        text-decoration: none;
+      }
+
+      .blog-toc-link::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: rgba(var(--color-text-secondary), 0.4);
+        transition: background-color 0.2s;
+      }
+
+      .blog-toc-link:hover {
+        color: rgb(var(--color-accent-green));
+      }
+
+      .blog-toc-link:hover::before {
+        background-color: rgb(var(--color-accent-green));
+      }
+
+      .blog-post-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: rgb(var(--color-text-primary));
+        font-family: 'SF Pro Display', 'Inter', sans-serif;
+      }
+
+      .blog-author-byline {
+        margin-bottom: 2rem;
+      }
+
+      .blog-post-content p {
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
+        color: rgb(var(--color-text-secondary));
+      }
+
+      .blog-post-content h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        color: rgb(var(--color-text-primary));
+        font-family: 'SF Pro Display', 'Inter', sans-serif;
+      }
+
+      .blog-post-content h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+        color: rgb(var(--color-text-primary));
+        font-family: 'SF Pro Display', 'Inter', sans-serif;
+      }
+
+      .blog-post-content ul {
+        margin-bottom: 1.5rem;
+        margin-left: 1.5rem;
+        list-style-type: disc;
+      }
+
+      .blog-post-content ol {
+        margin-bottom: 1.5rem;
+        margin-left: 1.5rem;
+        list-style-type: decimal;
+      }
+
+      .blog-post-content li {
+        margin-bottom: 0.5rem;
+        color: rgb(var(--color-text-secondary));
+      }
+
+      .blog-post-content strong {
+        color: rgb(var(--color-text-primary));
+        font-weight: 600;
+      }
+
+      .cta-box {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background: linear-gradient(135deg, rgba(var(--color-accent-green), 0.1), rgba(var(--color-luxury-900), 0.5));
+        border: 2px solid rgba(var(--color-accent-green), 0.3);
+        border-radius: 1rem;
+      }
+
+      .cta-box h3 {
+        color: rgb(var(--color-text-primary));
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        margin-top: 0;
+      }
+
+      .cta-box p {
+        color: rgb(var(--color-luxury-300));
+        margin-bottom: 1rem;
+      }
+
+      .cta-box a {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background: rgb(var(--color-accent-green));
+        color: #000;
+        font-weight: 600;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .cta-box a:hover {
+        background: rgba(var(--color-accent-green), 0.9);
+        transform: translateY(-2px);
+      }
+
+      .author-bio-box {
+        margin-top: 3rem;
+        padding: 1.5rem;
+        background: rgba(var(--color-luxury-900), 0.4);
+        border: 1px solid rgba(var(--color-luxury-800), 0.3);
+        border-radius: 1rem;
+      }
+
+      .related-posts {
+        margin-top: 3rem;
+      }
+
+      .related-posts h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: rgb(var(--color-text-primary));
+      }
+
+      .related-posts-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+
+      .related-post-card {
+        padding: 1.25rem;
+        background: rgba(var(--color-luxury-900), 0.4);
+        border: 1px solid rgba(var(--color-luxury-800), 0.3);
+        border-radius: 0.75rem;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .related-post-card:hover {
+        border-color: rgba(var(--color-accent-green), 0.4);
+        transform: translateY(-2px);
+      }
+
+      .related-post-card h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: rgb(var(--color-text-primary));
+        margin-bottom: 0.5rem;
+      }
+
+      .related-post-card p {
+        font-size: 0.85rem;
+        color: rgb(var(--color-luxury-400));
+        margin-bottom: 0;
+      }
+
+      /* Responsive design */
+      @media (max-width: 1200px) {
+        .blog-container {
+          grid-template-columns: 220px 1fr 240px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .blog-container {
+          grid-template-columns: 1fr;
+        }
+
+        .blog-sidebar,
+        .blog-right-sidebar {
+          display: none;
+        }
+
+        .blog-content {
+          padding: 2rem 1.5rem;
+        }
+
+        .related-posts-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Troy Assoignon - Positioning Expert",
+      "description": "Strategic brand positioning consultant helping luxury brands and executives capture premium market positioning through data-driven positioning strategy.",
+      "url": "https://www.troyassoignon.com",
+      "logo": "https://www.troyassoignon.com/favicon.svg",
+      "image": "https://www.troyassoignon.com/og-image.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CA"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Troy Assoignon",
+        "jobTitle": "Positioning Expert",
+        "description": "Positioning expert with $62.7M in documented client results. Creator of the Strategic Positioning Advantage™ framework.",
+        "url": "https://www.troyassoignon.com",
+        "knowsAbout": [
+          "Brand Positioning",
+          "Strategic Positioning",
+          "Luxury Brand Strategy",
+          "Investor Positioning",
+          "Premium Pricing Strategy",
+          "Market Differentiation"
+        ]
+      }
+    }
+    </script>
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Positioning Expert vs Brand Strategist: Which Do You Need?",
+      "description": "The $250K mistake: hiring the wrong expert. Most companies confuse positioning, branding, and strategy. Here's the clear comparison framework.",
+      "image": "https://www.troyassoignon.com/og-image.png",
+      "author": {
+        "@type": "Person",
+        "name": "Troy Assoignon",
+        "url": "https://www.troyassoignon.com",
+        "jobTitle": "Positioning Expert",
+        "description": "Positioning expert with $62.7M in documented client results"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Troy Assoignon",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.troyassoignon.com/favicon.svg"
+        }
+      },
+      "datePublished": "2025-10-30",
+      "dateModified": "2025-10-30",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.troyassoignon.com/blog/positioning-expert-vs-brand-strategist.html"
+      }
+    }
+    </script>
+
+    <!-- Person Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Troy Assoignon",
+      "jobTitle": "Positioning Expert",
+      "url": "https://www.troyassoignon.com",
+      "knowsAbout": [
+        "Brand Positioning",
+        "Strategic Positioning",
+        "Luxury Brand Strategy",
+        "Investor Positioning",
+        "Premium Pricing Strategy",
+        "Market Differentiation"
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Navbar (same as blog.html) -->
+      <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 py-4 md:py-6 bg-black/80 backdrop-blur-md shadow-md">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+          <a href="/" class="text-xl font-display font-bold tracking-tight flex items-center">
+            <span class="luxury-gradient">TROY ASSOIGNON</span>
+            <span class="bg-accent-green h-1.5 w-1.5 rounded-full ml-1 mt-1"></span>
+          </a>
+
+          <nav class="hidden md:flex items-center space-x-8">
+            <a href="/" class="back-button" aria-label="Return to home page">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+              <span>Back to Home</span>
+            </a>
+            <div class="relative group">
+              <a href="/#services" class="nav-item flex items-center">
+                Services
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+
+              <!-- Services dropdown -->
+              <div id="services-dropdown" class="absolute top-full left-0 mt-1 w-64 bg-black/90 backdrop-blur-lg border border-luxury-800/30 rounded-xl overflow-hidden transition-all duration-300 ease-out transform opacity-0 translate-y-2 pointer-events-none">
+                <div class="py-2">
+                  <a href="/services/strategic-brand-positioning.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Strategic Brand Positioning
+                  </a>
+                  <a href="/services/authority-thought-leadership.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Authority & Thought Leadership
+                  </a>
+                  <a href="/services/investor-ready-positioning.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Investor-Ready Positioning
+                  </a>
+                  <a href="/services/premium-pricing-offers.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Premium Pricing & Offers
+                  </a>
+                  <a href="/services/positioning-diagnostics.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Positioning Diagnostics
+                  </a>
+                  <a href="/services/fractional-cmo-cpo.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Fractional CMO/CPO
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="/#about" class="nav-item">About</a>
+            <a href="/#process" class="nav-item">Process</a>
+            <a href="/blog.html" class="nav-item">Blog</a>
+            <a href="/faq.html" class="nav-item">FAQ</a>
+
+            <!-- Theme toggle button -->
+            <button id="theme-toggle" class="p-2 rounded-full bg-luxury-800/30 hover:bg-luxury-700/50 transition-colors" aria-label="Toggle theme">
+              <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-luxury-300">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-luxury-300 hidden">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+
+            <a href="/#contact" class="button-primary">Get in Touch</a>
+          </nav>
+
+          <div class="md:hidden flex items-center space-x-4">
+            <!-- Mobile back button -->
+            <a href="/" class="back-button" aria-label="Return to home page">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+              <span class="sr-only">Back to Home</span>
+            </a>
+            <!-- Theme toggle button (mobile) -->
+            <button id="theme-toggle-mobile" class="p-2 rounded-full bg-luxury-800/30 hover:bg-luxury-700/50 transition-colors" aria-label="Toggle theme">
+              <svg id="moon-icon-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-luxury-300">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg id="sun-icon-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-luxury-300 hidden">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+
+            <button
+              id="mobile-menu-button"
+              class="text-luxury-300 hover:text-white transition-colors"
+              aria-label="Toggle menu"
+            >
+              <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+                <line x1="4" y1="6" x2="20" y2="6"></line>
+                <line x1="4" y1="18" x2="20" y2="18"></line>
+              </svg>
+              <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center space-y-8 pt-20 transition-all duration-500 ease-in-out transform opacity-0 translate-x-full pointer-events-none">
+          <a href="/" class="nav-item text-xl mobile-nav-item">Home</a>
+          <a href="/#services" class="nav-item text-xl mobile-nav-item">Services</a>
+          <a href="/#about" class="nav-item text-xl mobile-nav-item">About</a>
+          <a href="/#process" class="nav-item text-xl mobile-nav-item">Process</a>
+          <a href="/blog.html" class="nav-item text-xl mobile-nav-item">Blog</a>
+          <a href="/faq.html" class="nav-item text-xl mobile-nav-item">FAQ</a>
+          <a href="/#contact" class="button-primary text-xl mt-4">Get in Touch</a>
+        </div>
+      </header>
+
+      <!-- Blog Container -->
+      <div class="blog-container pt-24">
+        <!-- Left Sidebar -->
+        <aside class="blog-sidebar">
+          <div class="blog-sidebar-nav">
+            <div class="blog-sidebar-title">Categories</div>
+            <a href="/blog.html" class="blog-sidebar-link">All Posts</a>
+            <a href="/blog.html" class="blog-sidebar-link">Brand Positioning</a>
+            <a href="/blog.html" class="blog-sidebar-link">Strategy</a>
+            <a href="/blog.html" class="blog-sidebar-link">ROI Analysis</a>
+            <a href="/blog.html" class="blog-sidebar-link">Framework</a>
+
+            <div class="blog-sidebar-title">Recent Posts</div>
+            <a href="/blog/strategic-positioning-framework-deep-dive.html" class="blog-sidebar-link">Strategic Positioning Framework</a>
+            <a href="/blog/positioning-roi-profit-margins.html" class="blog-sidebar-link">ROI & Profit Margins</a>
+            <a href="/blog/investor-ready-positioning-capital-raising.html" class="blog-sidebar-link">Investor-Ready Positioning</a>
+            <a href="/blog/when-to-hire-positioning-expert.html" class="blog-sidebar-link">When to Hire an Expert</a>
+            <a href="/blog/positioning-diagnostics-revenue-analysis.html" class="blog-sidebar-link">Positioning Diagnostics</a>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="blog-content">
+          <article class="blog-post">
+            <!-- Author Byline -->
+            <div class="blog-author-byline">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 rounded-full bg-luxury-800 flex items-center justify-center">
+                  <span class="text-accent-green font-bold text-xl">TA</span>
+                </div>
+                <div>
+                  <div class="text-white font-medium">Troy Assoignon</div>
+                  <div class="text-luxury-400 text-sm">October 30, 2025 • 10 min read</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blog Post Title -->
+            <h1 class="blog-post-title">Positioning Expert vs Brand Strategist: Which Do You Need?</h1>
+
+            <!-- Blog Post Content -->
+            <div class="blog-post-content">
+<h1>Positioning Expert vs Brand Strategist: Which Do You Need?</h1>
+
+<h2>The $250K Mistake</h2>
+
+<p>A B2B SaaS company hired a prestigious brand strategy agency for $250K. They delivered a comprehensive rebrand: new logo, color palette, typography system, brand guidelines, website redesign. The work was beautiful.</p>
+
+<p>Revenue did not change.</p>
+
+<p>The problem was never their visual identity. The problem was their positioning. They competed in a commoditized category with no clear differentiation. A new logo could not fix that strategic gap.</p>
+
+<p>Six months later, they hired me to solve their actual problem: positioning. We clarified their unique category, identified their defensible competitive advantage, and architected messaging that made their value legible. Revenue increased 40% within 12 months.</p>
+
+<p>This is the most expensive confusion in business strategy: conflating positioning with branding, then investing in the wrong solution. This guide provides the framework to diagnose which expert you need and when. Learn more about <a href="/blog/what-is-positioning-expert-2025-guide.html" class="text-accent-green hover:underline">what positioning experts do</a> and how they create strategic advantage.</p>
+
+<h2>The Core Difference Explained</h2>
+
+<p>The positioning versus branding confusion exists because the disciplines overlap in execution but diverge completely in strategic purpose.</p>
+
+<h3>Positioning Expert: Market Perception and Competitive Differentiation</h3>
+
+<p>A <strong>positioning expert</strong> answers these strategic questions:</p>
+
+<ul>
+    <li>What category do we compete in?</li>
+    <li>Who do we compete against in the prospect's mind?</li>
+    <li>Why should someone choose us over alternatives?</li>
+    <li>What do we want to own in our target market's perception?</li>
+    <li>How do we build defensible competitive advantage?</li>
+</ul>
+
+<p>Positioning is strategic foundation work. It determines your competitive frame of reference, your unique value claim, your target audience definition, and your category ownership strategy.</p>
+
+<p>Example: When I positioned the real estate fund that raised $4.5M, the work involved category narrowing (from generic "real estate investment" to a specific underserved niche), competitive moat identification (proprietary deal flow), and investor narrative architecture (why this fund versus alternatives).</p>
+
+<p>That is positioning work: strategic, competitive, perception-focused.</p>
+
+<h3>Brand Strategist: Identity Expression and Brand Experience</h3>
+
+<p>A <strong>brand strategist</strong> answers these execution questions:</p>
+
+<ul>
+    <li>How should we express our identity visually and verbally?</li>
+    <li>What personality and tone should our brand embody?</li>
+    <li>How do we create consistent brand experiences across touchpoints?</li>
+    <li>What visual and verbal language reinforces our positioning?</li>
+    <li>How do we scale brand consistency as we grow?</li>
+</ul>
+
+<p>Brand strategy is expression work. It takes your positioning (strategic foundation) and translates it into logos, color systems, typography, voice and tone guidelines, and brand experience frameworks.</p>
+
+<p>Example: A cybersecurity company positioned as "the only AI-driven threat detection for healthcare compliance" (positioning) might work with a brand strategist to develop clinical, trustworthy visual language, educational content frameworks, and partnership-focused brand experiences (brand strategy).</p>
+
+<p>The positioning defines the strategic territory. The brand strategy executes the expression.</p>
+
+<h3>Marketing Consultant: Tactics, Channels, and Conversion Optimization</h3>
+
+<p>To complete the comparison, <strong>marketing consultants</strong> answer tactical questions:</p>
+
+<ul>
+    <li>Which channels should we prioritize?</li>
+    <li>How do we optimize our conversion funnels?</li>
+    <li>What campaigns will generate qualified leads?</li>
+    <li>How do we allocate marketing budget efficiently?</li>
+    <li>Which metrics should we track and improve?</li>
+</ul>
+
+<p>Marketing consultants optimize tactics. They assume your positioning and brand strategy are sound, then focus on execution efficiency.</p>
+
+<p>The hierarchy is: Positioning (strategic foundation) → Brand Strategy (identity expression) → Marketing Tactics (channel execution).</p>
+
+<p>Most companies skip positioning, invest in brand strategy, then wonder why their marketing tactics underperform. You cannot brand or market your way out of a positioning problem.</p>
+
+<h3>Where They Overlap, Where They Diverge</h3>
+
+<p>The confusion exists because all three disciplines touch messaging, audience definition, and value articulation. Here is how to delineate:</p>
+
+<p><strong>Positioning expert</strong> creates the messaging strategy and competitive frame. <strong>Brand strategist</strong> expresses that strategy through identity systems. <strong>Marketing consultant</strong> distributes that expression through channels.</p>
+
+<p>Think of it as architecture (positioning), interior design (branding), and furniture arrangement (marketing). You need solid architecture before you can decorate. The <a href="/blog/strategic-positioning-framework-deep-dive.html" class="text-accent-green hover:underline">Strategic Positioning Advantage™ framework</a> provides the architectural blueprint for this foundation.</p>
+
+<h2>When You Need a Positioning Expert</h2>
+
+<p>Four scenarios signal positioning expertise is your highest-leverage investment:</p>
+
+<h3>1. Revenue Plateau Despite Strong Brand</h3>
+
+<p>Your brand is beautiful. Your website won design awards. Your content is polished. But revenue growth has stalled.</p>
+
+<p>This is the classic positioning problem masquerading as a marketing problem. Your market does not understand your unique value or perceives you as interchangeable with competitors.</p>
+
+<p>A brand refresh will not fix this. You need <a href="/services/positioning-diagnostics.html" class="text-accent-green hover:underline">positioning work</a> to clarify your competitive differentiation and category ownership.</p>
+
+<p>I worked with a professional services firm that had invested $150K in brand strategy over three years. Revenue stayed flat. We repositioned them from "management consulting" (commoditized category) to a narrow, specialized niche. Revenue increased 35% within 10 months with no brand changes.</p>
+
+<h3>2. Commoditized Market: Competing on Price</h3>
+
+<p>If every sales conversation starts with "How much?", you have a positioning problem, not a pricing problem.</p>
+
+<p>Price-focused conversations indicate commoditized positioning. Prospects perceive you as interchangeable with alternatives, so price becomes the only differentiator.</p>
+
+<p>Strong positioning reframes the conversation from cost to value. When prospects see you as the only solution that solves their specific problem, price sensitivity drops.</p>
+
+<p>I have helped clients raise prices 20-30% immediately after repositioning, with zero client attrition. The pricing problem was always a positioning problem.</p>
+
+<h3>3. Entering New Markets or Raising Capital</h3>
+
+<p>Market expansion and fundraising both require crystal-clear positioning. Investors and new market prospects evaluate you through a positioning lens: What category do you lead? What is your competitive moat? Why you versus alternatives?</p>
+
+<p>The real estate fund that raised $4.5M had a solid brand. That was not their blocker. Their blocker was generic positioning that made them look identical to 50 other real estate funds. We repositioned them into a specific category with clear differentiation. Capital followed.</p>
+
+<p>If you are raising capital, selling your company, or entering new markets in the next 12-24 months, positioning expertise is not optional. Your valuation and market entry success depend on strategic positioning.</p>
+
+<h3>4. Building Thought Leadership and Category Authority</h3>
+
+<p>Companies that lead categories capture 70%+ of market value. Category leadership requires positioning strategy, not just content volume or speaking engagements.</p>
+
+<p>Thought leadership without positioning strategy produces generic insights that do not differentiate you. Every management consultant publishes leadership content; very few own categories.</p>
+
+<p>My positioning as "positioning expert" (not brand strategist, not marketing consultant) is deliberate category ownership. That specificity attracts right-fit clients and establishes category authority.</p>
+
+<p>If your goal is thought leadership, start with positioning to identify which category to lead and how to architect unique authority.</p>
+
+<h2>When You Need a Brand Strategist</h2>
+
+<p>Brand strategy becomes high-leverage after positioning is solved. Here are the four scenarios where brand expertise delivers maximum ROI:</p>
+
+<h3>1. Rebranding or Visual Identity Refresh</h3>
+
+<p>If your positioning is strong but your visual identity feels outdated, inconsistent, or misaligned with your strategic position, brand strategy expertise is needed.</p>
+
+<p>Example: A fintech company with clear positioning ("the only embedded finance platform for healthcare providers") but visual identity that looked like a consumer app needed brand strategy to align their expression with their B2B healthcare positioning.</p>
+
+<p>Note: Do not rebrand without confirming your positioning is sound. Most rebrands fail because they try to solve positioning problems with visual changes.</p>
+
+<h3>2. Inconsistent Brand Expression Across Touchpoints</h3>
+
+<p>Your sales team uses different messaging than your website. Your product team describes features differently than your marketing team. Your social media voice does not match your sales collateral.</p>
+
+<p>This is a brand consistency problem. A brand strategist develops messaging frameworks, voice and tone guidelines, and brand governance systems to align expression across touchpoints.</p>
+
+<h3>3. Scaling Brand Across Channels and Geographies</h3>
+
+<p>As companies grow, maintaining brand consistency becomes complex. Different teams, markets, and channels require adapted expressions while maintaining core identity.</p>
+
+<p>Brand strategists build the systems and frameworks to scale brand consistently: brand architecture (how sub-brands relate), messaging hierarchies (how different audiences receive adapted messages), and governance models (who approves what).</p>
+
+<h3>4. Brand Architecture Challenges</h3>
+
+<p>Companies with multiple products, services, or market segments need brand architecture: the structural logic of how brands and sub-brands relate.</p>
+
+<p>Should you use a branded house model (one master brand, like Google) or a house of brands model (separate brands, like Procter & Gamble)? This is brand strategy expertise.</p>
+
+<h2>The ROI Comparison: Positioning vs Branding</h2>
+
+<p>Both positioning and brand strategy deliver ROI, but through different mechanisms and at different magnitudes.</p>
+
+<h3>Positioning ROI: Structural Advantage</h3>
+
+<p>Strategic positioning produces four quantifiable ROI drivers:</p>
+
+<p><strong>1. Premium pricing power:</strong> Clear differentiation reduces price sensitivity. McKinsey research shows companies with precise positioning achieve 15-25% higher prices than commoditized competitors. At a 20% margin baseline, a 30% price increase produces a 45% margin improvement. Learn more about <a href="/services/premium-pricing-offers.html" class="text-accent-green hover:underline">premium pricing architecture</a>.</p>
+
+<p><strong>2. Reduced customer acquisition cost (CAC):</strong> Strong positioning attracts right-fit prospects organically. One client cut ad spend by 50% while doubling inbound leads after repositioning because their value became legible to their ideal audience.</p>
+
+<p><strong>3. Higher close rates:</strong> Positioning pre-qualifies and pre-sells prospects. A consulting firm I worked with increased their close rate from 10% to 40% after repositioning. Same sales team, different strategic foundation.</p>
+
+<p><strong>4. Competitive insulation:</strong> Category ownership prevents direct comparison with commoditized competitors. When you own a category, you are not compared on price because prospects perceive no equivalent alternatives.</p>
+
+<p>McKinsey's five-year study of 300+ companies found that businesses with precise positioning achieve 20-40% higher profit margins than competitors with generic positioning. That is structural advantage, not incremental improvement. Explore the full <a href="/blog/positioning-roi-profit-margins.html" class="text-accent-green hover:underline">positioning ROI analysis</a> for detailed mechanisms.</p>
+
+<h3>Brand Strategy ROI: Expression Efficiency</h3>
+
+<p>Brand strategy produces different ROI drivers:</p>
+
+<p><strong>1. Brand recognition:</strong> Consistent visual and verbal identity increases recall and recognition, which lowers marketing costs over time.</p>
+
+<p><strong>2. Operational efficiency:</strong> Brand guidelines and systems reduce decision-making friction, allowing teams to execute faster without constant creative debates.</p>
+
+<p><strong>3. Customer loyalty:</strong> Strong brand experiences increase retention and lifetime value by creating emotional connection beyond functional benefits.</p>
+
+<p><strong>4. Premium perception:</strong> Professional, consistent brand expression signals quality and credibility, which supports premium pricing (though positioning is the primary driver).</p>
+
+<p>Brand strategy ROI is real but secondary to positioning ROI. A well-expressed commodity is still a commodity. A poorly expressed category leader still captures market value.</p>
+
+<h3>Why Positioning ROI Is Higher</h3>
+
+<p>Positioning ROI is higher because it operates at the strategic foundation level. Branding optimizes expression; positioning determines whether your value proposition resonates at all.</p>
+
+<p>The B2B SaaS company that spent $250K on brand strategy saw no revenue change because their positioning problem remained unresolved. When we fixed positioning, revenue increased 40% with minimal brand changes.</p>
+
+<p>Position first, brand second.</p>
+
+<h2>Can One Person Do Both?</h2>
+
+<p>Some strategists claim expertise in both positioning and brand strategy. This is possible but rare. The skill sets overlap but require different strategic orientations.</p>
+
+<p><strong>Positioning expertise</strong> requires competitive analysis, category design thinking, market psychology, and strategic differentiation frameworks. It is strategic and analytical.</p>
+
+<p><strong>Brand strategy expertise</strong> requires visual and verbal identity systems, brand experience design, consistency frameworks, and expression optimization. It is creative and systematic.</p>
+
+<p>The best positioning experts understand brand strategy well enough to ensure positioning translates into coherent brand expression. The best brand strategists understand positioning well enough to ensure brand expression reinforces strategic positioning.</p>
+
+<p>In my practice, I lead with positioning (my core expertise) and collaborate with brand strategists for execution when needed. The key is sequencing: positioning first, brand second.</p>
+
+<p>If someone claims equal expertise in both, ask for their methodology and documented results in each domain. Most will reveal a primary strength with secondary familiarity in the other.</p>
+
+<h2>Conclusion: Positioning Is Strategy, Branding Is Expression</h2>
+
+<p>The core distinction is simple: <strong>positioning is strategic foundation</strong> (what you want to own in the market's mind, why prospects should choose you, what category you compete in), while <strong>branding is identity expression</strong> (how you communicate your positioning through visual and verbal language).</p>
+
+<p>You need a positioning expert when you face revenue plateaus despite strong delivery, commoditized competition, capital raising, or category leadership ambitions. You need a brand strategist when your positioning is solid but your expression is inconsistent, outdated, or misaligned.</p>
+
+<p>The ROI hierarchy is clear: positioning produces structural advantage (20-40% margin improvements), while branding produces expression efficiency (recognition, loyalty, operational speed).</p>
+
+<p>If you are unsure which you need, start with positioning. You cannot brand your way out of a positioning problem, but you can position your way into brand clarity. Schedule a <a href="/services/positioning-diagnostics.html" class="text-accent-green hover:underline">positioning assessment</a> to identify exactly where your strategic foundation needs reinforcement.</p>
+
+              <!-- CTA Box -->
+              <div class="cta-box">
+                  <h3>Ready to uncover where your positioning costs you revenue?</h3>
+                  <p>Get a strategic positioning diagnostic to identify the gaps between your value and your market's perception.</p>
+                  <a href="/services/positioning-diagnostics.html">Schedule Your Diagnostic</a>
+              </div>
+            </div>
+
+            <!-- Author Bio Box -->
+            <div class="author-bio-box">
+              <div class="flex gap-4 items-start">
+                <div class="w-16 h-16 rounded-full bg-luxury-800 flex items-center justify-center flex-shrink-0">
+                  <span class="text-accent-green font-bold text-2xl">TA</span>
+                </div>
+                <div>
+                  <h3 class="text-white font-semibold text-lg mb-2">About Troy Assoignon</h3>
+                  <p class="text-luxury-300 text-sm leading-relaxed mb-3">
+                    Troy is a positioning expert with $62.7M in documented client results. He created the Strategic Positioning Advantage™ framework and placed 2nd in the ElevenLabs international hackathon.
+                  </p>
+                  <div class="flex gap-4 text-sm">
+                    <a href="/#about" class="text-accent-green hover:underline">Learn more about Troy</a>
+                    <a href="https://linkedin.com/in/troyassoignon" class="text-accent-green hover:underline" target="_blank">Connect on LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Related Posts Section -->
+            <div class="related-posts">
+              <h3>Related Articles</h3>
+              <div class="related-posts-grid">
+                <a href="/blog/what-is-positioning-expert-2025-guide.html" class="related-post-card">
+                  <h4>What is a Positioning Expert?</h4>
+                  <p>12 min read</p>
+                </a>
+                <a href="/blog/strategic-positioning-framework-deep-dive.html" class="related-post-card">
+                  <h4>Strategic Positioning Framework</h4>
+                  <p>15 min read</p>
+                </a>
+                <a href="/blog/when-to-hire-positioning-expert.html" class="related-post-card">
+                  <h4>When to Hire a Positioning Expert</h4>
+                  <p>10 min read</p>
+                </a>
+              </div>
+            </div>
+          </article>
+        </main>
+
+        <!-- Right Sidebar (Table of Contents) -->
+        <aside class="blog-right-sidebar">
+          <div class="blog-toc">
+            <div class="blog-toc-title">On this page</div>
+            <div class="text-luxury-400 text-sm">No sections found</div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Footer -->
+      <footer class="py-12 px-6 bg-black border-t border-luxury-800/20">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+              <a href="/" class="text-xl font-display font-bold tracking-tight flex items-center">
+                <span class="luxury-gradient">TROY ASSOIGNON</span>
+                <span class="bg-accent-green h-1.5 w-1.5 rounded-full ml-1 mt-1"></span>
+              </a>
+              <p class="text-sm text-luxury-500 mt-2">Strategic Brand Positioning</p>
+            </div>
+
+            <nav class="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4 mb-8 md:mb-0">
+              <a href="/#services" class="text-sm text-luxury-400 hover:text-luxury-200 transition-colors">Services</a>
+              <a href="/#about" class="text-sm text-luxury-400 hover:text-luxury-200 transition-colors">About</a>
+              <a href="/#process" class="text-sm text-luxury-400 hover:text-luxury-200 transition-colors">Process</a>
+              <a href="/blog.html" class="text-sm text-luxury-400 hover:text-luxury-200 transition-colors">Blog</a>
+              <a href="/#contact" class="text-sm text-luxury-400 hover:text-luxury-200 transition-colors">Contact</a>
+            </nav>
+          </div>
+
+          <div class="border-t border-luxury-800/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-xs text-luxury-600 mb-4 md:mb-0">
+              © <span id="current-year">2025</span> Troy Assoignon. All rights reserved.
+            </div>
+
+            <div class="flex space-x-6">
+              <a href="/privacy" class="text-xs text-luxury-600 hover:text-luxury-400 transition-colors">Privacy Policy</a>
+              <a href="/terms" class="text-xs text-luxury-600 hover:text-luxury-400 transition-colors">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      // Update copyright year
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+
+      // Enable smooth scrolling for the TOC links
+      document.querySelectorAll('.blog-toc-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Highlight active TOC link on scroll
+      window.addEventListener('scroll', function() {
+        const headings = document.querySelectorAll('h2, h3');
+        const tocLinks = document.querySelectorAll('.blog-toc-link');
+
+        let currentHeading = null;
+        headings.forEach(heading => {
+          if (heading.getBoundingClientRect().top <= 120) {
+            currentHeading = heading;
+          }
+        });
+
+        if (currentHeading) {
+          const id = currentHeading.getAttribute('id');
+          tocLinks.forEach(link => {
+            if (link.getAttribute('href') === '#' + id) {
+              link.style.color = 'rgb(var(--color-accent-green))';
+            } else {
+              link.style.color = '';
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

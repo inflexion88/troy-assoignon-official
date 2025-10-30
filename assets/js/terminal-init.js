@@ -1,19 +1,16 @@
-// Terminal.js has been moved to old-files, so commenting out this import
-// import { startMatrixSequence, createMatrixEffects, handlePillChoice } from './terminal.js';
+// Terminal Initialization
+import { PositioningTerminal } from './terminal.js';
+import { startMatrixRain } from './matrix-effects.js';
+
+// Make matrix rain available globally
+window.startMatrixRain = startMatrixRain;
 
 // Initialize terminal when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('Terminal initializing...'); // Debug log
-  console.warn('Terminal functions are disabled - terminal.js has been archived');
+  console.log('Initializing PositioningIQ Terminal...');
 
-  // Get terminal elements
-  const terminalOutput = document.getElementById('terminal-output');
-  const namePrompt = document.getElementById('name-prompt');
-  const nameInputContainer = document.getElementById('name-input-container');
-  const nameInput = document.getElementById('name-input');
+  // Create terminal instance
+  window.positioningTerminal = new PositioningTerminal();
 
-  // Show a message that this feature is disabled
-  if (namePrompt) {
-    namePrompt.textContent = 'Terminal feature is currently disabled';
-  }
-}); 
+  console.log('Terminal initialized successfully');
+});

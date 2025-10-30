@@ -201,6 +201,36 @@
         transform: translateX(4px);
       }
 
+      /* Luxury card glassmorphism wrapper */
+      .luxury-card {
+        position: relative;
+        background: rgba(var(--color-luxury-900), 0.6);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(var(--color-luxury-800), 0.3);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        transition: all 0.3s ease;
+        overflow: hidden;
+      }
+
+      .luxury-card:hover {
+        border-color: rgba(var(--color-luxury-700), 0.5);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      }
+
+      .noise-texture {
+        position: absolute;
+        inset: 0;
+        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .luxury-card > * {
+        position: relative;
+        z-index: 2;
+      }
+
       /* Responsive design */
       @media (max-width: 992px) {
         .blog-grid {

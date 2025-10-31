@@ -61,7 +61,11 @@ export default defineConfig({
         // Resource/Giveaway pages (HTML deliverables replacing PDFs)
         'resources/positioning-diagnostic': resolve(__dirname, 'resources/positioning-diagnostic.html'),
         'resources/positioning-framework': resolve(__dirname, 'resources/positioning-framework.html'),
-        'resources/investor-positioning': resolve(__dirname, 'resources/investor-positioning.html')
+        'resources/investor-positioning': resolve(__dirname, 'resources/investor-positioning.html'),
+        // Thank you pages
+        'thank-you-diagnostic': resolve(__dirname, 'thank-you-diagnostic.html'),
+        'thank-you-framework': resolve(__dirname, 'thank-you-framework.html'),
+        'thank-you-investor': resolve(__dirname, 'thank-you-investor.html')
       },
       output: {
         // Keep the existing folder structure from public

@@ -57,7 +57,11 @@ export default defineConfig({
         // Lead magnet pages
         'lead-magnets/positioning-diagnostic-checklist': resolve(__dirname, 'lead-magnets/positioning-diagnostic-checklist.html'),
         'lead-magnets/positioning-framework-guide': resolve(__dirname, 'lead-magnets/positioning-framework-guide.html'),
-        'lead-magnets/investor-positioning-checklist': resolve(__dirname, 'lead-magnets/investor-positioning-checklist.html')
+        'lead-magnets/investor-positioning-checklist': resolve(__dirname, 'lead-magnets/investor-positioning-checklist.html'),
+        // Resource/Giveaway pages (HTML deliverables replacing PDFs)
+        'resources/positioning-diagnostic': resolve(__dirname, 'resources/positioning-diagnostic.html'),
+        'resources/positioning-framework': resolve(__dirname, 'resources/positioning-framework.html'),
+        'resources/investor-positioning': resolve(__dirname, 'resources/investor-positioning.html')
       },
       output: {
         // Keep the existing folder structure from public

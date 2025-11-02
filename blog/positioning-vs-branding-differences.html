@@ -1,23 +1,406 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" class="dark">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-74JF9CHYSL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-74JF9CHYSL', {
+        'send_page_view': true
+      });
+      gtag('config', 'G-EJX2GZ9H1N');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
     <title>Positioning vs. Branding: What's the Difference? [2025 Expert Guide]</title>
-    <meta name="description" content="Positioning defines where you compete (strategy). Branding is how you express it (execution). Learn the critical differences and why positioning must come first.">
+    <meta name="description" content="Positioning defines where you compete (strategy). Branding is how you express it (execution). Learn the critical differences and why positioning must come first." />
+    <meta name="author" content="Troy Assoignon" />
+
+    <!-- Canonical Tag -->
     <link rel="canonical" href="https://www.troyassoignon.com/blog/positioning-vs-branding-differences" />
 
-    <!-- Open Graph -->
+    <!-- Open Graph Tags -->
     <meta property="og:title" content="Positioning vs. Branding: What's the Difference? [2025 Expert Guide]" />
     <meta property="og:description" content="Positioning defines where you compete (strategy). Branding is how you express it (execution). Learn the critical differences and why positioning must come first." />
-    <meta property="og:url" content="https://www.troyassoignon.com/blog/positioning-vs-branding-differences" />
     <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.troyassoignon.com/blog/positioning-vs-branding-differences" />
     <meta property="og:image" content="https://www.troyassoignon.com/images/og-positioning-vs-branding.jpg" />
+    <meta property="og:site_name" content="Troy Assoignon - Positioning Expert" />
 
-    <!-- Twitter Card -->
+    <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Positioning vs. Branding: What's the Difference?" />
     <meta name="twitter:description" content="Positioning defines where you compete (strategy). Branding is how you express it (execution)." />
+    <meta name="twitter:image" content="https://www.troyassoignon.com/images/og-positioning-vs-branding.jpg" />
+
+    <link rel="stylesheet" href="/src/style.css" />
+
+    <style>
+      /* Blog Post Styles */
+      .blog-container {
+        display: grid;
+        grid-template-columns: 250px 1fr 280px;
+        gap: 0;
+        max-width: 100%;
+        margin: 0 auto;
+        min-height: calc(100vh - 80px);
+      }
+
+      .blog-sidebar {
+        padding: 2rem 1rem;
+        border-right: 1px solid rgba(50, 50, 60, 0.2);
+        overflow-y: auto;
+        position: sticky;
+        top: 80px;
+        height: calc(100vh - 80px);
+        background-color: rgba(25, 25, 30, 0.4);
+      }
+
+      .blog-sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .blog-sidebar-title {
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: rgb(var(--color-luxury-400));
+        margin-bottom: 0.5rem;
+        margin-top: 1.5rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+
+      .blog-sidebar-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 3rem;
+        height: 1px;
+        background: rgba(var(--color-accent-green), 0.3);
+      }
+
+      .blog-sidebar-link {
+        display: block;
+        padding: 0.25rem 0;
+        color: rgb(var(--color-text-secondary));
+        font-size: 0.85rem;
+        transition: color 0.2s;
+        text-decoration: none;
+      }
+
+      .blog-sidebar-link:hover {
+        color: rgb(var(--color-accent-green));
+      }
+
+      .blog-content {
+        padding: 2rem;
+        padding-top: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+        background-color: rgba(20, 20, 25, 0.5);
+        border-left: 1px solid rgba(50, 50, 60, 0.1);
+        border-right: 1px solid rgba(50, 50, 60, 0.1);
+      }
+
+      .blog-right-sidebar {
+        padding: 2rem 1rem;
+        position: sticky;
+        top: 80px;
+        height: calc(100vh - 80px);
+        overflow-y: auto;
+        border-left: 1px solid rgba(50, 50, 60, 0.2);
+        background-color: rgba(25, 25, 30, 0.4);
+      }
+
+      .blog-toc-title {
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        color: rgb(var(--color-text-primary));
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+
+      .blog-toc-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 3rem;
+        height: 1px;
+        background: rgba(var(--color-accent-green), 0.3);
+      }
+
+      .blog-toc-link {
+        display: block;
+        padding: 0.25rem 0;
+        color: rgb(var(--color-text-secondary));
+        font-size: 0.85rem;
+        transition: color 0.2s;
+        position: relative;
+        padding-left: 0.75rem;
+        text-decoration: none;
+      }
+
+      .blog-toc-link::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: rgba(var(--color-text-secondary), 0.4);
+        transition: background-color 0.2s;
+      }
+
+      .blog-toc-link:hover {
+        color: rgb(var(--color-accent-green));
+      }
+
+      .blog-toc-link:hover::before {
+        background-color: rgb(var(--color-accent-green));
+      }
+
+      .blog-post-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: rgb(var(--color-text-primary));
+        font-family: 'SF Pro Display', 'Inter', sans-serif;
+      }
+
+      .blog-author-byline {
+        margin-bottom: 2rem;
+      }
+
+      .blog-post-content p {
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
+        color: rgb(var(--color-text-secondary));
+      }
+
+      .blog-post-content h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        color: rgb(var(--color-text-primary));
+        font-family: 'SF Pro Display', 'Inter', sans-serif;
+      }
+
+      .blog-post-content h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+        color: rgb(var(--color-text-primary));
+        font-family: 'SF Pro Display', 'Inter', sans-serif;
+      }
+
+      .blog-post-content ul {
+        margin-bottom: 1.5rem;
+        margin-left: 1.5rem;
+        list-style-type: disc;
+      }
+
+      .blog-post-content ol {
+        margin-bottom: 1.5rem;
+        margin-left: 1.5rem;
+        list-style-type: decimal;
+      }
+
+      .blog-post-content li {
+        margin-bottom: 0.5rem;
+        color: rgb(var(--color-text-secondary));
+      }
+
+      .blog-post-content strong {
+        color: rgb(var(--color-text-primary));
+        font-weight: 600;
+      }
+
+      .blog-post-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 2rem 0;
+      }
+
+      .blog-post-content table th,
+      .blog-post-content table td {
+        padding: 15px;
+        text-align: left;
+        border: 1px solid rgba(var(--color-luxury-800), 0.3);
+      }
+
+      .blog-post-content table thead tr {
+        background: rgba(var(--color-luxury-900), 0.6);
+      }
+
+      .blog-post-content table tbody tr:nth-child(even) {
+        background: rgba(var(--color-luxury-900), 0.2);
+      }
+
+      .cta-box {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background: linear-gradient(135deg, rgba(var(--color-accent-green), 0.1), rgba(var(--color-luxury-900), 0.5));
+        border: 2px solid rgba(var(--color-accent-green), 0.3);
+        border-radius: 1rem;
+      }
+
+      .cta-box h3 {
+        color: rgb(var(--color-text-primary));
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        margin-top: 0;
+      }
+
+      .cta-box p {
+        color: rgb(var(--color-luxury-300));
+        margin-bottom: 1rem;
+      }
+
+      .cta-box a {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background: rgb(var(--color-accent-green));
+        color: #000;
+        font-weight: 600;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .cta-box a:hover {
+        background: rgba(var(--color-accent-green), 0.9);
+        transform: translateY(-2px);
+      }
+
+      .author-bio-box {
+        margin-top: 3rem;
+        padding: 1.5rem;
+        background: rgba(var(--color-luxury-900), 0.4);
+        border: 1px solid rgba(var(--color-luxury-800), 0.3);
+        border-radius: 1rem;
+      }
+
+      .related-posts {
+        margin-top: 3rem;
+      }
+
+      .related-posts h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: rgb(var(--color-text-primary));
+      }
+
+      .related-posts-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+
+      .related-post-card {
+        padding: 1.25rem;
+        background: rgba(var(--color-luxury-900), 0.4);
+        border: 1px solid rgba(var(--color-luxury-800), 0.3);
+        border-radius: 0.75rem;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .related-post-card:hover {
+        border-color: rgba(var(--color-accent-green), 0.4);
+        transform: translateY(-2px);
+      }
+
+      .related-post-card h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: rgb(var(--color-text-primary));
+        margin-bottom: 0.5rem;
+      }
+
+      .related-post-card p {
+        font-size: 0.85rem;
+        color: rgb(var(--color-luxury-400));
+        margin-bottom: 0;
+      }
+
+      /* Responsive design */
+      @media (max-width: 1200px) {
+        .blog-container {
+          grid-template-columns: 220px 1fr 240px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .blog-container {
+          grid-template-columns: 1fr;
+        }
+
+        .blog-sidebar,
+        .blog-right-sidebar {
+          display: none;
+        }
+
+        .blog-content {
+          padding: 2rem 1.5rem;
+        }
+
+        .related-posts-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Troy Assoignon - Positioning Expert",
+      "description": "Strategic brand positioning consultant helping luxury brands and executives capture premium market positioning through data-driven positioning strategy.",
+      "url": "https://www.troyassoignon.com",
+      "logo": "https://www.troyassoignon.com/favicon.svg",
+      "image": "https://www.troyassoignon.com/og-image.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CA"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Troy Assoignon",
+        "jobTitle": "Positioning Expert",
+        "description": "Positioning expert with $62.7M in documented client results. Creator of the Strategic Positioning Advantage™ framework.",
+        "url": "https://www.troyassoignon.com",
+        "knowsAbout": [
+          "Brand Positioning",
+          "Strategic Positioning",
+          "Luxury Brand Strategy",
+          "Investor Positioning",
+          "Premium Pricing Strategy",
+          "Market Differentiation"
+        ]
+      }
+    }
+    </script>
 
     <!-- Article Schema -->
     <script type="application/ld+json">
@@ -26,15 +409,21 @@
       "@type": "Article",
       "headline": "Positioning vs. Branding: What's the Difference? [2025 Expert Guide]",
       "description": "Positioning defines where you compete (strategy). Branding is how you express it (execution). Learn the critical differences and why positioning must come first.",
+      "image": "https://www.troyassoignon.com/images/og-positioning-vs-branding.jpg",
       "author": {
         "@type": "Person",
         "name": "Troy Assoignon",
+        "url": "https://www.troyassoignon.com",
         "jobTitle": "Positioning Expert",
-        "url": "https://www.troyassoignon.com"
+        "description": "Positioning expert with $62.7M in documented client results"
       },
       "publisher": {
-        "@type": "Person",
-        "name": "Troy Assoignon"
+        "@type": "Organization",
+        "name": "Troy Assoignon",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.troyassoignon.com/favicon.svg"
+        }
       },
       "datePublished": "2025-01-15",
       "dateModified": "2025-01-15",
@@ -88,316 +477,569 @@
     }
     </script>
 
-    <link rel="stylesheet" href="/src/style.css" />
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-74JF9CHYSL"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-74JF9CHYSL');
-      gtag('config', 'G-EJX2GZ9H1N');
+    <!-- Person Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Troy Assoignon",
+      "jobTitle": "Positioning Expert",
+      "url": "https://www.troyassoignon.com",
+      "knowsAbout": [
+        "Brand Positioning",
+        "Strategic Positioning",
+        "Luxury Brand Strategy",
+        "Investor Positioning",
+        "Premium Pricing Strategy",
+        "Market Differentiation"
+      ]
+    }
     </script>
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo"><a href="/">Troy Assoignon</a></div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/services/strategic-brand-positioning.html">Services</a></li>
-                <li><a href="/blog.html">Blog</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Navbar -->
+      <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12 py-4 md:py-6 bg-black/80 backdrop-blur-md shadow-md">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+          <a href="/" class="text-xl font-display font-bold tracking-tight flex items-center">
+            <span class="luxury-gradient">TROY ASSOIGNON</span>
+            <span class="bg-accent-green h-1.5 w-1.5 rounded-full ml-1 mt-1"></span>
+          </a>
 
-    <main class="article-container">
-        <article>
-            <div class="article-header">
-                <h1>Positioning vs. Branding: What's the Difference?</h1>
-                <p class="article-meta">
-                    By <a href="/about">Troy Assoignon</a> |
-                    Published: <time datetime="2025-01-15">January 15, 2025</time> |
-                    12 min read
-                </p>
-            </div>
+          <nav class="hidden md:flex items-center space-x-8">
+            <a href="/" class="back-button" aria-label="Return to home page">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+              <span>Back to Home</span>
+            </a>
+            <div class="relative group">
+              <a href="/#services" class="nav-item flex items-center">
+                Services
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
 
-            <div class="article-content">
-                <!-- Answer-First for AEO -->
-                <div class="key-answer" style="background: #f4f4f4; padding: 20px; border-left: 4px solid #000; margin: 30px 0;">
-                    <h2 style="margin-top: 0;">Quick Answer</h2>
-                    <p><strong>Positioning is strategy. Branding is execution.</strong></p>
-                    <p><strong>Positioning</strong> defines <em>where</em> you compete in the market and <em>what</em> you stand for in customers' minds. It's the strategic decision about your competitive territory.</p>
-                    <p><strong>Branding</strong> is <em>how</em> you express that position through visual identity, messaging, tone, and customer experience. It's the tactical communication of your strategy.</p>
-                    <p><strong>The critical relationship:</strong> Positioning comes first. You cannot build an effective brand without first knowing your strategic position.</p>
+              <!-- Services dropdown -->
+              <div id="services-dropdown" class="absolute top-full left-0 mt-1 w-64 bg-black/90 backdrop-blur-lg border border-luxury-800/30 rounded-xl overflow-hidden transition-all duration-300 ease-out transform opacity-0 translate-y-2 pointer-events-none">
+                <div class="py-2">
+                  <a href="/services/strategic-brand-positioning.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Strategic Brand Positioning
+                  </a>
+                  <a href="/services/authority-thought-leadership.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Authority & Thought Leadership
+                  </a>
+                  <a href="/services/investor-ready-positioning.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Investor-Ready Positioning
+                  </a>
+                  <a href="/services/premium-pricing-offers.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Premium Pricing & Offers
+                  </a>
+                  <a href="/services/positioning-diagnostics.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Positioning Diagnostics
+                  </a>
+                  <a href="/services/fractional-cmo-cpo.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Fractional CMO/CPO
+                  </a>
                 </div>
-
-                <h2>The Fundamental Difference</h2>
-                <p>Most business leaders confuse positioning and branding because both involve "how customers perceive you." But they operate at fundamentally different levels:</p>
-
-                <ul>
-                    <li><strong>Positioning</strong> answers: "What competitive territory do we own in the market?"</li>
-                    <li><strong>Branding</strong> answers: "How do we communicate that ownership consistently?"</li>
-                </ul>
-
-                <p>Positioning is the <strong>what</strong>. Branding is the <strong>how</strong>.</p>
-
-                <h2>Positioning vs. Branding: Side-by-Side Comparison</h2>
-
-                <table style="width: 100%; border-collapse: collapse; margin: 30px 0;">
-                    <thead>
-                        <tr style="background: #000; color: #fff;">
-                            <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Dimension</th>
-                            <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Positioning (Strategy)</th>
-                            <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Branding (Execution)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="padding: 15px; border: 1px solid #ddd;"><strong>Definition</strong></td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">Where you compete and what you stand for</td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">How you express your position consistently</td>
-                        </tr>
-                        <tr style="background: #f9f9f9;">
-                            <td style="padding: 15px; border: 1px solid #ddd;"><strong>Level</strong></td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">Strategic (corporate/business level)</td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">Tactical (marketing/communications level)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 15px; border: 1px solid #ddd;"><strong>Time Horizon</strong></td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">Long-term (3-10 years)</td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">Medium-term (refresh every 2-5 years)</td>
-                        </tr>
-                        <tr style="background: #f9f9f9;">
-                            <td style="padding: 15px; border: 1px solid #ddd;"><strong>Question Answered</strong></td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">"What competitive territory do we own?"</td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">"How do we communicate our territory?"</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 15px; border: 1px solid #ddd;"><strong>Key Decisions</strong></td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">Target audience, value proposition, competitive differentiation, category ownership</td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">Visual identity, tone of voice, messaging framework, customer experience design</td>
-                        </tr>
-                        <tr style="background: #f9f9f9;">
-                            <td style="padding: 15px; border: 1px solid #ddd;"><strong>Output</strong></td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">Positioning statement, competitive map, value architecture</td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">Logo, color palette, messaging guide, brand book</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 15px; border: 1px solid #ddd;"><strong>Success Metric</strong></td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">Pricing power, margin expansion, category leadership perception</td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">Brand recognition, recall, consistency scores</td>
-                        </tr>
-                        <tr style="background: #f9f9f9;">
-                            <td style="padding: 15px; border: 1px solid #ddd;"><strong>Owned By</strong></td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">CEO, executive leadership, strategy team</td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">CMO, marketing team, creative agencies</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 15px; border: 1px solid #ddd;"><strong>Changes When</strong></td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">Market structure shifts, competitive landscape evolves, customer needs fundamentally change</td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">Position evolves, creative gets stale, market aesthetics shift</td>
-                        </tr>
-                        <tr style="background: #f9f9f9;">
-                            <td style="padding: 15px; border: 1px solid #ddd;"><strong>Example</strong></td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">"We're the only positioning expert serving growth-stage B2B services with investor-ready frameworks"</td>
-                            <td style="padding: 15px; border: 1px solid #ddd;">Clean typography, authoritative tone, black-and-white aesthetic, strategic language</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h2>Why Positioning Must Come First</h2>
-                <p>You cannot brand what you haven't positioned. Here's why:</p>
-
-                <h3>1. Branding Amplifies Position (Good or Bad)</h3>
-                <p>Branding is an amplifier. It takes your strategic position and makes it louder, more visible, more memorable. But amplifiers don't discriminate—they amplify whatever you put into them.</p>
-
-                <ul>
-                    <li><strong>Strong position + strong brand</strong> = Premium pricing and category leadership</li>
-                    <li><strong>Weak position + strong brand</strong> = Expensive commoditization (you look professional but still compete on price)</li>
-                    <li><strong>Strong position + weak brand</strong> = Invisible differentiation (your advantage exists but nobody knows it)</li>
-                    <li><strong>Weak position + weak brand</strong> = Obscurity and margin compression</li>
-                </ul>
-
-                <p>The most dangerous scenario is #2: companies with beautiful websites, polished decks, and consistent visual identity—but undifferentiated positioning. They've invested in branding before strategy. The result? Professional-looking commoditization.</p>
-
-                <h3>2. Positioning Defines Brand Parameters</h3>
-                <p>Your strategic position determines your brand expression:</p>
-
-                <ul>
-                    <li>If you're positioned as <strong>"premium"</strong> → your brand should signal quality, exclusivity, sophistication</li>
-                    <li>If you're positioned as <strong>"accessible expert"</strong> → your brand should be approachable, educational, clear</li>
-                    <li>If you're positioned as <strong>"innovation leader"</strong> → your brand should be forward-thinking, bold, disruptive</li>
-                </ul>
-
-                <p>Trying to design a brand without knowing your position is like trying to write a script without knowing the genre. You'll make arbitrary creative decisions that may be aesthetically pleasing but strategically incoherent.</p>
-
-                <h3>3. Positioning is Harder to Change</h3>
-                <p>Branding can be refreshed relatively quickly—new logo, updated website, revised messaging. Positioning changes require fundamental strategic shifts that affect product development, pricing, sales approach, and market education.</p>
-
-                <p>Get your positioning wrong, and you'll waste years and millions trying to brand your way out of a strategic problem. Get positioning right first, and branding becomes a natural expression of that strategy.</p>
-
-                <h2>Common Positioning vs. Branding Mistakes</h2>
-
-                <h3>Mistake #1: "We need a rebrand" (when you actually need repositioning)</h3>
-                <p><strong>Symptom:</strong> Your sales team struggles to articulate differentiation. Buyers say "you seem like everyone else." You compete primarily on price.</p>
-                <p><strong>Wrong solution:</strong> Hire a design agency to refresh your logo and website.</p>
-                <p><strong>Right solution:</strong> Engage a <a href="/services/strategic-brand-positioning.html">positioning expert</a> to define your strategic territory, then brand against that position.</p>
-
-                <h3>Mistake #2: Treating branding as strategy</h3>
-                <p><strong>Symptom:</strong> Leadership meetings focus on color palettes, font choices, and tagline options rather than competitive differentiation and value architecture.</p>
-                <p><strong>Why it fails:</strong> Branding decisions are downstream from positioning decisions. Without strategic clarity, you're making creative choices in a vacuum.</p>
-                <p><strong>Fix:</strong> Elevate positioning to the strategic level (CEO/executive ownership) and keep branding at the tactical level (CMO/marketing ownership).</p>
-
-                <h3>Mistake #3: Thinking brand consistency = positioning strength</h3>
-                <p><strong>Reality:</strong> You can have perfectly consistent branding while being strategically undifferentiated. Consistency amplifies your position—but if that position is "we're like everyone else," consistency just makes you consistently generic.</p>
-
-                <h3>Mistake #4: Changing positioning without updating brand expression</h3>
-                <p><strong>Symptom:</strong> You've repositioned from "general consultant" to "specialized expert" but your website still has generic stock photos and "we help all businesses" messaging.</p>
-                <p><strong>Result:</strong> Strategic whiplash. Your sales team is selling the new position, but your marketing communicates the old one.</p>
-                <p><strong>Fix:</strong> When positioning changes, brand expression must follow. Budget for both.</p>
-
-                <h2>Real-World Example: Positioning vs. Branding in Action</h2>
-
-                <h3>Scenario: B2B Software Consulting Firm</h3>
-
-                <p><strong>Before: Weak Positioning + Strong Branding</strong></p>
-                <ul>
-                    <li><strong>Position:</strong> "We help companies with digital transformation" (undifferentiated)</li>
-                    <li><strong>Brand:</strong> Beautiful website, professional photography, consistent blue color scheme</li>
-                    <li><strong>Result:</strong> Looked impressive but competed in RFPs with 20 other firms, won on price 40% of the time, 18% margins</li>
-                </ul>
-
-                <p><strong>After: Strategic Repositioning → Aligned Branding</strong></p>
-                <ul>
-                    <li><strong>New Position:</strong> "The only consultancy specialized in manufacturing ERP implementations for private-equity-owned industrial businesses facing buy-and-build integrations" (specific, defensible)</li>
-                    <li><strong>Updated Brand:</strong> Industrial aesthetic, case studies from PE-backed manufacturers, "Integration Certainty" messaging framework</li>
-                    <li><strong>Result:</strong> Sole-source deals increased to 60%, pricing premium of 35% vs. generalists, 32% margins</li>
-                </ul>
-
-                <p><strong>Key insight:</strong> The brand didn't become "better"—it became <em>aligned</em> with a stronger strategic position. The logo changed minimally. The positioning changed fundamentally.</p>
-
-                <h2>When to Hire a Positioning Expert vs. Brand Strategist</h2>
-
-                <h3>Hire a Positioning Expert When:</h3>
-                <ul>
-                    <li>You're losing deals to "cheaper alternatives" despite having superior capabilities</li>
-                    <li>Buyers say "you're like [competitor]" or "we're evaluating 5 similar firms"</li>
-                    <li>You can't command premium pricing despite delivering premium results</li>
-                    <li>Your sales team struggles to articulate why customers should choose you</li>
-                    <li>You're entering a new market or launching a new category</li>
-                    <li>You're preparing for capital raising and need to demonstrate clear competitive advantage</li>
-                </ul>
-
-                <p><strong>What you get:</strong> <a href="/services/strategic-brand-positioning.html">Strategic positioning</a> that defines your competitive territory, target audience, value architecture, and defensible differentiation. <a href="/services/positioning-diagnostics.html">Positioning diagnostics</a> to identify strategic gaps.</p>
-
-                <h3>Hire a Brand Strategist/Agency When:</h3>
-                <ul>
-                    <li>Your positioning is clear but your visual identity is outdated or inconsistent</li>
-                    <li>You need to refresh creative execution while maintaining strategic position</li>
-                    <li>You're launching a new product within an existing category position</li>
-                    <li>You need messaging frameworks, content strategy, or tone of voice guidelines</li>
-                    <li>Your brand recognition is low despite strong market position</li>
-                </ul>
-
-                <p><strong>What you get:</strong> Visual identity system, messaging frameworks, brand guidelines, creative assets, tone of voice, customer experience design.</p>
-
-                <h3>The Ideal Sequence:</h3>
-                <ol>
-                    <li><strong>Year 1-2:</strong> Engage <a href="/services/strategic-brand-positioning.html">positioning expert</a> to define strategic territory</li>
-                    <li><strong>Year 2-3:</strong> Work with brand strategist/agency to express that position consistently</li>
-                    <li><strong>Year 3-5:</strong> Execute brand across all touchpoints with consistent messaging</li>
-                    <li><strong>Year 5-7:</strong> Refresh brand creative (if needed) while maintaining core position</li>
-                    <li><strong>Year 7-10:</strong> Reassess positioning if market structure has fundamentally shifted</li>
-                </ol>
-
-                <h2>How Positioning and Branding Work Together</h2>
-
-                <p>The relationship isn't either/or—it's sequential and complementary:</p>
-
-                <div style="background: #f9f9f9; padding: 20px; margin: 30px 0; border: 1px solid #ddd;">
-                    <h3 style="margin-top: 0;">The Strategic Hierarchy</h3>
-                    <ol>
-                        <li><strong>Positioning defines the strategy</strong> → "We own the category of investor-ready positioning for growth-stage B2B services"</li>
-                        <li><strong>Branding expresses the strategy</strong> → Clean typography, authoritative tone, strategic frameworks, "Positioning Expert" title</li>
-                        <li><strong>Marketing activates the brand</strong> → SEO-optimized content, thought leadership, case studies, educational resources</li>
-                        <li><strong>Sales converts with position</strong> → Discovery focused on strategic gaps, pricing anchored to value, competitive differentiation clearly articulated</li>
-                    </ol>
-                </div>
-
-                <p>Each level builds on the previous one. Skip positioning, and the entire structure collapses into generic execution.</p>
-
-                <h2>Key Takeaways: Positioning vs. Branding</h2>
-
-                <ul>
-                    <li><strong>Positioning is strategy (what you are), branding is execution (how you show it)</strong></li>
-                    <li><strong>Positioning must come first</strong>—you can't brand what you haven't positioned</li>
-                    <li><strong>Good branding amplifies your position</strong>—strong or weak, differentiated or generic</li>
-                    <li><strong>Positioning defines competitive territory</strong>; branding communicates that territory consistently</li>
-                    <li><strong>Positioning changes rarely</strong> (market structure shifts); branding refreshes regularly (creative updates)</li>
-                    <li><strong>Weak positioning + strong branding = professional-looking commoditization</strong></li>
-                    <li><strong>Strong positioning + weak branding = invisible differentiation</strong></li>
-                    <li><strong>Fix positioning first, then align branding to that position</strong></li>
-                </ul>
-
-                <h2>Next Steps</h2>
-                <p>If you're struggling with commoditization, price pressure, or undifferentiated messaging, the problem is likely positioning—not branding.</p>
-
-                <p><strong>Start here:</strong></p>
-                <ul>
-                    <li>Read: <a href="/blog/strategic-positioning-framework-deep-dive.html">Strategic Positioning Framework Deep Dive</a></li>
-                    <li>Assess: <a href="/services/positioning-diagnostics.html">Positioning Diagnostics</a> to identify strategic gaps</li>
-                    <li>Learn: <a href="/faq.html">FAQ</a> about positioning vs. branding implementation</li>
-                    <li>Engage: <a href="/services/strategic-brand-positioning.html">Strategic Brand Positioning</a> services to define your competitive territory</li>
-                </ul>
-
-                <p>Remember: <strong>Strategy first, execution second. Position first, brand second.</strong> Get the order right, and both will compound each other. Get it backwards, and you'll waste years branding an undifferentiated position.</p>
-
-                <div style="margin: 40px 0; padding: 30px; background: #000; color: #fff;">
-                    <h3 style="margin-top: 0; color: #fff;">Ready to Define Your Strategic Position?</h3>
-                    <p>If your branding looks professional but you're still competing on price, the problem isn't your logo—it's your positioning.</p>
-                    <p><a href="/contact.html" style="color: #fff; text-decoration: underline;">Schedule a positioning diagnostic</a> to identify strategic gaps and build defensible differentiation.</p>
-                </div>
+              </div>
             </div>
-        </article>
-    </main>
+            <a href="/#about" class="nav-item">About</a>
+            <a href="/#process" class="nav-item">Process</a>
+            <a href="/blog.html" class="nav-item">Blog</a>
+            <a href="/faq.html" class="nav-item">FAQ</a>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Troy Assoignon</h3>
-                <p>Positioning Expert</p>
-            </div>
-            <div class="footer-section">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="/services/strategic-brand-positioning.html">Strategic Brand Positioning</a></li>
-                    <li><a href="/services/positioning-diagnostics.html">Positioning Diagnostics</a></li>
-                    <li><a href="/services/fractional-cmo-cpo.html">Fractional CMO/CPO</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Resources</h3>
-                <ul>
-                    <li><a href="/blog.html">Blog</a></li>
-                    <li><a href="/faq.html">FAQ</a></li>
-                    <li><a href="/workshop.html">Workshop</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect</h3>
-                <ul>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="https://www.linkedin.com/in/troyassoignon" target="_blank">LinkedIn</a></li>
-                </ul>
-            </div>
+            <!-- Theme toggle button -->
+            <button id="theme-toggle" class="p-2 rounded-full bg-luxury-800/30 hover:bg-luxury-700/50 transition-colors" aria-label="Toggle theme">
+              <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-luxury-300">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-luxury-300 hidden">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+
+            <a href="/#contact" class="button-primary">Get in Touch</a>
+          </nav>
+
+          <div class="md:hidden flex items-center space-x-4">
+            <!-- Mobile back button -->
+            <a href="/" class="back-button" aria-label="Return to home page">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+              <span class="sr-only">Back to Home</span>
+            </a>
+            <!-- Theme toggle button (mobile) -->
+            <button id="theme-toggle-mobile" class="p-2 rounded-full bg-luxury-800/30 hover:bg-luxury-700/50 transition-colors" aria-label="Toggle theme">
+              <svg id="moon-icon-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-luxury-300">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg id="sun-icon-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-luxury-300 hidden">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </button>
+
+            <button
+              id="mobile-menu-button"
+              class="text-luxury-300 hover:text-white transition-colors"
+              aria-label="Toggle menu"
+            >
+              <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+                <line x1="4" y1="6" x2="20" y2="6"></line>
+                <line x1="4" y1="18" x2="20" y2="18"></line>
+              </svg>
+              <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Troy Assoignon. All rights reserved.</p>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center space-y-8 pt-20 transition-all duration-500 ease-in-out transform opacity-0 translate-x-full pointer-events-none">
+          <a href="/" class="nav-item text-xl mobile-nav-item">Home</a>
+          <a href="/#services" class="nav-item text-xl mobile-nav-item">Services</a>
+          <a href="/#about" class="nav-item text-xl mobile-nav-item">About</a>
+          <a href="/#process" class="nav-item text-xl mobile-nav-item">Process</a>
+          <a href="/blog.html" class="nav-item text-xl mobile-nav-item">Blog</a>
+          <a href="/faq.html" class="nav-item text-xl mobile-nav-item">FAQ</a>
+          <a href="/#contact" class="button-primary text-xl mt-4">Get in Touch</a>
         </div>
-    </footer>
-</body>
+      </header>
+
+      <!-- Blog Container -->
+      <div class="blog-container pt-24">
+        <!-- Left Sidebar -->
+        <aside class="blog-sidebar">
+          <div class="blog-sidebar-nav">
+            <div class="blog-sidebar-title">Categories</div>
+            <a href="/blog.html" class="blog-sidebar-link">All Posts</a>
+            <a href="/blog.html" class="blog-sidebar-link">Brand Positioning</a>
+            <a href="/blog.html" class="blog-sidebar-link">Strategy</a>
+            <a href="/blog.html" class="blog-sidebar-link">ROI Analysis</a>
+            <a href="/blog.html" class="blog-sidebar-link">Framework</a>
+
+            <div class="blog-sidebar-title">Recent Posts</div>
+            <a href="/blog/strategic-positioning-framework-deep-dive.html" class="blog-sidebar-link">Strategic Positioning Framework</a>
+            <a href="/blog/positioning-roi-profit-margins.html" class="blog-sidebar-link">ROI & Profit Margins</a>
+            <a href="/blog/investor-ready-positioning-capital-raising.html" class="blog-sidebar-link">Investor-Ready Positioning</a>
+            <a href="/blog/when-to-hire-positioning-expert.html" class="blog-sidebar-link">When to Hire an Expert</a>
+            <a href="/blog/positioning-diagnostics-revenue-analysis.html" class="blog-sidebar-link">Positioning Diagnostics</a>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="blog-content">
+          <article class="blog-post">
+            <!-- Author Byline -->
+            <div class="blog-author-byline">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 rounded-full bg-luxury-800 flex items-center justify-center">
+                  <span class="text-accent-green font-bold text-xl">TA</span>
+                </div>
+                <div>
+                  <div class="text-white font-medium">Troy Assoignon</div>
+                  <div class="text-luxury-400 text-sm">January 15, 2025 • 12 min read</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blog Post Title -->
+            <h1 class="blog-post-title mb-8">Positioning vs. Branding: What's the Difference?</h1>
+
+            <!-- Blog Post Content -->
+            <div class="blog-post-content">
+              <p><strong>Positioning is strategy. Branding is execution.</strong></p>
+
+              <p><strong>Positioning</strong> defines <em>where</em> you compete in the market and <em>what</em> you stand for in customers' minds. It's the strategic decision about your competitive territory.</p>
+
+              <p><strong>Branding</strong> is <em>how</em> you express that position through visual identity, messaging, tone, and customer experience. It's the tactical communication of your strategy.</p>
+
+              <p><strong>The critical relationship:</strong> Positioning comes first. You cannot build an effective brand without first knowing your strategic position.</p>
+
+              <h2 id="fundamental-difference">The Fundamental Difference</h2>
+              <p>Most business leaders confuse positioning and branding because both involve "how customers perceive you." But they operate at fundamentally different levels:</p>
+
+              <ul>
+                  <li><strong>Positioning</strong> answers: "What competitive territory do we own in the market?"</li>
+                  <li><strong>Branding</strong> answers: "How do we communicate that ownership consistently?"</li>
+              </ul>
+
+              <p>Positioning is the <strong>what</strong>. Branding is the <strong>how</strong>.</p>
+
+              <h2 id="side-by-side">Positioning vs. Branding: Side-by-Side Comparison</h2>
+
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Dimension</th>
+                          <th>Positioning (Strategy)</th>
+                          <th>Branding (Execution)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><strong>Definition</strong></td>
+                          <td>Where you compete and what you stand for</td>
+                          <td>How you express your position consistently</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Level</strong></td>
+                          <td>Strategic (corporate/business level)</td>
+                          <td>Tactical (marketing/communications level)</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Time Horizon</strong></td>
+                          <td>Long-term (3-10 years)</td>
+                          <td>Medium-term (refresh every 2-5 years)</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Question Answered</strong></td>
+                          <td>"What competitive territory do we own?"</td>
+                          <td>"How do we communicate our territory?"</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Key Decisions</strong></td>
+                          <td>Target audience, value proposition, competitive differentiation, category ownership</td>
+                          <td>Visual identity, tone of voice, messaging framework, customer experience design</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Output</strong></td>
+                          <td>Positioning statement, competitive map, value architecture</td>
+                          <td>Logo, color palette, messaging guide, brand book</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Success Metric</strong></td>
+                          <td>Pricing power, margin expansion, category leadership perception</td>
+                          <td>Brand recognition, recall, consistency scores</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Owned By</strong></td>
+                          <td>CEO, executive leadership, strategy team</td>
+                          <td>CMO, marketing team, creative agencies</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Changes When</strong></td>
+                          <td>Market structure shifts, competitive landscape evolves, customer needs fundamentally change</td>
+                          <td>Position evolves, creative gets stale, market aesthetics shift</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Example</strong></td>
+                          <td>"We're the only positioning expert serving growth-stage B2B services with investor-ready frameworks"</td>
+                          <td>Clean typography, authoritative tone, black-and-white aesthetic, strategic language</td>
+                      </tr>
+                  </tbody>
+              </table>
+
+              <h2 id="positioning-first">Why Positioning Must Come First</h2>
+              <p>You cannot brand what you haven't positioned. Here's why:</p>
+
+              <h3>1. Branding Amplifies Position (Good or Bad)</h3>
+              <p>Branding is an amplifier. It takes your strategic position and makes it louder, more visible, more memorable. But amplifiers don't discriminate—they amplify whatever you put into them.</p>
+
+              <ul>
+                  <li><strong>Strong position + strong brand</strong> = Premium pricing and category leadership</li>
+                  <li><strong>Weak position + strong brand</strong> = Expensive commoditization (you look professional but still compete on price)</li>
+                  <li><strong>Strong position + weak brand</strong> = Invisible differentiation (your advantage exists but nobody knows it)</li>
+                  <li><strong>Weak position + weak brand</strong> = Obscurity and margin compression</li>
+              </ul>
+
+              <p>The most dangerous scenario is #2: companies with beautiful websites, polished decks, and consistent visual identity—but undifferentiated positioning. They've invested in branding before strategy. The result? Professional-looking commoditization.</p>
+
+              <h3>2. Positioning Defines Brand Parameters</h3>
+              <p>Your strategic position determines your brand expression:</p>
+
+              <ul>
+                  <li>If you're positioned as <strong>"premium"</strong> → your brand should signal quality, exclusivity, sophistication</li>
+                  <li>If you're positioned as <strong>"accessible expert"</strong> → your brand should be approachable, educational, clear</li>
+                  <li>If you're positioned as <strong>"innovation leader"</strong> → your brand should be forward-thinking, bold, disruptive</li>
+              </ul>
+
+              <p>Trying to design a brand without knowing your position is like trying to write a script without knowing the genre. You'll make arbitrary creative decisions that may be aesthetically pleasing but strategically incoherent.</p>
+
+              <h3>3. Positioning is Harder to Change</h3>
+              <p>Branding can be refreshed relatively quickly—new logo, updated website, revised messaging. Positioning changes require fundamental strategic shifts that affect product development, pricing, sales approach, and market education.</p>
+
+              <p>Get your positioning wrong, and you'll waste years and millions trying to brand your way out of a strategic problem. Get positioning right first, and branding becomes a natural expression of that strategy.</p>
+
+              <h2 id="common-mistakes">Common Positioning vs. Branding Mistakes</h2>
+
+              <h3>Mistake #1: "We need a rebrand" (when you actually need repositioning)</h3>
+              <p><strong>Symptom:</strong> Your sales team struggles to articulate differentiation. Buyers say "you seem like everyone else." You compete primarily on price.</p>
+              <p><strong>Wrong solution:</strong> Hire a design agency to refresh your logo and website.</p>
+              <p><strong>Right solution:</strong> Engage a <a href="/services/strategic-brand-positioning.html" class="text-accent-green hover:underline">positioning expert</a> to define your strategic territory, then brand against that position.</p>
+
+              <h3>Mistake #2: Treating branding as strategy</h3>
+              <p><strong>Symptom:</strong> Leadership meetings focus on color palettes, font choices, and tagline options rather than competitive differentiation and value architecture.</p>
+              <p><strong>Why it fails:</strong> Branding decisions are downstream from positioning decisions. Without strategic clarity, you're making creative choices in a vacuum.</p>
+              <p><strong>Fix:</strong> Elevate positioning to the strategic level (CEO/executive ownership) and keep branding at the tactical level (CMO/marketing ownership).</p>
+
+              <h3>Mistake #3: Thinking brand consistency = positioning strength</h3>
+              <p><strong>Reality:</strong> You can have perfectly consistent branding while being strategically undifferentiated. Consistency amplifies your position—but if that position is "we're like everyone else," consistency just makes you consistently generic.</p>
+
+              <h3>Mistake #4: Changing positioning without updating brand expression</h3>
+              <p><strong>Symptom:</strong> You've repositioned from "general consultant" to "specialized expert" but your website still has generic stock photos and "we help all businesses" messaging.</p>
+              <p><strong>Result:</strong> Strategic whiplash. Your sales team is selling the new position, but your marketing communicates the old one.</p>
+              <p><strong>Fix:</strong> When positioning changes, brand expression must follow. Budget for both.</p>
+
+              <h2 id="real-world-example">Real-World Example: Positioning vs. Branding in Action</h2>
+
+              <h3>Scenario: B2B Software Consulting Firm</h3>
+
+              <p><strong>Before: Weak Positioning + Strong Branding</strong></p>
+              <ul>
+                  <li><strong>Position:</strong> "We help companies with digital transformation" (undifferentiated)</li>
+                  <li><strong>Brand:</strong> Beautiful website, professional photography, consistent blue color scheme</li>
+                  <li><strong>Result:</strong> Looked impressive but competed in RFPs with 20 other firms, won on price 40% of the time, 18% margins</li>
+              </ul>
+
+              <p><strong>After: Strategic Repositioning → Aligned Branding</strong></p>
+              <ul>
+                  <li><strong>New Position:</strong> "The only consultancy specialized in manufacturing ERP implementations for private-equity-owned industrial businesses facing buy-and-build integrations" (specific, defensible)</li>
+                  <li><strong>Updated Brand:</strong> Industrial aesthetic, case studies from PE-backed manufacturers, "Integration Certainty" messaging framework</li>
+                  <li><strong>Result:</strong> Sole-source deals increased to 60%, pricing premium of 35% vs. generalists, 32% margins</li>
+              </ul>
+
+              <p><strong>Key insight:</strong> The brand didn't become "better"—it became <em>aligned</em> with a stronger strategic position. The logo changed minimally. The positioning changed fundamentally.</p>
+
+              <h2 id="when-to-hire">When to Hire a Positioning Expert vs. Brand Strategist</h2>
+
+              <h3>Hire a Positioning Expert When:</h3>
+              <ul>
+                  <li>You're losing deals to "cheaper alternatives" despite having superior capabilities</li>
+                  <li>Buyers say "you're like [competitor]" or "we're evaluating 5 similar firms"</li>
+                  <li>You can't command premium pricing despite delivering premium results</li>
+                  <li>Your sales team struggles to articulate why customers should choose you</li>
+                  <li>You're entering a new market or launching a new category</li>
+                  <li>You're preparing for capital raising and need to demonstrate clear competitive advantage</li>
+              </ul>
+
+              <p><strong>What you get:</strong> <a href="/services/strategic-brand-positioning.html" class="text-accent-green hover:underline">Strategic positioning</a> that defines your competitive territory, target audience, value architecture, and defensible differentiation. <a href="/services/positioning-diagnostics.html" class="text-accent-green hover:underline">Positioning diagnostics</a> to identify strategic gaps.</p>
+
+              <h3>Hire a Brand Strategist/Agency When:</h3>
+              <ul>
+                  <li>Your positioning is clear but your visual identity is outdated or inconsistent</li>
+                  <li>You need to refresh creative execution while maintaining strategic position</li>
+                  <li>You're launching a new product within an existing category position</li>
+                  <li>You need messaging frameworks, content strategy, or tone of voice guidelines</li>
+                  <li>Your brand recognition is low despite strong market position</li>
+              </ul>
+
+              <p><strong>What you get:</strong> Visual identity system, messaging frameworks, brand guidelines, creative assets, tone of voice, customer experience design.</p>
+
+              <h3>The Ideal Sequence:</h3>
+              <ol>
+                  <li><strong>Year 1-2:</strong> Engage <a href="/services/strategic-brand-positioning.html" class="text-accent-green hover:underline">positioning expert</a> to define strategic territory</li>
+                  <li><strong>Year 2-3:</strong> Work with brand strategist/agency to express that position consistently</li>
+                  <li><strong>Year 3-5:</strong> Execute brand across all touchpoints with consistent messaging</li>
+                  <li><strong>Year 5-7:</strong> Refresh brand creative (if needed) while maintaining core position</li>
+                  <li><strong>Year 7-10:</strong> Reassess positioning if market structure has fundamentally shifted</li>
+              </ol>
+
+              <h2 id="working-together">How Positioning and Branding Work Together</h2>
+
+              <p>The relationship isn't either/or—it's sequential and complementary:</p>
+
+              <p><strong>The Strategic Hierarchy</strong></p>
+              <ol>
+                  <li><strong>Positioning defines the strategy</strong> → "We own the category of investor-ready positioning for growth-stage B2B services"</li>
+                  <li><strong>Branding expresses the strategy</strong> → Clean typography, authoritative tone, strategic frameworks, "Positioning Expert" title</li>
+                  <li><strong>Marketing activates the brand</strong> → SEO-optimized content, thought leadership, case studies, educational resources</li>
+                  <li><strong>Sales converts with position</strong> → Discovery focused on strategic gaps, pricing anchored to value, competitive differentiation clearly articulated</li>
+              </ol>
+
+              <p>Each level builds on the previous one. Skip positioning, and the entire structure collapses into generic execution.</p>
+
+              <h2 id="key-takeaways">Key Takeaways: Positioning vs. Branding</h2>
+
+              <ul>
+                  <li><strong>Positioning is strategy (what you are), branding is execution (how you show it)</strong></li>
+                  <li><strong>Positioning must come first</strong>—you can't brand what you haven't positioned</li>
+                  <li><strong>Good branding amplifies your position</strong>—strong or weak, differentiated or generic</li>
+                  <li><strong>Positioning defines competitive territory</strong>; branding communicates that territory consistently</li>
+                  <li><strong>Positioning changes rarely</strong> (market structure shifts); branding refreshes regularly (creative updates)</li>
+                  <li><strong>Weak positioning + strong branding = professional-looking commoditization</strong></li>
+                  <li><strong>Strong positioning + weak branding = invisible differentiation</strong></li>
+                  <li><strong>Fix positioning first, then align branding to that position</strong></li>
+              </ul>
+
+              <h2 id="next-steps">Next Steps</h2>
+              <p>If you're struggling with commoditization, price pressure, or undifferentiated messaging, the problem is likely positioning—not branding.</p>
+
+              <p><strong>Start here:</strong></p>
+              <ul>
+                  <li>Read: <a href="/blog/strategic-positioning-framework-deep-dive.html" class="text-accent-green hover:underline">Strategic Positioning Framework Deep Dive</a></li>
+                  <li>Assess: <a href="/services/positioning-diagnostics.html" class="text-accent-green hover:underline">Positioning Diagnostics</a> to identify strategic gaps</li>
+                  <li>Learn: <a href="/faq.html" class="text-accent-green hover:underline">FAQ</a> about positioning vs. branding implementation</li>
+                  <li>Engage: <a href="/services/strategic-brand-positioning.html" class="text-accent-green hover:underline">Strategic Brand Positioning</a> services to define your competitive territory</li>
+              </ul>
+
+              <p>Remember: <strong>Strategy first, execution second. Position first, brand second.</strong> Get the order right, and both will compound each other. Get it backwards, and you'll waste years branding an undifferentiated position.</p>
+
+              <!-- CTA Box -->
+              <div class="cta-box">
+                  <h3>Ready to Define Your Strategic Position?</h3>
+                  <p>If your branding looks professional but you're still competing on price, the problem isn't your logo—it's your positioning.</p>
+                  <a href="/services/positioning-diagnostics.html">Schedule a Positioning Diagnostic</a>
+              </div>
+            </div>
+
+            <!-- Author Bio Box -->
+            <div class="author-bio-box">
+                  <div class="flex gap-4 items-start">
+                    <div class="w-16 h-16 rounded-full bg-luxury-800 flex items-center justify-center flex-shrink-0">
+                      <span class="text-accent-green font-bold text-2xl">TA</span>
+                    </div>
+                    <div>
+                      <h3 class="text-white font-semibold text-lg mb-2">About Troy Assoignon</h3>
+                      <p class="text-luxury-300 text-sm leading-relaxed mb-3">
+                        Troy is a positioning expert with $62.7M in documented client results. He created the Strategic Positioning Advantage™ framework and placed 2nd in the ElevenLabs international hackathon.
+                      </p>
+                      <div class="flex gap-4 text-sm">
+                        <a href="/#about" class="text-accent-green hover:underline">Learn more about Troy</a>
+                        <a href="https://linkedin.com/in/troyassoignon" class="text-accent-green hover:underline" target="_blank">Connect on LinkedIn</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Related Posts Section -->
+            <div class="related-posts">
+              <h3>Related Articles</h3>
+              <div class="related-posts-grid">
+                <a href="/blog/common-positioning-mistakes.html" class="related-post-card">
+                  <h4>7 Fatal Positioning Mistakes</h4>
+                  <p>10 min read</p>
+                </a>
+                <a href="/blog/strategic-positioning-framework-deep-dive.html" class="related-post-card">
+                  <h4>Strategic Positioning Framework</h4>
+                  <p>15 min read</p>
+                </a>
+                <a href="/blog/how-to-choose-positioning-consultant.html" class="related-post-card">
+                  <h4>How to Choose a Positioning Consultant</h4>
+                  <p>14 min read</p>
+                </a>
+              </div>
+            </div>
+          </article>
+        </main>
+
+        <!-- Right Sidebar (Table of Contents) -->
+        <aside class="blog-right-sidebar">
+          <div class="blog-toc">
+            <div class="blog-toc-title">On this page</div>
+            <a href="#fundamental-difference" class="blog-toc-link">The Fundamental Difference</a>
+            <a href="#side-by-side" class="blog-toc-link">Side-by-Side Comparison</a>
+            <a href="#positioning-first" class="blog-toc-link">Why Positioning Must Come First</a>
+            <a href="#common-mistakes" class="blog-toc-link">Common Mistakes</a>
+            <a href="#real-world-example" class="blog-toc-link">Real-World Example</a>
+            <a href="#when-to-hire" class="blog-toc-link">When to Hire Experts</a>
+            <a href="#working-together" class="blog-toc-link">How They Work Together</a>
+            <a href="#key-takeaways" class="blog-toc-link">Key Takeaways</a>
+            <a href="#next-steps" class="blog-toc-link">Next Steps</a>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Footer -->
+      <footer class="py-12 px-6 bg-black border-t border-luxury-800/20">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+              <a href="/" class="text-xl font-display font-bold tracking-tight flex items-center">
+                <span class="luxury-gradient">TROY ASSOIGNON</span>
+                <span class="bg-accent-green h-1.5 w-1.5 rounded-full ml-1 mt-1"></span>
+              </a>
+              <p class="text-sm text-luxury-500 mt-2">Strategic Brand Positioning</p>
+            </div>
+
+            <nav class="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4 mb-8 md:mb-0">
+              <a href="/#services" class="text-sm text-luxury-400 hover:text-luxury-200 transition-colors">Services</a>
+              <a href="/#about" class="text-sm text-luxury-400 hover:text-luxury-200 transition-colors">About</a>
+              <a href="/#process" class="text-sm text-luxury-400 hover:text-luxury-200 transition-colors">Process</a>
+              <a href="/blog.html" class="text-sm text-luxury-400 hover:text-luxury-200 transition-colors">Blog</a>
+              <a href="/#contact" class="text-sm text-luxury-400 hover:text-luxury-200 transition-colors">Contact</a>
+            </nav>
+          </div>
+
+          <div class="border-t border-luxury-800/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-xs text-luxury-600 mb-4 md:mb-0">
+              © <span id="current-year">2025</span> Troy Assoignon. All rights reserved.
+            </div>
+
+            <div class="flex space-x-6">
+              <a href="/privacy" class="text-xs text-luxury-600 hover:text-luxury-400 transition-colors">Privacy Policy</a>
+              <a href="/terms" class="text-xs text-luxury-600 hover:text-luxury-400 transition-colors">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      // Update copyright year
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+
+      // Enable smooth scrolling for the TOC links
+      document.querySelectorAll('.blog-toc-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Highlight active TOC link on scroll
+      window.addEventListener('scroll', function() {
+        const headings = document.querySelectorAll('h2, h3');
+        const tocLinks = document.querySelectorAll('.blog-toc-link');
+
+        let currentHeading = null;
+        headings.forEach(heading => {
+          if (heading.getBoundingClientRect().top <= 120) {
+            currentHeading = heading;
+          }
+        });
+
+        if (currentHeading) {
+          const id = currentHeading.getAttribute('id');
+          tocLinks.forEach(link => {
+            if (link.getAttribute('href') === '#' + id) {
+              link.style.color = 'rgb(var(--color-accent-green))';
+            } else {
+              link.style.color = '';
+            }
+          });
+        }
+      });
+    </script>
+  </body>
 </html>

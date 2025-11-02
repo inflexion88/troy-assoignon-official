@@ -59,6 +59,7 @@ export default defineConfig({
         'blog/common-positioning-mistakes': resolve(__dirname, 'blog/common-positioning-mistakes.html'),
         'blog/how-to-choose-positioning-consultant': resolve(__dirname, 'blog/how-to-choose-positioning-consultant.html'),
         'blog/positioning-audit-checklist': resolve(__dirname, 'blog/positioning-audit-checklist.html'),
+        'blog/90-day-positioning-implementation-framework': resolve(__dirname, 'blog/90-day-positioning-implementation-framework.html'),
         // Lead magnet pages
         'lead-magnets/positioning-diagnostic-checklist': resolve(__dirname, 'lead-magnets/positioning-diagnostic-checklist.html'),
         'lead-magnets/positioning-framework-guide': resolve(__dirname, 'lead-magnets/positioning-framework-guide.html'),

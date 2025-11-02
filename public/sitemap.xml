@@ -157,6 +157,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.troyassoignon.com/blog/90-day-positioning-implementation-framework</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Priority 0.6 - Lead Magnet Pages -->
   <url>

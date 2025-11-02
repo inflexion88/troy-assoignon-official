@@ -55,6 +55,10 @@ export default defineConfig({
         'blog/positioning-roi-profit-margins': resolve(__dirname, 'blog/positioning-roi-profit-margins.html'),
         'blog/positioning-diagnostics-revenue-analysis': resolve(__dirname, 'blog/positioning-diagnostics-revenue-analysis.html'),
         'blog/investor-ready-positioning-capital-raising': resolve(__dirname, 'blog/investor-ready-positioning-capital-raising.html'),
+        'blog/positioning-vs-branding-differences': resolve(__dirname, 'blog/positioning-vs-branding-differences.html'),
+        'blog/common-positioning-mistakes': resolve(__dirname, 'blog/common-positioning-mistakes.html'),
+        'blog/how-to-choose-positioning-consultant': resolve(__dirname, 'blog/how-to-choose-positioning-consultant.html'),
+        'blog/positioning-audit-checklist': resolve(__dirname, 'blog/positioning-audit-checklist.html'),
         // Lead magnet pages
         'lead-magnets/positioning-diagnostic-checklist': resolve(__dirname, 'lead-magnets/positioning-diagnostic-checklist.html'),
         'lead-magnets/positioning-framework-guide': resolve(__dirname, 'lead-magnets/positioning-framework-guide.html'),

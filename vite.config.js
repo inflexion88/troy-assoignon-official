@@ -60,6 +60,12 @@ export default defineConfig({
         'blog/how-to-choose-positioning-consultant': resolve(__dirname, 'blog/how-to-choose-positioning-consultant.html'),
         'blog/positioning-audit-checklist': resolve(__dirname, 'blog/positioning-audit-checklist.html'),
         'blog/90-day-positioning-implementation-framework': resolve(__dirname, 'blog/90-day-positioning-implementation-framework.html'),
+        'blog/positioning-vs-messaging-difference': resolve(__dirname, 'blog/positioning-vs-messaging-difference.html'),
+        'blog/positioning-vs-marketing-strategy': resolve(__dirname, 'blog/positioning-vs-marketing-strategy.html'),
+        'blog/in-house-vs-expert-positioning': resolve(__dirname, 'blog/in-house-vs-expert-positioning.html'),
+        'blog/strategic-vs-tactical-positioning': resolve(__dirname, 'blog/strategic-vs-tactical-positioning.html'),
+        'blog/positioning-sprint-vs-system': resolve(__dirname, 'blog/positioning-sprint-vs-system.html'),
+        'blog/category-creation-vs-leadership': resolve(__dirname, 'blog/category-creation-vs-leadership.html'),
         // Lead magnet pages
         'lead-magnets/positioning-diagnostic-checklist': resolve(__dirname, 'lead-magnets/positioning-diagnostic-checklist.html'),
         'lead-magnets/positioning-framework-guide': resolve(__dirname, 'lead-magnets/positioning-framework-guide.html'),

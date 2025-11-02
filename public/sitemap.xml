@@ -60,6 +60,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Priority 0.8 - About Page (Person Schema, Entity) -->
+  <url>
+    <loc>https://www.troyassoignon.com/about</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Priority 0.7 - Workshop, Contact, Blog Hub -->
   <url>
     <loc>https://www.troyassoignon.com/workshop.html</loc>

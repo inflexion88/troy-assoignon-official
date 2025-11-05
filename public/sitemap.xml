@@ -16,6 +16,14 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Priority 0.9 - Interactive Tools (high engagement, lead generation) -->
+  <url>
+    <loc>https://www.troyassoignon.com/public/positioning-assessment</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Priority 0.8 - Service Pages -->
   <url>
     <loc>https://www.troyassoignon.com/services/strategic-brand-positioning</loc>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags - Optimized for Long-tail Keywords -->
+    <title>Free Positioning Assessment Tool | Calculate Your Brand Positioning Score in 5 Minutes</title>
+    <meta name="description" content="Take our free interactive positioning assessment to evaluate your brand positioning maturity. Get personalized insights across 5 key dimensions: clarity, differentiation, target market, value proposition, and competitive position. Instant results in 5 minutes.">
+    <meta name="keywords" content="positioning assessment tool, brand positioning calculator, positioning maturity score, evaluate brand positioning, positioning framework assessment, competitive positioning analysis, free positioning audit">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.troyassoignon.com/public/positioning-assessment">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Positioning Assessment Tool | Calculate Your Brand Positioning Score">
+    <meta property="og:description" content="Evaluate your brand positioning maturity across 5 key dimensions. Get personalized insights and actionable recommendations in 5 minutes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.troyassoignon.com/public/positioning-assessment">
+    <meta property="og:image" content="https://www.troyassoignon.com/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Positioning Assessment Tool">
+    <meta name="twitter:description" content="Evaluate your brand positioning maturity in 5 minutes. Get personalized insights and recommendations.">
+    <meta name="twitter:image" content="https://www.troyassoignon.com/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-74JF9CHYSL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-74JF9CHYSL');
+        gtag('config', 'G-EJX2GZ9H1N');
+    </script>
+
+    <!-- Structured Data - Assessment Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Positioning Assessment Tool",
+        "description": "Free interactive tool to evaluate brand positioning maturity across 5 key dimensions with personalized recommendations",
+        "url": "https://www.troyassoignon.com/public/positioning-assessment",
+        "applicationCategory": "BusinessApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Person",
+            "name": "Troy Assoignon",
+            "jobTitle": "Positioning Strategist",
+            "url": "https://www.troyassoignon.com"
+        },
+        "featureList": [
+            "20 positioning questions",
+            "5 category breakdowns",
+            "Instant scoring",
+            "Personalized recommendations",
+            "Free PDF report"
+        ]
+    }
+    </script>
+
+    <style>
+        /* Assessment-specific styles */
+        .progress-bar {
+            transition: width 0.3s ease-out;
+        }
+
+        .question-option {
+            transition: all 0.2s ease;
+        }
+
+        .question-option:hover {
+            transform: translateX(4px);
+        }
+
+        .question-option input:checked ~ label {
+            border-color: rgb(var(--color-accent-green));
+            background: rgba(var(--color-accent-green), 0.1);
+        }
+
+        .category-score {
+            transition: width 1s ease-out;
+        }
+
+        .score-gauge {
+            background: conic-gradient(
+                rgb(var(--color-accent-green)) 0deg,
+                rgb(var(--color-accent-green)) var(--score-angle),
+                rgba(255, 255, 255, 0.1) var(--score-angle),
+                rgba(255, 255, 255, 0.1) 360deg
+            );
+        }
+
+        @keyframes scoreCount {
+            from { --num: 0; }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.4s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans antialiased">
+
+    <!-- Background Effects -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <!-- Grid -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+
+        <!-- Glow effect -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-accent-green/[0.03] rounded-full blur-[128px]"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="relative min-h-screen flex items-center justify-center py-12 px-4">
+        <div class="max-w-4xl w-full mx-auto relative z-10">
+
+            <!-- Welcome Screen -->
+            <div id="welcome-screen" class="fade-in">
+                <div class="glass-bg p-8 md:p-12 rounded-2xl border border-white/10">
+                    <!-- Header -->
+                    <div class="text-center mb-8">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4 luxury-gradient">
+                            Positioning Assessment
+                        </h1>
+                        <p class="text-xl text-white/70 max-w-2xl mx-auto">
+                            Discover your brand positioning maturity score in 5 minutes
+                        </p>
+                    </div>
+
+                    <!-- Benefits -->
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <div class="text-center p-4">
+                            <div class="text-3xl mb-2">📊</div>
+                            <h3 class="font-semibold mb-1">5 Key Dimensions</h3>
+                            <p class="text-sm text-white/60">Comprehensive analysis across critical positioning areas</p>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="text-3xl mb-2">⚡</div>
+                            <h3 class="font-semibold mb-1">Instant Results</h3>
+                            <p class="text-sm text-white/60">Get your score and recommendations immediately</p>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="text-3xl mb-2">🎯</div>
+                            <h3 class="font-semibold mb-1">Personalized Insights</h3>
+                            <p class="text-sm text-white/60">Tailored recommendations for your specific needs</p>
+                        </div>
+                    </div>
+
+                    <!-- What You'll Discover -->
+                    <div class="mb-8 p-6 bg-white/5 rounded-xl border border-white/10">
+                        <h3 class="font-semibold mb-4 text-lg">What You'll Discover:</h3>
+                        <ul class="space-y-3 text-white/80">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent-green mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Your <strong>Positioning Clarity Score</strong> - How well-defined is your market position?</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent-green mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Your <strong>Differentiation Strength</strong> - How unique is your value in the market?</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent-green mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Your <strong>Target Market Alignment</strong> - Are you reaching the right audience?</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent-green mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Your <strong>Value Proposition Clarity</strong> - Is your value crystal clear?</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent-green mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Your <strong>Competitive Position</strong> - Where do you stand in your market?</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="text-center">
+                        <button id="start-assessment-btn" class="button-primary text-lg px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-transform duration-200">
+                            Start Assessment →
+                        </button>
+                        <p class="text-sm text-white/50 mt-4">
+                            20 questions • 5 minutes • 100% free
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Back to Site Link -->
+                <div class="text-center mt-6">
+                    <a href="/" class="text-white/60 hover:text-accent-green transition-colors">
+                        ← Back to Homepage
+                    </a>
+                </div>
+            </div>
+
+            <!-- Assessment Screen -->
+            <div id="assessment-screen" class="hidden">
+                <!-- Progress Bar -->
+                <div class="mb-8">
+                    <div class="flex justify-between text-sm text-white/60 mb-2">
+                        <span>Question <span id="current-question">1</span> of <span id="total-questions">20</span></span>
+                        <span id="progress-percentage">5%</span>
+                    </div>
+                    <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                        <div id="progress-bar" class="progress-bar h-full bg-gradient-to-r from-accent-green to-accent-green-dark" style="width: 5%"></div>
+                    </div>
+                </div>
+
+                <!-- Question Card -->
+                <div class="glass-bg p-8 md:p-12 rounded-2xl border border-white/10">
+                    <div id="question-container">
+                        <!-- Questions will be dynamically inserted here -->
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="flex justify-between mt-8">
+                        <button id="prev-btn" class="button-secondary px-6 py-3 rounded-xl font-semibold transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed" disabled>
+                            ← Previous
+                        </button>
+                        <button id="next-btn" class="button-primary px-6 py-3 rounded-xl font-semibold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                            Next →
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Screen -->
+            <div id="results-screen" class="hidden">
+                <div class="glass-bg p-8 md:p-12 rounded-2xl border border-white/10">
+                    <!-- Overall Score -->
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4 luxury-gradient">
+                            Your Positioning Maturity Score
+                        </h2>
+                        <div class="flex justify-center items-center mb-4">
+                            <div class="relative w-48 h-48">
+                                <!-- Score Circle -->
+                                <svg class="transform -rotate-90 w-48 h-48">
+                                    <circle cx="96" cy="96" r="88" stroke="rgba(255,255,255,0.1)" stroke-width="12" fill="none" />
+                                    <circle id="score-circle" cx="96" cy="96" r="88" stroke="rgb(101, 228, 143)" stroke-width="12" fill="none"
+                                        stroke-dasharray="552.92" stroke-dashoffset="552.92" stroke-linecap="round"
+                                        style="transition: stroke-dashoffset 2s ease-out;" />
+                                </svg>
+                                <div class="absolute inset-0 flex items-center justify-center flex-col">
+                                    <div id="overall-score" class="text-5xl font-bold text-accent-green">0</div>
+                                    <div class="text-white/60 text-sm">out of 100</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p id="score-description" class="text-xl text-white/80 max-w-2xl mx-auto">
+                            <!-- Dynamic description based on score -->
+                        </p>
+                    </div>
+
+                    <!-- Category Breakdown -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-bold mb-6">Category Breakdown</h3>
+                        <div id="category-scores" class="space-y-4">
+                            <!-- Category scores will be inserted here -->
+                        </div>
+                    </div>
+
+                    <!-- Recommendations -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-bold mb-6">Your Personalized Recommendations</h3>
+                        <div id="recommendations" class="space-y-4">
+                            <!-- Recommendations will be inserted here -->
+                        </div>
+                    </div>
+
+                    <!-- Email Capture for Detailed Report -->
+                    <div class="bg-white/5 p-8 rounded-xl border border-white/10 mb-8">
+                        <h3 class="text-xl font-bold mb-4 text-center">Get Your Detailed Report</h3>
+                        <p class="text-white/70 text-center mb-6">
+                            Receive a comprehensive PDF report with specific action steps for each category
+                        </p>
+                        <form id="results-email-form" class="max-w-md mx-auto">
+                            <div class="flex gap-3">
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="your@email.com"
+                                    required
+                                    class="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:border-accent-green text-white placeholder-white/40"
+                                />
+                                <button type="submit" class="button-primary px-6 py-3 rounded-xl font-semibold whitespace-nowrap">
+                                    Send Report
+                                </button>
+                            </div>
+                            <input type="hidden" name="_subject" value="Positioning Assessment Results Request">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" id="score-input" name="overall_score" value="">
+                            <input type="hidden" id="categories-input" name="category_scores" value="">
+                        </form>
+                    </div>
+
+                    <!-- CTAs -->
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <a href="/contact" class="block text-center button-primary px-6 py-4 rounded-xl font-semibold hover:scale-105 transition-transform duration-200">
+                            Schedule a Strategy Call
+                        </a>
+                        <a href="/services/positioning-diagnostics" class="block text-center button-secondary px-6 py-4 rounded-xl font-semibold hover:scale-105 transition-transform duration-200">
+                            Explore Positioning Services
+                        </a>
+                    </div>
+
+                    <!-- Retake -->
+                    <div class="text-center mt-8">
+                        <button id="retake-btn" class="text-white/60 hover:text-accent-green transition-colors">
+                            ↻ Retake Assessment
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Assessment JavaScript -->
+    <script src="/assets/js/positioning-assessment.js"></script>
+
+</body>
+</html>

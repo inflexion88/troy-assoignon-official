@@ -41,6 +41,13 @@
     <link rel="stylesheet" href="/src/style.css" />
 
     <style>
+      /* Services Dropdown Hover */
+      .group:hover #services-dropdown {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
       /* Blog Post Styles */
       .blog-container {
         display: grid;
@@ -424,31 +431,36 @@
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
               </svg>
-              <span class="sr-only">Back to Home</span>
+              <span>Back to Home</span>
             </a>
-
-            <div class="services-dropdown-wrapper">
-              <div class="services-dropdown-trigger">
-                <span class="nav-item">Services</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <div class="relative group">
+              <a href="/#services" class="nav-item flex items-center">
+                Services
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180">
                   <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
-                <div class="services-dropdown-menu">
-                  <a href="/services/strategic-brand-positioning.html" class="services-dropdown-item">
-                    <div class="services-dropdown-item-title">Strategic Brand Positioning</div>
-                    <div class="services-dropdown-item-desc">Define your unique market position</div>
+              </a>
+
+              <!-- Services dropdown -->
+              <div id="services-dropdown" class="absolute top-full left-0 mt-1 w-64 bg-black/90 backdrop-blur-lg border border-luxury-800/30 rounded-xl overflow-hidden transition-all duration-300 ease-out transform opacity-0 translate-y-2 pointer-events-none">
+                <div class="py-2">
+                  <a href="/services/strategic-brand-positioning.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Strategic Brand Positioning
                   </a>
-                  <a href="/services/positioning-diagnostics.html" class="services-dropdown-item">
-                    <div class="services-dropdown-item-title">Positioning Diagnostics</div>
-                    <div class="services-dropdown-item-desc">Identify positioning gaps</div>
+                  <a href="/services/authority-thought-leadership.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Authority & Thought Leadership
                   </a>
-                  <a href="/services/premium-pricing-offers.html" class="services-dropdown-item">
-                    <div class="services-dropdown-item-title">Premium Pricing Architecture</div>
-                    <div class="services-dropdown-item-desc">Engineer high-value offers</div>
+                  <a href="/services/investor-ready-positioning.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Investor-Ready Positioning
                   </a>
-                  <a href="/services/fractional-cmo-caio.html" class="services-dropdown-item">
-                    <div class="services-dropdown-item-title">Fractional CMO/CAIo</div>
-                    <div class="services-dropdown-item-desc">Strategic leadership for growth</div>
+                  <a href="/services/premium-pricing-offers.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Premium Pricing Architecture
+                  </a>
+                  <a href="/services/positioning-diagnostics.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Positioning Diagnostics
+                  </a>
+                  <a href="/services/fractional-cmo-caio.html" class="block px-4 py-2 text-sm text-luxury-300 hover:text-white hover:bg-accent-green/10 transition-colors">
+                    Fractional CMO/CAIo
                   </a>
                 </div>
               </div>

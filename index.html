@@ -4,6 +4,11 @@
     <!-- Resource hints for performance -->
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
+    <!-- Preload critical fonts and CSS -->
+    <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/style.css" as="style">
+
     <!-- Google tag (gtag.js) - Deferred for performance -->
     <script>
       // Initialize dataLayer early for any events that fire before GTM loads
@@ -110,7 +115,7 @@
         <!-- Accent lines -->
         <div class="absolute inset-x-0 top-32 h-px bg-gradient-to-r from-transparent via-accent-green/10 to-transparent"></div>
 
-        <div class="container mx-auto px-4 sm:px-6 relative z-10 py-12 sm:py-16">
+        <div class="container mx-auto px-4 sm:px-6 relative z-10 py-12 sm:py-16 min-h-[600px] sm:min-h-[700px]">
           <div class="flex flex-col items-center pt-4 sm:pt-4">
             <!-- Luxury tag -->
             <!-- Mobile fix: text-[11px] increased for better readability -->
@@ -167,8 +172,13 @@
             </div>
             
             <!-- Results section container - the JS will insert into this -->
-            <div id="results-container" class="w-full">
-              <!-- Results will be inserted here by JS -->
+            <div id="results-container" class="w-full min-h-[300px]">
+              <!-- Skeleton placeholder to prevent CLS -->
+              <div class="skeleton-placeholder animate-pulse opacity-50" id="skeleton-loader">
+                <div class="h-20 bg-luxury-800/30 rounded-lg mb-4"></div>
+                <div class="h-20 bg-luxury-800/30 rounded-lg mb-4"></div>
+                <div class="h-20 bg-luxury-800/30 rounded-lg"></div>
+              </div>
             </div>
           </div>
         </div>

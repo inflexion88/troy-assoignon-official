@@ -831,6 +831,12 @@ class PositioningTerminalAssessment {
             </div>
         `;
 
+        // Hide skeleton loader before inserting results
+        const skeletonLoader = document.getElementById('skeleton-loader');
+        if (skeletonLoader) {
+            skeletonLoader.style.display = 'none';
+        }
+
         // Insert HTML
         container.innerHTML = html;
 
@@ -856,6 +862,12 @@ class PositioningTerminalAssessment {
     showEmailFormOnPage() {
         const container = document.getElementById('results-container');
         if (!container) return;
+
+        // Hide skeleton loader
+        const skeletonLoader = document.getElementById('skeleton-loader');
+        if (skeletonLoader) {
+            skeletonLoader.style.display = 'none';
+        }
 
         container.innerHTML = `
             <div style="max-width: 600px; margin: 100px auto; text-align: center;">
@@ -923,6 +935,12 @@ class PositioningTerminalAssessment {
 
         const container = document.getElementById('results-container');
         if (container) {
+            // Hide skeleton loader
+            const skeletonLoader = document.getElementById('skeleton-loader');
+            if (skeletonLoader) {
+                skeletonLoader.style.display = 'none';
+            }
+
             container.innerHTML = `
                 <div style="max-width: 600px; margin: 100px auto; text-align: center;">
                     <div style="font-size: 72px; color: #65E48F; margin-bottom: 20px;">✓</div>

@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-74JF9CHYSL"></script>
+    <!-- Resource hints for performance -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    <!-- Preload critical fonts and CSS -->
+    <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/style.css" as="style">
+
+    <!-- Google tag (gtag.js) - Deferred for performance -->
     <script>
+      // Initialize dataLayer early for any events that fire before GTM loads
       window.dataLayer = window.dataLayer || [];
       function gtag(){window.dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-74JF9CHYSL', {
-        'send_page_view': true
-      });
-      gtag('config', 'G-EJX2GZ9H1N');
+
+      // Defer GTM loading until page is interactive
+      function loadGTM() {
+        // Load gtag script
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-74JF9CHYSL';
+        document.head.appendChild(script);
+
+        // Configure GTM after script loads
+        script.onload = function() {
+          gtag('js', new Date());
+          gtag('config', 'G-74JF9CHYSL', {
+            'send_page_view': true
+          });
+          gtag('config', 'G-EJX2GZ9H1N');
+        };
+      }
+
+      // Load GTM after page is interactive
+      if (document.readyState === 'complete') {
+        loadGTM();
+      } else {
+        window.addEventListener('load', loadGTM);
+      }
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

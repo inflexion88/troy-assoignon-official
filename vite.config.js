@@ -66,6 +66,7 @@ export default defineConfig({
         'blog/strategic-vs-tactical-positioning': resolve(__dirname, 'blog/strategic-vs-tactical-positioning.html'),
         'blog/positioning-sprint-vs-system': resolve(__dirname, 'blog/positioning-sprint-vs-system.html'),
         'blog/category-creation-vs-leadership': resolve(__dirname, 'blog/category-creation-vs-leadership.html'),
+        'blog/fractional-cmo-ai-marketing-teams-smes': resolve(__dirname, 'blog/fractional-cmo-ai-marketing-teams-smes.html'),
         // Lead magnet pages
         'lead-magnets/positioning-diagnostic-checklist': resolve(__dirname, 'lead-magnets/positioning-diagnostic-checklist.html'),
         'lead-magnets/positioning-framework-guide': resolve(__dirname, 'lead-magnets/positioning-framework-guide.html'),

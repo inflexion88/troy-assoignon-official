@@ -1,10 +1,10 @@
 /**
- * Positioning Assessment Tool
- * Interactive brand positioning maturity assessment
+ * Positioning Diagnostic Tool
+ * Interactive brand positioning maturity diagnostic
  * @author Troy Assoignon
  */
 
-// Assessment Questions Configuration
+// Diagnostic Questions Configuration
 const QUESTIONS = [
     // CATEGORY 1: POSITIONING CLARITY (4 questions)
     {
@@ -277,62 +277,85 @@ const QUESTIONS = [
     }
 ];
 
+// Category mapping for segmented progress bar (4 questions each)
+const CATEGORY_QUESTION_MAP = {
+    clarity: [1, 2, 3, 4],
+    differentiation: [5, 6, 7, 8],
+    target_market: [9, 10, 11, 12],
+    value_proposition: [13, 14, 15, 16],
+    competitive_position: [17, 18, 19, 20]
+};
+
+// Category display names for indicator
+const CATEGORY_DISPLAY_NAMES = {
+    clarity: 'Positioning Clarity',
+    differentiation: 'Differentiation Strength',
+    target_market: 'Target Market Alignment',
+    value_proposition: 'Value Proposition Clarity',
+    competitive_position: 'Competitive Position'
+};
+
 // Category metadata for scoring
 const CATEGORIES = {
     clarity: {
         label: 'Positioning Clarity',
-        icon: '🎯',
+        icon: '🧭',
         description: 'How well-defined and articulated is your market position?',
         recommendations: {
-            low: 'Your positioning lacks clarity. Start by documenting your unique value and ensuring team alignment.',
-            medium: 'Your positioning has some clarity but needs refinement. Focus on creating a concise, compelling positioning statement.',
-            high: 'Excellent positioning clarity! Maintain consistency and continue refining your message.'
+            poor: '**Action:** Conduct a 2-hour positioning workshop with your leadership team to define your specific ICP, unique point of view, and category position. Use a structured framework like April Dunford\'s positioning canvas.\n\n**Impact:** Creates the strategic clarity that drives all go-to-market decisions and aligns your entire organization.\n\n**Timeline:** 1 week to define, 2 weeks to validate with 5-10 target customers.',
+            fair: '**Action:** Document your positioning in a 1-page strategic brief including ICP definition, problem you solve, how you solve it, and proof points. Ensure every team member can articulate this consistently.\n\n**Impact:** Aligns entire team on who you serve and why you win, eliminating confusion in customer conversations.\n\n**Timeline:** 3-5 business days to document and socialize.',
+            good: '**Action:** Audit all customer-facing materials for positioning consistency - website, sales decks, email sequences, case studies. Create a messaging guide to standardize language.\n\n**Impact:** Ensures positioning clarity across every touchpoint, strengthening brand recognition and recall.\n\n**Timeline:** 1-2 weeks for audit and updates.',
+            excellent: '**Action:** Create a positioning playbook documenting your strategic rationale, competitive landscape, and messaging framework to scale consistency across new markets, products, or teams.\n\n**Impact:** Maintains positioning excellence as you grow and expand while reducing onboarding time for new team members.\n\n**Timeline:** 2-3 weeks to develop comprehensive playbook.'
         }
     },
     differentiation: {
         label: 'Differentiation Strength',
-        icon: '💎',
+        icon: '⚙️',
         description: 'How unique and defensible is your competitive advantage?',
         recommendations: {
-            low: 'You need stronger differentiation. Identify your unique capabilities and communicate them clearly.',
-            medium: 'You have decent differentiation but it could be stronger. Focus on what makes you truly unique.',
-            high: 'Strong differentiation! Keep innovating and defending your competitive moat.'
+            poor: '**Action:** Run a differentiation sprint: analyze your top 3 competitors, identify gaps in their offerings, and map your unique capabilities that fill those gaps. Interview 5 recent customers about why they chose you.\n\n**Impact:** Uncovers your authentic differentiation based on real customer value, not assumptions.\n\n**Timeline:** 2 weeks for research, 1 week to synthesize findings.',
+            fair: '**Action:** Develop 3-5 proof points that demonstrate your differentiation with quantifiable results. Create a competitive battle card for your sales team showing how you win on specific dimensions.\n\n**Impact:** Gives your team concrete ammunition to communicate uniqueness and handle competitive objections.\n\n**Timeline:** 1-2 weeks to gather proof points and build battle cards.',
+            good: '**Action:** Build moats around your differentiation through IP development, exclusive partnerships, proprietary data, or network effects. Identify which advantages are most defensible and invest there.\n\n**Impact:** Transforms temporary advantages into sustainable competitive barriers that competitors can\'t easily replicate.\n\n**Timeline:** 3-6 months depending on moat strategy.',
+            excellent: '**Action:** Launch a thought leadership program establishing your unique POV through original research, speaking engagements, and content that reinforces your differentiation. Consider category creation.\n\n**Impact:** Positions you as the category leader and makes differentiation self-reinforcing through market perception.\n\n**Timeline:** Ongoing program, first results in 2-3 months.'
         }
     },
     target_market: {
         label: 'Target Market Alignment',
-        icon: '👥',
+        icon: '🎯',
         description: 'How well-defined is your ideal customer and how aligned are your efforts?',
         recommendations: {
-            low: 'Your target market is too broad or undefined. Define a specific ICP and focus your efforts.',
-            medium: 'You have target market clarity but need better alignment. Be more selective with prospects.',
-            high: 'Excellent target market focus! Continue refining your ICP and staying disciplined.'
+            poor: '**Action:** Define your ICP with specific criteria: company size, industry, tech stack, pain points, buying triggers, and decision-making process. Interview your best 10 customers to identify patterns.\n\n**Impact:** Focuses all marketing and sales efforts on high-probability prospects, dramatically improving conversion rates.\n\n**Timeline:** 2 weeks for customer interviews, 1 week to synthesize ICP.',
+            fair: '**Action:** Implement lead scoring and qualification criteria based on your ICP. Train your sales team to disqualify prospects that don\'t fit. Set a goal to say "no" to 30% of inbound leads.\n\n**Impact:** Increases sales efficiency by 2-3x by focusing time on winnable deals with ideal customers.\n\n**Timeline:** 1 week to implement scoring, ongoing discipline required.',
+            good: '**Action:** Segment your ICP into 2-3 sub-personas and create personalized messaging, content, and sales plays for each. Test which segments convert best and double down.\n\n**Impact:** Increases relevance and conversion by tailoring approach to specific customer contexts and needs.\n\n**Timeline:** 2-3 weeks to segment and personalize.',
+            excellent: '**Action:** Build a customer advisory board with 6-8 ideal customers to co-create product roadmap and validate new market opportunities. Use insights to stay ahead of market shifts.\n\n**Impact:** Deepens relationships with best customers while ensuring continued alignment as market evolves.\n\n**Timeline:** 1 month to recruit and launch, quarterly meetings.'
         }
     },
     value_proposition: {
         label: 'Value Proposition Clarity',
-        icon: '⚡',
+        icon: '💡',
         description: 'How clear and compelling is the value you deliver?',
         recommendations: {
-            low: 'Your value proposition is unclear. Articulate specific outcomes and quantifiable benefits.',
-            medium: 'Your value prop is decent but needs more clarity. Focus on measurable outcomes over features.',
-            high: 'Crystal clear value proposition! Keep leading with outcomes and proving ROI.'
+            poor: '**Action:** Run a value discovery workshop: analyze customer outcomes, quantify ROI, and craft a one-sentence value proposition using the formula: "We help [ICP] achieve [outcome] by [unique approach]." Test with 10 prospects.\n\n**Impact:** Creates a compelling, customer-centric value story that resonates immediately in sales conversations.\n\n**Timeline:** 1 week to develop, 2 weeks to test and refine.',
+            fair: '**Action:** Build a value calculator or ROI tool showing quantifiable benefits customers receive. Create 3-5 customer case studies with specific metrics (revenue increase, cost savings, time saved).\n\n**Impact:** Transforms abstract value into concrete proof that accelerates buying decisions and justifies premium pricing.\n\n**Timeline:** 2-3 weeks to develop calculator and case studies.',
+            good: '**Action:** Shift all messaging from features to outcomes. Rewrite website, decks, and collateral leading with business results, then explaining how. Train team to sell outcomes, not capabilities.\n\n**Impact:** Positions you as a strategic partner driving business results rather than a vendor selling features.\n\n**Timeline:** 2-3 weeks for messaging overhaul, ongoing reinforcement.',
+            excellent: '**Action:** Develop an executive-level business case template that shows CFO/CEO-level impact: strategic value, financial ROI, risk mitigation. Use to elevate conversations to C-suite.\n\n**Impact:** Enables enterprise deals and strategic partnerships by speaking the language of executive decision-makers.\n\n**Timeline:** 2-3 weeks to develop template and executive narrative.'
         }
     },
     competitive_position: {
         label: 'Competitive Position',
-        icon: '🏆',
+        icon: '📍',
         description: 'How strong is your market position relative to competitors?',
         recommendations: {
-            low: 'Your competitive position is weak. Focus on winning in a specific niche before expanding.',
-            medium: 'You have a moderate market position. Strengthen your position through better differentiation.',
-            high: 'Strong competitive position! Defend your position and look for expansion opportunities.'
+            poor: '**Action:** Identify a specific sub-segment where you can be #1 or #2. Focus all resources on dominating that niche before expanding. Build 5-10 referenceable customers in this segment.\n\n**Impact:** Establishes a defendable beachhead and creates momentum through concentrated wins.\n\n**Timeline:** 3-6 months to establish niche leadership.',
+            fair: '**Action:** Conduct quarterly competitive analysis tracking positioning, features, pricing, and messaging of top 5 competitors. Update battle cards and train sales team on handling competitive situations.\n\n**Impact:** Keeps you informed on competitive threats and enables proactive positioning adjustments.\n\n**Timeline:** 2-3 days per quarter for analysis, ongoing battle card updates.',
+            good: '**Action:** Launch a competitive displacement program targeting competitor customers with migration offers, comparison guides, and switching incentives. Aim to win 10-15 competitive deals per quarter.\n\n**Impact:** Accelerates market share growth by actively taking customers from competitors.\n\n**Timeline:** 1 month to design program, ongoing execution.',
+            excellent: '**Action:** Build a market intelligence system tracking win/loss data, competitive mentions, analyst reports, and market trends. Use insights to anticipate market shifts and maintain leadership position.\n\n**Impact:** Creates sustainable advantage through superior market intelligence and adaptive strategy.\n\n**Timeline:** 1-2 months to establish system, ongoing monitoring.'
         }
     }
 };
 
 /**
- * Main Assessment Controller
+ * Main Diagnostic Controller
  */
 class PositioningAssessment {
     constructor() {
@@ -359,10 +382,9 @@ class PositioningAssessment {
 
         // Assessment elements
         this.questionContainer = document.getElementById('question-container');
-        this.progressBar = document.getElementById('progress-bar');
-        this.currentQuestionSpan = document.getElementById('current-question');
-        this.totalQuestionsSpan = document.getElementById('total-questions');
-        this.progressPercentage = document.getElementById('progress-percentage');
+        this.currentQuestionSpan = document.getElementById('current-q');
+        this.categoryIndicator = document.getElementById('category-indicator');
+        this.segments = document.querySelectorAll('.segment');
         this.prevBtn = document.getElementById('prev-btn');
         this.nextBtn = document.getElementById('next-btn');
 
@@ -381,9 +403,6 @@ class PositioningAssessment {
         // Buttons
         this.startBtn = document.getElementById('start-assessment-btn');
         this.retakeBtn = document.getElementById('retake-btn');
-
-        // Set total questions
-        this.totalQuestionsSpan.textContent = this.questions.length;
     }
 
     setupEventListeners() {
@@ -401,17 +420,84 @@ class PositioningAssessment {
         this.welcomeScreen.classList.add('hidden');
         this.assessmentScreen.classList.remove('hidden');
         this.renderQuestion();
-        this.trackEvent('assessment_started');
+        this.trackEvent('diagnostic_started');
+    }
+
+    /**
+     * Get current category and progress within that category
+     */
+    getCurrentCategoryInfo() {
+        const questionNumber = this.currentQuestionIndex + 1; // 1-indexed
+
+        // Determine which category we're in
+        let currentCategory = '';
+        for (const [category, questions] of Object.entries(CATEGORY_QUESTION_MAP)) {
+            if (questions.includes(questionNumber)) {
+                currentCategory = category;
+                break;
+            }
+        }
+
+        // Calculate progress within this category
+        const categoryQuestions = CATEGORY_QUESTION_MAP[currentCategory];
+        const categoryPosition = categoryQuestions.indexOf(questionNumber) + 1; // 1-indexed
+        const categoryProgress = (categoryPosition / categoryQuestions.length) * 100;
+
+        return {
+            category: currentCategory,
+            categoryPosition: categoryPosition,
+            categoryTotal: categoryQuestions.length,
+            categoryProgress: categoryProgress,
+            categoryIndex: Object.keys(CATEGORY_QUESTION_MAP).indexOf(currentCategory)
+        };
+    }
+
+    /**
+     * Update segmented progress bar
+     */
+    updateProgress() {
+        const info = this.getCurrentCategoryInfo();
+
+        // Update question counter
+        this.currentQuestionSpan.textContent = this.currentQuestionIndex + 1;
+
+        // Update category indicator
+        this.categoryIndicator.textContent = CATEGORY_DISPLAY_NAMES[info.category];
+
+        // Update segments
+        this.segments.forEach((segment, index) => {
+            const fill = segment.querySelector('.segment-fill');
+
+            if (index < info.categoryIndex) {
+                // Previous segments - fill to 100% and mark as completed
+                fill.style.width = '100%';
+                if (!segment.classList.contains('completed')) {
+                    segment.classList.add('completed');
+                }
+            } else if (index === info.categoryIndex) {
+                // Current segment - fill to progress
+                fill.style.width = `${info.categoryProgress}%`;
+                // Mark as completed if at 100%
+                if (info.categoryProgress === 100) {
+                    if (!segment.classList.contains('completed')) {
+                        segment.classList.add('completed');
+                    }
+                } else {
+                    segment.classList.remove('completed');
+                }
+            } else {
+                // Future segments - 0% and not completed
+                fill.style.width = '0%';
+                segment.classList.remove('completed');
+            }
+        });
     }
 
     renderQuestion() {
         const question = this.questions[this.currentQuestionIndex];
 
-        // Update progress
-        const progress = ((this.currentQuestionIndex + 1) / this.questions.length) * 100;
-        this.progressBar.style.width = `${progress}%`;
-        this.currentQuestionSpan.textContent = this.currentQuestionIndex + 1;
-        this.progressPercentage.textContent = `${Math.round(progress)}%`;
+        // Update progress with new segmented system
+        this.updateProgress();
 
         // Update navigation buttons
         this.prevBtn.disabled = this.currentQuestionIndex === 0;
@@ -436,14 +522,17 @@ class PositioningAssessment {
                                 ${this.responses[question.id] === option.value ? 'checked' : ''}
                                 data-question-id="${question.id}"
                             />
-                            <div class="peer-checked:border-accent-green peer-checked:bg-accent-green/10
+                            <div class="option-card peer-checked:border-accent-green peer-checked:bg-accent-green/10
                                         border border-white/20 rounded-xl p-4 hover:border-white/40
-                                        transition-all duration-200">
+                                        transition-all duration-200 ${this.responses[question.id] === option.value ? 'option-selected' : ''}">
                                 <div class="flex items-start">
                                     <div class="flex-shrink-0 w-6 h-6 rounded-full border-2 border-white/40
                                                 peer-checked:border-accent-green peer-checked:bg-accent-green
-                                                mr-3 mt-0.5 flex items-center justify-center">
+                                                mr-3 mt-0.5 flex items-center justify-center relative">
                                         <div class="w-2 h-2 rounded-full bg-white opacity-0 peer-checked:opacity-100"></div>
+                                        <svg class="check-icon ${this.responses[question.id] === option.value ? 'check-icon-visible' : ''} absolute w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                                        </svg>
                                     </div>
                                     <span class="text-white/80 peer-checked:text-white">${option.text}</span>
                                 </div>
@@ -467,6 +556,40 @@ class PositioningAssessment {
     handleResponse(event) {
         const questionId = parseInt(event.target.dataset.questionId);
         const value = parseInt(event.target.value);
+
+        // Get the selected option's card element
+        const selectedOption = event.target.closest('.question-option');
+        const optionCard = selectedOption.querySelector('.option-card');
+
+        // Remove previous selections' glow effects
+        const allOptionCards = this.questionContainer.querySelectorAll('.option-card');
+        allOptionCards.forEach(card => {
+            card.classList.remove('option-selected', 'option-selected-animate');
+        });
+
+        // Remove all check icons
+        const allCheckIcons = this.questionContainer.querySelectorAll('.check-icon');
+        allCheckIcons.forEach(icon => {
+            icon.classList.remove('check-icon-visible');
+        });
+
+        // Add selection animation
+        optionCard.classList.add('option-selected-animate');
+
+        // After animation completes, add glow effect
+        setTimeout(() => {
+            optionCard.classList.remove('option-selected-animate');
+            optionCard.classList.add('option-selected');
+        }, 300);
+
+        // Show check icon with animation
+        const checkIcon = selectedOption.querySelector('.check-icon');
+        if (checkIcon) {
+            // Small delay for better visual hierarchy
+            setTimeout(() => {
+                checkIcon.classList.add('check-icon-visible');
+            }, 150);
+        }
 
         this.responses[questionId] = value;
         this.saveToStorage();
@@ -496,15 +619,24 @@ class PositioningAssessment {
     }
 
     nextQuestion() {
-        if (this.currentQuestionIndex < this.questions.length - 1) {
-            this.currentQuestionIndex++;
-            this.renderQuestion();
-            this.trackEvent('question_next');
-        } else {
-            // All questions answered, show results
-            this.calculateScores();
-            this.showResults();
-        }
+        // Add subtle analyzing effect to button
+        this.nextBtn.classList.add('button-analyzing');
+        this.nextBtn.disabled = true;
+
+        // Brief pause for premium feel
+        setTimeout(() => {
+            this.nextBtn.classList.remove('button-analyzing');
+
+            if (this.currentQuestionIndex < this.questions.length - 1) {
+                this.currentQuestionIndex++;
+                this.renderQuestion();
+                this.trackEvent('question_next');
+            } else {
+                // All questions answered, show results
+                this.calculateScores();
+                this.showResults();
+            }
+        }, 200);
     }
 
     calculateScores() {
@@ -557,7 +689,7 @@ class PositioningAssessment {
         this.scoreInput.value = this.overallScore;
         this.categoriesInput.value = JSON.stringify(this.categoryScores);
 
-        this.trackEvent('assessment_completed', {
+        this.trackEvent('diagnostic_completed', {
             overall_score: this.overallScore,
             category_scores: this.categoryScores
         });
@@ -589,21 +721,55 @@ class PositioningAssessment {
             this.scoreCircle.style.strokeDashoffset = offset;
         }, 100);
 
-        // Set score description
-        this.scoreDescription.textContent = this.getScoreDescription(this.overallScore);
+        // Set score description with competitive context
+        const scoreDescriptionData = this.getScoreDescription(this.overallScore);
+        this.scoreDescription.innerHTML = `
+            ${scoreDescriptionData.description}<br>
+            <span class="text-luxury-300 text-base mt-2 block">${scoreDescriptionData.context}</span>
+        `;
+
+        // Calculate and display percentile
+        this.displayPercentile(this.overallScore);
     }
 
     getScoreDescription(score) {
-        if (score >= 80) {
-            return 'Excellent! Your positioning is mature and well-executed. Focus on continuous optimization.';
-        } else if (score >= 60) {
-            return 'Good foundation! Your positioning is solid but has room for improvement in key areas.';
-        } else if (score >= 40) {
-            return 'Fair positioning. Significant opportunities exist to strengthen your market position.';
-        } else if (score >= 20) {
-            return 'Needs work. Your positioning requires fundamental improvements across multiple dimensions.';
+        let description = '';
+        let context = '';
+
+        if (score < 20) {
+            description = 'Critical positioning gaps detected';
+            context = 'Companies at this level struggle with market clarity and differentiation.';
+        } else if (score < 40) {
+            description = 'Significant positioning challenges identified';
+            context = 'You\'re in the bottom quartile - immediate strategic intervention recommended.';
+        } else if (score < 60) {
+            description = 'Moderate positioning foundation with improvement opportunities';
+            context = 'You\'re performing below the 50th percentile of assessed companies.';
+        } else if (score < 80) {
+            description = 'Strong positioning with specific optimization areas';
+            context = 'You\'re above average, placing in the top 40% of companies.';
         } else {
-            return 'Critical gaps. Immediate action needed to establish a clear and compelling market position.';
+            description = 'Elite positioning maturity';
+            context = 'You\'re in the top 20% - focus on maintaining competitive advantage.';
+        }
+
+        return { description, context };
+    }
+
+    displayPercentile(score) {
+        // Calculate percentile based on score
+        const percentile = Math.min(Math.round((score / 100) * 100), 99);
+        const percentileElement = document.getElementById('your-percentile');
+        const markerElement = document.getElementById('percentile-marker');
+
+        if (percentileElement && markerElement) {
+            percentileElement.textContent = `Top ${100 - percentile}%`;
+
+            // Position marker with animation
+            setTimeout(() => {
+                markerElement.style.left = `${percentile}%`;
+                markerElement.style.transition = 'left 1.5s cubic-bezier(0.4, 0.0, 0.2, 1)';
+            }, 500);
         }
     }
 
@@ -634,47 +800,6 @@ class PositioningAssessment {
     }
 
     renderRecommendations() {
-        const recommendations = Object.keys(this.categoryScores).map(category => {
-            const score = this.categoryScores[category];
-            const metadata = CATEGORIES[category];
-
-            let level;
-            if (score >= 70) level = 'high';
-            else if (score >= 40) level = 'medium';
-            else level = 'low';
-
-            const recommendation = metadata.recommendations[level];
-
-            // Determine priority badge
-            let priorityBadge = '';
-            let priorityClass = '';
-            if (score < 40) {
-                priorityBadge = 'HIGH PRIORITY';
-                priorityClass = 'bg-luxury-700/20 text-luxury-300 border-luxury-700/30';
-            } else if (score < 70) {
-                priorityBadge = 'MEDIUM PRIORITY';
-                priorityClass = 'bg-luxury-600/20 text-luxury-400 border-luxury-600/30';
-            } else {
-                priorityBadge = 'MAINTAIN';
-                priorityClass = 'bg-accent-green/20 text-accent-green border-accent-green/30';
-            }
-
-            return `
-                <div class="fade-in bg-white/5 p-6 rounded-xl border border-luxury-800/30">
-                    <div class="flex justify-between items-start mb-3">
-                        <div class="flex items-center">
-                            <span class="text-2xl mr-2">${metadata.icon}</span>
-                            <h4 class="font-bold text-lg">${metadata.label}</h4>
-                        </div>
-                        <span class="text-xs font-semibold px-3 py-1 rounded-full border ${priorityClass}">
-                            ${priorityBadge}
-                        </span>
-                    </div>
-                    <p class="text-white/80">${recommendation}</p>
-                </div>
-            `;
-        });
-
         // Sort by priority (lowest scores first)
         const sortedRecommendations = Object.keys(this.categoryScores)
             .sort((a, b) => this.categoryScores[a] - this.categoryScores[b])
@@ -682,21 +807,27 @@ class PositioningAssessment {
                 const score = this.categoryScores[category];
                 const metadata = CATEGORIES[category];
 
+                // Map score to 4-tier system: poor (0-40), fair (40-60), good (60-80), excellent (80+)
                 let level;
-                if (score >= 70) level = 'high';
-                else if (score >= 40) level = 'medium';
-                else level = 'low';
+                if (score >= 80) level = 'excellent';
+                else if (score >= 60) level = 'good';
+                else if (score >= 40) level = 'fair';
+                else level = 'poor';
 
                 const recommendation = metadata.recommendations[level];
 
+                // Determine priority badge based on 4 tiers
                 let priorityBadge = '';
                 let priorityClass = '';
                 if (score < 40) {
                     priorityBadge = 'HIGH PRIORITY';
                     priorityClass = 'bg-red-500/20 text-red-400 border-red-500/30';
-                } else if (score < 70) {
+                } else if (score < 60) {
                     priorityBadge = 'MEDIUM PRIORITY';
                     priorityClass = 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
+                } else if (score < 80) {
+                    priorityBadge = 'OPTIMIZE';
+                    priorityClass = 'bg-blue-500/20 text-blue-400 border-blue-500/30';
                 } else {
                     priorityBadge = 'MAINTAIN';
                     priorityClass = 'bg-accent-green/20 text-accent-green border-accent-green/30';
@@ -713,7 +844,7 @@ class PositioningAssessment {
                                 ${priorityBadge}
                             </span>
                         </div>
-                        <p class="text-white/80">${recommendation}</p>
+                        <p class="text-white/80 whitespace-pre-line">${recommendation}</p>
                     </div>
                 `;
             });
@@ -765,7 +896,7 @@ class PositioningAssessment {
         this.welcomeScreen.classList.remove('hidden');
 
         localStorage.removeItem('positioning_assessment');
-        this.trackEvent('assessment_retake');
+        this.trackEvent('diagnostic_retake');
 
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -799,7 +930,7 @@ class PositioningAssessment {
                     this.overallScore = data.overallScore || 0;
                 }
             } catch (e) {
-                console.error('Error loading saved assessment:', e);
+                console.error('Error loading saved diagnostic:', e);
             }
         }
     }
@@ -808,7 +939,7 @@ class PositioningAssessment {
         // Google Analytics event tracking
         if (typeof gtag !== 'undefined') {
             gtag('event', eventName, {
-                event_category: 'positioning_assessment',
+                event_category: 'positioning_diagnostic',
                 ...eventData
             });
         }

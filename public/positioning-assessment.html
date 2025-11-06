@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags - Optimized for Long-tail Keywords -->
-    <title>Free Positioning Assessment Tool | Calculate Your Brand Positioning Score in 5 Minutes</title>
-    <meta name="description" content="Take our free interactive positioning assessment to evaluate your brand positioning maturity. Get personalized insights across 5 key dimensions: clarity, differentiation, target market, value proposition, and competitive position. Instant results in 5 minutes.">
-    <meta name="keywords" content="positioning assessment tool, brand positioning calculator, positioning maturity score, evaluate brand positioning, positioning framework assessment, competitive positioning analysis, free positioning audit">
+    <title>Free Positioning Diagnostic Tool | Calculate Your Brand Positioning Score in 5 Minutes</title>
+    <meta name="description" content="Take our free interactive positioning diagnostic to evaluate your brand positioning maturity. Get personalized insights across 5 key dimensions: clarity, differentiation, target market, value proposition, and competitive position. Instant results in 5 minutes.">
+    <meta name="keywords" content="positioning diagnostic tool, brand positioning calculator, positioning maturity score, evaluate brand positioning, positioning framework diagnostic, competitive positioning analysis, free positioning audit">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.troyassoignon.com/public/positioning-assessment">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Free Positioning Assessment Tool | Calculate Your Brand Positioning Score">
+    <meta property="og:title" content="Free Positioning Diagnostic Tool | Calculate Your Brand Positioning Score">
     <meta property="og:description" content="Evaluate your brand positioning maturity across 5 key dimensions. Get personalized insights and actionable recommendations in 5 minutes.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.troyassoignon.com/public/positioning-assessment">
@@ -20,7 +20,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Free Positioning Assessment Tool">
+    <meta name="twitter:title" content="Free Positioning Diagnostic Tool">
     <meta name="twitter:description" content="Evaluate your brand positioning maturity in 5 minutes. Get personalized insights and recommendations.">
     <meta name="twitter:image" content="https://www.troyassoignon.com/og-image.png">
 
@@ -40,12 +40,12 @@
         gtag('config', 'G-EJX2GZ9H1N');
     </script>
 
-    <!-- Structured Data - Assessment Schema -->
+    <!-- Structured Data - Diagnostic Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "Positioning Assessment Tool",
+        "name": "Positioning Diagnostic Tool",
         "description": "Free interactive tool to evaluate brand positioning maturity across 5 key dimensions with personalized recommendations",
         "url": "https://www.troyassoignon.com/public/positioning-assessment",
         "applicationCategory": "BusinessApplication",
@@ -61,7 +61,7 @@
             "url": "https://www.troyassoignon.com"
         },
         "featureList": [
-            "20 positioning questions",
+            "20 strategic evaluations",
             "5 category breakdowns",
             "Instant scoring",
             "Personalized recommendations",
@@ -71,11 +71,7 @@
     </script>
 
     <style>
-        /* Assessment-specific styles */
-        .progress-bar {
-            transition: width 0.3s ease-out;
-        }
-
+        /* Diagnostic-specific styles */
         .question-option {
             transition: all 0.2s ease;
         }
@@ -87,6 +83,93 @@
         .question-option input:checked ~ label {
             border-color: rgb(var(--color-accent-green));
             background: rgba(var(--color-accent-green), 0.1);
+        }
+
+        /* Segmented Progress Bar Styles */
+        .segment {
+            position: relative;
+        }
+
+        .segment-fill {
+            transition: width 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        /* Segment completion indicator */
+        .segment.completed {
+            position: relative;
+        }
+
+        .segment.completed::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.7rem;
+            color: rgb(var(--color-accent-green));
+            opacity: 0;
+            animation: checkmarkAppear 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+        }
+
+        @keyframes checkmarkAppear {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        /* Enhanced Selection Microinteractions */
+        .option-selected-animate {
+            animation: selectPulse 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        @keyframes selectPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.98); }
+            75% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .option-selected {
+            box-shadow: 0 0 20px rgba(101, 228, 143, 0.3);
+        }
+
+        /* Check Icon Animation */
+        .check-icon {
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .check-icon-visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Analyzing State for Next Button */
+        .button-analyzing {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .button-analyzing::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: analyzing 1s infinite;
+        }
+
+        @keyframes analyzing {
+            0% { left: -100%; }
+            100% { left: 100%; }
         }
 
         .category-score {
@@ -164,7 +247,7 @@
     </div>
 
     <!-- Main Container -->
-    <div class="relative min-h-screen flex items-center justify-center py-12 px-4">
+    <div class="relative min-h-screen flex items-center justify-center pt-24 md:pt-28 pb-12 px-4">
         <div class="max-w-4xl w-full mx-auto relative z-10">
 
             <!-- Welcome Screen -->
@@ -173,17 +256,17 @@
                     <!-- Header -->
                     <div class="text-center mb-8">
                         <h1 class="text-4xl md:text-5xl font-bold font-display mb-4 luxury-gradient">
-                            Positioning Assessment
+                            Positioning Diagnostic
                         </h1>
                         <p class="text-xl text-luxury-200 max-w-2xl mx-auto">
-                            Discover your brand positioning maturity score in 5 minutes
+                            Discover your strategic positioning maturity index in 5 minutes
                         </p>
                     </div>
 
                     <!-- Benefits -->
                     <div class="grid md:grid-cols-3 gap-6 mb-8">
                         <div class="text-center p-4">
-                            <div class="text-3xl mb-2">📊</div>
+                            <div class="text-3xl mb-2">🧭</div>
                             <h3 class="font-semibold mb-1">5 Key Dimensions</h3>
                             <p class="text-sm text-luxury-300">Comprehensive analysis across critical positioning areas</p>
                         </div>
@@ -193,7 +276,7 @@
                             <p class="text-sm text-luxury-300">Get your score and recommendations immediately</p>
                         </div>
                         <div class="text-center p-4">
-                            <div class="text-3xl mb-2">🎯</div>
+                            <div class="text-3xl mb-2">🔬</div>
                             <h3 class="font-semibold mb-1">Personalized Insights</h3>
                             <p class="text-sm text-luxury-300">Tailored recommendations for your specific needs</p>
                         </div>
@@ -201,7 +284,7 @@
 
                     <!-- What You'll Discover -->
                     <div class="mb-8 p-6 bg-white/5 rounded-xl border border-luxury-800/30">
-                        <h3 class="font-semibold mb-4 text-lg">What You'll Discover:</h3>
+                        <h3 class="font-semibold mb-4 text-lg">Diagnostic Insights:</h3>
                         <ul class="space-y-3 text-luxury-200">
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-accent-green mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -239,10 +322,10 @@
                     <!-- CTA -->
                     <div class="text-center">
                         <button id="start-assessment-btn" class="button-primary">
-                            Start Assessment →
+                            Begin Diagnostic →
                         </button>
                         <p class="text-sm text-luxury-400 mt-4">
-                            20 questions • 5 minutes • 100% free
+                            20 strategic evaluations • 5 minutes • Complimentary
                         </p>
                     </div>
                 </div>
@@ -255,16 +338,30 @@
                 </div>
             </div>
 
-            <!-- Assessment Screen -->
+            <!-- Diagnostic Screen -->
             <div id="assessment-screen" class="hidden">
-                <!-- Progress Bar -->
+                <!-- Segmented Progress Bar -->
                 <div class="mb-8">
                     <div class="flex justify-between text-sm text-luxury-300 mb-2">
-                        <span>Question <span id="current-question">1</span> of <span id="total-questions">20</span></span>
-                        <span id="progress-percentage">5%</span>
+                        <span id="progress-text">Question <span id="current-q">1</span> of 20</span>
+                        <span id="category-indicator"></span>
                     </div>
-                    <div class="h-2 bg-white/10 rounded-full overflow-hidden">
-                        <div id="progress-bar" class="progress-bar h-full bg-gradient-to-r from-accent-green to-accent-green-dark" style="width: 5%"></div>
+                    <div class="flex gap-1">
+                        <div class="segment flex-1 h-2 bg-luxury-800/30 rounded-full overflow-hidden" data-category="clarity">
+                            <div class="segment-fill h-full bg-accent-green transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                        <div class="segment flex-1 h-2 bg-luxury-800/30 rounded-full overflow-hidden" data-category="differentiation">
+                            <div class="segment-fill h-full bg-accent-green transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                        <div class="segment flex-1 h-2 bg-luxury-800/30 rounded-full overflow-hidden" data-category="target_market">
+                            <div class="segment-fill h-full bg-accent-green transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                        <div class="segment flex-1 h-2 bg-luxury-800/30 rounded-full overflow-hidden" data-category="value_proposition">
+                            <div class="segment-fill h-full bg-accent-green transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                        <div class="segment flex-1 h-2 bg-luxury-800/30 rounded-full overflow-hidden" data-category="competitive_position">
+                            <div class="segment-fill h-full bg-accent-green transition-all duration-500" style="width: 0%"></div>
+                        </div>
                     </div>
                 </div>
 
@@ -312,6 +409,61 @@
                         <p id="score-description" class="text-xl text-luxury-200 max-w-2xl mx-auto">
                             <!-- Dynamic description based on score -->
                         </p>
+
+                        <!-- Benchmark Comparison -->
+                        <div class="mt-8 p-6 bg-luxury-800/20 rounded-xl border border-luxury-800/30">
+                            <h3 class="text-lg font-semibold mb-4">How You Compare</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-luxury-300">Your Score</span>
+                                    <span id="your-percentile" class="text-accent-green font-bold"></span>
+                                </div>
+                                <div class="relative h-2 bg-luxury-900 rounded-full overflow-hidden">
+                                    <div id="percentile-marker" class="absolute top-0 h-full w-1 bg-accent-green"></div>
+                                    <div class="absolute inset-0 flex">
+                                        <div class="flex-1 bg-luxury-700/30"></div>
+                                        <div class="flex-1 bg-luxury-600/30"></div>
+                                        <div class="flex-1 bg-luxury-500/30"></div>
+                                        <div class="flex-1 bg-accent-green/30"></div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between text-xs text-luxury-400">
+                                    <span>Critical</span>
+                                    <span>Below Avg</span>
+                                    <span>Average</span>
+                                    <span>Strong</span>
+                                    <span>Elite</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Troy's Authority Section -->
+                    <div class="mb-12 p-8 bg-luxury-900/40 backdrop-blur-xl rounded-2xl border border-luxury-800/30">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-20 h-20 rounded-full bg-accent-green/10 border-2 border-accent-green/30 flex items-center justify-center">
+                                    <span class="text-2xl font-bold text-accent-green">TA</span>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2">Your Positioning Diagnostic</h3>
+                                <p class="text-luxury-200 mb-4">
+                                    This diagnostic is powered by the <strong class="text-white">Strategic Positioning Advantage™</strong> framework that has generated <strong class="text-accent-green">$62.7M in documented client results</strong>.
+                                </p>
+                                <div class="flex flex-wrap gap-4 text-sm">
+                                    <div class="px-3 py-1 bg-accent-green/10 border border-accent-green/30 rounded-full text-accent-green">
+                                        McKinsey Research-Backed
+                                    </div>
+                                    <div class="px-3 py-1 bg-accent-green/10 border border-accent-green/30 rounded-full text-accent-green">
+                                        2,000+ Diagnostics
+                                    </div>
+                                    <div class="px-3 py-1 bg-accent-green/10 border border-accent-green/30 rounded-full text-accent-green">
+                                        Framework-Driven
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Category Breakdown -->
@@ -349,7 +501,7 @@
                                     Send Report
                                 </button>
                             </div>
-                            <input type="hidden" name="_subject" value="Positioning Assessment Results Request">
+                            <input type="hidden" name="_subject" value="Positioning Diagnostic Results">
                             <input type="hidden" name="_template" value="table">
                             <input type="hidden" id="score-input" name="overall_score" value="">
                             <input type="hidden" id="categories-input" name="category_scores" value="">
@@ -369,7 +521,7 @@
                     <!-- Retake -->
                     <div class="text-center mt-8">
                         <button id="retake-btn" class="text-luxury-300 hover:text-accent-green transition-colors">
-                            ↻ Retake Assessment
+                            ↻ Retake Diagnostic
                         </button>
                     </div>
                 </div>
@@ -409,7 +561,7 @@
         </div>
     </footer>
 
-    <!-- Assessment JavaScript -->
+    <!-- Diagnostic JavaScript -->
     <script src="/assets/js/positioning-assessment.js"></script>
 
 </body>

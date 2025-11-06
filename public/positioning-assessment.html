@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,9 +28,6 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
     <!-- Stylesheets -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/style.css">
 
     <!-- Google Analytics -->
@@ -119,43 +116,51 @@
         }
     </style>
 </head>
-<body class="bg-black text-white font-sans antialiased">
+<body class="bg-luxury-900 text-luxury-100">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-luxury-950/95 backdrop-blur-sm border-b border-luxury-800/50">
-      <div class="max-w-6xl mx-auto px-6 py-4">
-        <div class="flex items-center justify-between">
-          <a href="/" class="text-xl font-bold text-white hover:text-accent-green transition-colors">
-            Troy Assoignon
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 px-4 md:px-12 py-4 md:py-6 bg-black md:bg-black/80 backdrop-blur-sm">
+      <div class="max-w-7xl mx-auto flex items-center justify-between relative">
+        <a href="/" class="text-xl font-display font-bold tracking-tight flex items-center">
+          <span class="luxury-gradient">TROY ASSOIGNON</span>
+          <span class="bg-accent-green h-1.5 w-1.5 rounded-full ml-1 mt-1"></span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden p-2 text-white"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="/" class="nav-item">Home</a>
+          <a href="/about.html" class="nav-item">About</a>
+          <a href="/blog.html" class="nav-item">Blog</a>
+          <a href="/faq.html" class="nav-item">FAQ</a>
+
+          <a href="/contact.html" class="bg-accent-green text-black px-6 py-2 rounded-full hover:bg-accent-green/90 transition-colors">
+            Contact
           </a>
-
-          <div class="hidden md:flex items-center gap-8">
-            <a href="/about" class="text-luxury-300 hover:text-white transition-colors">About</a>
-            <a href="/blog" class="text-luxury-300 hover:text-white transition-colors">Blog</a>
-            <a href="/workshop" class="text-luxury-300 hover:text-white transition-colors">Workshop</a>
-            <a href="/faq" class="text-luxury-300 hover:text-white transition-colors">FAQ</a>
-            <a href="/contact" class="inline-flex items-center gap-2 bg-accent-green text-luxury-950 px-6 py-2 rounded-lg font-medium hover:bg-accent-green/90 transition-all">
-              Get Started
-            </a>
-          </div>
-
-          <!-- Mobile menu button -->
-          <button class="md:hidden text-luxury-300 hover:text-white" aria-label="Toggle menu">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
 
     <!-- Background Effects -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none">
         <!-- Grid -->
-        <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+        <div class="absolute inset-0 opacity-[0.03]">
+            <div class="h-full w-full" style="background-image: linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 100px 100px;"></div>
+        </div>
 
-        <!-- Glow effect -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-accent-green/[0.03] rounded-full blur-[128px]"></div>
+        <!-- Glow effects -->
+        <div class="absolute top-0 -right-20 sm:-right-32 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-accent-green/[0.03] rounded-full blur-[80px] sm:blur-[128px]"></div>
+        <div class="absolute bottom-0 -left-20 sm:-left-32 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-accent-green/[0.03] rounded-full blur-[80px] sm:blur-[128px]"></div>
     </div>
 
     <!-- Main Container -->
@@ -170,7 +175,7 @@
                         <h1 class="text-4xl md:text-5xl font-bold font-display mb-4 luxury-gradient">
                             Positioning Assessment
                         </h1>
-                        <p class="text-xl text-white/70 max-w-2xl mx-auto">
+                        <p class="text-xl text-luxury-200 max-w-2xl mx-auto">
                             Discover your brand positioning maturity score in 5 minutes
                         </p>
                     </div>
@@ -180,24 +185,24 @@
                         <div class="text-center p-4">
                             <div class="text-3xl mb-2">📊</div>
                             <h3 class="font-semibold mb-1">5 Key Dimensions</h3>
-                            <p class="text-sm text-white/60">Comprehensive analysis across critical positioning areas</p>
+                            <p class="text-sm text-luxury-300">Comprehensive analysis across critical positioning areas</p>
                         </div>
                         <div class="text-center p-4">
                             <div class="text-3xl mb-2">⚡</div>
                             <h3 class="font-semibold mb-1">Instant Results</h3>
-                            <p class="text-sm text-white/60">Get your score and recommendations immediately</p>
+                            <p class="text-sm text-luxury-300">Get your score and recommendations immediately</p>
                         </div>
                         <div class="text-center p-4">
                             <div class="text-3xl mb-2">🎯</div>
                             <h3 class="font-semibold mb-1">Personalized Insights</h3>
-                            <p class="text-sm text-white/60">Tailored recommendations for your specific needs</p>
+                            <p class="text-sm text-luxury-300">Tailored recommendations for your specific needs</p>
                         </div>
                     </div>
 
                     <!-- What You'll Discover -->
                     <div class="mb-8 p-6 bg-white/5 rounded-xl border border-luxury-800/30">
                         <h3 class="font-semibold mb-4 text-lg">What You'll Discover:</h3>
-                        <ul class="space-y-3 text-white/80">
+                        <ul class="space-y-3 text-luxury-200">
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-accent-green mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
@@ -236,7 +241,7 @@
                         <button id="start-assessment-btn" class="button-primary">
                             Start Assessment →
                         </button>
-                        <p class="text-sm text-white/50 mt-4">
+                        <p class="text-sm text-luxury-400 mt-4">
                             20 questions • 5 minutes • 100% free
                         </p>
                     </div>
@@ -244,7 +249,7 @@
 
                 <!-- Back to Site Link -->
                 <div class="text-center mt-6">
-                    <a href="/" class="text-white/60 hover:text-accent-green transition-colors">
+                    <a href="/" class="text-luxury-300 hover:text-accent-green transition-colors">
                         ← Back to Homepage
                     </a>
                 </div>
@@ -254,7 +259,7 @@
             <div id="assessment-screen" class="hidden">
                 <!-- Progress Bar -->
                 <div class="mb-8">
-                    <div class="flex justify-between text-sm text-white/60 mb-2">
+                    <div class="flex justify-between text-sm text-luxury-300 mb-2">
                         <span>Question <span id="current-question">1</span> of <span id="total-questions">20</span></span>
                         <span id="progress-percentage">5%</span>
                     </div>
@@ -300,11 +305,11 @@
                                 </svg>
                                 <div class="absolute inset-0 flex items-center justify-center flex-col">
                                     <div id="overall-score" class="text-5xl font-bold text-accent-green">0</div>
-                                    <div class="text-white/60 text-sm">out of 100</div>
+                                    <div class="text-luxury-300 text-sm">out of 100</div>
                                 </div>
                             </div>
                         </div>
-                        <p id="score-description" class="text-xl text-white/80 max-w-2xl mx-auto">
+                        <p id="score-description" class="text-xl text-luxury-200 max-w-2xl mx-auto">
                             <!-- Dynamic description based on score -->
                         </p>
                     </div>
@@ -328,7 +333,7 @@
                     <!-- Email Capture for Detailed Report -->
                     <div class="bg-white/5 p-8 rounded-xl border border-luxury-800/30 mb-8">
                         <h3 class="text-xl font-bold mb-4 text-center">Get Your Detailed Report</h3>
-                        <p class="text-white/70 text-center mb-6">
+                        <p class="text-luxury-200 text-center mb-6">
                             Receive a comprehensive PDF report with specific action steps for each category
                         </p>
                         <form id="results-email-form" class="max-w-md mx-auto">
@@ -363,7 +368,7 @@
 
                     <!-- Retake -->
                     <div class="text-center mt-8">
-                        <button id="retake-btn" class="text-white/60 hover:text-accent-green transition-colors">
+                        <button id="retake-btn" class="text-luxury-300 hover:text-accent-green transition-colors">
                             ↻ Retake Assessment
                         </button>
                     </div>

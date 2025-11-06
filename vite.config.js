@@ -5,9 +5,30 @@ import { resolve } from 'path';
 export default defineConfig({
   // Base public path (update for production if deploying to a subdirectory)
   base: '/',
-  
+
   // Serve files from public directory
   publicDir: 'public',
+
+  // Custom plugins
+  plugins: [
+    {
+      name: 'defer-css-loading',
+      apply: 'build', // Only run during build, not dev
+      enforce: 'post', // Run after Vite processes HTML
+      transformIndexHtml(html) {
+        // Replace blocking stylesheet with deferred loading pattern
+        // This fixes the issue where Vite auto-injects blocking CSS links
+        return html.replace(
+          /<link rel="stylesheet"([^>]*?)href="([^"]*?\/style\.css)"([^>]*?)>/gi,
+          (match, attrs1, href, attrs2) => {
+            return `<!-- Defer non-critical CSS -->
+    <link rel="preload"${attrs1}href="${href}"${attrs2} as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet"${attrs1}href="${href}"${attrs2}></noscript>`;
+          }
+        );
+      }
+    }
+  ],
   
   // Development server settings
   server: {

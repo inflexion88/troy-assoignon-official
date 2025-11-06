@@ -650,17 +650,17 @@ class PositioningAssessment {
             let priorityClass = '';
             if (score < 40) {
                 priorityBadge = 'HIGH PRIORITY';
-                priorityClass = 'bg-red-500/20 text-red-400 border-red-500/30';
+                priorityClass = 'bg-luxury-700/20 text-luxury-300 border-luxury-700/30';
             } else if (score < 70) {
                 priorityBadge = 'MEDIUM PRIORITY';
-                priorityClass = 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
+                priorityClass = 'bg-luxury-600/20 text-luxury-400 border-luxury-600/30';
             } else {
                 priorityBadge = 'MAINTAIN';
                 priorityClass = 'bg-accent-green/20 text-accent-green border-accent-green/30';
             }
 
             return `
-                <div class="fade-in bg-white/5 p-6 rounded-xl border border-white/10">
+                <div class="fade-in bg-white/5 p-6 rounded-xl border border-luxury-800/30">
                     <div class="flex justify-between items-start mb-3">
                         <div class="flex items-center">
                             <span class="text-2xl mr-2">${metadata.icon}</span>
@@ -703,7 +703,7 @@ class PositioningAssessment {
                 }
 
                 return `
-                    <div class="fade-in bg-white/5 p-6 rounded-xl border border-white/10">
+                    <div class="fade-in bg-white/5 p-6 rounded-xl border border-luxury-800/30">
                         <div class="flex justify-between items-start mb-3">
                             <div class="flex items-center">
                                 <span class="text-2xl mr-2">${metadata.icon}</span>

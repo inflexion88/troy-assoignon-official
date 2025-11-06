@@ -46,6 +46,7 @@ export default defineConfig({
         'services/investor-ready-positioning': resolve(__dirname, 'services/investor-ready-positioning.html'),
         'services/premium-pricing-offers': resolve(__dirname, 'services/premium-pricing-offers.html'),
         'services/positioning-diagnostics': resolve(__dirname, 'services/positioning-diagnostics.html'),
+        'public/positioning-assessment': resolve(__dirname, 'public/positioning-assessment.html'),
         positioningiq: resolve(__dirname, 'public/positioningiq.html'),
         // Blog post pages
         'blog/what-is-positioning-expert-2025-guide': resolve(__dirname, 'blog/what-is-positioning-expert-2025-guide.html'),

@@ -278,20 +278,29 @@
         border-radius: 1rem;
       }
 
-      .related-posts {
-        margin-top: 3rem;
+      .related-posts-section {
+        width: 100%;
+        padding: 4rem 1.5rem;
+        background: rgba(15, 15, 20, 0.6);
+        border-top: 1px solid rgba(50, 50, 60, 0.3);
+      }
+
+      .related-posts-container {
+        max-width: 1200px;
+        margin: 0 auto;
       }
 
       .related-posts h3 {
         font-size: 1.5rem;
         font-weight: 600;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
         color: rgb(255, 255, 255);
+        text-align: center;
       }
 
       .related-posts-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
       }
 
@@ -327,6 +336,10 @@
         .blog-container {
           grid-template-columns: 220px 1fr 240px;
         }
+
+        .related-posts-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
       }
 
       @media (max-width: 992px) {
@@ -343,6 +356,12 @@
           padding: 2rem 1.5rem;
         }
 
+        .related-posts-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 640px) {
         .related-posts-grid {
           grid-template-columns: 1fr;
         }
@@ -571,23 +590,6 @@
             <a href="/blog.html" class="nav-item">Blog</a>
             <a href="/faq.html" class="nav-item">FAQ</a>
 
-            <!-- Theme toggle button -->
-            <button id="theme-toggle" class="p-2 rounded-full bg-luxury-800/30 hover:bg-luxury-700/50 transition-colors" aria-label="Toggle theme">
-              <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-luxury-300">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-              </svg>
-              <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-luxury-300 hidden">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-              </svg>
-            </button>
 
             <a href="/#contact" class="button-primary">Get in Touch</a>
           </nav>
@@ -600,23 +602,6 @@
               </svg>
               <span class="sr-only">Back to Home</span>
             </a>
-            <!-- Theme toggle button (mobile) -->
-            <button id="theme-toggle-mobile" class="p-2 rounded-full bg-luxury-800/30 hover:bg-luxury-700/50 transition-colors" aria-label="Toggle theme">
-              <svg id="moon-icon-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-luxury-300">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-              </svg>
-              <svg id="sun-icon-mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-luxury-300 hidden">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-              </svg>
-            </button>
 
             <button
               id="mobile-menu-button"
@@ -1147,26 +1132,7 @@
                   </div>
                 </div>
             </div>
-
-            <!-- Related Posts Section -->
-            <div class="related-posts">
-              <h3>Related Articles</h3>
-              <div class="related-posts-grid">
-                <a href="/blog/what-is-positioning-expert-2025-guide.html" class="related-post-card">
-                  <h4>What is a Positioning Expert?</h4>
-                  <p>12 min read</p>
-                </a>
-                <a href="/blog/positioning-roi-profit-margins.html" class="related-post-card">
-                  <h4>ROI & Profit Margins</h4>
-                  <p>12 min read</p>
-                </a>
-                <a href="/blog/when-to-hire-positioning-expert.html" class="related-post-card">
-                  <h4>When to Hire a Positioning Expert</h4>
-                  <p>10 min read</p>
-                </a>
-              </div>
-            </div>
-          </article>
+</article>
         </main>
 
         <!-- Right Sidebar (Table of Contents) -->
@@ -1205,7 +1171,30 @@
             <a href="#conclusion-define-design-defend-strategic-position" class="blog-toc-link">Conclusion: Define, Design, Defend = Strategic ...</a>
           </div>
         </aside>
-      </div>
+
+      <!-- Related Posts Section -->
+      <section class="related-posts-section">
+        <div class="related-posts-container">
+          <div class="related-posts">
+            <h3>Related Articles</h3>
+              <div class="related-posts-grid">
+                <a href="/blog/what-is-positioning-expert-2025-guide.html" class="related-post-card">
+                  <h4>What is a Positioning Expert?</h4>
+                  <p>12 min read</p>
+                </a>
+                <a href="/blog/positioning-roi-profit-margins.html" class="related-post-card">
+                  <h4>ROI & Profit Margins</h4>
+                  <p>12 min read</p>
+                </a>
+                <a href="/blog/when-to-hire-positioning-expert.html" class="related-post-card">
+                  <h4>When to Hire a Positioning Expert</h4>
+                  <p>10 min read</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Footer -->
       <footer class="py-12 px-6 bg-black border-t border-luxury-800/20">

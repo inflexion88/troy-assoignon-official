@@ -7,6 +7,7 @@ module.exports = {
     './workshop.html',
     './services/**/*.html',
     './lead-magnets/**/*.html',
+    './public/**/*.html',
     './src/**/*.{js,ts,jsx,tsx}',
     './assets/js/**/*.{js,ts}',
   ],

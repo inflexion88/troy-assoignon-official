@@ -302,20 +302,29 @@
         border-radius: 1rem;
       }
 
-      .related-posts {
-        margin-top: 3rem;
+      .related-posts-section {
+        width: 100%;
+        padding: 4rem 1.5rem;
+        background: rgba(15, 15, 20, 0.6);
+        border-top: 1px solid rgba(50, 50, 60, 0.3);
+      }
+
+      .related-posts-container {
+        max-width: 1200px;
+        margin: 0 auto;
       }
 
       .related-posts h3 {
         font-size: 1.5rem;
         font-weight: 600;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
         color: rgb(255, 255, 255);
+        text-align: center;
       }
 
       .related-posts-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
       }
 
@@ -351,6 +360,10 @@
         .blog-container {
           grid-template-columns: 220px 1fr 240px;
         }
+
+        .related-posts-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
       }
 
       @media (max-width: 992px) {
@@ -367,6 +380,12 @@
           padding: 2rem 1.5rem;
         }
 
+        .related-posts-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 640px) {
         .related-posts-grid {
           grid-template-columns: 1fr;
         }
@@ -860,25 +879,6 @@
               </div>
             </div>
           </article>
-
-          <!-- Related Posts Section -->
-          <div class="related-posts">
-            <h3>Related Articles</h3>
-            <div class="related-posts-grid">
-              <a href="/blog/positioning-vs-branding-differences.html" class="related-post-card">
-                <h4>Positioning vs. Branding: The Critical Differences</h4>
-                <p>12 min read</p>
-              </a>
-              <a href="/blog/common-positioning-mistakes.html" class="related-post-card">
-                <h4>7 Fatal Positioning Mistakes</h4>
-                <p>10 min read</p>
-              </a>
-              <a href="/blog/positioning-audit-checklist.html" class="related-post-card">
-                <h4>Positioning Audit Checklist</h4>
-                <p>15 min read</p>
-              </a>
-            </div>
-          </div>
         </main>
 
         <!-- Right Sidebar (Table of Contents) -->
@@ -902,6 +902,33 @@
           </div>
         </aside>
       </div>
+
+      <!-- Related Posts Section -->
+      <section class="related-posts-section">
+        <div class="related-posts-container">
+          <div class="related-posts">
+            <h3>Related Articles</h3>
+            <div class="related-posts-grid">
+              <a href="/blog/positioning-vs-branding-differences.html" class="related-post-card">
+                <h4>Positioning vs. Branding</h4>
+                <p>12 min read</p>
+              </a>
+              <a href="/blog/common-positioning-mistakes.html" class="related-post-card">
+                <h4>7 Fatal Positioning Mistakes</h4>
+                <p>10 min read</p>
+              </a>
+              <a href="/blog/positioning-audit-checklist.html" class="related-post-card">
+                <h4>Positioning Audit Checklist</h4>
+                <p>15 min read</p>
+              </a>
+              <a href="/blog/when-to-hire-positioning-expert.html" class="related-post-card">
+                <h4>When to Hire a Positioning Expert</h4>
+                <p>10 min read</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Footer -->
       <footer class="py-12 px-6 bg-black border-t border-luxury-800/20">

@@ -299,57 +299,57 @@ const CATEGORY_DISPLAY_NAMES = {
 const CATEGORIES = {
     clarity: {
         label: 'Positioning Clarity',
-        icon: '🧭',
+        icon: '<svg class="w-6 h-6 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>',
         description: 'How well-defined and articulated is your market position?',
         recommendations: {
-            poor: '**Action:** Conduct a 2-hour positioning workshop with your leadership team to define your specific ICP, unique point of view, and category position. Use a structured framework like April Dunford\'s positioning canvas.\n\n**Impact:** Creates the strategic clarity that drives all go-to-market decisions and aligns your entire organization.\n\n**Timeline:** 1 week to define, 2 weeks to validate with 5-10 target customers.',
-            fair: '**Action:** Document your positioning in a 1-page strategic brief including ICP definition, problem you solve, how you solve it, and proof points. Ensure every team member can articulate this consistently.\n\n**Impact:** Aligns entire team on who you serve and why you win, eliminating confusion in customer conversations.\n\n**Timeline:** 3-5 business days to document and socialize.',
-            good: '**Action:** Audit all customer-facing materials for positioning consistency - website, sales decks, email sequences, case studies. Create a messaging guide to standardize language.\n\n**Impact:** Ensures positioning clarity across every touchpoint, strengthening brand recognition and recall.\n\n**Timeline:** 1-2 weeks for audit and updates.',
-            excellent: '**Action:** Create a positioning playbook documenting your strategic rationale, competitive landscape, and messaging framework to scale consistency across new markets, products, or teams.\n\n**Impact:** Maintains positioning excellence as you grow and expand while reducing onboarding time for new team members.\n\n**Timeline:** 2-3 weeks to develop comprehensive playbook.'
+            poor: '<strong>Action:</strong> Conduct a 2-hour positioning workshop with your leadership team to define your specific ICP, unique point of view, and category position. Use a structured framework like April Dunford\'s positioning canvas.\n\n<strong>Impact:</strong> Creates the strategic clarity that drives all go-to-market decisions and aligns your entire organization.\n\n<strong>Timeline:</strong> 1 week to define, 2 weeks to validate with 5-10 target customers.',
+            fair: '<strong>Action:</strong> Document your positioning in a 1-page strategic brief including ICP definition, problem you solve, how you solve it, and proof points. Ensure every team member can articulate this consistently.\n\n<strong>Impact:</strong> Aligns entire team on who you serve and why you win, eliminating confusion in customer conversations.\n\n<strong>Timeline:</strong> 3-5 business days to document and socialize.',
+            good: '<strong>Action:</strong> Audit all customer-facing materials for positioning consistency - website, sales decks, email sequences, case studies. Create a messaging guide to standardize language.\n\n<strong>Impact:</strong> Ensures positioning clarity across every touchpoint, strengthening brand recognition and recall.\n\n<strong>Timeline:</strong> 1-2 weeks for audit and updates.',
+            excellent: '<strong>Action:</strong> Create a positioning playbook documenting your strategic rationale, competitive landscape, and messaging framework to scale consistency across new markets, products, or teams.\n\n<strong>Impact:</strong> Maintains positioning excellence as you grow and expand while reducing onboarding time for new team members.\n\n<strong>Timeline:</strong> 2-3 weeks to develop comprehensive playbook.'
         }
     },
     differentiation: {
         label: 'Differentiation Strength',
-        icon: '⚙️',
+        icon: '<svg class="w-6 h-6 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>',
         description: 'How unique and defensible is your competitive advantage?',
         recommendations: {
-            poor: '**Action:** Run a differentiation sprint: analyze your top 3 competitors, identify gaps in their offerings, and map your unique capabilities that fill those gaps. Interview 5 recent customers about why they chose you.\n\n**Impact:** Uncovers your authentic differentiation based on real customer value, not assumptions.\n\n**Timeline:** 2 weeks for research, 1 week to synthesize findings.',
-            fair: '**Action:** Develop 3-5 proof points that demonstrate your differentiation with quantifiable results. Create a competitive battle card for your sales team showing how you win on specific dimensions.\n\n**Impact:** Gives your team concrete ammunition to communicate uniqueness and handle competitive objections.\n\n**Timeline:** 1-2 weeks to gather proof points and build battle cards.',
-            good: '**Action:** Build moats around your differentiation through IP development, exclusive partnerships, proprietary data, or network effects. Identify which advantages are most defensible and invest there.\n\n**Impact:** Transforms temporary advantages into sustainable competitive barriers that competitors can\'t easily replicate.\n\n**Timeline:** 3-6 months depending on moat strategy.',
-            excellent: '**Action:** Launch a thought leadership program establishing your unique POV through original research, speaking engagements, and content that reinforces your differentiation. Consider category creation.\n\n**Impact:** Positions you as the category leader and makes differentiation self-reinforcing through market perception.\n\n**Timeline:** Ongoing program, first results in 2-3 months.'
+            poor: '<strong>Action:</strong> Run a differentiation sprint: analyze your top 3 competitors, identify gaps in their offerings, and map your unique capabilities that fill those gaps. Interview 5 recent customers about why they chose you.\n\n<strong>Impact:</strong> Uncovers your authentic differentiation based on real customer value, not assumptions.\n\n<strong>Timeline:</strong> 2 weeks for research, 1 week to synthesize findings.',
+            fair: '<strong>Action:</strong> Develop 3-5 proof points that demonstrate your differentiation with quantifiable results. Create a competitive battle card for your sales team showing how you win on specific dimensions.\n\n<strong>Impact:</strong> Gives your team concrete ammunition to communicate uniqueness and handle competitive objections.\n\n<strong>Timeline:</strong> 1-2 weeks to gather proof points and build battle cards.',
+            good: '<strong>Action:</strong> Build moats around your differentiation through IP development, exclusive partnerships, proprietary data, or network effects. Identify which advantages are most defensible and invest there.\n\n<strong>Impact:</strong> Transforms temporary advantages into sustainable competitive barriers that competitors can\'t easily replicate.\n\n<strong>Timeline:</strong> 3-6 months depending on moat strategy.',
+            excellent: '<strong>Action:</strong> Launch a thought leadership program establishing your unique POV through original research, speaking engagements, and content that reinforces your differentiation. Consider category creation.\n\n<strong>Impact:</strong> Positions you as the category leader and makes differentiation self-reinforcing through market perception.\n\n<strong>Timeline:</strong> Ongoing program, first results in 2-3 months.'
         }
     },
     target_market: {
         label: 'Target Market Alignment',
-        icon: '🎯',
+        icon: '<svg class="w-6 h-6 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>',
         description: 'How well-defined is your ideal customer and how aligned are your efforts?',
         recommendations: {
-            poor: '**Action:** Define your ICP with specific criteria: company size, industry, tech stack, pain points, buying triggers, and decision-making process. Interview your best 10 customers to identify patterns.\n\n**Impact:** Focuses all marketing and sales efforts on high-probability prospects, dramatically improving conversion rates.\n\n**Timeline:** 2 weeks for customer interviews, 1 week to synthesize ICP.',
-            fair: '**Action:** Implement lead scoring and qualification criteria based on your ICP. Train your sales team to disqualify prospects that don\'t fit. Set a goal to say "no" to 30% of inbound leads.\n\n**Impact:** Increases sales efficiency by 2-3x by focusing time on winnable deals with ideal customers.\n\n**Timeline:** 1 week to implement scoring, ongoing discipline required.',
-            good: '**Action:** Segment your ICP into 2-3 sub-personas and create personalized messaging, content, and sales plays for each. Test which segments convert best and double down.\n\n**Impact:** Increases relevance and conversion by tailoring approach to specific customer contexts and needs.\n\n**Timeline:** 2-3 weeks to segment and personalize.',
-            excellent: '**Action:** Build a customer advisory board with 6-8 ideal customers to co-create product roadmap and validate new market opportunities. Use insights to stay ahead of market shifts.\n\n**Impact:** Deepens relationships with best customers while ensuring continued alignment as market evolves.\n\n**Timeline:** 1 month to recruit and launch, quarterly meetings.'
+            poor: '<strong>Action:</strong> Define your ICP with specific criteria: company size, industry, tech stack, pain points, buying triggers, and decision-making process. Interview your best 10 customers to identify patterns.\n\n<strong>Impact:</strong> Focuses all marketing and sales efforts on high-probability prospects, dramatically improving conversion rates.\n\n<strong>Timeline:</strong> 2 weeks for customer interviews, 1 week to synthesize ICP.',
+            fair: '<strong>Action:</strong> Implement lead scoring and qualification criteria based on your ICP. Train your sales team to disqualify prospects that don\'t fit. Set a goal to say "no" to 30% of inbound leads.\n\n<strong>Impact:</strong> Increases sales efficiency by 2-3x by focusing time on winnable deals with ideal customers.\n\n<strong>Timeline:</strong> 1 week to implement scoring, ongoing discipline required.',
+            good: '<strong>Action:</strong> Segment your ICP into 2-3 sub-personas and create personalized messaging, content, and sales plays for each. Test which segments convert best and double down.\n\n<strong>Impact:</strong> Increases relevance and conversion by tailoring approach to specific customer contexts and needs.\n\n<strong>Timeline:</strong> 2-3 weeks to segment and personalize.',
+            excellent: '<strong>Action:</strong> Build a customer advisory board with 6-8 ideal customers to co-create product roadmap and validate new market opportunities. Use insights to stay ahead of market shifts.\n\n<strong>Impact:</strong> Deepens relationships with best customers while ensuring continued alignment as market evolves.\n\n<strong>Timeline:</strong> 1 month to recruit and launch, quarterly meetings.'
         }
     },
     value_proposition: {
         label: 'Value Proposition Clarity',
-        icon: '💡',
+        icon: '<svg class="w-6 h-6 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>',
         description: 'How clear and compelling is the value you deliver?',
         recommendations: {
-            poor: '**Action:** Run a value discovery workshop: analyze customer outcomes, quantify ROI, and craft a one-sentence value proposition using the formula: "We help [ICP] achieve [outcome] by [unique approach]." Test with 10 prospects.\n\n**Impact:** Creates a compelling, customer-centric value story that resonates immediately in sales conversations.\n\n**Timeline:** 1 week to develop, 2 weeks to test and refine.',
-            fair: '**Action:** Build a value calculator or ROI tool showing quantifiable benefits customers receive. Create 3-5 customer case studies with specific metrics (revenue increase, cost savings, time saved).\n\n**Impact:** Transforms abstract value into concrete proof that accelerates buying decisions and justifies premium pricing.\n\n**Timeline:** 2-3 weeks to develop calculator and case studies.',
-            good: '**Action:** Shift all messaging from features to outcomes. Rewrite website, decks, and collateral leading with business results, then explaining how. Train team to sell outcomes, not capabilities.\n\n**Impact:** Positions you as a strategic partner driving business results rather than a vendor selling features.\n\n**Timeline:** 2-3 weeks for messaging overhaul, ongoing reinforcement.',
-            excellent: '**Action:** Develop an executive-level business case template that shows CFO/CEO-level impact: strategic value, financial ROI, risk mitigation. Use to elevate conversations to C-suite.\n\n**Impact:** Enables enterprise deals and strategic partnerships by speaking the language of executive decision-makers.\n\n**Timeline:** 2-3 weeks to develop template and executive narrative.'
+            poor: '<strong>Action:</strong> Run a value discovery workshop: analyze customer outcomes, quantify ROI, and craft a one-sentence value proposition using the formula: "We help [ICP] achieve [outcome] by [unique approach]." Test with 10 prospects.\n\n<strong>Impact:</strong> Creates a compelling, customer-centric value story that resonates immediately in sales conversations.\n\n<strong>Timeline:</strong> 1 week to develop, 2 weeks to test and refine.',
+            fair: '<strong>Action:</strong> Build a value calculator or ROI tool showing quantifiable benefits customers receive. Create 3-5 customer case studies with specific metrics (revenue increase, cost savings, time saved).\n\n<strong>Impact:</strong> Transforms abstract value into concrete proof that accelerates buying decisions and justifies premium pricing.\n\n<strong>Timeline:</strong> 2-3 weeks to develop calculator and case studies.',
+            good: '<strong>Action:</strong> Shift all messaging from features to outcomes. Rewrite website, decks, and collateral leading with business results, then explaining how. Train team to sell outcomes, not capabilities.\n\n<strong>Impact:</strong> Positions you as a strategic partner driving business results rather than a vendor selling features.\n\n<strong>Timeline:</strong> 2-3 weeks for messaging overhaul, ongoing reinforcement.',
+            excellent: '<strong>Action:</strong> Develop an executive-level business case template that shows CFO/CEO-level impact: strategic value, financial ROI, risk mitigation. Use to elevate conversations to C-suite.\n\n<strong>Impact:</strong> Enables enterprise deals and strategic partnerships by speaking the language of executive decision-makers.\n\n<strong>Timeline:</strong> 2-3 weeks to develop template and executive narrative.'
         }
     },
     competitive_position: {
         label: 'Competitive Position',
-        icon: '📍',
+        icon: '<svg class="w-6 h-6 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>',
         description: 'How strong is your market position relative to competitors?',
         recommendations: {
-            poor: '**Action:** Identify a specific sub-segment where you can be #1 or #2. Focus all resources on dominating that niche before expanding. Build 5-10 referenceable customers in this segment.\n\n**Impact:** Establishes a defendable beachhead and creates momentum through concentrated wins.\n\n**Timeline:** 3-6 months to establish niche leadership.',
-            fair: '**Action:** Conduct quarterly competitive analysis tracking positioning, features, pricing, and messaging of top 5 competitors. Update battle cards and train sales team on handling competitive situations.\n\n**Impact:** Keeps you informed on competitive threats and enables proactive positioning adjustments.\n\n**Timeline:** 2-3 days per quarter for analysis, ongoing battle card updates.',
-            good: '**Action:** Launch a competitive displacement program targeting competitor customers with migration offers, comparison guides, and switching incentives. Aim to win 10-15 competitive deals per quarter.\n\n**Impact:** Accelerates market share growth by actively taking customers from competitors.\n\n**Timeline:** 1 month to design program, ongoing execution.',
-            excellent: '**Action:** Build a market intelligence system tracking win/loss data, competitive mentions, analyst reports, and market trends. Use insights to anticipate market shifts and maintain leadership position.\n\n**Impact:** Creates sustainable advantage through superior market intelligence and adaptive strategy.\n\n**Timeline:** 1-2 months to establish system, ongoing monitoring.'
+            poor: '<strong>Action:</strong> Identify a specific sub-segment where you can be #1 or #2. Focus all resources on dominating that niche before expanding. Build 5-10 referenceable customers in this segment.\n\n<strong>Impact:</strong> Establishes a defendable beachhead and creates momentum through concentrated wins.\n\n<strong>Timeline:</strong> 3-6 months to establish niche leadership.',
+            fair: '<strong>Action:</strong> Conduct quarterly competitive analysis tracking positioning, features, pricing, and messaging of top 5 competitors. Update battle cards and train sales team on handling competitive situations.\n\n<strong>Impact:</strong> Keeps you informed on competitive threats and enables proactive positioning adjustments.\n\n<strong>Timeline:</strong> 2-3 days per quarter for analysis, ongoing battle card updates.',
+            good: '<strong>Action:</strong> Launch a competitive displacement program targeting competitor customers with migration offers, comparison guides, and switching incentives. Aim to win 10-15 competitive deals per quarter.\n\n<strong>Impact:</strong> Accelerates market share growth by actively taking customers from competitors.\n\n<strong>Timeline:</strong> 1 month to design program, ongoing execution.',
+            excellent: '<strong>Action:</strong> Build a market intelligence system tracking win/loss data, competitive mentions, analyst reports, and market trends. Use insights to anticipate market shifts and maintain leadership position.\n\n<strong>Impact:</strong> Creates sustainable advantage through superior market intelligence and adaptive strategy.\n\n<strong>Timeline:</strong> 1-2 months to establish system, ongoing monitoring.'
         }
     }
 };
@@ -782,7 +782,6 @@ class PositioningAssessment {
                 <div class="fade-in">
                     <div class="flex justify-between items-center mb-2">
                         <div class="flex items-center">
-                            <span class="text-2xl mr-2">${metadata.icon}</span>
                             <span class="font-semibold">${metadata.label}</span>
                         </div>
                         <span class="text-accent-green font-bold">${score}/100</span>
@@ -837,7 +836,6 @@ class PositioningAssessment {
                     <div class="fade-in bg-white/5 p-6 rounded-xl border border-luxury-800/30">
                         <div class="flex justify-between items-start mb-3">
                             <div class="flex items-center">
-                                <span class="text-2xl mr-2">${metadata.icon}</span>
                                 <h4 class="font-bold text-lg">${metadata.label}</h4>
                             </div>
                             <span class="text-xs font-semibold px-3 py-1 rounded-full border ${priorityClass}">
@@ -873,7 +871,7 @@ class PositioningAssessment {
             // Show success message
             form.innerHTML = `
                 <div class="text-center py-4">
-                    <div class="text-accent-green text-4xl mb-2">✓</div>
+                    <div class="text-accent-green text-4xl mb-2 font-bold">✓</div>
                     <p class="text-white font-semibold">Report sent to your inbox!</p>
                     <p class="text-white/60 text-sm mt-1">Check your email for your detailed positioning report.</p>
                 </div>

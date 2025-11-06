@@ -869,31 +869,44 @@
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const tocLinks = document.querySelectorAll('.toc-link');
-        const sections = document.querySelectorAll('h2[id], h3[id]');
+        const sections = Array.from(document.querySelectorAll('h2[id]')); // Only track H2 sections
 
         function setActiveLink() {
-          let currentSection = '';
-          const scrollPosition = window.scrollY + 150; // Offset for header
+          // Get current scroll position with offset for header
+          const scrollPosition = window.scrollY + 200;
 
-          sections.forEach(section => {
+          let currentSection = null;
+
+          // Find the section that's currently in view
+          // Start from the bottom and work up to find the last section that's above the scroll position
+          for (let i = sections.length - 1; i >= 0; i--) {
+            const section = sections[i];
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
 
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            if (scrollPosition >= sectionTop - 100) {
               currentSection = section.getAttribute('id');
+              break;
             }
-          });
+          }
 
+          // If we're at the very top, highlight the first section
+          if (!currentSection && sections.length > 0) {
+            currentSection = sections[0].getAttribute('id');
+          }
+
+          // Update active states
           tocLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + currentSection) {
+            const href = link.getAttribute('href');
+            if (href === '#' + currentSection) {
               link.classList.add('active');
+            } else {
+              link.classList.remove('active');
             }
           });
         }
 
         // Set initial active state
-        setActiveLink();
+        setTimeout(setActiveLink, 100);
 
         // Update on scroll with throttle for performance
         let ticking = false;
@@ -915,11 +928,14 @@
             const targetSection = document.getElementById(targetId);
 
             if (targetSection) {
-              const offsetTop = targetSection.offsetTop - 100;
+              const offsetTop = targetSection.offsetTop - 120;
               window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
               });
+
+              // Immediately set active after clicking
+              setTimeout(setActiveLink, 100);
             }
           });
         });

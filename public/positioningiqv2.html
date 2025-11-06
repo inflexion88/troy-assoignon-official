@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJX2GZ9H1N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-EJX2GZ9H1N');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Free Positioning Audit | Strategic Brand Positioning Assessment Tool</title>
+    <meta name="description" content="Take our free 20-question positioning maturity audit. Assess your positioning clarity, differentiation strength, target market alignment, value proposition, and competitive position. Get personalized strategic recommendations." />
+    <meta name="keywords" content="positioning audit, brand positioning, positioning assessment, strategic positioning, market positioning, competitive positioning, positioning maturity, differentiation strategy, target market analysis" />
+    <meta name="author" content="Troy Assoignon" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Free Positioning Audit | Strategic Brand Positioning Assessment" />
+    <meta property="og:description" content="Evaluate your positioning maturity across 5 critical dimensions with our interactive positioning audit tool." />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:url" content="https://troyassoignon.com/positioningiqv2" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Positioning Assessment | Strategic Positioning Audit" />
+    <meta name="twitter:description" content="Take our 20-question positioning maturity audit and get personalized strategic recommendations." />
+    <meta name="twitter:image" content="/og-image.png" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Quiz",
+      "name": "Strategic Positioning Maturity Assessment",
+      "description": "Comprehensive 20-question audit to evaluate your positioning clarity, differentiation strength, target market alignment, value proposition clarity, and competitive position.",
+      "author": {
+        "@type": "Person",
+        "name": "Troy Assoignon",
+        "url": "https://troyassoignon.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PositioningIQ",
+        "url": "https://troyassoignon.com"
+      },
+      "educationalLevel": "Professional",
+      "typicalAgeRange": "25-65",
+      "numberOfQuestions": 20,
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Brand Positioning"
+        },
+        {
+          "@type": "Thing",
+          "name": "Strategic Positioning"
+        },
+        {
+          "@type": "Thing",
+          "name": "Market Positioning"
+        },
+        {
+          "@type": "Thing",
+          "name": "Competitive Strategy"
+        },
+        {
+          "@type": "Thing",
+          "name": "Differentiation"
+        }
+      ],
+      "mainEntity": {
+        "@type": "WebApplication",
+        "name": "PositioningIQ Terminal Assessment",
+        "applicationCategory": "BusinessApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    }
+    </script>
+    <style>
+      /* Critical inline animations */
+      @keyframes matrixRain {
+        0% {
+          transform: translateY(-100%) translateX(0);
+          opacity: 0;
+        }
+        10% { opacity: 0.4; }
+        90% { opacity: 0.4; }
+        100% {
+          transform: translateY(100vh) translateX(0);
+          opacity: 0;
+        }
+      }
+
+      /* Reduce space above and tighten hero content */
+      .matrix-hero {
+        padding-top: 4rem !important;
+      }
+
+      .matrix-hero__content {
+        gap: 0.5rem !important;
+        margin-bottom: 1rem !important;
+      }
+
+      .matrix-hero__title {
+        margin: 0 !important;
+        line-height: 1.1 !important;
+      }
+
+      .matrix-hero__terminal {
+        padding-top: 1rem !important;
+      }
+
+      /* Terminal width - responsive */
+      .terminal-container {
+        width: 832px;
+        max-width: 100%;
+        min-width: auto;
+        margin: 0 auto;
+      }
+
+      .terminal-window {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      .background-matrix-rain {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .name-matrix-rain {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+        overflow: hidden;
+      }
+
+      .background-matrix-column {
+        position: absolute;
+        top: -100%;
+        white-space: pre;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1;
+        color: rgba(101, 228, 143, 0.2);
+        animation: matrixRain 3s linear forwards;
+        transform: translateX(0);
+      }
+
+      .name-matrix-column {
+        position: absolute;
+        top: -100%;
+        white-space: pre;
+        font-family: monospace;
+        font-size: 24px;
+        line-height: 1;
+        color: rgba(101, 228, 143, 0.4);
+        font-weight: bold;
+        animation: matrixRain 4s linear forwards;
+        transform: translateX(0);
+      }
+
+      .matrix-rain-background,
+      .matrix-rain-foreground {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .matrix-rain-background {
+        z-index: 1;
+        mix-blend-mode: screen;
+      }
+
+      .matrix-rain-foreground {
+        z-index: 2;
+        mix-blend-mode: screen;
+      }
+
+      .matrix-rain-background .matrix-rain-column,
+      .matrix-rain-foreground .matrix-rain-column {
+        position: absolute;
+        font-family: monospace;
+        font-size: 16px;
+        line-height: 1;
+        color: rgba(101, 228, 143, 0.6);
+        text-shadow: 0 0 8px rgba(101, 228, 143, 0.4);
+        white-space: pre;
+        opacity: 0;
+        will-change: transform;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+
+      .matrix-rain-foreground .matrix-rain-column {
+        font-family: 'Courier New', monospace;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      /* Add styles for loading interface */
+      #loading-interface {
+        background: transparent !important;
+      }
+
+      #terminal-static {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
+
+      /* Option buttons styling */
+      .option-button {
+        display: block;
+        width: 100%;
+        padding: 6px 12px;
+        margin: 3px 0;
+        background: rgba(101, 228, 143, 0.05);
+        border: 1px solid rgba(101, 228, 143, 0.3);
+        color: #65E48F;
+        font-family: monospace;
+        font-size: 13px;
+        text-align: left;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .option-button:hover {
+        background: rgba(101, 228, 143, 0.15);
+        border-color: #65E48F;
+        box-shadow: 0 0 10px rgba(101, 228, 143, 0.3);
+      }
+
+      .option-button.selected {
+        background: rgba(101, 228, 143, 0.2);
+        border-color: #65E48F;
+        box-shadow: 0 0 15px rgba(101, 228, 143, 0.4);
+      }
+
+      .option-number {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        background: rgba(101, 228, 143, 0.2);
+        border: 1px solid #65E48F;
+        border-radius: 50%;
+        margin-right: 8px;
+        font-weight: bold;
+        font-size: 11px;
+      }
+
+      /* Progress indicator */
+      .progress-indicator {
+        margin: 12px 0 8px 0;
+        padding: 8px;
+        background: rgba(101, 228, 143, 0.05);
+        border: 1px solid rgba(101, 228, 143, 0.2);
+        border-radius: 4px;
+        font-family: monospace;
+        font-size: 11px;
+        color: #65E48F;
+      }
+
+      .progress-bar {
+        height: 4px;
+        background: rgba(101, 228, 143, 0.2);
+        margin-top: 8px;
+        border-radius: 2px;
+        overflow: hidden;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background: #65E48F;
+        transition: width 0.3s ease;
+        box-shadow: 0 0 10px rgba(101, 228, 143, 0.6);
+      }
+
+      /* Score display */
+      .score-display {
+        text-align: center;
+        padding: 30px;
+        margin: 20px 0;
+      }
+
+      .score-number {
+        font-size: 72px;
+        font-weight: bold;
+        color: #65E48F;
+        text-shadow: 0 0 20px rgba(101, 228, 143, 0.6);
+        font-family: monospace;
+      }
+
+      .score-label {
+        font-size: 18px;
+        color: rgba(101, 228, 143, 0.8);
+        margin-top: 10px;
+      }
+
+      /* Results Page Styling */
+      #results-page {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        display: none;
+        opacity: 0;
+        transition: opacity 1s ease;
+        z-index: 1000;
+        overflow-y: auto;
+      }
+
+      #results-page.visible {
+        display: block;
+        opacity: 1;
+      }
+
+      .results-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 60px 40px;
+        color: #65E48F;
+        font-family: monospace;
+      }
+
+      .results-score-card {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .results-score-number {
+        font-size: 96px;
+        font-weight: bold;
+        color: #65E48F;
+        text-shadow: 0 0 30px rgba(101, 228, 143, 0.6);
+        line-height: 1;
+      }
+
+      .results-score-label {
+        font-size: 20px;
+        color: rgba(101, 228, 143, 0.6);
+        margin-top: 10px;
+      }
+
+      .results-percentile {
+        font-size: 16px;
+        color: rgba(101, 228, 143, 0.8);
+        margin-top: 16px;
+      }
+
+      .results-interpretation {
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        margin-bottom: 50px;
+        line-height: 1.6;
+      }
+
+      .results-categories {
+        margin-bottom: 50px;
+      }
+
+      .results-category-title {
+        font-size: 16px;
+        color: #65E48F;
+        margin-bottom: 30px;
+        text-align: center;
+        letter-spacing: 2px;
+      }
+
+      .results-category-item {
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .results-category-label {
+        width: 250px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .results-category-bar {
+        flex: 1;
+        height: 8px;
+        background: rgba(101, 228, 143, 0.2);
+        border-radius: 4px;
+        margin: 0 16px;
+        overflow: hidden;
+      }
+
+      .results-category-fill {
+        height: 100%;
+        background: #65E48F;
+        box-shadow: 0 0 10px rgba(101, 228, 143, 0.6);
+        transition: width 1s ease;
+      }
+
+      .results-category-score {
+        width: 100px;
+        text-align: right;
+        color: #65E48F;
+      }
+
+      .results-recommendations {
+        margin-bottom: 50px;
+      }
+
+      .results-rec-title {
+        font-size: 16px;
+        color: #65E48F;
+        margin-bottom: 24px;
+        text-align: center;
+        letter-spacing: 2px;
+      }
+
+      .results-rec-item {
+        margin-bottom: 24px;
+        padding: 20px;
+        background: rgba(101, 228, 143, 0.05);
+        border: 1px solid rgba(101, 228, 143, 0.3);
+        border-radius: 8px;
+      }
+
+      .results-rec-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .results-rec-category {
+        font-size: 15px;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      .results-rec-badge {
+        font-size: 11px;
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-weight: bold;
+      }
+
+      .results-rec-badge.high {
+        background: rgba(239, 68, 68, 0.2);
+        color: #ef4444;
+        border: 1px solid rgba(239, 68, 68, 0.4);
+      }
+
+      .results-rec-badge.medium {
+        background: rgba(251, 191, 36, 0.2);
+        color: #fbbf24;
+        border: 1px solid rgba(251, 191, 36, 0.4);
+      }
+
+      .results-rec-text {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+      }
+
+      .results-ctas {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        margin-top: 40px;
+      }
+
+      .results-cta-button {
+        padding: 14px 28px;
+        background: rgba(101, 228, 143, 0.1);
+        border: 1px solid #65E48F;
+        color: #65E48F;
+        font-family: monospace;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border-radius: 4px;
+      }
+
+      .results-cta-button:hover {
+        background: rgba(101, 228, 143, 0.2);
+        box-shadow: 0 0 20px rgba(101, 228, 143, 0.4);
+      }
+
+      .results-cta-button.primary {
+        background: #65E48F;
+        color: #000;
+      }
+
+      .results-cta-button.primary:hover {
+        background: #7ef0a0;
+        box-shadow: 0 0 30px rgba(101, 228, 143, 0.6);
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/terminal.css">
+  </head>
+  <body class="bg-black">
+    <!-- SEO Content: Hidden from users, visible to search engines -->
+    <div id="seo-content" style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">
+      <article>
+        <h1>Strategic Positioning Maturity Assessment</h1>
+        <p>Evaluate your company's positioning strength across 5 critical dimensions with our comprehensive 20-question audit tool. Get personalized strategic recommendations to improve your market position, differentiation, and competitive advantage.</p>
+
+        <section>
+          <h2>Positioning Clarity Assessment Questions</h2>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How clearly can you articulate what makes your offering unique in the market?</h3>
+            <ul>
+              <li>Very clearly - I can explain it in one sentence</li>
+              <li>Pretty clearly - I can explain it in a short paragraph</li>
+              <li>Somewhat clearly - It takes a few minutes to explain</li>
+              <li>Not very clearly - I struggle to explain our uniqueness</li>
+              <li>Not at all - We haven't defined our unique position</li>
+            </ul>
+          </div>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Do all team members describe your company's position in the market consistently?</h3>
+            <ul>
+              <li>Yes - Everyone uses the same positioning language</li>
+              <li>Mostly - There's general alignment with minor variations</li>
+              <li>Somewhat - Some consistency but noticeable differences</li>
+              <li>Not really - Different people say different things</li>
+              <li>Not at all - There's no consistent positioning message</li>
+            </ul>
+          </div>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How well documented is your positioning strategy?</h3>
+            <ul>
+              <li>Fully documented - Complete positioning framework with all elements</li>
+              <li>Well documented - Key elements captured in writing</li>
+              <li>Partially documented - Some notes and informal guidelines</li>
+              <li>Minimally documented - Mostly exists in people's heads</li>
+              <li>Not documented - No written positioning strategy exists</li>
+            </ul>
+          </div>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Can you clearly state which market category you compete in?</h3>
+            <ul>
+              <li>Yes - We own or define a specific category</li>
+              <li>Yes - We have a clear category with slight nuances</li>
+              <li>Somewhat - We fit into multiple categories</li>
+              <li>Not really - Our category is unclear or too broad</li>
+              <li>No - We haven't defined our market category</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Differentiation Strength Assessment Questions</h2>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">What makes your offering meaningfully different from competitors?</h3>
+            <ul>
+              <li>Unique innovation - We offer something no one else does</li>
+              <li>Strong differentiation - We have clear, defendable differences</li>
+              <li>Moderate differentiation - Some differences but not game-changing</li>
+              <li>Weak differentiation - Minor differences, mostly similar to competitors</li>
+              <li>No differentiation - We compete primarily on price</li>
+            </ul>
+          </div>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How defensible is your competitive advantage?</h3>
+            <ul>
+              <li>Highly defensible - Significant barriers (IP, network effects, etc.)</li>
+              <li>Defensible - Takes significant time/resources to replicate</li>
+              <li>Moderately defensible - Could be copied but with effort</li>
+              <li>Weakly defensible - Easy for competitors to replicate</li>
+              <li>Not defensible - No moat or competitive barriers</li>
+            </ul>
+          </div>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How often do prospects say "you're just like [competitor]"?</h3>
+            <ul>
+              <li>Never - We're always seen as unique</li>
+              <li>Rarely - Occasionally compared but clearly different</li>
+              <li>Sometimes - We get compared to competitors regularly</li>
+              <li>Often - Frequently lumped in with competitors</li>
+              <li>Always - Seen as commoditized/interchangeable</li>
+            </ul>
+          </div>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Do you win deals based on unique value or primarily on price?</h3>
+            <ul>
+              <li>Always on value - Price is rarely the deciding factor</li>
+              <li>Mostly on value - Price matters but value wins</li>
+              <li>Mixed - Equal split between value and price wins</li>
+              <li>Mostly on price - We often need to discount to win</li>
+              <li>Always on price - We compete primarily as low-cost option</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Target Market Alignment Assessment Questions</h2>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How well-defined is your ideal customer profile (ICP)?</h3>
+            <ul>
+              <li>Crystal clear - Detailed ICP with specific firmographics/demographics</li>
+              <li>Well-defined - Clear ICP with key characteristics</li>
+              <li>Somewhat defined - General sense of our target market</li>
+              <li>Poorly defined - Broad or vague target market</li>
+              <li>Not defined - We try to serve everyone</li>
+            </ul>
+          </div>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">What percentage of your sales leads match your ideal customer profile?</h3>
+            <ul>
+              <li>80-100% - Nearly all leads are in our sweet spot</li>
+              <li>60-79% - Most leads are a good fit</li>
+              <li>40-59% - About half are a good fit</li>
+              <li>20-39% - Many leads are poor fits</li>
+              <li>0-19% - Most leads are not our ideal customers</li>
+            </ul>
+          </div>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Do you say "no" to customers who don't fit your ideal profile?</h3>
+            <ul>
+              <li>Always - We're disciplined about our ICP</li>
+              <li>Usually - We turn away poor fits most of the time</li>
+              <li>Sometimes - We're selective but flexible</li>
+              <li>Rarely - We take most customers who can pay</li>
+              <li>Never - We serve anyone willing to buy</li>
+            </ul>
+          </div>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How well does your messaging resonate with your target audience?</h3>
+            <ul>
+              <li>Extremely well - Prospects say "this is exactly what I need"</li>
+              <li>Very well - Strong resonance and engagement</li>
+              <li>Moderately well - Some resonance but could be stronger</li>
+              <li>Not well - Generic reactions, low engagement</li>
+              <li>Poorly - Messaging doesn't land with our audience</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Value Proposition Clarity Assessment Questions</h2>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Can you articulate your value proposition in one clear sentence?</h3>
+            <ul>
+              <li>Yes - Crystal clear, compelling one-sentence value prop</li>
+              <li>Yes - Clear value prop, maybe needs minor refinement</li>
+              <li>Somewhat - We have a value prop but it's a bit wordy</li>
+              <li>Not really - Our value prop is unclear or too complex</li>
+              <li>No - We don't have a defined value proposition</li>
+            </ul>
+          </div>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How quantifiable is the value you deliver to customers?</h3>
+            <ul>
+              <li>Highly quantifiable - We have specific ROI/metrics to prove value</li>
+              <li>Mostly quantifiable - We can demonstrate value with data</li>
+              <li>Partially quantifiable - Some metrics, mostly qualitative benefits</li>
+              <li>Barely quantifiable - Primarily qualitative/intangible value</li>
+              <li>Not quantifiable - We can't measure our value</li>
+            </ul>
+          </div>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Do customers understand the value before they buy?</h3>
+            <ul>
+              <li>Always - They "get it" immediately</li>
+              <li>Usually - Most understand value quickly</li>
+              <li>Sometimes - Takes some explanation</li>
+              <li>Rarely - Value only clear after they use product</li>
+              <li>Never - We struggle to communicate value upfront</li>
+            </ul>
+          </div>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Is your value proposition focused on outcomes or features?</h3>
+            <ul>
+              <li>Entirely outcomes - We sell business results and transformations</li>
+              <li>Mostly outcomes - Focus on results with some feature mentions</li>
+              <li>Mixed - Equal focus on outcomes and features</li>
+              <li>Mostly features - We lead with what we do, not results</li>
+              <li>Only features - We list capabilities without outcome focus</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Competitive Position Assessment Questions</h2>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How well do you understand your competitive landscape?</h3>
+            <ul>
+              <li>Extremely well - Deep competitive analysis, ongoing monitoring</li>
+              <li>Very well - Strong understanding of key competitors</li>
+              <li>Moderately well - Basic competitive awareness</li>
+              <li>Not well - Limited competitive knowledge</li>
+              <li>Poorly - We don't track competitors</li>
+            </ul>
+          </div>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Where do you rank in your target market segment?</h3>
+            <ul>
+              <li>Market leader - #1 or #2 in our category</li>
+              <li>Strong player - Top 5 in our category</li>
+              <li>Mid-tier player - Recognized but not leading</li>
+              <li>Small player - Limited market presence</li>
+              <li>Unknown - No meaningful market position</li>
+            </ul>
+          </div>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How often do you appear in competitive evaluations?</h3>
+            <ul>
+              <li>Always - We're always in consideration sets</li>
+              <li>Usually - We're included in most evaluations</li>
+              <li>Sometimes - We're sometimes considered</li>
+              <li>Rarely - We're rarely in competitive deals</li>
+              <li>Never - Prospects don't know we exist</li>
+            </ul>
+          </div>
+          <div itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">What's your win rate in competitive deals?</h3>
+            <ul>
+              <li>70%+ - We win most competitive deals</li>
+              <li>50-69% - We win more than we lose</li>
+              <li>30-49% - We win less than we lose</li>
+              <li>10-29% - We rarely win competitive deals</li>
+              <li>0-9% - We almost never win when competing</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3>About This Positioning Assessment</h3>
+          <p>This free positioning audit tool evaluates your strategic market position across five critical dimensions: positioning clarity, differentiation strength, target market alignment, value proposition clarity, and competitive position. The 20-question assessment provides a comprehensive analysis of your positioning maturity and delivers personalized strategic recommendations to help you strengthen your market position, improve differentiation, and gain competitive advantage.</p>
+          <p>Whether you're a startup defining your initial market position or an established company refining your positioning strategy, this assessment helps identify gaps and opportunities in your positioning approach. Get actionable insights on how to improve your positioning clarity, strengthen differentiation, align with your target market, clarify your value proposition, and enhance your competitive position.</p>
+        </section>
+      </article>
+    </div>
+
+    <div id="root">
+      <!-- Matrix Hero Section -->
+      <section class="matrix-hero">
+        <!-- Background Layers -->
+        <div class="matrix-hero__layer matrix-hero__layer--grid"></div>
+        <div class="matrix-hero__layer matrix-hero__layer--glow matrix-hero__layer--glow-right"></div>
+        <div class="matrix-hero__layer matrix-hero__layer--glow-left"></div>
+        <div class="matrix-hero__layer matrix-hero__layer--matrix">
+          <div class="matrix-rain-background"></div>
+          <div class="matrix-rain-foreground"></div>
+        </div>
+        <div class="matrix-hero__layer matrix-hero__layer--noise"></div>
+
+        <!-- Hero Content -->
+        <div class="matrix-hero__content">
+          <div class="matrix-hero__eyebrow">SYSTEM ACCESS</div>
+          <h1 class="matrix-hero__title">
+            <span class="luxury-gradient">Positioning Audit</span>
+          </h1>
+          <p class="matrix-hero__lead">
+            Terminal-based strategic positioning audit
+          </p>
+        </div>
+
+        <!-- Terminal Interface -->
+        <div class="matrix-hero__terminal">
+          <div class="matrix-hero__interface" id="loading-interface">
+        <div class="terminal-container">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-buttons">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="terminal-title">PositioningIQ - Strategic Positioning Audit</div>
+            </div>
+            <div class="terminal-content">
+              <div class="terminal-output" id="terminal-output">
+                <div class="line system-msg">Terminal active...</div>
+                <div class="line system-msg">Initializing audit scan...</div>
+                <div class="line system-msg">Ready.</div>
+                <div class="line blink-cursor" id="name-prompt"></div>
+              </div>
+              <div class="terminal-input-container" id="name-input-container" style="display: none;">
+                <span class="prompt">>></span>
+                <input type="text" id="name-input" class="terminal-input" autocomplete="off" maxlength="20" placeholder="Enter your name">
+              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results Page (Hidden until terminal fades) -->
+      <div id="results-page">
+        <div class="results-container" id="results-container">
+          <!-- Results will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+    <script type="module" src="../assets/js/positioning-terminal-assessment.js"></script>
+  </body>
+</html>

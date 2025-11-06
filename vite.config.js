@@ -51,6 +51,7 @@ export default defineConfig({
         // Blog post pages
         'blog/what-is-positioning-expert-2025-guide': resolve(__dirname, 'blog/what-is-positioning-expert-2025-guide.html'),
         'blog/positioning-expert-vs-brand-strategist': resolve(__dirname, 'blog/positioning-expert-vs-brand-strategist.html'),
+        'blog/positioning-expert-vs-brand-strategist-v2': resolve(__dirname, 'blog/positioning-expert-vs-brand-strategist-v2.html'),
         'blog/strategic-positioning-framework-deep-dive': resolve(__dirname, 'blog/strategic-positioning-framework-deep-dive.html'),
         'blog/when-to-hire-positioning-expert': resolve(__dirname, 'blog/when-to-hire-positioning-expert.html'),
         'blog/positioning-roi-profit-margins': resolve(__dirname, 'blog/positioning-roi-profit-margins.html'),

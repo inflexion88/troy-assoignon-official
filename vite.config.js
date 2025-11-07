@@ -18,7 +18,7 @@ export default defineConfig({
       transformIndexHtml(html) {
         // Replace blocking stylesheet with deferred loading pattern
         // This fixes the issue where Vite auto-injects blocking CSS links
-        return html.replace(
+        let result = html.replace(
           /<link rel="stylesheet"([^>]*?)href="([^"]*?\/style\.css)"([^>]*?)>/gi,
           (match, attrs1, href, attrs2) => {
             return `<!-- Defer non-critical CSS -->
@@ -26,6 +26,14 @@ export default defineConfig({
     <noscript><link rel="stylesheet"${attrs1}href="${href}"${attrs2}></noscript>`;
           }
         );
+
+        // Remove empty style2.js reference (0 bytes, adds 162ms to critical path)
+        result = result.replace(
+          /<script[^>]*?src="[^"]*?\/style2\.js"[^>]*?><\/script>\s*/gi,
+          ''
+        );
+
+        return result;
       }
     }
   ],
@@ -72,7 +80,6 @@ export default defineConfig({
         // Blog post pages
         'blog/what-is-positioning-expert-2025-guide': resolve(__dirname, 'blog/what-is-positioning-expert-2025-guide.html'),
         'blog/positioning-expert-vs-brand-strategist': resolve(__dirname, 'blog/positioning-expert-vs-brand-strategist.html'),
-        'blog/positioning-expert-vs-brand-strategist-v2': resolve(__dirname, 'blog/positioning-expert-vs-brand-strategist-v2.html'),
         'blog/strategic-positioning-framework-deep-dive': resolve(__dirname, 'blog/strategic-positioning-framework-deep-dive.html'),
         'blog/when-to-hire-positioning-expert': resolve(__dirname, 'blog/when-to-hire-positioning-expert.html'),
         'blog/positioning-roi-profit-margins': resolve(__dirname, 'blog/positioning-roi-profit-margins.html'),

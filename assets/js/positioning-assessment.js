@@ -945,6 +945,6 @@ class PositioningAssessment {
 }
 
 // Initialize on DOM ready
-document.addEventListener('DOMContentLoaded', () => {
-    new PositioningAssessment();
+document.addEventListener('DOMContentLoaded', function() {
+    window.positioningAssessment = new PositioningAssessment();
 });

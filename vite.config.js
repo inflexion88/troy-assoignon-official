@@ -33,6 +33,16 @@ export default defineConfig({
           ''
         );
 
+        // Remove modulepreload links for empty style files
+        result = result.replace(
+          /<link[^>]*?rel="modulepreload"[^>]*?href="[^"]*?\/style2\.js"[^>]*?>\s*/gi,
+          ''
+        );
+        result = result.replace(
+          /<link[^>]*?rel="modulepreload"[^>]*?href="[^"]*?\/style\.js"[^>]*?>\s*/gi,
+          ''
+        );
+
         return result;
       }
     }

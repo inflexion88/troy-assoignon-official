@@ -387,9 +387,9 @@ class PositioningTerminalAssessment {
         await this.typeText('> - Competitive Position', 'line data');
         await this.delay(2000);
 
-        await this.typeText('> Total assessment time: 8-10 minutes', 'line');
+        await this.typeText('> Total assessment time: 3-5 minutes', 'line');
         await this.delay(1000);
-        await this.typeText('> 20 strategic questions', 'line');
+        await this.typeText('> 7 strategic questions', 'line');
         await this.delay(2000);
 
         await this.typeText('> First, please identify yourself:', 'line');

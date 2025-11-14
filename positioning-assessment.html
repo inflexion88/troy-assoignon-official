@@ -197,6 +197,27 @@
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* Results layout refinements */
+        #results-screen #overall-score {
+            font-variant-numeric: tabular-nums;
+            letter-spacing: -0.03em;
+        }
+
+        #percentile-marker {
+            transform: translateX(-50%);
+        }
+
+        #percentile-fill {
+            background: linear-gradient(90deg,
+                rgba(var(--color-accent-green), 0.35),
+                rgba(var(--color-accent-green), 0.85));
+            transition: width 1.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .authority-card {
+            box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+        }
     </style>
 </head>
 <body class="bg-luxury-900 text-luxury-100">
@@ -425,13 +446,14 @@
                                     <span id="your-percentile" class="text-accent-green font-bold"></span>
                                 </div>
                                 <div class="relative h-2 bg-luxury-900 rounded-full overflow-hidden">
-                                    <div id="percentile-marker" class="absolute top-0 h-full w-1 bg-accent-green"></div>
                                     <div class="absolute inset-0 flex">
                                         <div class="flex-1 bg-luxury-700/30"></div>
                                         <div class="flex-1 bg-luxury-600/30"></div>
                                         <div class="flex-1 bg-luxury-500/30"></div>
-                                        <div class="flex-1 bg-accent-green/30"></div>
+                                        <div class="flex-1 bg-accent-green/20"></div>
                                     </div>
+                                    <div id="percentile-fill" class="absolute top-0 left-0 h-full rounded-full" style="width: 0%"></div>
+                                    <div id="percentile-marker" class="absolute top-0 h-full w-1 bg-accent-green"></div>
                                 </div>
                                 <div class="flex justify-between text-xs text-luxury-400">
                                     <span>Critical</span>
@@ -445,26 +467,26 @@
                     </div>
 
                     <!-- Troy's Authority Section -->
-                    <div class="mb-12 p-8 bg-luxury-900/40 backdrop-blur-xl rounded-2xl border border-luxury-800/30">
-                        <div class="flex items-start gap-6">
-                            <div class="flex-shrink-0">
+                    <div class="mb-12 p-8 bg-luxury-900/40 backdrop-blur-xl rounded-2xl border border-luxury-800/30 authority-card">
+                        <div class="flex flex-col md:flex-row md:items-center gap-6">
+                            <div class="flex-shrink-0 self-center md:self-auto">
                                 <div class="w-20 h-20 rounded-full bg-accent-green/10 border-2 border-accent-green/30 flex items-center justify-center">
                                     <span class="text-2xl font-bold text-accent-green">TA</span>
                                 </div>
                             </div>
-                            <div class="flex-1">
+                            <div class="flex-1 text-center md:text-left">
                                 <h3 class="text-xl font-bold mb-2">Your Positioning Audit</h3>
-                                <p class="text-luxury-200 mb-4">
+                                <p class="text-luxury-200 mb-4 leading-relaxed">
                                     This audit is powered by the <strong class="text-white">Strategic Positioning Advantage™</strong> framework that has generated <strong class="text-accent-green">$62.7M in documented client results</strong>.
                                 </p>
-                                <div class="flex flex-wrap gap-4 text-sm">
-                                    <div class="px-3 py-1 bg-accent-green/10 border border-accent-green/30 rounded-full text-accent-green">
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                                    <div class="px-3 py-1 bg-accent-green/10 border border-accent-green/30 rounded-full text-accent-green text-center">
                                         McKinsey Research-Backed
                                     </div>
-                                    <div class="px-3 py-1 bg-accent-green/10 border border-accent-green/30 rounded-full text-accent-green">
+                                    <div class="px-3 py-1 bg-accent-green/10 border border-accent-green/30 rounded-full text-accent-green text-center">
                                         2,000+ Audits
                                     </div>
-                                    <div class="px-3 py-1 bg-accent-green/10 border border-accent-green/30 rounded-full text-accent-green">
+                                    <div class="px-3 py-1 bg-accent-green/10 border border-accent-green/30 rounded-full text-accent-green text-center">
                                         Framework-Driven
                                     </div>
                                 </div>

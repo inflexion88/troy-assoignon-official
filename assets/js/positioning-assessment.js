@@ -583,6 +583,7 @@ class PositioningAssessment {
         const percentile = Math.min(Math.round((score / 100) * 100), 99);
         const percentileElement = document.getElementById('your-percentile');
         const markerElement = document.getElementById('percentile-marker');
+        const fillElement = document.getElementById('percentile-fill');
 
         if (percentileElement && markerElement) {
             percentileElement.textContent = `Top ${100 - percentile}%`;
@@ -592,6 +593,12 @@ class PositioningAssessment {
                 markerElement.style.left = `${percentile}%`;
                 markerElement.style.transition = 'left 1.5s cubic-bezier(0.4, 0.0, 0.2, 1)';
             }, 500);
+
+            if (fillElement) {
+                setTimeout(() => {
+                    fillElement.style.width = `${percentile}%`;
+                }, 200);
+            }
         }
     }
 

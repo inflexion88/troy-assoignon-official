@@ -1,10 +1,10 @@
 /**
- * Positioning Diagnostic Tool
- * Interactive brand positioning maturity diagnostic
+ * Positioning Audit Tool
+ * Interactive brand positioning maturity audit
  * @author Troy Assoignon
  */
 
-// Diagnostic Questions Configuration (7 high-leverage prompts)
+// Audit Questions Configuration (7 high-leverage prompts)
 const QUESTIONS = [
     {
         id: 1,
@@ -177,7 +177,7 @@ const CATEGORIES = {
 };
 
 /**
- * Main Diagnostic Controller
+ * Main Audit Controller
  */
 class PositioningAssessment {
     constructor() {
@@ -242,7 +242,7 @@ class PositioningAssessment {
         this.welcomeScreen.classList.add('hidden');
         this.assessmentScreen.classList.remove('hidden');
         this.renderQuestion();
-        this.trackEvent('diagnostic_started');
+        this.trackEvent('audit_started');
     }
 
     /**
@@ -511,7 +511,7 @@ class PositioningAssessment {
         this.scoreInput.value = this.overallScore;
         this.categoriesInput.value = JSON.stringify(this.categoryScores);
 
-        this.trackEvent('diagnostic_completed', {
+        this.trackEvent('audit_completed', {
             overall_score: this.overallScore,
             category_scores: this.categoryScores
         });
@@ -716,7 +716,7 @@ class PositioningAssessment {
         this.welcomeScreen.classList.remove('hidden');
 
         localStorage.removeItem('positioning_assessment');
-        this.trackEvent('diagnostic_retake');
+        this.trackEvent('audit_retake');
 
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -750,7 +750,7 @@ class PositioningAssessment {
                     this.overallScore = data.overallScore || 0;
                 }
             } catch (e) {
-                console.error('Error loading saved diagnostic:', e);
+                console.error('Error loading saved audit:', e);
             }
         }
     }
@@ -759,7 +759,7 @@ class PositioningAssessment {
         // Google Analytics event tracking
         if (typeof gtag !== 'undefined') {
             gtag('event', eventName, {
-                event_category: 'positioning_diagnostic',
+                event_category: 'positioning_audit',
                 ...eventData
             });
         }

@@ -1,5 +1,5 @@
 /**
- * PositioningIQ Terminal Assessment
+ * PositioningIQ Terminal Audit
  * Narrative-driven keyboard-interactive positioning audit
  * @author Troy Assoignon
  */
@@ -313,9 +313,9 @@ const CATEGORY_QUESTION_MAP = {
 };
 
 /**
- * PositioningIQ Terminal Assessment Class
+ * PositioningIQ Terminal Audit Class
  */
-class PositioningTerminalAssessment {
+class PositioningTerminalAudit {
     constructor() {
         this.output = document.getElementById('terminal-output');
         this.nameInput = document.getElementById('name-input');
@@ -337,8 +337,8 @@ class PositioningTerminalAssessment {
         const loaded = this.loadFromStorage();
 
         if (loaded && this.responses && Object.keys(this.responses).length > 0) {
-            // Resume assessment
-            this.resumeAssessment();
+            // Resume audit
+            this.resumeAudit();
         } else {
             // Start fresh
             this.startExperience();
@@ -350,14 +350,14 @@ class PositioningTerminalAssessment {
         await this.phaseOpening();
     }
 
-    async resumeAssessment() {
+    async resumeAudit() {
         await this.delay(500);
         this.clearOutput();
         await this.typeText(`> Welcome back, ${this.userdata.name || 'User'}`, 'line highlight');
         await this.delay(1500);
         await this.typeText('> Resuming audit from question ' + (this.currentQuestionIndex + 1) + '/20', 'line system-msg');
         await this.delay(2000);
-        this.phaseAssessment();
+        this.phaseAudit();
     }
 
     // ============================================
@@ -371,7 +371,7 @@ class PositioningTerminalAssessment {
         await this.delay(800);
         await this.typeText('> System initialized...', 'line system-msg');
         await this.delay(600);
-        await this.typeText('> Ready for strategic assessment.', 'line system-msg');
+        await this.typeText('> Ready for strategic audit.', 'line system-msg');
         await this.delay(2000);
 
         await this.typeText('> This audit will analyze your positioning maturity across 5 critical dimensions:', 'line');
@@ -387,7 +387,7 @@ class PositioningTerminalAssessment {
         await this.typeText('> - Competitive Position', 'line data');
         await this.delay(2000);
 
-        await this.typeText('> Total assessment time: 3-5 minutes', 'line');
+        await this.typeText('> Total audit time: 3-5 minutes', 'line');
         await this.delay(1000);
         await this.typeText('> 7 strategic questions', 'line');
         await this.delay(2000);
@@ -423,14 +423,14 @@ class PositioningTerminalAssessment {
         await this.delay(1500);
         await this.typeText('> Beginning audit scan...', 'line system-msg');
         await this.delay(2000);
-        this.phaseAssessment();
+        this.phaseAudit();
     }
 
     // ============================================
-    // PHASE 2: ASSESSMENT QUESTIONS
+    // PHASE 2: AUDIT QUESTIONS
     // ============================================
-    async phaseAssessment() {
-        this.phase = 'assessment';
+    async phaseAudit() {
+        this.phase = 'audit';
         this.renderQuestion();
     }
 
@@ -822,7 +822,7 @@ class PositioningTerminalAssessment {
         // Add CTAs
         html += `
             <div class="results-ctas">
-                <button class="results-cta-button primary" onclick="window.location.href='/contact.html?source=terminal-assessment&score=${this.overallScore}'">
+                <button class="results-cta-button primary" onclick="window.location.href='/contact.html?source=terminal-audit&score=${this.overallScore}'">
                     Schedule Strategic Session
                 </button>
                 <button class="results-cta-button" id="email-report-cta">
@@ -1052,7 +1052,7 @@ class PositioningTerminalAssessment {
 
         // Setup CTA listeners
         document.getElementById('schedule-btn')?.addEventListener('click', () => {
-            window.location.href = '/contact.html?source=terminal-assessment&score=' + this.overallScore;
+            window.location.href = '/contact.html?source=terminal-audit&score=' + this.overallScore;
         });
 
         document.getElementById('email-report-btn')?.addEventListener('click', () => {
@@ -1134,11 +1134,11 @@ class PositioningTerminalAssessment {
             categoryScores: this.categoryScores,
             overallScore: this.overallScore
         };
-        localStorage.setItem('positioning_terminal_assessment', JSON.stringify(data));
+        localStorage.setItem('positioning_terminal_audit', JSON.stringify(data));
     }
 
     loadFromStorage() {
-        const saved = localStorage.getItem('positioning_terminal_assessment');
+        const saved = localStorage.getItem('positioning_terminal_audit');
         if (!saved) return false;
 
         try {
@@ -1157,11 +1157,11 @@ class PositioningTerminalAssessment {
                 this.overallScore = data.overallScore || 0;
                 return true;
             } else {
-                localStorage.removeItem('positioning_terminal_assessment');
+                localStorage.removeItem('positioning_terminal_audit');
                 return false;
             }
         } catch (e) {
-            console.error('Error loading saved assessment:', e);
+            console.error('Error loading saved audit:', e);
             return false;
         }
     }
@@ -1228,5 +1228,5 @@ class PositioningTerminalAssessment {
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
-    new PositioningTerminalAssessment();
+    new PositioningTerminalAudit();
 });

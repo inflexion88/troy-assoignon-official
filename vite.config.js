@@ -107,6 +107,9 @@ export default defineConfig({
         'blog/positioning-sprint-vs-system': resolve(__dirname, 'blog/positioning-sprint-vs-system.html'),
         'blog/category-creation-vs-leadership': resolve(__dirname, 'blog/category-creation-vs-leadership.html'),
         'blog/fractional-cmo-ai-marketing-teams-smes': resolve(__dirname, 'blog/fractional-cmo-ai-marketing-teams-smes.html'),
+        'blog/ai-intern-task-board-template': resolve(__dirname, 'blog/ai-intern-task-board-template.html'),
+        'blog/ai-intern-prompt-bank': resolve(__dirname, 'blog/ai-intern-prompt-bank.html'),
+        'blog/fractional-cmo-intern-cost-model': resolve(__dirname, 'blog/fractional-cmo-intern-cost-model.html'),
         // Lead magnet pages
         'lead-magnets/positioning-diagnostic-checklist': resolve(__dirname, 'lead-magnets/positioning-diagnostic-checklist.html'),
         'lead-magnets/positioning-framework-guide': resolve(__dirname, 'lead-magnets/positioning-framework-guide.html'),
@@ -115,6 +118,8 @@ export default defineConfig({
         'resources/positioning-diagnostic': resolve(__dirname, 'resources/positioning-diagnostic.html'),
         'resources/positioning-framework': resolve(__dirname, 'resources/positioning-framework.html'),
         'resources/investor-positioning': resolve(__dirname, 'resources/investor-positioning.html'),
+        // Playbooks
+        'playbooks/fractional-cmo-ai-interns': resolve(__dirname, 'playbooks/fractional-cmo-ai-interns.html'),
         // Thank you pages
         'thank-you-diagnostic': resolve(__dirname, 'thank-you-diagnostic.html'),
         'thank-you-framework': resolve(__dirname, 'thank-you-framework.html'),
@@ -145,5 +150,4 @@ export default defineConfig({
     }
   }
 }) 
-
 

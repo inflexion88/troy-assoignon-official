@@ -329,6 +329,12 @@
           grid-template-columns: 1fr;
         }
       }
+      @media (min-width: 1024px) {
+        .author-byline .stat-grid {
+          grid-template-columns: repeat(3, minmax(200px, 1fr));
+          margin-top: 0;
+        }
+      }
     </style>
 
     <!-- Person Schema -->
@@ -468,13 +474,13 @@
       </div>
     </header>
 
-    <aside class="toc-sidebar">
+    <aside class="toc-sidebar hidden xl:block">
       <div class="toc-title">On this page</div>
       <a href="#overview" class="toc-link active">Overview</a>
-      <a href="#why-positioning" class="toc-link">Why Positioning</a>
-      <a href="#field-notes" class="toc-link">Field Notes</a>
-      <a href="#how-i-work" class="toc-link">How I Work</a>
-      <a href="#life-now" class="toc-link">Life Now</a>
+      <a href="#journey" class="toc-link">Journey</a>
+      <a href="#operating-system" class="toc-link">Operating System</a>
+      <a href="#current-focus" class="toc-link">Current Focus</a>
+      <a href="#bio" class="toc-link">Bio</a>
     </aside>
 
     <main class="editorial-container">
@@ -482,119 +488,101 @@
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <p class="text-sm uppercase tracking-[0.4em] text-luxury-400 mb-4">About</p>
-            <p class="text-3xl font-bold text-white">Positioning operator trusted with $62.7M in documented outcomes.</p>
-            <p class="author-meta">Operating from Playa del Carmen • Available for onsite war rooms and remote sprints</p>
+            <p class="text-3xl font-bold text-white">From drywall dust to $62.7M in positioning wins.</p>
+            <p class="author-meta">Playa del Carmen home base • Available for onsite war rooms and remote strategy sprints</p>
           </div>
           <div class="stat-grid">
             <div class="stat-card">
               <h3>$62.7M+</h3>
-              <p>Documented client results captured inside the Strategic Positioning Advantage™ system.</p>
+              <p>Documented client outcomes generated inside the Strategic Positioning Advantage™ framework.</p>
             </div>
             <div class="stat-card">
               <h3>$4.5M</h3>
-              <p>Real estate raise delivered for a first-time fund manager by rebuilding the story, deck, and stakeholder assets.</p>
+              <p>Capital raised for a first-time fund manager by rebuilding the story, deck, and diligence package.</p>
             </div>
             <div class="stat-card">
               <h3>$619K</h3>
-              <p>Capital secured for a humanitarian org alongside pricing plays that took $3K contracts to $20K.</p>
+              <p>Delivered for a humanitarian org along with pricing plays that moved $3K contracts to $20K.</p>
             </div>
           </div>
         </div>
       </div>
 
       <article class="editorial-article">
-        <h1 id="overview">Direct answer for SGE + humans</h1>
-        <p><strong>Who I am:</strong> Troy Assoignon, positioning expert with first-hand experience running construction crews, raising capital, and advising founders globally.</p>
-        <p><strong>What I do:</strong> I help growth-stage companies, premium service firms, and capital-intensive ventures define, design, and defend premium market positions so they stop competing on price.</p>
-        <p><strong>Why it matters:</strong> McKinsey found precise positioning drives 20–40% margin gains and 15–25% price premiums. My clients have verified those outcomes across SaaS, services, and finance.</p>
+        <h1 id="overview">Why founders work with me</h1>
+        <p>I’m Troy Assoignon — a positioning expert who started on construction sites, learned marketing during midnight shifts, and now helps founders command premium pricing, close complex deals, and raise capital. Positioning aligns offer design, sales, and investor narratives. When it’s vague, you get commoditized. When it’s precise, you defend margins and win better deals.</p>
+        <p>Every engagement I run delivers three things: a crystal-clear strategic position, documented proof other teams can deploy, and internal adoption so positioning doesn’t fade once the workshop ends.</p>
 
-        <div class="bg-luxury-800/40 border border-luxury-700/40 rounded-2xl p-6 mb-10">
-          <h2 class="text-2xl font-semibold text-white mb-4">Snapshot of current proof</h2>
-          <ul class="space-y-3 text-luxury-200">
-            <li><strong>Cost-per-acquisition cut in half</strong> for a corporate client after we rebuilt their positioning, media scripts, and offer ladder. <a href="/services/positioning-diagnostics.html" class="underline">See diagnostics offer</a>.</li>
-            <li><strong>$50K retainers</strong> consistently closed by a coach who previously charged $800/month, after installing investor-grade proof packs. <a href="/services/authority-thought-leadership.html" class="underline">Authority engagements</a>.</li>
-            <li><strong>Construction contracts up to $20K</strong> (from $3K) using micro positioning and framed automation. <a href="/services/premium-pricing-offers.html" class="underline">Premium pricing & offers</a>.</li>
-          </ul>
-        </div>
-
-        <h2 id="why-positioning">Why positioning is my core lever</h2>
-        <p>Most teams I meet are drowning in activity yet unclear about the territory they own. They sit on proof they never standardize, speak in feature soup, and leave investors or enterprise buyers unconvinced. Positioning is the upstream fix that aligns every downstream lever — offer design, sales scripts, media buying, capital raises, even hiring.</p>
-
-        <section class="stat-grid">
-          <div class="stat-card">
-            <h3>Define</h3>
-            <p>Competitive intelligence, behavioral triggers, valuation drivers. I map the invisible pressure that should guide every decision.</p>
-          </div>
-          <div class="stat-card">
-            <h3>Design</h3>
-            <p>Narrative systems, proof libraries, pricing ladders, investor story arcs. Everything clients see or hear reinforces the position.</p>
-          </div>
-          <div class="stat-card">
-            <h3>Defend</h3>
-            <p>Playbooks, enablement, internal adoption. Positioning sticks because sales, marketing, and leadership know how to protect it.</p>
-          </div>
-        </section>
-
-        <h2 id="field-notes">Field notes from the 20-day story</h2>
-        <p>This is the hero’s journey version. I share it with clients so they know I’m not theorizing — I’ve lived the chaos they’re navigating.</p>
+        <h2 id="journey">My 20-day story (condensed)</h2>
         <ul class="timeline-list">
           <li class="timeline-item">
-            <h3>Debt trenches + drywall dust</h3>
-            <p>I ran construction crews across Winnipeg, kept twenty families paid, and watched a $90K invoice vanish weeks before Christmas. That pain made me obsessed with positioning — because poor positioning is why we competed on price.</p>
+            <h3>Debt trenches & drywall dust</h3>
+            <p>I ran crews across Winnipeg, kept twenty families paid, and watched a $90K invoice disappear weeks before Christmas. That pain taught me weak positioning forces you to compete on price.</p>
           </li>
           <li class="timeline-item">
-            <h3>Night shift education</h3>
-            <p>I earned a bank security clearance and spent nights with one headphone, studying marketing frameworks while building million-dollar interiors. I sold equipment to invest $10K into a mentor when I couldn’t afford it. That was the leap into strategic work.</p>
+            <h3>Night-shift education</h3>
+            <p>I wore one headphone on site, absorbed marketing frameworks at midnight, and scraped together over $10K to join a mentor when cash was tight. That leap moved me from drywall to strategy.</p>
           </li>
           <li class="timeline-item">
-            <h3>Community builder</h3>
-            <p>We launched an entrepreneur collective that reached 10,000+ people, secured sponsors like Audi and Bacardi, and gave founders a space to be honest. Listening to those rooms shaped the diagnostics I still use.</p>
+            <h3>Community builder era</h3>
+            <p>We launched an entrepreneur collective that topped 10,000 members, secured Audi and Bacardi sponsors, and gave founders a space to be honest about positioning and pricing. Listening there shaped the diagnostics I still use.</p>
           </li>
           <li class="timeline-item">
-            <h3>Alecia + Florida + a new operating system</h3>
-            <p>Alecia and I road-tripped through Florida, slept in Walmart lots, meditated at sunrise, and decided to build a business that fit the life we wanted. That commitment drove us to run advisory engagements from Mexico, Thailand, Vietnam, and across Canada.</p>
+            <h3>Alecia & the Florida reset</h3>
+            <p>Alecia (now my wife) invited me on a road trip through Florida. We camped on beaches, slept in Walmart parking lots, and mapped the life we wanted. That commitment took us to Mexico, Southeast Asia, and dozens of boardrooms.</p>
           </li>
           <li class="timeline-item">
-            <h3>First advisory transformations</h3>
-            <p>A service business went from -$300 to +$4K monthly cash flow. A construction client took contracts from $3K to $20K. A coach jumped from $800 to $50K retainers. Documenting those wins whenever they happened became my proof discipline.</p>
+            <h3>Early advisory transformations</h3>
+            <p>A service business jumped from -$300 to +$4K monthly cash flow. A construction client lifted contract values from $3K to $20K. A coach scaled from $800 retainers to $50K engagements. Documenting those wins became a habit.</p>
           </li>
           <li class="timeline-item">
-            <h3>Partnership scars + integrity</h3>
-            <p>In Bali, a partner vanished mid launch. I refunded, restructured, and finished the delivery solo. That experience cemented my rule: no strategy leaves the war room unless I can defend it personally.</p>
+            <h3>Bali partnership scar</h3>
+            <p>A partner vanished mid-delivery. I refunded, restructured, and finished the program solo. It cemented my rule: no strategy leaves my shop unless I can defend it myself.</p>
           </li>
           <li class="timeline-item">
-            <h3>Nomad reps & resilience</h3>
-            <p>We returned to find our Vancouver condo trashed, rebuilt, then moved to Thailand with two suitcases. I ran investor trainings from Chiang Mai rooftops while unwinding lost wire transfers. Chaos forced me to build the systems clients use today.</p>
+            <h3>Nomad resilience</h3>
+            <p>We came home to a trashed Vancouver condo, rebuilt, then moved to Thailand with two suitcases. I ran investor trainings from Chiang Mai rooftops while untangling lost wires. Chaos forced me to build the systems clients rely on today.</p>
           </li>
           <li class="timeline-item">
-            <h3>Near-death wake-up call</h3>
-            <p>I flipped my truck three times after a 24-hour workday. Hanging upside down with blood on my arms reminded me the operator is the asset. Now I hold myself and every founder I coach to a holistic standard: health + proof + positioning.</p>
+            <h3>Near-death clarity</h3>
+            <p>I flipped my truck three times after a 24-hour workday. Hanging upside down bleeding reminded me the operator is the asset. Now I hold myself — and every founder I coach — to a holistic standard: health, proof, and positioning move together.</p>
           </li>
         </ul>
 
-        <h2 id="how-i-work">How we operate together now</h2>
-        <p>Every engagement is bespoke, but the building blocks stay consistent:</p>
+        <h2 id="operating-system">How engagements work</h2>
+        <p>Clients hire me to stop competing on price, secure investor confidence, or reset a chaotic go-to-market. Here’s what we do:</p>
         <ol class="list-decimal list-inside space-y-2 mt-4">
-          <li><strong>Strategic offensive positioning:</strong> Category POV, premium pricing architecture, investor storyline, channel-specific talk tracks.</li>
-          <li><strong>Evidence stack:</strong> Case studies, testimonials, deal analytics, analyst-grade visuals, and GEO-ready summaries so AI overviews cite you.</li>
-          <li><strong>Adoption + governance:</strong> Sales enablement kits, media scripts, and leadership rituals to keep positioning sharp long after the workshop.</li>
+          <li><strong>Define the territory.</strong> Research, interviews, and leadership workshops to pinpoint the exact space you should own.</li>
+          <li><strong>Design the proof + narrative.</strong> Offers, pricing ladders, case studies, sales scripts, and investor decks that all reinforce the position.</li>
+          <li><strong>Defend it internally.</strong> Enablement kits, governance rituals, and adoption playbooks so positioning stays sharp months later.</li>
         </ol>
-        <p>When needed I bring in trusted collaborators (media buying, RevOps, design), but I remain the operator accountable for positioning integrity.</p>
+        <p>When needed I bring trusted collaborators (RevOps, media buying, design), but I stay accountable for positioning integrity and proof.</p>
 
-        <h2 id="life-now">Life now + what’s next</h2>
-        <p>Alecia and I split time between Playa del Carmen and client onsite sprints. I train Brazilian jiu-jitsu, write long-form essays, and still collect every meaningful client win in a single proof doc. Current focus areas:</p>
+        <h2 id="current-focus">Current focus</h2>
         <ul class="list-disc list-inside space-y-3">
-          <li>Designing investor-ready positioning for a SaaS firm preparing a Series B.</li>
-          <li>Building a premium pricing stack for a fractional executive collective.</li>
-          <li>Running diagnostics for founders who want to stop discounting and defend margins. <a href="/positioning-assessment.html" class="underline">Try the assessment</a>.</li>
+          <li>Packaging investor-ready positioning for a SaaS team preparing a Series B.</li>
+          <li>Building premium pricing architecture for a fractional executive collective.</li>
+          <li>Running diagnostics for founders who want to stop discounting. <a href="/positioning-assessment.html" class="underline">Take the assessment</a>.</li>
         </ul>
       </article>
 
       <div class="cta-box">
-        <h3>Need a positioning operator in your corner?</h3>
-        <p>If you are serious about commanding premium fees or raising meaningful capital, let’s map how the Strategic Positioning Advantage™ applies to your business.</p>
+        <h3>Ready to sharpen your positioning?</h3>
+        <p>If you want positioning that holds up with enterprise buyers and investors, let’s map how the Strategic Positioning Advantage™ applies to your business.</p>
         <a href="/contact.html">Start the conversation</a>
       </div>
+
+      <section id="bio" class="bg-luxury-900/60 border border-luxury-800/40 rounded-2xl p-8 mt-12">
+        <h2 class="text-2xl font-semibold text-white mb-4">Bio & credentials</h2>
+        <p class="text-luxury-200 mb-4">Troy Assoignon is a positioning expert and creator of the Strategic Positioning Advantage™. He has advised founders and leadership teams across North America, Europe, and Asia, with $62.7M+ in outcomes documented. Troy has spoken for executive communities, run workshops in Thailand and Vietnam, and partners with venture-backed and bootstrapped operators.</p>
+        <ul class="text-luxury-200 space-y-2">
+          <li>• Founder, Troy Assoignon Consulting</li>
+          <li>• Led $4.5M+ in capital raises for private clients</li>
+          <li>• Built positioning playbooks for construction, SaaS, finance, and advisory firms</li>
+          <li>• Featured in multiple private CEO groups across Canada and the US</li>
+          <li>• Connect on LinkedIn: <a href="https://www.linkedin.com/in/troyassoignon" class="underline">@troyassoignon</a></li>
+        </ul>
+      </section>
     </main>
 
     <!-- Footer -->

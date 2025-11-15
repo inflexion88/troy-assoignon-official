@@ -196,7 +196,7 @@ fundraising positioning, investor narrative, venture capital, pitch deck, compet
 ---
 
 ## Blog Post #8: Positioning Statement vs Value Proposition: Differences, Examples & Templates
-- **File**: `08-positioning-statement-vs-value-proposition.html`
+- **File**: `blog/positioning-statement-vs-value-proposition.html`
 - **Word Count**: 2,100 words
 - **Primary Keyword**: positioning statement vs value proposition
 - **Search Intent**: Informational + commercial investigation (marketers comparing frameworks)

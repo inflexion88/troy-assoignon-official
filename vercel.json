@@ -61,6 +61,11 @@
       "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug",
       "destination": "/blog.html",
       "permanent": true
+    },
+    {
+      "source": "/introductory",
+      "destination": "/contact.html",
+      "permanent": true
     }
   ],
   "headers": [

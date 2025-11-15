@@ -7,7 +7,7 @@
     <!-- Preload critical fonts and CSS -->
     <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/src/style.css" as="style">
+    <link rel="preload" href="/assets/css/style.css" as="style">
 
     <!-- Google tag (gtag.js) - Deferred for performance -->
     <script>
@@ -45,8 +45,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO Meta Tags -->
-    <title>About Troy Assoignon | Positioning Expert & Strategic Consultant</title>
-    <meta name="description" content="Meet Troy Assoignon, positioning expert with $62.7M in documented client results. Learn how systematic positioning methodology drives premium pricing and market differentiation." />
+    <title>About Troy Assoignon | Positioning Expert</title>
+    <meta name="description" content="Meet Troy Assoignon, positioning expert with $62.7M in client results. Learn how a systematic positioning methodology drives premium pricing and differentiation." />
     <meta name="author" content="Troy Assoignon" />
 
     <!-- Canonical Tag -->
@@ -66,7 +66,106 @@
     <meta name="twitter:description" content="$62.7M in documented positioning results. Strategic positioning methodology for premium pricing and market differentiation." />
     <meta name="twitter:image" content="https://www.troyassoignon.com/og-image.png" />
 
-    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <style>
+      .editorial-outer {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 9rem 2rem 4rem 2rem;
+        position: relative;
+      }
+      .editorial-hero h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        color: rgb(255,255,255);
+      }
+      .editorial-hero p {
+        font-size: 1.2rem;
+        color: rgb(185,185,190);
+        line-height: 1.6;
+      }
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+        gap: 1.25rem;
+        margin: 3rem 0;
+      }
+      .stat-card {
+        background: rgba(30,30,35,0.9);
+        border: 1px solid rgba(101,228,143,0.25);
+        border-radius: 1rem;
+        padding: 1.75rem;
+      }
+      .stat-card h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: .35rem;
+        color: rgb(255,255,255);
+      }
+      .stat-card p {
+        color: rgb(185,185,190);
+        font-size: .95rem;
+      }
+      .editorial-article {
+        font-size: 1.125rem;
+        line-height: 1.9;
+        color: rgb(200,200,210);
+      }
+      .editorial-article h2 {
+        font-size: 2.3rem;
+        font-weight: 700;
+        color: rgb(255,255,255);
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+      }
+      .editorial-article h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: rgb(255,255,255);
+        margin-top: 2rem;
+        margin-bottom: .75rem;
+      }
+      .timeline-list {
+        list-style: none;
+        padding: 0;
+        margin: 2rem 0 0;
+      }
+      .timeline-item {
+        border-left: 2px solid rgba(101,228,143,0.35);
+        padding-left: 1.5rem;
+        margin-bottom: 2rem;
+        position: relative;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -10px;
+        top: 4px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgb(101,228,143);
+      }
+      .cta-panel {
+        margin-top: 4rem;
+        padding: 2.5rem;
+        border-radius: 1rem;
+        border: 1px solid rgba(101,228,143,0.4);
+        background: linear-gradient(135deg, rgba(101,228,143,0.08), rgba(17,17,23,0.9));
+        text-align: center;
+      }
+      .cta-panel h3 {
+        font-size: 2rem;
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+      .cta-panel p {
+        color: rgb(185,185,190);
+        margin-bottom: 1.5rem;
+      }
+    </style>
 
     <!-- Person Schema -->
     <script type="application/ld+json">
@@ -121,6 +220,16 @@
       ]
     }
     </script>
+      <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.troyassoignon.com/"},
+        {"@type": "ListItem", "position": 2, "name": "About", "item": "https://www.troyassoignon.com/about"}
+      ]
+    }
+    </script>
   </head>
 
   <body class="bg-luxury-900 text-luxury-100">
@@ -153,219 +262,93 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="max-w-4xl mx-auto px-6 py-16">
-      <!-- Hero Section -->
-      <div class="mb-16">
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
-          About Troy Assoignon
-        </h1>
-        <p class="text-xl text-luxury-300 leading-relaxed">
-          Positioning expert helping growth-stage companies and premium brands escape commodity pricing through systematic market differentiation.
-        </p>
-      </div>
-
-      <!-- Core Story -->
-      <div class="prose prose-invert prose-lg max-w-none mb-12">
-        <h2 class="text-3xl font-bold text-white mb-6">The Positioning Expert Behind $62.7M in Client Results</h2>
-
-        <p class="text-luxury-200 leading-relaxed mb-6">
-          I help companies solve a specific problem: <strong>weak positioning that forces you to compete on price instead of value.</strong>
-        </p>
-
-        <p class="text-luxury-200 leading-relaxed mb-6">
-          Most businesses can't articulate what makes them different. They sound like everyone else. Their sales teams struggle to justify premium pricing. They lose deals to cheaper alternatives despite delivering superior results.
-        </p>
-
-        <p class="text-luxury-200 leading-relaxed mb-6">
-          This isn't a branding problem or a marketing problem. <strong>It's a positioning problem.</strong>
-        </p>
-
-        <p class="text-luxury-200 leading-relaxed mb-8">
-          Over the past decade, I've developed the <strong>Strategic Positioning Advantage™ framework</strong> — a systematic methodology that's generated <strong>$62.7M in documented client outcomes</strong>, including a $4.5M real estate fund raise for an expert with no prior fundraising experience and $619,000 raised for a humanitarian organization.
-        </p>
-
-        <!-- Results Box -->
-        <div class="bg-luxury-800/30 border border-accent-green/20 rounded-lg p-8 my-12">
-          <h3 class="text-2xl font-bold text-white mb-6">Documented Results</h3>
-          <div class="grid md:grid-cols-3 gap-6">
-            <div>
-              <div class="text-4xl font-bold text-accent-green mb-2">$62.7M</div>
-              <div class="text-luxury-300">Total Client Results</div>
-            </div>
-            <div>
-              <div class="text-4xl font-bold text-accent-green mb-2">20-40%</div>
-              <div class="text-luxury-300">Typical Margin Improvement</div>
-            </div>
-            <div>
-              <div class="text-4xl font-bold text-accent-green mb-2">$4.5M</div>
-              <div class="text-luxury-300">Real Estate Fund Raised</div>
-            </div>
-          </div>
+    <main class="editorial-outer">
+      <header class="editorial-hero mb-8">
+        <p class="text-sm uppercase tracking-[0.4em] text-luxury-400 mb-4">About</p>
+        <h1>Fix complicated positioning. Close bigger deals.</h1>
+        <p>I grew up breathing drywall dust, rebuilding after wrecked contracts, and learning how to earn attention the hard way. Today I help founders and executive teams convert that grit into clear market positions, premium offers, and investor grade narratives.</p>
+        <div class="flex flex-wrap gap-4 mt-6 text-sm text-luxury-400">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-luxury-700/60 bg-luxury-900/70">📍 Playa del Carmen & strategic onsite sessions</span>
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-luxury-700/60 bg-luxury-900/70">🏗 From job sites to capital raises</span>
         </div>
+      </header>
 
-        <h2 class="text-3xl font-bold text-white mb-6">The Strategic Positioning Advantage™ Framework</h2>
-
-        <p class="text-luxury-200 leading-relaxed mb-6">
-          Unlike generic brand consultants who start with logos and messaging, I use a systematic three-phase methodology:
-        </p>
-
-        <div class="space-y-6 mb-8">
-          <div class="border-l-4 border-accent-green pl-6">
-            <h3 class="text-xl font-bold text-white mb-2">Phase 1: Define</h3>
-            <p class="text-luxury-300">
-              Establish your strategic foundation through competitive landscape mapping, value attribute analysis, and category ownership opportunity identification. No guesswork — we diagnose exactly where you should own market territory.
-            </p>
-          </div>
-
-          <div class="border-l-4 border-accent-green pl-6">
-            <h3 class="text-xl font-bold text-white mb-2">Phase 2: Design</h3>
-            <p class="text-luxury-300">
-              Architect the narrative system that communicates your position across every stakeholder touchpoint. Core story development, proof architecture, and message hierarchy that adapts from 10-second pitches to 10-minute presentations.
-            </p>
-          </div>
-
-          <div class="border-l-4 border-accent-green pl-6">
-            <h3 class="text-xl font-bold text-white mb-2">Phase 3: Defend</h3>
-            <p class="text-luxury-300">
-              Build competitive insulation through moat identification, premium pricing architecture, and thought leadership positioning. This is where positioning becomes permanent competitive advantage, not temporary marketing campaign.
-            </p>
-          </div>
+      <section class="stat-grid">
+        <div class="stat-card">
+          <h3>$62.7M+</h3>
+          <p>Documented outcomes recorded inside the Strategic Positioning Advantage system.</p>
         </div>
-
-        <h2 class="text-3xl font-bold text-white mb-6">Why My Approach Is Different</h2>
-
-        <p class="text-luxury-200 leading-relaxed mb-6">
-          Most positioning consultants come from advertising or brand agencies. They treat positioning as creative work — subjective, iterative, opinion-based.
-        </p>
-
-        <p class="text-luxury-200 leading-relaxed mb-6">
-          I approach positioning differently, informed by 30+ years in construction project management before transitioning to strategic consulting. In construction, you don't start building without blueprints. You don't guess at foundation depth. You follow systematic processes based on site conditions, building codes, and structural engineering principles.
-        </p>
-
-        <p class="text-luxury-200 leading-relaxed mb-8">
-          <strong>Positioning works the same way.</strong> You can't design messaging before you've mapped the competitive landscape. You can't build market position without understanding the structural moats that will defend it. You need blueprints, not brainstorms.
-        </p>
-
-        <!-- Unique Angle Box -->
-        <div class="bg-accent-green/10 border border-accent-green/30 rounded-lg p-8 my-12">
-          <h3 class="text-2xl font-bold text-white mb-4">The Construction-Positioning Connection</h3>
-          <p class="text-luxury-200 leading-relaxed mb-4">
-            My construction background isn't just context — it's the foundation of my methodology:
-          </p>
-          <ul class="space-y-3 text-luxury-200">
-            <li class="flex items-start gap-3">
-              <span class="text-accent-green mt-1">•</span>
-              <span><strong>Foundation before walls:</strong> Positioning before marketing (most companies do this backwards)</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent-green mt-1">•</span>
-              <span><strong>Blueprint methodology:</strong> Systematic process, not creative guesswork</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent-green mt-1">•</span>
-              <span><strong>Load-bearing walls:</strong> Strategic elements that hold competitive advantage vs. decorative elements (features, messaging)</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent-green mt-1">•</span>
-              <span><strong>Building codes:</strong> Proven standards that prevent positioning collapse (defensibility, proof requirements, consistency)</span>
-            </li>
-          </ul>
-          <p class="text-luxury-200 leading-relaxed mt-4">
-            This systematic approach is why my clients see measurable results, not just better-looking brand decks.
-          </p>
+        <div class="stat-card">
+          <h3>$4.5M</h3>
+          <p>Capital raised by a fund manager with zero prior fundraising history after we rewrote the narrative, deck, and asset package.</p>
         </div>
-
-        <h2 class="text-3xl font-bold text-white mb-6">Who I Work With</h2>
-
-        <p class="text-luxury-200 leading-relaxed mb-6">
-          I specialize in three types of clients:
-        </p>
-
-        <div class="space-y-4 mb-8">
-          <div class="bg-luxury-800/30 rounded-lg p-6">
-            <h3 class="text-xl font-bold text-white mb-2">Growth-Stage Companies (Series A-C)</h3>
-            <p class="text-luxury-300">
-              Scaling companies that need investor-ready positioning and category differentiation to justify premium pricing as they grow. Typical challenge: maintaining positioning clarity while scaling headcount 3-5x.
-            </p>
-          </div>
-
-          <div class="bg-luxury-800/30 rounded-lg p-6">
-            <h3 class="text-xl font-bold text-white mb-2">Premium Service Providers</h3>
-            <p class="text-luxury-300">
-              Consultants, agencies, and professional services firms competing on value instead of hourly rates. Typical challenge: sounding like every other expert in their space, unable to justify 2-3x pricing.
-            </p>
-          </div>
-
-          <div class="bg-luxury-800/30 rounded-lg p-6">
-            <h3 class="text-xl font-bold text-white mb-2">Capital-Intensive Businesses</h3>
-            <p class="text-luxury-300">
-              Real estate, finance, and industries where positioning directly impacts fundraising ability and investor confidence. Typical challenge: communicating complex value propositions to institutional decision-makers.
-            </p>
-          </div>
+        <div class="stat-card">
+          <h3>$619K</h3>
+          <p>Secured for a humanitarian organization along with pricing plays that turned $3K projects into $20K contracts.</p>
         </div>
+        <div class="stat-card">
+          <h3>+$50K</h3>
+          <p>Retainers won by coaches who once charged $800 per client. When positioning changes, confidence does too.</p>
+        </div>
+      </section>
 
-        <h2 class="text-3xl font-bold text-white mb-6">Recognition & Credentials</h2>
+      <article class="editorial-article">
+        <h2>Why positioning is the lever I pull</h2>
+        <p>Teams hire me when they cannot explain why they belong in a budget line. They sit on proof they never curate, discount to stay alive, or pitch investors without a story worth funding. Positioning is the upstream fix. Define the territory. Design the proof. Defend the price. Everything else gets easier when that is nailed.</p>
 
-        <ul class="space-y-3 text-luxury-200 mb-8">
-          <li class="flex items-start gap-3">
-            <span class="text-accent-green mt-1">✓</span>
-            <span><strong>ElevenLabs AI Hackathon:</strong> 2nd Place Finalist among 5,000+ global participants</span>
+        <h2>Field notes from a twenty day story</h2>
+        <p>I recently told the long version of how I arrived here over a twenty day thread. These chapters shaped how I operate today.</p>
+        <ul class="timeline-list">
+          <li class="timeline-item">
+            <h3>Construction collapse and debt trenches</h3>
+            <p>I spent years running crews across Winnipeg, chasing six figure invoices that never landed, and keeping twenty families paid even when I was suffocating under debt. That season taught me accountability and the cost of weak positioning the hard way.</p>
           </li>
-          <li class="flex items-start gap-3">
-            <span class="text-accent-green mt-1">✓</span>
-            <span><strong>$62.7M in Documented Client Results:</strong> Verified outcomes across positioning engagements</span>
+          <li class="timeline-item">
+            <h3>Headphones, N95 masks, and a $10K bet</h3>
+            <p>I earned a bank security clearance, wore a single headphone on night shifts, and packed it with marketing courses. I sold gear to join a mentor’s program even though I was broke. That mix of self taught design chops and relentless study became the foundation of my consulting work.</p>
           </li>
-          <li class="flex items-start gap-3">
-            <span class="text-accent-green mt-1">✓</span>
-            <span><strong>Strategic Positioning Advantage™ Framework:</strong> Proprietary methodology taught to positioning professionals</span>
+          <li class="timeline-item">
+            <h3>Building a 10K person community</h3>
+            <p>We launched an event series that drew hundreds each month, partnered with Audi and Bacardi, and gave founders a place to be honest. I would power wash drywall dust off in a Subway bathroom before hosting those nights. That grind showed me how many operators lacked strategic counsel.</p>
           </li>
-          <li class="flex items-start gap-3">
-            <span class="text-accent-green mt-1">✓</span>
-            <span><strong>30+ Years Construction Project Management:</strong> Foundation for systematic positioning methodology</span>
+          <li class="timeline-item">
+            <h3>Meeting Alecia and choosing a different life</h3>
+            <p>Alecia and I first connected online, then spent three weeks camping across Florida. We slept in Walmart parking lots, meditated beside the ocean, and talked about building something that matched the way we wanted to live. She challenged me to heal and to take my skills abroad.</p>
+          </li>
+          <li class="timeline-item">
+            <h3>Early advisory wins</h3>
+            <p>I helped a service business swing from negative three hundred dollars a month to plus four thousand. A construction client took contracts from three grand to twenty grand. A coach jumped from eight hundred to fifty thousand per engagement. Documenting those wins became non negotiable.</p>
+          </li>
+          <li class="timeline-item">
+            <h3>Partnership scars</h3>
+            <p>In Bali I took over a program after a partner vanished mid launch while playing video games. I refunded, restructured, and finished the delivery solo. It hurt to end a five year friendship, yet it forced me to hold collaborators to a higher bar.</p>
+          </li>
+          <li class="timeline-item">
+            <h3>Nomad reps and resilience</h3>
+            <p>We returned to Vancouver to find a tenant had trashed our apartment, rebuilt, and then left for Thailand with everything we owned stuffed into two suitcases. I trained teams in Vietnam, handled wire transfers that went missing, and kept clients happy from Chiang Mai rooftops.</p>
+          </li>
+          <li class="timeline-item">
+            <h3>Near-death wake up call</h3>
+            <p>Before all of this I flipped my truck three times at five in the morning after a twenty four hour workday. Hanging upside down with blood on my arms reminded me that performance requires rest. I hold myself and my clients to that same standard now.</p>
           </li>
         </ul>
 
-        <h2 class="text-3xl font-bold text-white mb-6">How We Can Work Together</h2>
+        <h2>How I work with clients now</h2>
+        <p>I partner with founders, investors, and executive teams who need to command premium pricing or ship investor grade stories. Engagements follow one cadence:</p>
+        <ol class="list-decimal list-inside space-y-2 mt-4">
+          <li><strong>Define.</strong> Map incentives, competitors, customer beliefs, and valuation triggers.</li>
+          <li><strong>Design.</strong> Architect proof libraries, pricing ladders, talk tracks, and media scripts.</li>
+          <li><strong>Defend.</strong> Operationalize the new position through training, assets, and internal adoption.</li>
+        </ol>
 
-        <p class="text-luxury-200 leading-relaxed mb-6">
-          I offer three primary engagement models:
-        </p>
+        <h2>Life now</h2>
+        <p>Alecia and I split time between Playa del Carmen and client sessions. When I am not in a war room, I am on the mats, writing long form essays, or coaching founders through the same holistic lens that got me out of construction. I still log every meaningful result because proof is what keeps you grounded.</p>
+      </article>
 
-        <div class="space-y-4 mb-8">
-          <div>
-            <h3 class="text-lg font-bold text-white mb-2">Positioning Diagnostic</h3>
-            <p class="text-luxury-300">
-              23-point positioning assessment identifying exactly where your current positioning costs you revenue. Typical outcome: clarity on top 3 positioning gaps preventing premium pricing.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="text-lg font-bold text-white mb-2">Full Positioning Engagement</h3>
-            <p class="text-luxury-300">
-              Complete Define-Design-Defend implementation over 90-180 days. Deliverables include positioning strategy, competitive moat analysis, narrative architecture, and thought leadership roadmap.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="text-lg font-bold text-white mb-2">Fractional CMO / CAIO</h3>
-            <p class="text-luxury-300">
-              Ongoing positioning and AI strategy for growth-stage companies. Focused on maintaining positioning clarity while scaling marketing operations and implementing AI-driven competitive advantages.
-            </p>
-          </div>
-        </div>
-
-        <!-- CTA Section -->
-        <div class="bg-gradient-to-r from-accent-green/10 to-luxury-800/30 border border-accent-green/30 rounded-lg p-8 text-center mt-12">
-          <h3 class="text-2xl font-bold text-white mb-4">
-            Let's Diagnose Your Positioning
-          </h3>
-          <p class="text-luxury-200 mb-6 max-w-2xl mx-auto">
-            Most companies have 3-5 critical positioning gaps costing them 20-40% in profit margins. Find yours.
-          </p>
-          <a href="/contact.html" class="inline-flex items-center gap-2 bg-accent-green text-luxury-950 px-8 py-3 rounded-lg font-bold hover:bg-accent-green/90 transition-all text-lg">
-            Schedule Positioning Diagnostic
-          </a>
-        </div>
+      <div class="cta-panel">
+        <h3>Need a positioning operator in your corner?</h3>
+        <p>If you are serious about commanding premium fees or raising meaningful capital, let’s map how the Strategic Positioning Advantage applies to your business.</p>
+        <a href="/contact.html" class="button-primary inline-flex items-center justify-center px-8 py-3">Start the conversation</a>
       </div>
     </main>
 

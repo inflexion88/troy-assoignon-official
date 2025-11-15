@@ -225,6 +225,36 @@ positioning statement definition, value proposition example, messaging hierarchy
 
 ---
 
+## Blog Post #9: Brand Positioning Consultant: 2025 Guide for Growth Leaders
+- **File**: `blog/brand-positioning-consultant.html`
+- **Word Count**: 1,550 words
+- **Primary Keyword**: brand positioning consultant
+- **Search Intent**: High commercial (evaluation + selection)
+- **Conversion Path**: Positioning Assessment → Strategic Brand Positioning engagement → Fractional CMO support
+
+### Key Elements:
+- GEO-friendly quick answer clarifying what a positioning consultant delivers vs branding agency
+- Deliverable grid + ROI benchmarks table for credibility
+- 12-week engagement timeline with CTA to Strategic Positioning Advantage™ framework
+- Evaluation scorecard with internal/external signals
+- Pricing ranges plus CTA to premium pricing and diagnostic offers
+- FAQ for in-market readers comparing consultants vs strategists
+
+### SEO Keywords Used:
+brand positioning consultant, strategic brand positioning services, positioning diagnostics, premium pricing, investor-ready positioning, fractional CMO, brand positioning expert
+
+### Internal Links:
+- Strategic Brand Positioning services
+- Positioning Diagnostics service
+- Premium Pricing & Offers service
+- Investor-Ready Positioning service
+- Category Creation vs Leadership blog
+- Positioning ROI blog
+- Fractional CMO & CAIO support
+- Book a positioning assessment
+
+---
+
 ## Strategic Content Architecture
 
 ### Funnel Mapping:

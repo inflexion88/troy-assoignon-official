@@ -7,10 +7,13 @@ broken_count=0
 total_count=0
 
 # Extract all internal links from HTML files
+# NOTE: Ignore absolute-root paths (starting with /) because filesystem checks
+# on local dev don’t reflect production routes.
+
 find . -name "*.html" -not -path "*/dist/*" -type f | while read file; do
     grep -o 'href="[^"]*"' "$file" | sed 's/href="//;s/"//' | while read link; do
         # Skip external links, mailto, tel, # anchors
-        if [[ "$link" =~ ^https?:// ]] || [[ "$link" =~ ^mailto: ]] || [[ "$link" =~ ^tel: ]] || [[ "$link" == "#"* ]]; then
+        if [[ "$link" =~ ^https?:// ]] || [[ "$link" =~ ^mailto: ]] || [[ "$link" =~ ^tel: ]] || [[ "$link" == "#"* ]] || [[ "$link" == /* ]]; then
             continue
         fi
         

@@ -195,6 +195,36 @@ fundraising positioning, investor narrative, venture capital, pitch deck, compet
 
 ---
 
+## Blog Post #8: Positioning Statement vs Value Proposition: Differences, Examples & Templates
+- **File**: `08-positioning-statement-vs-value-proposition.html`
+- **Word Count**: 2,100 words
+- **Primary Keyword**: positioning statement vs value proposition
+- **Search Intent**: Informational + commercial investigation (marketers comparing frameworks)
+- **Conversion Path**: Comparison guide → Positioning Diagnostics sprint → Strategic Brand Positioning retainer
+
+### Key Elements:
+- GEO-ready TL;DR block plus comparison table for AI Overviews and featured snippet capture
+- Diagram of the messaging hierarchy (positioning → narrative → value propositions)
+- Templates + validation checklist for both statements
+- Scenarios showing when to lead with positioning versus value propositions
+- CTA modules pointing to Positioning Diagnostics and Strategic Brand Positioning with social proof
+- Methodology note + SME quote + external research citations (Gartner, McKinsey, Bain)
+
+### SEO Keywords Used:
+positioning statement definition, value proposition example, messaging hierarchy, premium pricing, investor narrative, go-to-market strategy, positioning diagnostics, B2B positioning strategy
+
+### Internal Links:
+- Strategic Brand Positioning services
+- Positioning Diagnostics program
+- Premium pricing offers
+- Strategic Positioning Advantage™ framework overview (Blog #3)
+- Article on what a positioning expert does (Blog #1)
+- Investor-ready positioning checklist
+- Fractional CMO & CAIO support
+- Book a positioning assessment page
+
+---
+
 ## Strategic Content Architecture
 
 ### Funnel Mapping:

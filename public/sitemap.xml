@@ -18,7 +18,7 @@
 
   <!-- Priority 0.9 - Interactive Tools (high engagement, lead generation) -->
   <url>
-    <loc>https://www.troyassoignon.com/public/positioning-assessment</loc>
+    <loc>https://www.troyassoignon.com/positioning-assessment</loc>
     <lastmod>2025-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -204,6 +204,30 @@
   <url>
     <loc>https://www.troyassoignon.com/blog/category-creation-vs-leadership</loc>
     <lastmod>2025-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.troyassoignon.com/blog/ai-intern-prompt-bank</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.troyassoignon.com/blog/ai-intern-task-board-template</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.troyassoignon.com/blog/fractional-cmo-ai-marketing-teams-smes</loc>
+    <lastmod>2025-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.troyassoignon.com/blog/fractional-cmo-intern-cost-model</loc>
+    <lastmod>2025-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

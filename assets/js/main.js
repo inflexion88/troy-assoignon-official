@@ -70,17 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
         debugLog('hero', 'Results section initialised');
       }
 
-      setTimeout(() => {
-        const textElements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, div');
-        textElements.forEach(el => {
-          if (el.textContent && el.textContent.includes('OUR SERVICES HELP YOU ACHIEVE THESE RESULTS')) {
-            el.style.display = 'none';
-          }
-          if (el.textContent && el.textContent.includes('EXPLORE')) {
-            el.style.display = 'none';
-          }
-        });
-      }, 400);
     }, 120);
 
     const loadingInterface = document.getElementById('loading-interface');
@@ -910,7 +899,6 @@ export function startMatrixSequence(name) {
 
 // Make the function available globally
 window.startMatrixSequence = startMatrixSequence; 
-
 
 
 

@@ -62,16 +62,6 @@
       "destination": "/blog.html",
       "permanent": true
     },
-    {
-      "source": "/about",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/about-us",
-      "destination": "/",
-      "permanent": true
-    }
   ],
   "headers": [
     {

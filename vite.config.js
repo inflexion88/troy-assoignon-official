@@ -110,6 +110,8 @@ export default defineConfig({
         'blog/ai-intern-task-board-template': resolve(__dirname, 'blog/ai-intern-task-board-template.html'),
         'blog/ai-intern-prompt-bank': resolve(__dirname, 'blog/ai-intern-prompt-bank.html'),
         'blog/fractional-cmo-intern-cost-model': resolve(__dirname, 'blog/fractional-cmo-intern-cost-model.html'),
+        'blog/positioning-statement-vs-value-proposition': resolve(__dirname, 'blog/positioning-statement-vs-value-proposition.html'),
+        'blog/brand-positioning-consultant': resolve(__dirname, 'blog/brand-positioning-consultant.html'),
         // Lead magnet pages
         'lead-magnets/positioning-diagnostic-checklist': resolve(__dirname, 'lead-magnets/positioning-diagnostic-checklist.html'),
         'lead-magnets/positioning-framework-guide': resolve(__dirname, 'lead-magnets/positioning-framework-guide.html'),
@@ -150,4 +152,3 @@ export default defineConfig({
     }
   }
 }) 
-

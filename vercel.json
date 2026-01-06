@@ -4,6 +4,10 @@
     {
       "source": "/permapatch",
       "destination": "/perma-patch"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.html"
     }
   ],
   "redirects": [
